@@ -30,7 +30,7 @@ hunt_sources = [
   '__init__.py',
   'main.py',
   'window.py',
-  '../python3-pyenchant.json',
+  'python3-pyenchant.json',
 ]
 
 install_data(hunt_sources, install_dir: moduledir)
