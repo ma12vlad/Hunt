@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="hunt">
+	<schema id="io.github.swordpuffin.hunt" path="/io/github/swordpuffin/hunt/">
+	</schema>
+</schemalist>

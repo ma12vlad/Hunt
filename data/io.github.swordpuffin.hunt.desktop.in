@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=hunt
+Exec=hunt
+Icon=io.github.swordpuffin.hunt
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=GTK;
+StartupNotify=true
+DBusActivatable=true
