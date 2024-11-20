@@ -25,21 +25,35 @@
             <property name="margin-start">20</property>
             <property name="margin-end">20</property>
             <child>
-              <object class="GtkFrame">
+              <object class="GtkListBox" id="frame">
                 <property name="width-request">200</property>
                 <property name="margin-end">20</property>
                 <property name="margin-top">60</property>
                 <property name="margin-bottom">60</property>
+                <style>
+                  <class name="title-2"/>
+                  <class name="boxed-list"/>
+                </style>
+                <child>
+                  <object class="GtkLabel" id="frame_label">
+                    <property name="wrap">True</property>
+                    <property name="xalign">0.5</property>
+                    <property name="valign">start</property>
+                    <property name="justify">center</property>
+                  </object>
+                </child>
               </object>
             </child>
             <child>
               <object class="GtkGrid" id="grid">
-                <property name="margin-top">20</property>
-                <property name="margin-bottom">15</property>
-                <property name="width-request">700</property>
-                <property name="height-request">700</property>
-                <property name="halign">center</property>
-                <property name="valign">center</property>
+                <property name="margin-top">25</property>
+                <property name="margin-bottom">25</property>
+                <property name="margin-start">35</property>
+                <property name="margin-end">45</property>
+                <property name="hexpand">true</property>
+                <property name="vexpand">true</property>
+                <property name="row-homogeneous">true</property>
+                <property name="column-homogeneous">true</property>
               </object>
             </child>
           </object>

@@ -1,0 +1,15 @@
+.green_button {
+  background-color: @green_5;
+}
+
+.box {
+  background-color: @borders;
+  border: none;
+}
+
+.frame {
+  border: none;
+  background-color: @card_bg_color;
+  border-radius: 10px;
+}
+
