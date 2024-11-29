@@ -2,6 +2,65 @@
   background-color: @green_5;
 }
 
+.red1 {
+    background-color: @red_1;
+}
+
+.red2 {
+    background-color: @red_2;
+}
+
+.red3 {
+    background-color: @red_3;
+}
+
+.red4 {
+    background-color: @red_4;
+}
+
+.red5 {
+    background-color: @red_5;
+}
+
+.blue1 {
+    background-color: @blue_1;
+}
+
+.blue2 {
+    background-color: @blue_2;
+}
+
+.blue3 {
+    background-color: @blue_3;
+}
+
+.blue4 {
+    background-color: @blue_4;
+}
+
+.blue5 {
+    background-color: @blue_5;
+}
+
+.yellow1 {
+    background-color: @yellow_1;
+}
+
+.yellow2 {
+    background-color: @yellow_2;
+}
+
+.yellow3 {
+    background-color: @yellow_3;
+}
+
+.yellow4 {
+    background-color: @yellow_4;
+}
+
+.yellow5 {
+    background-color: @yellow_5;
+}
 .box {
   background-color: @borders;
   border: none;

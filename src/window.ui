@@ -25,21 +25,38 @@
             <property name="margin-start">20</property>
             <property name="margin-end">20</property>
             <child>
-              <object class="GtkListBox" id="frame">
-                <property name="width-request">200</property>
-                <property name="margin-end">20</property>
-                <property name="margin-top">60</property>
-                <property name="margin-bottom">60</property>
-                <style>
-                  <class name="title-2"/>
-                  <class name="boxed-list"/>
-                </style>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkLabel" id="frame_label">
-                    <property name="wrap">True</property>
-                    <property name="xalign">0.5</property>
-                    <property name="valign">start</property>
-                    <property name="justify">center</property>
+                  <object class="GtkButton">
+                    <property name="margin-start">88</property>
+                    <property name="margin-end">98</property>
+                    <property name="margin-top">30</property>
+                    <property name="icon-name">reload-symbolic</property>
+                    <property name="action-name">win.reload</property>
+                    <style>
+                      <class name="circular"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkListBox" id="frame">
+                    <property name="width-request">200</property>
+                    <property name="margin-end">20</property>
+                    <property name="margin-top">20</property>
+                    <property name="margin-bottom">60</property>
+                    <style>
+                      <class name="title-2"/>
+                      <class name="boxed-list"/>
+                    </style>
+                    <child>
+                      <object class="GtkLabel" id="frame_label">
+                        <property name="wrap">True</property>
+                        <property name="xalign">0.5</property>
+                        <property name="valign">start</property>
+                        <property name="justify">center</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
@@ -48,7 +65,6 @@
               <object class="GtkGrid" id="grid">
                 <property name="margin-top">25</property>
                 <property name="margin-bottom">25</property>
-                <property name="margin-start">35</property>
                 <property name="margin-end">45</property>
                 <property name="hexpand">true</property>
                 <property name="vexpand">true</property>

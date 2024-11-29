@@ -55,8 +55,6 @@ class HuntApplication(Adw.Application):
                                 version='0.1.0',
                                 developers=['Nathan Perlman'],
                                 copyright='© 2024 Nathan Perlman')
-        # Translators: Replace "translator-credits" with your name/username, and optionally an email or URL.
-        about.set_translator_credits(_('translator-credits'))
         about.present(self.props.active_window)
 
     def on_preferences_action(self, widget, _):
