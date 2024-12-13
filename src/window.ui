@@ -4,8 +4,8 @@
   <requires lib="Adw" version="1.0"/>
   <template class="HuntWindow" parent="AdwApplicationWindow">
     <property name="title" translatable="yes">Hunt</property>
-    <property name="default-width">850</property>
-    <property name="default-height">850</property>
+    <property name="default-width">700</property>
+    <property name="default-height">450</property>
     <property name="content">
       <object class="AdwToolbarView">
         <child type="top">
@@ -24,19 +24,356 @@
           <object class="GtkBox">
             <property name="margin-start">20</property>
             <property name="margin-end">20</property>
+            <property name="margin-top">20</property>
+            <property name="margin-bottom">20</property>
             <child>
-              <object class="GtkBox">
+              <object class="GtkBox" id="start_box">
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+                <property name="valign">center</property>
+                <property name="halign">center</property>
+                <child>
+                  <object class="GtkBox" id="custom_box">
+                    <property name="orientation">1</property>
+                    <property name="vexpand">true</property>
+                    <property name="valign">center</property>
+                    <property name="hexpand">true</property>
+                    <property name="halign">center</property>
+                    <property name="margin-end">60</property>
+                    <child>
+                      <object class="GtkGrid">
+                        <property name="column-spacing">20</property>
+                        <property name="row-spacing">20</property>
+                        <style>
+                          <class name="title-4"/>
+                        </style>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Height</property>
+                            <layout>
+                              <property name="column">0</property>
+                              <property name="row">0</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSpinButton" id="height_value">
+                              <property name="value">10</property>
+                              <property name="climb-rate">1</property>
+                              <property name="adjustment">
+                                <object class="GtkAdjustment">
+                                  <property name="lower">7</property>
+                                  <property name="upper">18</property>
+                                  <property name="step-increment">1</property>
+                                  <property name="value">10</property>
+                                </object>
+                              </property>
+                              <layout>
+                                <property name="column">1</property>
+                                <property name="row">0</property>
+                              </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Width</property>
+                            <layout>
+                              <property name="column">0</property>
+                              <property name="row">1</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSpinButton" id="width_value">
+                              <property name="value">10</property>
+                              <property name="climb-rate">1</property>
+                              <property name="adjustment">
+                                <object class="GtkAdjustment">
+                                  <property name="lower">7</property>
+                                  <property name="upper">18</property>
+                                  <property name="step-increment">1</property>
+                                  <property name="value">10</property>
+                                </object>
+                              </property>
+                              <layout>
+                                <property name="column">1</property>
+                                <property name="row">1</property>
+                              </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Words</property>
+                            <layout>
+                              <property name="column">0</property>
+                              <property name="row">3</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSpinButton" id="words_value">
+                              <property name="value">5</property>
+                              <property name="climb-rate">1</property>
+                              <property name="adjustment">
+                              <object class="GtkAdjustment">
+                               <property name="lower">1</property>
+                               <property name="upper">10</property>
+                               <property name="step-increment">1</property>
+                               <property name="value">5</property>
+                              </object>
+                              </property>
+                              <layout>
+                                <property name="column">1</property>
+                                <property name="row">3</property>
+                              </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkLabel">
+                            <property name="label">Time (seconds)</property>
+                            <layout>
+                              <property name="column">0</property>
+                              <property name="row">4</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkSpinButton" id="time_value">
+                              <property name="value">10</property>
+                              <property name="climb-rate">5</property>
+                              <property name="adjustment">
+                              <object class="GtkAdjustment">
+                               <property name="lower">5</property>
+                               <property name="upper">500000</property>
+                               <property name="step-increment">5</property>
+                               <property name="value">10</property>
+                              </object>
+                              </property>
+                              <layout>
+                                <property name="column">1</property>
+                                <property name="row">4</property>
+                              </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton">
+                            <property name="label">Start</property>
+                            <property name="action-name">win.custom_start</property>
+                            <style>
+                              <class name="suggested-action"/>
+                            </style>
+                            <layout>
+                              <property name="column">0</property>
+                              <property name="row">5</property>
+                            </layout>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton">
+                            <property name="label">Back</property>
+                            <property name="action-name">win.back</property>
+                            <style>
+                              <class name="destructive-action"/>
+                            </style>
+                            <layout>
+                              <property name="column">1</property>
+                              <property name="row">5</property>
+                            </layout>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkGrid" id="option_grid">
+                    <property name="row-spacing">20</property>
+                    <property name="column-spacing">20</property>
+                    <property name="margin-end">20</property>
+                    <style>
+                      <class name="title-2"/>
+                    </style>
+                    <child>
+                      <object class="GtkButton" id="button1">
+                        <property name="width-request">200</property>
+                        <property name="height-request">200</property>
+                        <child>
+                          <object class="GtkLabel">
+                              <property name="label">8 x 8 grid
+
+5 words
+(25 seconds)</property>
+                            <property name="justify">center</property>
+                          </object>
+                        </child>
+                        <property name="action-name">win.small</property>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button2">
+                        <property name="width-request">200</property>
+                        <property name="height-request">200</property>
+                        <property name="action-name">win.medium</property>
+                        <child>
+                          <object class="GtkLabel">
+                              <property name="label">12 x 12 grid
+
+8 words
+(45 seconds)</property>
+                            <property name="justify">center</property>
+                          </object>
+                        </child>
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="row">0</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button3">
+                        <property name="width-request">200</property>
+                        <property name="height-request">200</property>
+                        <property name="action-name">win.large</property>
+                        <child>
+                          <object class="GtkLabel">
+                              <property name="label">16 x 16 grid
+
+10 words
+(60 seconds)</property>
+                            <property name="justify">center</property>
+                          </object>
+                        </child>
+                        <layout>
+                          <property name="column">0</property>
+                          <property name="row">1</property>
+                        </layout>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="button4">
+                        <property name="width-request">200</property>
+                        <property name="height-request">200</property>
+                        <property name="action-name">win.custom</property>
+                        <property name="label">
+    Custom
+                        </property>
+                        <layout>
+                          <property name="column">1</property>
+                          <property name="row">1</property>
+                        </layout>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">1</property>
+                    <property name="spacing">10</property>
+                    <property name="width-request">120</property>
+                    <style>
+                      <class name="title-3"/>
+                    </style>
+                    <child>
+                      <object class="GtkFrame">
+                        <property name="vexpand">true</property>
+                        <property name="valign">end</property>
+                        <property name="height-request">63</property>
+                        <property name="width-request">162</property>
+                        <style>
+                          <class name="frame"/>
+                        </style>
+                        <child>
+                          <object class="GtkCheckButton" id="standard">
+                            <property name="hexpand">true</property>
+                            <property name="halign">center</property>
+                            <property name="active">true</property>
+                            <property name="label">     No timer</property>
+                            <property name="action-name">win.standard</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkFrame">
+                        <property name="vexpand">true</property>
+                        <property name="valign">center</property>
+                        <property name="height-request">63</property>
+                        <property name="width-request">162</property>
+                        <style>
+                          <class name="frame"/>
+                        </style>
+                        <child>
+                          <object class="GtkCheckButton" id="speedrun">
+                            <property name="hexpand">true</property>
+                            <property name="halign">center</property>
+                            <property name="active">false</property>
+                            <property name="label">     Speedrun</property>
+                            <property name="action-name">win.speed</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkFrame">
+                        <property name="vexpand">true</property>
+                        <property name="valign">start</property>
+                        <property name="height-request">63</property>
+                        <property name="width-request">162</property>
+                        <style>
+                          <class name="frame"/>
+                        </style>
+                        <child>
+                          <object class="GtkCheckButton" id="clocked">
+                            <property name="hexpand">true</property>
+                            <property name="halign">center</property>
+                            <property name="active">false</property>
+                            <property name="label">         Timed</property>
+                            <property name="action-name">win.timed</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="main_box">
                 <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkButton">
-                    <property name="margin-start">88</property>
-                    <property name="margin-end">98</property>
-                    <property name="margin-top">30</property>
-                    <property name="icon-name">reload-symbolic</property>
-                    <property name="action-name">win.reload</property>
-                    <style>
-                      <class name="circular"/>
-                    </style>
+                  <object class="GtkBox">
+                    <child>
+                      <object class="GtkButton">
+                        <property name="margin-start">10</property>
+                        <property name="margin-end">20</property>
+                        <property name="margin-top">30</property>
+                        <property name="icon-name">update</property>
+                        <property name="action-name">win.reload</property>
+                        <style>
+                          <class name="circular"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton">
+                        <property name="margin-end">20</property>
+                        <property name="margin-top">30</property>
+                        <property name="label">Back to menu</property>
+                        <property name="action-name">win.restart</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="clock">
+                        <property name="width-request">120</property>
+                        <property name="margin-end">30</property>
+                        <property name="margin-top">30</property>
+                        <property name="label"></property>
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child>
@@ -68,8 +405,6 @@
                 <property name="margin-end">45</property>
                 <property name="hexpand">true</property>
                 <property name="vexpand">true</property>
-                <property name="row-homogeneous">true</property>
-                <property name="column-homogeneous">true</property>
               </object>
             </child>
           </object>
@@ -79,10 +414,6 @@
   </template>
   <menu id="primary_menu">
     <section>
-      <item>
-        <attribute name="label" translatable="yes">_Preferences</attribute>
-        <attribute name="action">app.preferences</attribute>
-      </item>
       <item>
         <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>

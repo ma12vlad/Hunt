@@ -44,14 +44,17 @@
 
 .yellow1 {
     background-color: @yellow_1;
+    color: black;
 }
 
 .yellow2 {
     background-color: @yellow_2;
+    color: black;
 }
 
 .yellow3 {
     background-color: @yellow_3;
+    color: black;
 }
 
 .yellow4 {

@@ -36,7 +36,7 @@ related_words = {
     'Video Games': ['videogame', 'gaming', 'console', 'PC', 'controller', 'action', 'adventure', 'RPG', 'shooter', 'multiplayer'],
     'Gardening': ['gardening', 'plants', 'flowers', 'green', 'soil', 'compost', 'seed', 'flowerbed', 'landscaping', 'botanist'],
     'Hobbies': ['hobby', 'interest', 'crafting', 'sports', 'reading', 'collecting', 'writing', 'photography', 'gaming', 'knitting'],
-    'Dance': ['dance', 'ballet', 'hip-hop', 'jazz', 'tap', 'salsa', 'ballroom', 'choreography', 'perform', 'rhythm'],
+    'Dance': ['dance', 'ballet', 'hiphop', 'jazz', 'tap', 'salsa', 'ballroom', 'choreography', 'perform', 'rhythm'],
     'Travel': ['travel', 'tourism', 'vacation', 'destination', 'trip', 'journey', 'hotel', 'adventure', 'explore', 'backpacking'],
     'Fitness': ['fitness', 'exercise', 'strength', 'gym', 'workout', 'health', 'endurance', 'bodybuilding', 'yoga', 'cardio'],
     'Cooking': ['cooking', 'recipe', 'chef', 'kitchen', 'bake', 'grill', 'fry', 'saute', 'dish', 'ingredient'],
@@ -44,8 +44,8 @@ related_words = {
     'Technology Trends': ['technology', 'apple', 'blockchain', 'algorithm', 'linux', 'innovation', 'gadgets', 'tech', 'automation', 'future'],
     'Mythology': ['mythology', 'god', 'goddess', 'myth', 'legend', 'creature', 'pantheon', 'Greek', 'Norse', 'Egyptian'],
     'Philosophy': ['philosophy', 'thought', 'ethics', 'logic', 'reasoning', 'wisdom', 'morality', 'theory', 'physics', 'epistemology'],
-    'Animals - Wild': ['wild animal', 'predator', 'prey', 'jungle', 'safari', 'tiger', 'lion', 'bear', 'elephant', 'zebra'],
-    'Animals - Pets': ['pet', 'dog', 'cat', 'fish', 'rabbit', 'hamster', 'bird', 'animal', 'companion', 'pup'],
+    'Animals - Wild': ['bat', 'raven', 'zebra', 'badger', 'ostrich', 'tiger', 'lion', 'bear', 'elephant', 'zebra'],
+    'Animals - Pets': ['pet', 'dog', 'cat', 'fish', 'rabbit', 'hamster', 'bird', 'animal', 'jellyfish', 'pup'],
     'Space Exploration': ['exploration', 'NASA', 'astronaut', 'mission', 'rocket', 'spacecraft', 'planetary', 'research', 'cosmos', 'voyager'],
     'Marketing': ['marketing', 'advertising', 'brand', 'campaign', 'consumer', 'strategy', 'promotion', 'SEO', 'content', 'social media'],
     'Personal Finance': ['finance', 'saving', 'budget', 'debt', 'investing', 'taxes', 'bank', 'credit', 'retirement', 'stocks'],
@@ -59,5 +59,13 @@ related_words = {
     'Cultural Festivals': ['festival', 'celebration', 'music', 'dance', 'food', 'tradition', 'ceremony', 'culture', 'art', 'parade'],
     'Street Art': ['streetart', 'graffiti', 'urban', 'spraypaint', 'mural', 'artist', 'painting', 'public', 'expression', 'creative'],
     'Technology Gadgets': ['gadget', 'smartphone', 'tablet', 'watch', 'camera', 'headphones', 'speaker', 'device', 'VR', 'Bluetooth'],
+    'Gases' : ['oxygen', 'freon', 'helium', 'neon', 'argon', 'xenon', 'radon', 'methane', 'krypton'],
+    'Occupations' : ['engineer', 'doctor', 'teacher', 'florist', 'nurse', 'pilot', 'lawyer', 'dentist', 'baker', 'chef'],
+    'Monsters' : ['dracula', 'mummy', 'demon', 'zombie', 'wendigo', 'ogre', 'goblin', 'ghost', 'witch', 'thing'],
+    'Websites' : ['google', 'youtube', 'reddit', 'amazon', 'yahoo', 'bing', 'telegram', 'ebay', 'baidu', 'canva'],
+    'Board Games' : ['othello', 'sorry', 'chess', 'jenga', 'boggle', 'mahjong', 'risk', 'twister', 'clue', 'go'],
+    'Money' : ['bank', 'coin', 'dime', 'nickel', 'dollar', 'pounds', 'euros', 'bills', 'money', 'penny'],
+    'Birds' : ['hawk', 'chicken', 'goose', 'turkey', 'parrot', 'robin', 'heron', 'bluejay', 'dove', 'ostrich'],
+    'Books - Dr. Seuss' : ['lorax', 'horton', 'thneed', 'samiam', 'grinch', 'yertle', 'wocket', 'max', 'sneetches']
 }
 
