@@ -35,6 +35,7 @@
                 <child>
                   <object class="GtkBox" id="custom_box">
                     <property name="orientation">1</property>
+                    <property name="height-request">420</property>
                     <property name="vexpand">true</property>
                     <property name="valign">center</property>
                     <property name="hexpand">true</property>
@@ -42,6 +43,8 @@
                     <property name="margin-end">60</property>
                     <child>
                       <object class="GtkGrid">
+                        <property name="vexpand">true</property>
+                        <property name="valign">center</property>
                         <property name="column-spacing">20</property>
                         <property name="row-spacing">20</property>
                         <style>
@@ -351,7 +354,7 @@
                         <property name="margin-start">10</property>
                         <property name="margin-end">20</property>
                         <property name="margin-top">30</property>
-                        <property name="icon-name">update</property>
+                        <property name="icon-name">update-symbolic</property>
                         <property name="action-name">win.reload</property>
                         <style>
                           <class name="circular"/>

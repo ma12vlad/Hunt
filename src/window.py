@@ -30,6 +30,7 @@ class HuntWindow(Adw.ApplicationWindow):
     timer = 10
     colors = ["red1", "red2", "red3", "red4", "red5", "blue1", "blue2", "blue3", "blue4", "blue5", "yellow1", "yellow2", "yellow3", "yellow4", "yellow5"]
     word_buttons = []
+    timed_game = False
 
     grid_data = None
     current_word = None
@@ -95,14 +96,18 @@ class HuntWindow(Adw.ApplicationWindow):
     def normal(self, action, _):
         self.clocked.set_active(False), self.speedrun.set_active(False)
         self.standard.set_active(True)
+        self.timed_game = False
 
     def timed(self, action, _):
         self.standard.set_active(False), self.speedrun.set_active(False)
         self.clocked.set_active(True)
+        self.timed_game = True
 
     def speed(self, action, _):
         self.standard.set_active(False), self.clocked.set_active(False)
         self.speedrun.set_active(True)
+        self.clock.set_visible(True)
+        self.timed_game = True
 
     def small(self, action, _):
         self.word_count = 5
@@ -140,7 +145,8 @@ class HuntWindow(Adw.ApplicationWindow):
         self.start_box.set_visible(True)
         self.main_box.set_visible(False)
         self.grid.set_visible(False)
-        GLib.Source.remove(self.timer_id)
+        if(self.clock.is_visible()):
+            GLib.Source.remove(self.timer_id)
 
     def update(self):
         if(self.timer <= 0.1 and self.grid.is_visible()):
@@ -152,7 +158,10 @@ class HuntWindow(Adw.ApplicationWindow):
             return True
 
     def make_grid(self, action, _):
-        self.timer_id = GLib.timeout_add(100, self.update)
+        self.clock.set_visible(False)
+        if(self.timed_game):
+            self.timer_id = GLib.timeout_add(100, self.update)
+            self.clock.set_visible(True)
         self.start_box.set_visible(False)
         self.main_box.set_visible(True)
         self.grid.set_visible(True)
@@ -160,7 +169,6 @@ class HuntWindow(Adw.ApplicationWindow):
         self.random_key = random.choice(list(related_words.keys()))
         random_value = related_words[self.random_key]
         self.grid_data = [[' ' for _ in range(self.grid_size)] for _ in range(self.grid_size)]
-        random.shuffle(self.words)
 
         for i in range(self.word_count):
             self.words.append(random_value[i].upper())
@@ -207,10 +215,10 @@ class HuntWindow(Adw.ApplicationWindow):
             label.set_margin_bottom(14)
             label.set_margin_top(14)
             self.frame.append(label)
-        self.frame.remove(self.frame.get_first_child())
 
     def place_word_in_grid(self, word):
         placed = False
+        attempts = 0
         while(not placed):
             direction = random.choice(['horizontal', 'vertical', 'diagonal'])
             row = random.randint(0, self.grid_size - 1)
@@ -353,20 +361,52 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Dialog that runs when the player has found all the words.
     def end_dialogue(self):
-        dialog = Gtk.Dialog(transient_for=self, modal=True)
-        dialog.set_title("Results")
-        content = dialog.get_content_area()
-        length = Gtk.Label(label="You got all the words in the " + self.random_key + " category")
-        found_list = Gtk.Label(label="(" + str('  '.join(map(str, self.found_words)) + ")"))
-        content.append(length), content.append(found_list)
-        replay = Gtk.Button()
-        icon = Gtk.Image.new_from_icon_name("reload-symbolic")
-        replay.set_child(icon), replay.add_css_class("circular")
-        content.append(replay)
-        length.set_margin_start(30),  found_list.set_margin_start(30)
-        length.set_margin_end(30), found_list.set_margin_end(30)
-        length.set_margin_top(30), found_list.set_margin_top(20)
-        length.set_margin_bottom(20), found_list.set_margin_bottom(20)
-        length.add_css_class("title-3"), found_list.add_css_class("title-4")
-        dialog.present()
+        if(self.clock.is_visible()):
+            GLib.Source.remove(self.timer_id)
+        dialog = Gtk.Dialog(title="Game Over", transient_for=self, modal=True)
+        dialog.set_default_size(300, 200)
+        dialog.set_decorated(False)
 
+        # Apply the title-4 CSS class
+        dialog.get_style_context().add_class("title-4")
+
+        # Dialog content area
+        content_area = dialog.get_content_area()
+
+        # Create a box to vertically center the content
+        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=20)
+        vbox.set_valign(Gtk.Align.CENTER)
+        vbox.set_halign(Gtk.Align.CENTER)
+        content_area.append(vbox)
+
+        # Create a label to display the end-game message
+        message = Gtk.Label(
+            label=f"\nCongratulations on completing the crossword!\n\n# of words found: {len(self.found_words)}\n",
+            halign=Gtk.Align.CENTER,
+            valign=Gtk.Align.CENTER,
+            margin_start=30,
+            margin_end=30,
+            justify=Gtk.Justification.CENTER
+        )
+        vbox.append(message)
+
+        # Create a button box to center the buttons
+        button_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
+        button_box.set_halign(Gtk.Align.CENTER)
+
+        # Add buttons to the button box
+        new_game_button = Gtk.Button(label="New Game")
+        new_game_button.connect("clicked", lambda _: dialog.response(Gtk.ResponseType.OK))
+        button_box.append(new_game_button)
+
+        close_button = Gtk.Button(label="Close")
+        close_button.connect("clicked", lambda _: dialog.response(Gtk.ResponseType.CLOSE))
+        button_box.append(close_button)
+
+        # Add the button box to the vbox
+        vbox.append(button_box)
+
+        dialog.show()
+        dialog.destroy()
+
+        return
