@@ -28,7 +28,7 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.0.0" date="2024-12-22">
+    <release version="1.0.1" date="2024-12-22">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.0</url>
       <description translate="no">
         <p>First release</p>
