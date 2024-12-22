@@ -14,16 +14,17 @@
     background-color: @red_3;
 }
 
-.red4 {
-    background-color: @red_4;
+.orange3 {
+    background-color: @orange_3;
 }
 
-.red5 {
-    background-color: @red_5;
+.purple2 {
+    background-color: @purple_2;
 }
 
 .blue1 {
     background-color: @blue_1;
+    color: black;
 }
 
 .blue2 {
@@ -59,10 +60,12 @@
 
 .yellow4 {
     background-color: @yellow_4;
+    color: black;
 }
 
-.yellow5 {
-    background-color: @yellow_5;
+.green1 {
+    background-color: @green_1;
+    color: black;
 }
 .box {
   background-color: @borders;

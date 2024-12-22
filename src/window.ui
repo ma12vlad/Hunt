@@ -87,7 +87,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="GtkSpinButton" id="width_value">
+                          <object class="GtkSpinButton" id="length_value">
                               <property name="value">10</property>
                               <property name="climb-rate">1</property>
                               <property name="adjustment">
@@ -205,7 +205,7 @@
                               <property name="label">8 x 8 grid
 
 5 words
-(25 seconds)</property>
+(30 seconds)</property>
                             <property name="justify">center</property>
                           </object>
                         </child>
@@ -226,7 +226,7 @@
                               <property name="label">12 x 12 grid
 
 8 words
-(45 seconds)</property>
+(60 seconds)</property>
                             <property name="justify">center</property>
                           </object>
                         </child>
@@ -246,7 +246,7 @@
                               <property name="label">16 x 16 grid
 
 10 words
-(60 seconds)</property>
+(80 seconds)</property>
                             <property name="justify">center</property>
                           </object>
                         </child>
@@ -294,7 +294,7 @@
                             <property name="hexpand">true</property>
                             <property name="halign">center</property>
                             <property name="active">true</property>
-                            <property name="label">     No timer</property>
+                            <property name="label">    No timer</property>
                             <property name="action-name">win.standard</property>
                           </object>
                         </child>
@@ -310,32 +310,49 @@
                           <class name="frame"/>
                         </style>
                         <child>
-                          <object class="GtkCheckButton" id="speedrun">
+                          <object class="GtkCheckButton" id="clocked">
                             <property name="hexpand">true</property>
                             <property name="halign">center</property>
                             <property name="active">false</property>
-                            <property name="label">     Speedrun</property>
-                            <property name="action-name">win.speed</property>
+                            <property name="label">   With timer</property>
+                            <property name="action-name">win.timed</property>
                           </object>
                         </child>
                       </object>
                     </child>
                     <child>
-                      <object class="GtkFrame">
-                        <property name="vexpand">true</property>
-                        <property name="valign">start</property>
-                        <property name="height-request">63</property>
-                        <property name="width-request">162</property>
-                        <style>
-                          <class name="frame"/>
-                        </style>
+                      <object class="GtkBox">
+                        <property name="spacing">10</property>
                         <child>
-                          <object class="GtkCheckButton" id="clocked">
-                            <property name="hexpand">true</property>
-                            <property name="halign">center</property>
-                            <property name="active">false</property>
-                            <property name="label">         Timed</property>
-                            <property name="action-name">win.timed</property>
+                          <object class="GtkFrame">
+                            <property name="vexpand">true</property>
+                            <property name="valign">start</property>
+                            <property name="height-request">63</property>
+                            <property name="width-request">162</property>
+                            <style>
+                              <class name="frame"/>
+                            </style>
+                            <child>
+                              <object class="GtkCheckButton" id="speedrun">
+                                <property name="hexpand">true</property>
+                                <property name="halign">center</property>
+                                <property name="active">false</property>
+                                <property name="label">    Speedrun</property>
+                                <property name="action-name">win.speed</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton">
+                            <property name="vexpand">true</property>
+                            <property name="valign">start</property>
+                            <property name="margin-top">15</property>
+                            <property name="icon-name">question</property>
+                            <property name="action-name">win.question</property>
+                            <style>
+                              <class name="circular"/>
+                            </style>
                           </object>
                         </child>
                       </object>
@@ -374,7 +391,7 @@
                         <property name="width-request">120</property>
                         <property name="margin-end">30</property>
                         <property name="margin-top">30</property>
-                        <property name="label"></property>
+                        <property name="visible">false</property>
                       </object>
                     </child>
                   </object>

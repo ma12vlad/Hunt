@@ -40,7 +40,7 @@ class HuntApplication(Adw.Application):
         win.present()
 
     def on_about_action(self, *args):
-        about = Adw.AboutDialog(application_name='hunt',
+        about = Adw.AboutDialog(application_name='Hunt',
                                 application_icon='io.github.swordpuffin.hunt',
                                 developer_name='Nathan Perlman',
                                 version='0.1.0',

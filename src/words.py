@@ -52,5 +52,17 @@ related_words = {
     'Games': ['cards', 'dice', 'poker', 'bingo', 'jenga', 'clue', 'chess', 'risk', 'domino', 'go'],
     'Houses': ['home', 'cabin', 'loft', 'villa', 'barn', 'shack', 'duplex', 'castle', 'ranch', 'tower'],
     'Deserts': ['dunes', 'cactus', 'sands', 'oasis', 'rocks', 'heat', 'dust', 'dry', 'wind', 'arid'],
+    'Birds': ['sparrow', 'pigeon', 'parrot', 'crow', 'crane', 'heron', 'robin', 'swan', 'eagle', 'finch'],
+    'Beaches': ['sand', 'shell', 'sunset', 'breeze', 'shore', 'ocean', 'tide', 'coast', 'waves', 'reef'],
+    'Furniture': ['chair', 'table', 'sofa', 'shelf', 'bench', 'stool', 'bed', 'lamp', 'desk', 'couch'],
+    'Jewelry': ['ring', 'brace', 'pearl', 'chain', 'stone', 'gold', 'beads', 'cuff', 'watch', 'gem'],
+    'Languages': ['french', 'spanish', 'latin', 'greek', 'hindi', 'japan', 'korean', 'dutch', 'arabic', 'swahili'],
+    'Planets': ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'orbit'],
+    'Camping': ['tent', 'fire', 'trail', 'hike', 'woods', 'gear', 'lamp', 'sleep', 'camp', 'grill'],
+    'Music': ['piano', 'violin', 'flute', 'drums', 'guitar', 'notes', 'bass', 'rhythm', 'vocal', 'lyric'],
+    'Wonders': ['pyramids', 'statue', 'temple', 'garden', 'castle', 'palace', 'tower', 'ruins', 'bridge', 'stone'],
+    'Mythical Creatures': ['dragon', 'unicorn', 'fairy', 'troll', 'mermaid', 'elf', 'phoenix', 'sprite', 'hydra', 'gryphon'],
+    'Shapes': ['circle', 'square', 'triangle', 'oval', 'hexagon', 'pentagon', 'rhombus', 'sphere', 'cube', 'cone'],
+    'Desserts': ['cake', 'pie', 'brownie', 'cookie', 'tart', 'pudding', 'mousse', 'fudge', 'sorbet', 'gelato'],
 }
 
