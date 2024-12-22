@@ -31,7 +31,7 @@
                 {
                     "type" : "git",
                     "path" : "https://github.com/SwordPuffin/Hunt.git",
-                    "branch" : "main"
+                    "tag" : "v1.0.0"
                 }
             ]
         }
