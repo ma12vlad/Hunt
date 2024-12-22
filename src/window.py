@@ -82,7 +82,7 @@ class HuntWindow(Adw.ApplicationWindow):
             transient_for=self,
             message_type=Gtk.MessageType.INFO,
             buttons=Gtk.ButtonsType.OK,
-            text="Speedrun mode reduces the time allotted per word.\n\nFor example, with 60 seconds for 5 words, each word would only be available for 12 seconds before game over.\n\nWords in the category are given one at a time.",
+            text="Speedrun mode reduces the time allotted per word.\n\nFor example, with 60 seconds for 5 words, each word would only be available for 12 seconds before game over.\n\nWords in that category are given one at a time.",
         )
         dialog.add_css_class("title-4")
         dialog.get_message_area().get_first_child().set_justify(Gtk.Justification.CENTER)

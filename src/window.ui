@@ -348,7 +348,7 @@
                             <property name="vexpand">true</property>
                             <property name="valign">start</property>
                             <property name="margin-top">15</property>
-                            <property name="icon-name">question</property>
+                            <property name="icon-name">question-round-outline-symbolic</property>
                             <property name="action-name">win.question</property>
                             <style>
                               <class name="circular"/>
