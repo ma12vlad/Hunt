@@ -21,15 +21,15 @@
   </branding>
   <screenshots>
     <screenshot type="default">
-      <image>https://github.com/SwordPuffin/Hunt/blob/main/data/screenshots/Screenshot1.png</image>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot1.png</image>
     </screenshot>
     <screenshot>
-      <image>https://github.com/SwordPuffin/Hunt/blob/main/data/screenshots/Screenshot2.png</image>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot2.png</image>
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.0.1" date="2024-12-22">
-      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.0</url>
+    <release version="1.0.2" date="2024-12-22">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.2</url>
       <description translate="no">
         <p>First release</p>
       </description>

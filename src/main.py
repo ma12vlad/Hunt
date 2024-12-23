@@ -43,7 +43,7 @@ class HuntApplication(Adw.Application):
         about = Adw.AboutDialog(application_name='Hunt',
                                 application_icon='io.github.swordpuffin.hunt',
                                 developer_name='Nathan Perlman',
-                                version='1.0.1',
+                                version='1.0.2',
                                 developers=['Nathan Perlman'],
                                 copyright='© 2024 Nathan Perlman')
         about.present(self.props.active_window)
