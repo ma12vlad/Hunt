@@ -255,34 +255,45 @@ class HuntWindow(Adw.ApplicationWindow):
             self.words.append(self.random_value[i].upper())
         random.shuffle(self.words)
 
-    #Places the words in self.words into the grid in random places and random directions.
+    # Places the words in self.words into the grid in random places and in random directions
     def place_word_in_grid(self, word):
         placed = False
         attempts = 0
-        while(not placed):
+        max_attempts = 100  # Maximum attempts to prevent infinite loop
+
+        while(not placed and attempts < max_attempts):
+            attempts += 1
             direction = random.choice(['horizontal', 'vertical', 'diagonal'])
-            row = random.randint(0, self.height - 1) # Random start position
+            row = random.randint(0, self.height - 1)  # Random start position
             col = random.randint(0, self.length - 1)
 
-            #Places the word in its direction if it fits within the grid, and does not interfere with other words.
+            # Check horizontal placement with intersection allowed
+            if(direction == 'horizontal' and col + len(word) <= self.length):
+                if(all(self.grid_data[row][col + i] == ' ' or self.grid_data[row][col + i] == word[i].upper() for i in range(len(word)))):
+                    for i in range(len(word)):
+                        self.grid_data[row][col + i] = word[i].upper()
+                        self.buttons[row * self.length + col + i].set_label(word[i].upper())
+                    placed = True
 
-            if(direction == 'horizontal' and col + len(word) <= self.length and all(self.grid_data[row][col + i] == ' ' for i in range(len(word)))):
-                for i in range(len(word)):
-                    self.grid_data[row][col + i] = word[i].upper()
-                    self.buttons[row * self.length + col + i].set_label(word[i])
-                placed = True
+            # Check vertical placement with intersection allowed
+            elif(direction == 'vertical' and row + len(word) <= self.height):
+                if(all(self.grid_data[row + i][col] == ' ' or self.grid_data[row + i][col] == word[i].upper() for i in range(len(word)))):
+                    for i in range(len(word)):
+                        self.grid_data[row + i][col] = word[i].upper()
+                        self.buttons[(row + i) * self.length + col].set_label(word[i].upper())
+                    placed = True
 
-            elif(direction == 'vertical' and row + len(word) <= self.height and all(self.grid_data[row + i][col] == ' ' for i in range(len(word)))):
-                for i in range(len(word)):
-                    self.grid_data[row + i][col] = word[i].upper()
-                    self.buttons[(row + i) * self.length + col].set_label(word[i])
-                placed = True
+            # Check diagonal placement with intersection allowed
+            elif(direction == 'diagonal' and row + len(word) <= self.height and col + len(word) <= self.length):
+                if(all(self.grid_data[row + i][col + i] == ' ' or self.grid_data[row + i][col + i] == word[i].upper() for i in range(len(word)))):
+                    for i in range(len(word)):
+                        self.grid_data[row + i][col + i] = word[i].upper()  # Use uppercase for consistency
+                        self.buttons[(row + i) * self.length + (col + i)].set_label(word[i].upper())
+                    placed = True
 
-            elif(direction == 'diagonal' and row + len(word) <= self.height and col + len(word) <= self.length and all(self.grid_data[row + i][col + i] == ' ' for i in range(len(word)))):
-                for i in range(len(word)):
-                    self.grid_data[row + i][col + i] = word[i].lower()
-                    self.buttons[(row + i) * self.length + (col + i)].set_label(word[i])
-                placed = True
+        if(not placed):
+            print(f"Failed to place word '{word}' after {max_attempts} attempts.")
+            self.make_grid("activate", _)
 
     #Fetches the word in between the two selected buttons. Also checks if the word that is made is one of words the player is supposed to find
     def letter_selected(self, action, _, button):
