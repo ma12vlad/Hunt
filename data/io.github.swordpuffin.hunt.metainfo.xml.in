@@ -5,14 +5,16 @@
   <project_license>GPL-3.0-or-later</project_license>
 
   <name>Hunt</name>
-  <summary>A simple word search game</summary>
+  <summary>Find every word</summary>
   <description>
-    <p>Hunt is an easy word search app made with Python. You can play with or without a timer, or a speedrun mode, where you must find each individual word in a much smaller length of time</p>
+    <p>Hunt is an easy word search game. You can play with or without a timer, or a speedrun mode, where you must find each individual word in a much smaller length of time.</p>
   </description>
   <developer id="io.github.swordpuffin.hunt">
     <name>Nathan Perlman</name>
   </developer>
   <url type="homepage">https://github.com/SwordPuffin/Hunt</url>
+  <url type="bugtracker">https://github.com/SwordPuffin/Hunt/issues</url>
+  <url type="contribute">https://github.com/SwordPuffin/Hunt?tab=readme-ov-file#contributing</url>
   <launchable type="desktop-id">io.github.swordpuffin.hunt.desktop</launchable>
   <content_rating type="oars-1.1" />
   <branding>
@@ -21,12 +23,21 @@
   </branding>
   <screenshots>
     <screenshot type="default">
+      <caption>Setting up a board</caption>
       <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot1.png</image>
     </screenshot>
     <screenshot>
+      <caption>Playing the game</caption>
       <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot2.png</image>
     </screenshot>
   </screenshots>
+  <requires>
+    <display_length compare="ge">905</display_length>
+    <internet>offline-only</internet>
+  </requires>
+  <supports>
+    <control>pointing</control>
+  </supports>
   <releases>
     <release version="1.0.2" date="2024-12-22">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.2</url>
