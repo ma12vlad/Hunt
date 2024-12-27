@@ -2,6 +2,9 @@
 
 A simple word search game built with GTK4 and Python.
 
+<a href='https://flathub.org/apps/io.github.swordpuffin.hunt'>
+    <img width='240' alt='Get it on Flathub' src='https://flathub.org/api/badge?svg&locale=en'/>
+</a>
 
 ## How To Play
 
