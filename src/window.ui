@@ -65,7 +65,7 @@
                               <property name="climb-rate">1</property>
                               <property name="adjustment">
                                 <object class="GtkAdjustment">
-                                  <property name="lower">7</property>
+                                  <property name="lower">8</property>
                                   <property name="upper">18</property>
                                   <property name="step-increment">1</property>
                                   <property name="value">10</property>
@@ -92,7 +92,7 @@
                               <property name="climb-rate">1</property>
                               <property name="adjustment">
                                 <object class="GtkAdjustment">
-                                  <property name="lower">7</property>
+                                  <property name="lower">8</property>
                                   <property name="upper">18</property>
                                   <property name="step-increment">1</property>
                                   <property name="value">10</property>
@@ -333,28 +333,41 @@
                               <class name="frame"/>
                             </style>
                             <child>
-                              <object class="GtkCheckButton" id="speedrun">
-                                <property name="hexpand">true</property>
-                                <property name="halign">center</property>
-                                <property name="active">false</property>
-                                <property name="label">    Speedrun</property>
-                                <property name="action-name">win.speed</property>
+                              <object class="GtkBox">
+                                <child>
+                                  <object class="GtkCheckButton" id="speedrun">
+                                    <property name="hexpand">true</property>
+                                    <property name="halign">center</property>
+                                    <property name="active">false</property>
+                                    <property name="label">    Blitz</property>
+                                    <property name="action-name">win.speed</property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="vexpand">true</property>
+                                    <property name="valign">center</property>
+                                    <property name="margin-end">15</property>
+                                    <property name="icon-name">question-round-outline-symbolic</property>
+                                    <property name="action-name">win.question</property>
+                                    <style>
+                                      <class name="circular"/>
+                                    </style>
+                                  </object>
+                                </child>
                               </object>
                             </child>
                           </object>
                         </child>
-                        <child>
-                          <object class="GtkButton">
-                            <property name="vexpand">true</property>
-                            <property name="valign">start</property>
-                            <property name="margin-top">15</property>
-                            <property name="icon-name">question-round-outline-symbolic</property>
-                            <property name="action-name">win.question</property>
-                            <style>
-                              <class name="circular"/>
-                            </style>
-                          </object>
-                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwSplitButton">
+                        <property name="label">Categories</property>
+                        <property name="height-request">50</property>
+                        <property name="popover">category_popover</property>
+                        <property name="vexpand">true</property>
+                        <property name="valign">start</property>
                       </object>
                     </child>
                   </object>
@@ -364,6 +377,7 @@
             <child>
               <object class="GtkBox" id="main_box">
                 <property name="orientation">vertical</property>
+                <property name="valign">center</property>
                 <child>
                   <object class="GtkBox">
                     <child>
@@ -420,11 +434,8 @@
             </child>
             <child>
               <object class="GtkGrid" id="grid">
-                <property name="margin-top">25</property>
-                <property name="margin-bottom">25</property>
-                <property name="margin-end">45</property>
-                <property name="hexpand">true</property>
-                <property name="vexpand">true</property>
+                <property name="halign">center</property>
+                <property name="valign">center</property>
               </object>
             </child>
           </object>
@@ -432,6 +443,44 @@
       </object>
     </property>
   </template>
+  <object class="GtkPopover" id="category_popover">
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">1</property>
+        <child>
+          <object class="GtkSearchEntry" id="search_entry">
+            <property name="placeholder-text" translatable="yes">Search categories</property>
+          </object>
+        </child>
+          <child>
+            <object class="GtkButton" id="random_category">
+              <property name="margin-top">35</property>
+              <property name="margin-bottom">10</property>
+              <property name="margin-start">25</property>
+              <property name="margin-end">25</property>
+              <property name="label">RANDOM</property>
+              <property name="action-name">win.random_category</property>
+              <style>
+                <class name="title-4"/>
+                </style>
+            </object>
+          </child>
+        <child>
+          <object class="AdwStatusPage">
+            <property name="width-request">300</property>
+            <child>
+              <object class="GtkListBox" id="category_list">
+              <style>
+                <class name="title-4"/>
+                <class name="frame"/>
+              </style>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
   <menu id="primary_menu">
     <section>
       <item>

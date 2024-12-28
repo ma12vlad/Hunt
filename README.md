@@ -8,7 +8,7 @@ A simple word search game built with GTK4 and Python.
 
 ## How To Play
 
-Hunt is an easy word search app. You can play with or without a timer, or in speedrun mode, where you must find each individual word in a much smaller length of time.
+Hunt is an easy word search app. You can play with or without a timer, or in blitz mode, where you must find each individual word in a much smaller length of time.
 
 
 ## Screenshots
@@ -32,6 +32,7 @@ git clone https://github.com/SwordPuffin/Hunt
 Then, in Gnome-Builder you can add it to your projects.
 
 ---
-if you are a graphic designer who can help with creating a better app icon, just create a pull request with whatever you have, I would really appreciate it :).  
+If you are a graphic designer who can help with creating a better app icon, just create a pull request with whatever you have, I would really appreciate it :).
 
 Help with translations for languages other than English would also be nice.
+

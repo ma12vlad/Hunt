@@ -39,6 +39,18 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.0.3" date="2024-12-27">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.3</url>
+      <description translate="no">
+        <p>Hunt 1.0.3 is a small update that is mostly just more polish</p>
+        <p>Notable changes:</p>
+        <ul>
+          <li>Now allows the player to select what word category they would like to use, instead of always being random</li>
+          <li>The word placement algorithm is now more reliable, and allows for word intersections</li>
+          <li>Added more word categories to play with</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.2" date="2024-12-22">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.2</url>
       <description translate="no">
