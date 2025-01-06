@@ -278,7 +278,7 @@
                     <property name="spacing">10</property>
                     <property name="width-request">120</property>
                     <style>
-                      <class name="title-3"/>
+                      <class name="title-2"/>
                     </style>
                     <child>
                       <object class="GtkFrame">
@@ -362,12 +362,13 @@
                       </object>
                     </child>
                     <child>
-                      <object class="AdwSplitButton">
-                        <property name="label">Categories</property>
+                      <object class="AdwSplitButton" id="active_category">
+                        <property name="label">RANDOM</property>
                         <property name="height-request">50</property>
                         <property name="popover">category_popover</property>
                         <property name="vexpand">true</property>
                         <property name="valign">start</property>
+                        <property name="width-request">260</property>
                       </object>
                     </child>
                   </object>
@@ -448,32 +449,34 @@
       <object class="GtkBox">
         <property name="orientation">1</property>
         <child>
-          <object class="GtkSearchEntry" id="search_entry">
-            <property name="placeholder-text" translatable="yes">Search categories</property>
+          <object class="GtkButton" id="random_category">
+            <property name="margin-top">10</property>
+            <property name="margin-bottom">15</property>
+            <property name="margin-start">25</property>
+            <property name="margin-end">25</property>
+            <property name="label">Random Category</property>
+            <property name="action-name">win.random_category</property>
           </object>
         </child>
-          <child>
-            <object class="GtkButton" id="random_category">
-              <property name="margin-top">35</property>
-              <property name="margin-bottom">10</property>
-              <property name="margin-start">25</property>
-              <property name="margin-end">25</property>
-              <property name="label">RANDOM</property>
-              <property name="action-name">win.random_category</property>
-              <style>
-                <class name="title-4"/>
-                </style>
-            </object>
-          </child>
+        <child>
+          <object class="GtkSearchEntry" id="search_entry">
+            <property name="placeholder-text" translatable="yes">Search categories</property>
+            <property name="margin-bottom">10</property>
+            <property name="margin-start">15</property>
+            <property name="margin-end">15</property>
+          </object>
+        </child>
         <child>
           <object class="AdwStatusPage">
-            <property name="width-request">300</property>
             <child>
               <object class="GtkListBox" id="category_list">
-              <style>
-                <class name="title-4"/>
-                <class name="frame"/>
-              </style>
+                <property name="width-request">300</property>
+                <property name="vexpand">true</property>
+                <property name="valign">start</property>
+                <style>
+                  <class name="title-4"/>
+                  <class name="frame"/>
+                </style>
               </object>
             </child>
           </object>

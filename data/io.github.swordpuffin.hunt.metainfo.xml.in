@@ -3,11 +3,10 @@
   <id>io.github.swordpuffin.hunt</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
-
   <name>Hunt</name>
   <summary>Find every word</summary>
   <description>
-    <p>Hunt is an easy word search game. You can play with or without a timer, or a speedrun mode, where you must find each individual word in a much smaller length of time.</p>
+    <p>Hunt is an easy word search game. You can play with or without a timer, or a blitz mode, where you must find each individual word in a much smaller length of time.</p>
   </description>
   <developer id="io.github.swordpuffin.hunt">
     <name>Nathan Perlman</name>
@@ -39,6 +38,18 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.0.4" date="2025-1-5">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.4</url>
+      <description translate="no">
+        <p>Hunt 1.0.4 includes a few minor fixes and changes</p>
+        <p>Updates:</p>
+        <ul>
+          <li>Change Hunt's app icon</li>
+          <li>Fix a bug that occured with one of the categories</li>
+          <li>Add more word categories</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.3" date="2024-12-27">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.3</url>
       <description translate="no">

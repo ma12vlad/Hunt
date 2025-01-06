@@ -1,6 +1,6 @@
 # main.py
 #
-# Copyright 2024 Nathan Perlman
+# Copyright 2025 Nathan Perlman
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -43,10 +43,10 @@ class HuntApplication(Adw.Application):
         about = Adw.AboutDialog(application_name='Hunt',
                                 application_icon='io.github.swordpuffin.hunt',
                                 developer_name='Nathan Perlman',
-                                version='1.0.3',
+                                version='1.0.4',
                                 issue_url='https://github.com/SwordPuffin/Hunt/issues',
                                 developers=['Nathan Perlman'],
-                                copyright='© 2024 Nathan Perlman')
+                                copyright='© 2025 Nathan Perlman')
         about.present(self.props.active_window)
 
     def create_action(self, name, callback, shortcuts=None):

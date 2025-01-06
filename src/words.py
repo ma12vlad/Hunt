@@ -29,7 +29,7 @@ related_words = {
     'PHOTOGRAPHY': ['photo', 'frame', 'lens', 'scene', 'focus', 'angle', 'light', 'flash', 'shot', 'view'],
     'ARCHITECTURE': ['build', 'house', 'tower', 'brick', 'urban', 'plans', 'roof', 'rooms', 'stone', 'wall'],
     'NATURE': ['plant', 'river', 'trees', 'grass', 'flora', 'field', 'woods', 'stone', 'bush', 'vine'],
-    'CRAFTS': ['sew', 'paint', 'knit', 'mold', 'lace', 'thread', 'bead', 'stitch', 'DIY', 'craft'],
+    'CRAFTS': ['sew', 'paint', 'knit', 'mold', 'lace', 'thread', 'bead', 'stitch', 'diy', 'craft'],
     'BOARD GAMES': ['chess', 'dice', 'clue', 'cards', 'risk', 'pawn', 'check', 'move', 'jenga', 'board'],
     'VIDEO GAMES': ['games', 'enemy', 'score', 'level', 'play', 'pixel', 'quest', 'shoot', 'jump', 'fight'],
     'GARDENING': ['plant', 'grow', 'prune', 'tools', 'soil', 'water', 'seeds', 'weeds', 'herbs', 'pots'],
@@ -80,6 +80,23 @@ related_words = {
     'WILDLIFE': ['deer', 'fox', 'wolf', 'bear', 'owl', 'eagle', 'snake', 'frog', 'moose', 'otter'],
     'SEASONS': ['summer', 'winter', 'autumn', 'spring', 'fall', 'season', 'harvest', 'snow', 'breeze', 'blossom'],
     'GEMS': ['diamond', 'ruby', 'lapis', 'opal', 'jasper', 'emerald', 'topaz', 'garnet', 'pearl', 'onyx'],
-    'EMOTIONS': ['happy', 'sad', 'angry', 'excited', 'fear', 'love', 'joy', 'angst', 'grief', 'relief']
+    'EMOTIONS': ['happy', 'sad', 'angry', 'excited', 'fear', 'love', 'joy', 'angst', 'grief', 'relief'],
+    'CANDY': ['sugar', 'fudge', 'candy', 'mint', 'gummy', 'sweet', 'treats', 'choco', 'caramel', 'nougat'],
+    'TOOLS': ['screw', 'drill', 'wrench', 'plier', 'knife', 'saw', 'level', 'ruler', 'blade', 'bolts'],
+    'ALIENS': ['alien', 'ufo', 'mars', 'green', 'ship', 'probe', 'beam', 'space', 'zoom', 'zap'],
+    'CASTLES': ['tower', 'moat', 'stone', 'arch', 'court', 'king', 'queen', 'walls', 'draw', 'gate'],
+    'ISLANDS': ['palm', 'sands', 'reef', 'coast', 'beach', 'sea', 'cove', 'boats', 'docks', 'tropic'],
+    'CLOWNS': ['clown', 'mime', 'wig', 'mask', 'red', 'nose', 'balloon', 'laugh', 'joke', 'prank'],
+    'GHOSTS': ['ghost', 'haunt', 'spook', 'ghoul', 'scare', 'crypt', 'eerie', 'fright', 'wail', 'chill'],
+    'CAVES': ['stone', 'bats', 'rocks', 'dark', 'stalag', 'depth', 'troll', 'echo', 'gloom', 'vault'],
+    'ROBOTS': ['servo', 'logic', 'cog', 'bolt', 'brain', 'cable', 'metal', 'tools', 'arm', 'gear'],
+    'TREES': ['oak', 'pine', 'bark', 'leaves', 'roots', 'twig', 'shade', 'apple', 'fruit', 'moss'],
+    'WIZARDS': ['magic', 'spell', 'cloak', 'staff', 'potion', 'witch', 'runes', 'charm', 'wand', 'books'],
+    'VOLCANO': ['lava', 'smoke', 'ash', 'crust', 'rock', 'fire', 'erupts', 'earth', 'crack', 'magma'],
+    'DRAGONS': ['scales', 'wings', 'fire', 'tail', 'claws', 'roar', 'flame', 'fangs', 'beast', 'lair'],
+    'MIRRORS': ['glass', 'frame', 'look', 'shine', 'image', 'reflect', 'ghost', 'room', 'angle', 'clean'],
+    'FAIRIES': ['pixie', 'tiny', 'wings', 'spark', 'magic', 'light', 'dust', 'charm', 'lore', 'elf'],
+    'MARKETS': ['trade', 'stalls', 'fruit', 'value', 'goods', 'crowd', 'money', 'sales', 'deals', 'price'],
+    'TUNNELS': ['earth', 'dark', 'shaft', 'mines', 'train', 'pipes', 'crawl', 'route', 'gates', 'dig']
 }
 

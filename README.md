@@ -36,3 +36,4 @@ If you are a graphic designer who can help with creating a better app icon, just
 
 Help with translations for languages other than English would also be nice.
 
+

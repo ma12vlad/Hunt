@@ -27,6 +27,7 @@ class HuntWindow(Adw.ApplicationWindow):
     category_list = Gtk.Template.Child()
     search_entry = Gtk.Template.Child()
     random_category = Gtk.Template.Child()
+    active_category = Gtk.Template.Child()
     length = 10
     height = 10
     words = []
@@ -111,9 +112,13 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Changes the active category depending on what row in self.category_list is selected
     def on_row_activated(self, listbox, row):
-        if(row is None):
-            row = self.random_category
-        self.selected_category = row.get_child().get_text()
+        if(row is not None):
+            self.selected_category = row.get_child().get_text()
+            self.active_category.get_first_child().set_label(row.get_child().get_text())
+        else:
+            self.selected_category = "RANDOM"
+            self.active_category.get_first_child().set_label("RANDOM")
+
 
     def question(self, action, _):
         dialog = Gtk.MessageDialog(
