@@ -518,11 +518,11 @@ class HuntWindow(Adw.ApplicationWindow):
         button_box.set_halign(Gtk.Align.CENTER)
 
         # Add buttons to the button box
-        new_game_button = Gtk.Button(label="New Game")
+        new_game_button = Gtk.Button(label=(_("New Game")))
         new_game_button.connect("clicked", lambda _: self.restart_game("activate", _))
         button_box.append(new_game_button)
 
-        close_button = Gtk.Button(label="Close")
+        close_button = Gtk.Button(label=(_("Close")))
         close_button.connect("clicked", lambda _: self.close_end_dialogue("activate", _))
         button_box.append(close_button)
         button_box.set_margin_bottom(15)
