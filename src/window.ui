@@ -79,7 +79,7 @@
                         </child>
                         <child>
                           <object class="GtkLabel">
-                            <property name="label">Width</property>
+                            <property name="label" translatable="yes">Width</property>
                             <layout>
                               <property name="column">0</property>
                               <property name="row">1</property>
@@ -106,7 +106,7 @@
                         </child>
                         <child>
                           <object class="GtkLabel">
-                            <property name="label">Words</property>
+                            <property name="label" translatable="yes">Words</property>
                             <layout>
                               <property name="column">0</property>
                               <property name="row">3</property>
@@ -133,7 +133,7 @@
                         </child>
                         <child>
                           <object class="GtkLabel">
-                            <property name="label">Time (seconds)</property>
+                            <property name="label" translatable="yes">Time (seconds)</property>
                             <layout>
                               <property name="column">0</property>
                               <property name="row">4</property>
@@ -160,7 +160,7 @@
                         </child>
                         <child>
                           <object class="GtkButton">
-                            <property name="label">Start</property>
+                            <property name="label" translatable="yes">Start</property>
                             <property name="action-name">win.custom_start</property>
                             <style>
                               <class name="suggested-action"/>
@@ -173,7 +173,7 @@
                         </child>
                         <child>
                           <object class="GtkButton">
-                            <property name="label">Back</property>
+                            <property name="label" translatable="yes">Back</property>
                             <property name="action-name">win.back</property>
                             <style>
                               <class name="destructive-action"/>
@@ -202,7 +202,7 @@
                         <property name="height-request">200</property>
                         <child>
                           <object class="GtkLabel">
-                              <property name="label">8 x 8 grid
+                              <property name="label" translatable="yes">8 x 8 grid
 
 5 words
 (30 seconds)</property>
@@ -223,7 +223,7 @@
                         <property name="action-name">win.medium</property>
                         <child>
                           <object class="GtkLabel">
-                              <property name="label">12 x 12 grid
+                              <property name="label" translatable="yes">12 x 12 grid
 
 8 words
 (60 seconds)</property>
@@ -243,7 +243,7 @@
                         <property name="action-name">win.large</property>
                         <child>
                           <object class="GtkLabel">
-                              <property name="label">16 x 16 grid
+                              <property name="label" translatable="yes">16 x 16 grid
 
 10 words
 (80 seconds)</property>
@@ -261,7 +261,7 @@
                         <property name="width-request">200</property>
                         <property name="height-request">200</property>
                         <property name="action-name">win.custom</property>
-                        <property name="label">
+                        <property name="label" translatable="yes">
     Custom
                         </property>
                         <layout>
@@ -294,7 +294,7 @@
                             <property name="hexpand">true</property>
                             <property name="halign">center</property>
                             <property name="active">true</property>
-                            <property name="label">    No timer</property>
+                            <property name="label" translatable="yes">    No timer</property>
                             <property name="action-name">win.standard</property>
                           </object>
                         </child>
@@ -314,7 +314,7 @@
                             <property name="hexpand">true</property>
                             <property name="halign">center</property>
                             <property name="active">false</property>
-                            <property name="label">   With timer</property>
+                            <property name="label" translatable="yes">   With timer</property>
                             <property name="action-name">win.timed</property>
                           </object>
                         </child>
@@ -339,7 +339,7 @@
                                     <property name="hexpand">true</property>
                                     <property name="halign">center</property>
                                     <property name="active">false</property>
-                                    <property name="label">    Blitz</property>
+                                    <property name="label" translatable="yes">    Blitz</property>
                                     <property name="action-name">win.speed</property>
                                   </object>
                                 </child>
@@ -363,7 +363,7 @@
                     </child>
                     <child>
                       <object class="AdwSplitButton" id="active_category">
-                        <property name="label">RANDOM</property>
+                        <property name="label" translatable="yes">RANDOM</property>
                         <property name="height-request">50</property>
                         <property name="popover">category_popover</property>
                         <property name="vexpand">true</property>
@@ -397,7 +397,7 @@
                       <object class="GtkButton">
                         <property name="margin-end">20</property>
                         <property name="margin-top">30</property>
-                        <property name="label">Back to menu</property>
+                        <property name="label" translatable="yes">Back to menu</property>
                         <property name="action-name">win.restart</property>
                       </object>
                     </child>
