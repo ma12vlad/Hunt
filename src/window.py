@@ -486,7 +486,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.current_word = None
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
-        self.dialog = Gtk.Dialog(title="Game Over", transient_for=self, modal=True)
+        self.dialog = Gtk.Dialog(title=(_("Game Over")), transient_for=self, modal=True)
         self.dialog.set_default_size(300, 200)
         self.dialog.set_decorated(False)
 
