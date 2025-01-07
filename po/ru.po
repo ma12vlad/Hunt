@@ -1,0 +1,153 @@
+# SPDX-FileCopyrightText: 2025 mva <ma12@rambler.ru>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-01-07 22:32+0300\n"
+"PO-Revision-Date: 2025-01-07 22:33+0300\n"
+"Last-Translator: mva <ma12@rambler.ru>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<"
+"=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.4\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: src/main.py\n"
+"X-Poedit-SearchPath-1: src/window.py\n"
+"X-Poedit-SearchPath-2: src/window.ui\n"
+"X-Poedit-SearchPath-3: src/gtk/help-overlay.ui\n"
+"X-Poedit-SearchPath-4: data/io.github.swordpuffin.hunt.desktop.in\n"
+"X-Poedit-SearchPath-5: data/io.github.swordpuffin.hunt.gschema.xml\n"
+"X-Poedit-SearchPath-6: data/io.github.swordpuffin.hunt.metainfo.xml.in\n"
+
+#: src/gtk/help-overlay.ui:11
+msgid "General"
+msgstr "Основные"
+
+#: src/gtk/help-overlay.ui:14
+msgid "Show Shortcuts"
+msgstr "Показать сочетания клавиш"
+
+#: src/gtk/help-overlay.ui:20
+msgid "Quit"
+msgstr "Выйти"
+
+#: src/window.py:489
+msgid "Game Over"
+msgstr "Конец игры"
+
+#: src/window.py:521
+msgid "New Game"
+msgstr "Новая игра"
+
+#: src/window.py:525
+msgid "Close"
+msgstr "Закрыть"
+
+#: src/window.ui:6
+msgid "Hunt"
+msgstr ""
+
+#: src/window.ui:17
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: src/window.ui:82
+msgid "Width"
+msgstr "Ширина"
+
+#: src/window.ui:109
+msgid "Words"
+msgstr "Слова"
+
+#: src/window.ui:136
+msgid "Time (seconds)"
+msgstr "Время(секунды)"
+
+#: src/window.ui:163
+msgid "Start"
+msgstr "Cтарт"
+
+#: src/window.ui:176
+msgid "Back"
+msgstr "Назад"
+
+#: src/window.ui:205
+msgid ""
+"8 x 8 grid\n"
+"\n"
+"5 words\n"
+"(30 seconds)"
+msgstr ""
+"сетка 8 х 8\n"
+"5 слов\n"
+"(30 секунд)"
+
+#: src/window.ui:226
+msgid ""
+"12 x 12 grid\n"
+"\n"
+"8 words\n"
+"(60 seconds)"
+msgstr ""
+"сетка 12 x 12\n"
+"\n"
+"8 слов\n"
+"(60 секунд)"
+
+#: src/window.ui:246
+msgid ""
+"16 x 16 grid\n"
+"\n"
+"10 words\n"
+"(80 seconds)"
+msgstr ""
+"сетка 16 x 16\n"
+"\n"
+"10 слов\n"
+"(80 секунд)"
+
+#: src/window.ui:264
+msgid ""
+"\n"
+"    Custom\n"
+"                        "
+msgstr ""
+"\n"
+"    Пользовательский\n"
+"                                            "
+
+#: src/window.ui:297
+msgid "    No timer"
+msgstr "  Без таймера"
+
+#: src/window.ui:317
+msgid "   With timer"
+msgstr "  С таймером"
+
+#: src/window.ui:342
+msgid "    Blitz"
+msgstr "  Блиц"
+
+#: src/window.ui:366
+msgid "RANDOM"
+msgstr "СЛУЧАЙНО"
+
+#: src/window.ui:400
+msgid "Back to menu"
+msgstr "Возврат в меню"
+
+#: src/window.ui:463
+msgid "Search categories"
+msgstr "Категории поиска"
+
+#: src/window.ui:490
+msgid "_Keyboard Shortcuts"
+msgstr "_Сочетания клавиш"
+
+#: src/window.ui:494
+msgid "_About Hunt"
+msgstr "_О Hunt"
+
