@@ -486,7 +486,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.current_word = None
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
-        self.dialog = Gtk.Dialog(title="Game Over", transient_for=self, modal=True)
+        self.dialog = Gtk.Dialog(title=(_("Game Over")), transient_for=self, modal=True)
         self.dialog.set_default_size(300, 200)
         self.dialog.set_decorated(False)
 
@@ -518,11 +518,11 @@ class HuntWindow(Adw.ApplicationWindow):
         button_box.set_halign(Gtk.Align.CENTER)
 
         # Add buttons to the button box
-        new_game_button = Gtk.Button(label="New Game")
+        new_game_button = Gtk.Button(label=(_("New Game")))
         new_game_button.connect("clicked", lambda _: self.restart_game("activate", _))
         button_box.append(new_game_button)
 
-        close_button = Gtk.Button(label="Close")
+        close_button = Gtk.Button(label=(_("Close")))
         close_button.connect("clicked", lambda _: self.close_end_dialogue("activate", _))
         button_box.append(close_button)
         button_box.set_margin_bottom(15)
