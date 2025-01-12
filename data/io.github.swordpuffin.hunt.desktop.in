@@ -5,6 +5,11 @@ Icon=io.github.swordpuffin.hunt
 Terminal=false
 Type=Application
 Categories=Game;
-Keywords=Search;Word;Hunt
 StartupNotify=true
 DBusActivatable=true
+
+Keywords=Search;Word;Hunt
+Comment=Easy word search game
+
+Keywords[ru]=Поиск;Слова;Охота;Hunt
+Comment[ru]=Простая игра в поиск английских слов
