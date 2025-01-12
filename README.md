@@ -32,8 +32,6 @@ git clone https://github.com/SwordPuffin/Hunt
 Then, in Gnome-Builder you can add it to your projects.
 
 ---
-If you are a graphic designer who can help with creating a better app icon, just create a pull request with whatever you have, I would really appreciate it :).
-
-Help with translations for languages other than English would also be nice.
+Any help with translating Hunt into other languages would be much appreciated :).
 
 
