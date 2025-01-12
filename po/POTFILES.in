@@ -1,9 +1,7 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
-data/io.github.swordpuffin.hunt.desktop.in
-data/io.github.swordpuffin.hunt.metainfo.xml.in
-data/io.github.swordpuffin.hunt.gschema.xml
 src/gtk/help-overlay.ui
 src/main.py
 src/window.py
 src/window.ui
+src/words.py
