@@ -117,7 +117,7 @@ class HuntWindow(Adw.ApplicationWindow):
             self.active_category.get_first_child().set_label(row.get_child().get_text())
         else:
             self.selected_category = "RANDOM"
-            self.active_category.get_first_child().set_label("RANDOM")
+            self.active_category.get_first_child().set_label(_("RANDOM"))
 
 
     def question(self, action, _):
