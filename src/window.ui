@@ -52,7 +52,7 @@
                         </style>
                         <child>
                           <object class="GtkLabel">
-                            <property name="label">Height</property>
+                            <property name="label" translatable="yes">Height</property>
                             <layout>
                               <property name="column">0</property>
                               <property name="row">0</property>
