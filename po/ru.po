@@ -60,6 +60,10 @@ msgstr ""
 msgid "Main Menu"
 msgstr "Главное меню"
 
+#: src/window.ui:55
+msgid "Height"
+msgstr "Высота"
+
 #: src/window.ui:82
 msgid "Width"
 msgstr "Ширина"
