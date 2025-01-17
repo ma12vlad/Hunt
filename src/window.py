@@ -12,12 +12,11 @@ class HuntWindow(Adw.ApplicationWindow):
     grid = Gtk.Template.Child()
     main_box = Gtk.Template.Child()
     frame = Gtk.Template.Child()
-    frame_label = Gtk.Template.Child()
     start_box = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
     clock = Gtk.Template.Child()
     standard = Gtk.Template.Child()
-    speedrun = Gtk.Template.Child()
+    blitz = Gtk.Template.Child()
     clocked = Gtk.Template.Child()
     option_grid = Gtk.Template.Child()
     words_value = Gtk.Template.Child()
@@ -28,15 +27,18 @@ class HuntWindow(Adw.ApplicationWindow):
     search_entry = Gtk.Template.Child()
     random_category = Gtk.Template.Child()
     active_category = Gtk.Template.Child()
+
+    found_words = []
+    words = []
+    word_buttons = []
+    colors = ["red1", "red2", "red3", "orange3", "purple2", "blue1", "blue2", "blue3", "blue4", "blue5", "yellow1", "yellow2", "yellow3", "yellow4", "green1"]
+
     length = 10
     height = 10
-    words = []
     word_count = 3
-    found_words = []
     timer = 10
     saved_time = 10
-    colors = ["red1", "red2", "red3", "orange3", "purple2", "blue1", "blue2", "blue3", "blue4", "blue5", "yellow1", "yellow2", "yellow3", "yellow4", "green1"]
-    word_buttons = []
+
     timed_game = False
     game_over = False
     fast = False
@@ -49,12 +51,6 @@ class HuntWindow(Adw.ApplicationWindow):
     divided_timer = None
     selected_category = "RANDOM"
 
-    #For some reason, this function would not work if I tried to import it from main.py, so it end up here.
-    def create_action(self, name, callback):
-        action = Gio.SimpleAction.new(name, None)
-        action.connect("activate", callback)
-        self.add_action(action)
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         css_provider = Gtk.CssProvider()
@@ -63,20 +59,21 @@ class HuntWindow(Adw.ApplicationWindow):
             Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
         )
 
+        from .main import HuntApplication
+
         #Connect each button to its designated function
-        self.create_action('reload', self.reload)
-        self.create_action('small', self.small)
-        self.create_action('medium', self.medium)
-        self.create_action('large', self.large)
-        self.create_action('custom', self.custom)
-        self.create_action('back', self.back)
-        self.create_action('custom_start', self.custom_start)
-        self.create_action('timed', self.timed)
-        self.create_action('standard', self.normal)
-        self.create_action('speed', self.speed)
-        self.create_action('restart', self.restart)
-        self.create_action('question', self.question)
-        self.create_action('random_category', self.on_row_activated)
+        HuntApplication.create_action(self, 'reload', self.reload)
+        HuntApplication.create_action(self, 'small', self.small)
+        HuntApplication.create_action(self, 'medium', self.medium)
+        HuntApplication.create_action(self, 'large', self.large)
+        HuntApplication.create_action(self, 'custom', self.custom)
+        HuntApplication.create_action(self, 'back', self.back)
+        HuntApplication.create_action(self, 'custom_start', self.custom_start)
+        HuntApplication.create_action(self, 'timed', self.timed)
+        HuntApplication.create_action(self, 'standard', self.normal)
+        HuntApplication.create_action(self, 'speed', self.speed)
+        HuntApplication.create_action(self, 'restart', self.back_to_main_menu)
+        HuntApplication.create_action(self, 'random_category', self.on_row_activated)
 
         self.main_box.set_visible(False)
         self.grid.set_visible(False)
@@ -119,22 +116,7 @@ class HuntWindow(Adw.ApplicationWindow):
             self.selected_category = "RANDOM"
             self.active_category.get_first_child().set_label(_("RANDOM"))
 
-
-    def question(self, action, _):
-        dialog = Gtk.MessageDialog(
-            transient_for=self,
-            message_type=Gtk.MessageType.INFO,
-            buttons=Gtk.ButtonsType.OK,
-            text="Blitz mode reduces the time allotted per word.\n\nFor example, with 60 seconds for 5 words, each word would only be available for 12 seconds before game over.\n\nWords in that category are given one at a time.",
-        )
-        dialog.add_css_class("title-4")
-        dialog.get_message_area().get_first_child().set_justify(Gtk.Justification.CENTER)
-        dialog.show()
-        dialog.connect("response", self.response)
-
-    def response(self, dialog, response_id):
-        dialog.close()
-    #Restarts the game
+    #back_to_main_menus the game
     def reload(self, action, _):
         if(self.timed_game or self.fast):
             GLib.Source.remove(self.timer_id)
@@ -144,7 +126,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #No timer and not in blitz mode
     def normal(self, action, _):
-        self.clocked.set_active(False), self.speedrun.set_active(False)
+        self.clocked.set_active(False), self.blitz.set_active(False)
         self.standard.set_active(True)
         self.clock.set_visible(False)
         self.timed_game = False
@@ -152,7 +134,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #With timer, but not blitz
     def timed(self, action, _):
-        self.standard.set_active(False), self.speedrun.set_active(False)
+        self.standard.set_active(False), self.blitz.set_active(False)
         self.clocked.set_active(True)
         self.clock.set_visible(True)
         self.timed_game = True
@@ -161,7 +143,7 @@ class HuntWindow(Adw.ApplicationWindow):
     #Blitz mode, gives words one at a time, sets the timer at: length of time/# of words
     def speed(self, action, _):
         self.standard.set_active(False), self.clocked.set_active(False)
-        self.speedrun.set_active(True)
+        self.blitz.set_active(True)
         self.clock.set_visible(True)
         self.timed_game = False
         self.fast = True
@@ -215,9 +197,10 @@ class HuntWindow(Adw.ApplicationWindow):
         self.grid.set_size_request(400 + (self.length - 8) / 2 * 100, 400 + (self.height - 8) / 2 * 100)
 
     #Back from a running game to the main menu
-    def restart(self, action, _):
+    def back_to_main_menu(self, action, _):
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
+        self.found_words.clear()
         self.set_default_size(700, 450)
         self.start_box.set_visible(True)
         self.main_box.set_visible(False)
@@ -292,8 +275,6 @@ class HuntWindow(Adw.ApplicationWindow):
                 #Occurs with words that fail to be placed
                 if(label.get_label().lower() in related_words[self.random_key] and all(child.get_first_child().get_label() != label.get_label() for child in self.frame)):
                     self.frame.append(label)
-
-
         else: #Add self.divided_timer to however much it was before, and place the one new word into the grid as well as onto the GTKListBox.
             self.timer += self.divided_timer
             self.clock.set_label(str(round(self.timer, 1)))
@@ -470,8 +451,8 @@ class HuntWindow(Adw.ApplicationWindow):
                     path_buttons.append(button)
         # Diagonal path
         elif(abs(row1 - row2) == abs(col1 - col2)):
-            row_step = 1 if row2 > row1 else -1 #Either moves upwards or downwards depending on the difference in location
-            col_step = 1 if col2 > col1 else -1
+            row_step = 1 if row2 > row1 else - 1 #Either moves upwards or downwards depending on the difference in location
+            col_step = 1 if col2 > col1 else - 1
             for step in range(abs(row2 - row1) + 1):
                 button = self.grid.get_child_at(col1 + step * col_step, row1 + step * row_step) #I don't understand how this works, but it does
                 if(button):
@@ -482,7 +463,7 @@ class HuntWindow(Adw.ApplicationWindow):
     #Dialog that runs when the player has found all the words or run out of time.
     def end_dialogue(self):
         game_over = True
-        #If the player restarts the game, self.current_word gets set to the first button and returns errors. Don't know why it happens, so this is the fix ¯\_(ツ)_/¯
+        #If the player back_to_main_menus the game, self.current_word gets set to the first button and returns errors. Don't know why it happens, so this is the fix ¯\_(ツ)_/¯
         self.current_word = None
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
@@ -519,7 +500,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
         # Add buttons to the button box
         new_game_button = Gtk.Button(label=(_("New Game")))
-        new_game_button.connect("clicked", lambda _: self.restart_game("activate", _))
+        new_game_button.connect("clicked", lambda _: self.back_to_main_menu_game("activate", _))
         button_box.append(new_game_button)
 
         close_button = Gtk.Button(label=(_("Close")))
@@ -532,13 +513,12 @@ class HuntWindow(Adw.ApplicationWindow):
         self.dialog.show()
         self.found_words.clear()
 
-    #Restart the game when it ends
-    def restart_game(self, action, _):
+    #back_to_main_menu the game when it ends
+    def back_to_main_menu_game(self, action, _):
         self.dialog.destroy()
         self.make_grid("activate", _)
 
     #Destroy the dialogue so that the player can see the grid
     def close_end_dialogue(self, action, _):
-        self.game_over = True
         self.dialog.destroy()
 

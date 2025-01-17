@@ -99,4 +99,3 @@ related_words = {
     (_('MARKETS')): ['trade', 'stalls', 'fruit', 'value', 'goods', 'crowd', 'money', 'sales', 'deals', 'price'],
     (_('TUNNELS')): ['earth', 'dark', 'shaft', 'mines', 'train', 'pipes', 'crawl', 'route', 'gates', 'dig']
 }
-
