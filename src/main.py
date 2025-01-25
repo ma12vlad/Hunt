@@ -18,6 +18,7 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 import sys
+
 import gi
 
 gi.require_version('Gtk', '4.0')
@@ -56,7 +57,7 @@ class HuntApplication(Adw.Application):
             message_type=Gtk.MessageType.INFO,
             buttons=Gtk.ButtonsType.CLOSE,
         )
-        dialog.get_message_area().get_first_child().set_markup("<span size=\"large\"><big><b>How to play:</b></big>\n______________________________________________________________________\n\nTo start, select one of the four grid sizes: \n\n- 8 × 8 board with 5 words \n- 12 × 12 board with 8 words \n- 16 × 16 board with 10 words \n- Custom board, where you choose the size and the number of words\n\nTo choose a term from the grid, click the first and the last letter of the word you want, and all letters in between the two is what Hunt will take as what the player has selected.\n\nTo win, you must find all words that are hidden in the grid.\n\nAvoid minimizing the grid size, and maximizing the word count, as it can occasionally lead to game crashes if some words are unable to be placed.\n\n</span><span size=\"large\"><big><b>Blitz Mode:</b></big>\n______________________________________________________________________\n\nBlitz mode reduces the amount of time the player has per word, and words in that category are given one at a time.\n\nFor example, with 60 seconds for 5 words, each word would only be available for 12 seconds (60 ÷ 5 = 12) before game over.\n\nWhenever a word is found, the amount of time the game started with gets added to the remaining time the player has. \n\n</span><span size=\"large\"><big><b>Get Involved:</b></big>\n______________________________________________________________________\n\nHunt should be available for anybody, and needs translators to make sure everyone can play.\n\nYou are welcome to participate in Hunt's development, whether by improving the code, or adding more language support.</span>")
+        dialog.get_message_area().get_first_child().set_markup("<span size=\"large\"><big><b>How to play:</b></big>\n______________________________________________________________________\n\nTo start, select one of the four grid sizes: \n\n○  8 × 8 board with 5 words \n○  12 × 12 board with 8 words \n○  16 × 16 board with 10 words \n○  Custom board, where you choose the size and the number of words\n\nTo choose a term from the grid, click the first and the last letter of the word you want, and all letters in between the two is what Hunt will take as selected.\n\nTo win, you must find all words that are hidden in the grid.\n\nAvoid minimizing the grid size, and maximizing the word count, as it can occasionally lead to game crashes if some words are unable to be placed.\n\n</span><span size=\"large\"><big><b>Blitz Mode:</b></big>\n______________________________________________________________________\n\nBlitz mode reduces the amount of time the player has per word, and words in that category are given one at a time.\n\nFor example, with 60 seconds for 5 words, each word would only be available for 12 seconds (60 ÷ 5 = 12) before game over.\n\nWhenever a word is found, the amount of time the game started with gets added to the remaining time the player has. \n\n</span><span size=\"large\"><big><b>Get Involved:</b></big>\n______________________________________________________________________\n\nEveryone is welcome to participate in Hunt's development, whether by improving the game's code, or adding more language support.</span>")
         dialog.get_message_area().get_first_child().set_justify(Gtk.Justification.LEFT)
         link = Gtk.LinkButton.new_with_label(
             uri="https://github.com/SwordPuffin/Hunt",
@@ -75,7 +76,6 @@ class HuntApplication(Adw.Application):
         self.add_action(action)
         if(shortcuts):
             self.set_accels_for_action(f"app.{name}", shortcuts)
-
 
 def main(version):
     app = HuntApplication()

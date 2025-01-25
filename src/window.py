@@ -1,8 +1,9 @@
 import random
 import string
+
 from gi.repository import Adw
 from gi.repository import Gtk, Gdk, Gio, GLib
-from .words import related_words
+from .resources import *
 
 @Gtk.Template(resource_path='/io/github/swordpuffin/hunt/window.ui')
 class HuntWindow(Adw.ApplicationWindow):
@@ -51,10 +52,11 @@ class HuntWindow(Adw.ApplicationWindow):
     divided_timer = None
     selected_category = "RANDOM"
 
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_path("/app/share/hunt/hunt/styles.css")
+        css_provider.load_from_data(css.encode('utf-8'))
         Gtk.StyleContext.add_provider_for_display(
             Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
         )

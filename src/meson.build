@@ -30,8 +30,7 @@ hunt_sources = [
   '__init__.py',
   'main.py',
   'window.py',
-  'styles.css',
-  'words.py',
+  'resources.py',
 ]
 
 install_data(hunt_sources, install_dir: moduledir)
