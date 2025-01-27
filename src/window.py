@@ -56,7 +56,7 @@ class HuntWindow(Adw.ApplicationWindow):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         css_provider = Gtk.CssProvider()
-        css_provider.load_from_data(css.encode('utf-8'))
+        css_provider.load_from_data(css.encode('utf-8')) #fetches the css from resources.py.
         Gtk.StyleContext.add_provider_for_display(
             Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
         )
