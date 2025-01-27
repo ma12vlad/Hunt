@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: src/main.py\n"
 "X-Poedit-SearchPath-1: src/window.py\n"
 "X-Poedit-SearchPath-2: src/window.ui\n"
-"X-Poedit-SearchPath-3: src/words.py\n"
+"X-Poedit-SearchPath-3: src/resources.py\n"
 "X-Poedit-SearchPath-4: src/gtk/help-overlay.ui\n"
 "X-Poedit-SearchPath-5: data/io.github.swordpuffin.hunt.desktop.in\n"
 "X-Poedit-SearchPath-6: data/io.github.swordpuffin.hunt.gschema.xml\n"
@@ -161,394 +161,394 @@ msgstr "_Сочетания клавиш"
 msgid "_About Hunt"
 msgstr "_О Hunt"
 
-#: src/words.py:2
+#: src/resources.py:2
 msgid "ICE CREAM FLAVORS"
 msgstr "ВКУСЫ МОРОЖЕНОГО"
 
-#: src/words.py:3
+#: src/resources.py:3
 msgid "FRUITS"
 msgstr "ФРУКТЫ"
 
-#: src/words.py:4
+#: src/resources.py:4
 msgid "VEGETABLES"
 msgstr "ОВОЩИ"
 
-#: src/words.py:5
+#: src/resources.py:5
 msgid "BREAKFAST FOODS"
 msgstr "ЗАВТРАК"
 
-#: src/words.py:6
+#: src/resources.py:6
 msgid "ANIMALS"
 msgstr "ЖИВОТНЫЕ"
 
-#: src/words.py:7
+#: src/resources.py:7
 msgid "VEHICLES"
 msgstr "ТРАНСПОРТ"
 
-#: src/words.py:8
+#: src/resources.py:8
 msgid "COLORS"
 msgstr "ЦВЕТА"
 
-#: src/words.py:9
+#: src/resources.py:9
 msgid "SPORTS"
 msgstr "СПОРТ"
 
-#: src/words.py:10
+#: src/resources.py:10
 msgid "MUSIC GENRES"
 msgstr "ЖАНРЫ МУЗЫКИ"
 
-#: src/words.py:11
+#: src/resources.py:11
 msgid "MOVIES"
 msgstr "ФИЛЬМЫ"
 
-#: src/words.py:12
+#: src/resources.py:12
 msgid "BOOKS"
 msgstr "КНИГИ"
 
-#: src/words.py:13
+#: src/resources.py:13
 msgid "CITIES"
 msgstr "ГОРОД"
 
-#: src/words.py:14
+#: src/resources.py:14
 msgid "MOUNTAINS"
 msgstr "ГОРЫ"
 
-#: src/words.py:15
+#: src/resources.py:15
 msgid "OCEANS"
 msgstr "ОКЕАНЫ"
 
-#: src/words.py:16
+#: src/resources.py:16
 msgid "WEATHER"
 msgstr "ПОГОДА"
 
-#: src/words.py:17
+#: src/resources.py:17
 msgid "SPACE"
 msgstr "КОСМОС"
 
-#: src/words.py:18
+#: src/resources.py:18
 msgid "COMPUTERS"
 msgstr "КОМПЬЮТЕРЫ"
 
-#: src/words.py:19
+#: src/resources.py:19
 msgid "SOCIAL MEDIA"
 msgstr "СОЦСЕТИ"
 
-#: src/words.py:20
+#: src/resources.py:20
 msgid "FASHION"
 msgstr "МОДА"
 
-#: src/words.py:21
+#: src/resources.py:21
 msgid "FOOD"
 msgstr "ЕДА"
 
-#: src/words.py:22
+#: src/resources.py:22
 msgid "TECHNOLOGY"
 msgstr "ТЕХНОЛОГИЯ"
 
-#: src/words.py:23
+#: src/resources.py:23
 msgid "ECONOMICS"
 msgstr "ЭКОНОМИКА"
 
-#: src/words.py:24
+#: src/resources.py:24
 msgid "POLITICS"
 msgstr "ПОЛИТИКА"
 
-#: src/words.py:25
+#: src/resources.py:25
 msgid "HISTORY"
 msgstr "ИСТОРИЯ"
 
-#: src/words.py:26
+#: src/resources.py:26
 msgid "HEALTH"
 msgstr "ЗДОРОВЬЕ"
 
-#: src/words.py:27
+#: src/resources.py:27
 msgid "EDUCATION"
 msgstr "ОБРАЗОВАНИЕ"
 
-#: src/words.py:28
+#: src/resources.py:28
 msgid "ART"
 msgstr "ИСКУССТВО"
 
-#: src/words.py:29
+#: src/resources.py:29
 msgid "PHOTOGRAPHY"
 msgstr "ФОТОГРАФИЯ"
 
-#: src/words.py:30
+#: src/resources.py:30
 msgid "ARCHITECTURE"
 msgstr "АРХИТЕКТУРА"
 
-#: src/words.py:31
+#: src/resources.py:31
 msgid "NATURE"
 msgstr "ПРИРОДА"
 
-#: src/words.py:32
+#: src/resources.py:32
 msgid "CRAFTS"
 msgstr "РЕМЁСЛА"
 
-#: src/words.py:33
+#: src/resources.py:33
 msgid "BOARD GAMES"
 msgstr "НАСТОЛЬНЫЕ ИГРЫ"
 
-#: src/words.py:34
+#: src/resources.py:34
 msgid "VIDEO GAMES"
 msgstr "ВИДЕОИГРЫ"
 
-#: src/words.py:35
+#: src/resources.py:35
 msgid "GARDENING"
 msgstr "САДОВОДСТВО"
 
-#: src/words.py:36
+#: src/resources.py:36
 msgid "HOBBIES"
 msgstr "ХОББИ"
 
-#: src/words.py:37
+#: src/resources.py:37
 msgid "DANCE"
 msgstr "ТАНЦЫ"
 
-#: src/words.py:38
+#: src/resources.py:38
 msgid "TRAVEL"
 msgstr "ПУТЕШЕСТВИЯ"
 
-#: src/words.py:39
+#: src/resources.py:39
 msgid "FITNESS"
 msgstr "ФИТНЕС"
 
-#: src/words.py:40
+#: src/resources.py:40
 msgid "COOKING"
 msgstr "ПРИГОТОВЛЕНИЕ"
 
-#: src/words.py:41
+#: src/resources.py:41
 msgid "BEAUTY"
 msgstr "КРАСОТА"
 
-#: src/words.py:42
+#: src/resources.py:42
 msgid "MYTHOLOGY"
 msgstr "МИФОЛОГИЯ"
 
-#: src/words.py:43
+#: src/resources.py:43
 msgid "PHILOSOPHY"
 msgstr "ФИЛОСОФИЯ"
 
-#: src/words.py:44
+#: src/resources.py:44
 msgid "SCIENCE"
 msgstr "НАУКА"
 
-#: src/words.py:45
+#: src/resources.py:45
 msgid "HOLIDAYS"
 msgstr "ПРАЗДНИКИ"
 
-#: src/words.py:46
+#: src/resources.py:46
 msgid "FLOWERS"
 msgstr "ЦВЕТЫ"
 
-#: src/words.py:47
+#: src/resources.py:47
 msgid "DRINKS"
 msgstr "НАПИТКИ"
 
-#: src/words.py:48
+#: src/resources.py:48
 msgid "CLOTHING"
 msgstr "ОДЕЖДА"
 
-#: src/words.py:49
+#: src/resources.py:49
 msgid "INSECTS"
 msgstr "НАСЕКОМЫЕ"
 
-#: src/words.py:50
+#: src/resources.py:50
 msgid "JOBS"
 msgstr "РАБОТА"
 
-#: src/words.py:51 src/words.py:85
+#: src/resources.py:51 src/resources.py:85
 msgid "TOOLS"
 msgstr "ИНСТРУМЕНТЫ"
 
-#: src/words.py:52
+#: src/resources.py:52
 msgid "GAMES"
 msgstr "ИГРЫ"
 
-#: src/words.py:53
+#: src/resources.py:53
 msgid "HOUSES"
 msgstr "ДОМА"
 
-#: src/words.py:54
+#: src/resources.py:54
 msgid "DESERTS"
 msgstr "ПУСТЫНИ"
 
-#: src/words.py:55
+#: src/resources.py:55
 msgid "BIRDS"
 msgstr "ПТИЦЫ"
 
-#: src/words.py:56
+#: src/resources.py:56
 msgid "BEACHES"
 msgstr "ПЛЯЖИ"
 
-#: src/words.py:57
+#: src/resources.py:57
 msgid "FURNITURE"
 msgstr "МЕБЕЛЬ"
 
-#: src/words.py:58
+#: src/resources.py:58
 msgid "JEWELRY"
 msgstr "ДРАГОЦЕННОСТИ"
 
-#: src/words.py:59
+#: src/resources.py:59
 msgid "LANGUAGES"
 msgstr "ЯЗЫКИ"
 
-#: src/words.py:60
+#: src/resources.py:60
 msgid "PLANETS"
 msgstr "ПЛАНЕТЫ"
 
-#: src/words.py:61
+#: src/resources.py:61
 msgid "CAMPING"
 msgstr "КЕМПИНГ"
 
-#: src/words.py:62
+#: src/resources.py:62
 msgid "MUSIC"
 msgstr "МУЗЫКА"
 
-#: src/words.py:63
+#: src/resources.py:63
 msgid "WONDERS"
 msgstr "ЧУДЕСА"
 
-#: src/words.py:64
+#: src/resources.py:64
 msgid "MYTHICAL CREATURES"
 msgstr "МИФИЧЕСКИЕ СУЩЕСТВА"
 
-#: src/words.py:65
+#: src/resources.py:65
 msgid "SHAPES"
 msgstr "ФОРМЫ"
 
-#: src/words.py:66
+#: src/resources.py:66
 msgid "DESSERTS"
 msgstr "ДЕСЕРТЫ"
 
-#: src/words.py:67
+#: src/resources.py:67
 msgid "BEVERAGES"
 msgstr "НАПИТОК"
 
-#: src/words.py:68
+#: src/resources.py:68
 msgid "HORROR"
 msgstr "УЖАС"
 
-#: src/words.py:69
+#: src/resources.py:69
 msgid "ASTRONOMY"
 msgstr "АСТРОНОМИЯ"
 
-#: src/words.py:70
+#: src/resources.py:70
 msgid "FANTASY"
 msgstr "ФАНТАСТИКА"
 
-#: src/words.py:71
+#: src/resources.py:71
 msgid "PIRATES"
 msgstr "ПИРАТЫ"
 
-#: src/words.py:72
+#: src/resources.py:72
 msgid "KITCHEN"
 msgstr "КУХНЯ"
 
-#: src/words.py:73
+#: src/resources.py:73
 msgid "MONSTERS"
 msgstr "МОНСТРЫ"
 
-#: src/words.py:74
+#: src/resources.py:74
 msgid "GARDENS"
 msgstr "САД"
 
-#: src/words.py:75
+#: src/resources.py:75
 msgid "TRAINS"
 msgstr "ПОЕЗДА"
 
-#: src/words.py:76
+#: src/resources.py:76
 msgid "LEGENDS"
 msgstr "ЛЕГЕНДЫ"
 
-#: src/words.py:77
+#: src/resources.py:77
 msgid "HIKING"
 msgstr "ЭКСКУРСИИ"
 
-#: src/words.py:78
+#: src/resources.py:78
 msgid "PLANTS"
 msgstr "РАСТЕНИЯ"
 
-#: src/words.py:79
+#: src/resources.py:79
 msgid "UNDERWATER LIFE"
 msgstr "ПОДВОДНАЯ ЖИЗНЬ"
 
-#: src/words.py:80
+#: src/resources.py:80
 msgid "WILDLIFE"
 msgstr "ЖИВАЯ ПРИРОДА"
 
-#: src/words.py:81
+#: src/resources.py:81
 msgid "SEASONS"
 msgstr "СЕЗОНЫ"
 
-#: src/words.py:82
+#: src/resources.py:82
 msgid "GEMS"
 msgstr "ДРАГОЦЕННЫЕ КАМНИ"
 
-#: src/words.py:83
+#: src/resources.py:83
 msgid "EMOTIONS"
 msgstr "ЭМОЦИИ"
 
-#: src/words.py:84
+#: src/resources.py:84
 msgid "CANDY"
 msgstr "КОНФЕТЫ"
 
-#: src/words.py:86
+#: src/resources.py:86
 msgid "ALIENS"
 msgstr "ЧУЖИЕ"
 
-#: src/words.py:87
+#: src/resources.py:87
 msgid "CASTLES"
 msgstr "ЗАМКИ"
 
-#: src/words.py:88
+#: src/resources.py:88
 msgid "ISLANDS"
 msgstr "ОСТРОВА"
 
-#: src/words.py:89
+#: src/resources.py:89
 msgid "CLOWNS"
 msgstr "КЛОУНЫ"
 
-#: src/words.py:90
+#: src/resources.py:90
 msgid "GHOSTS"
 msgstr "ПРИЗРАКИ"
 
-#: src/words.py:91
+#: src/resources.py:91
 msgid "CAVES"
 msgstr "ПЕЩЕРЫ"
 
-#: src/words.py:92
+#: src/resources.py:92
 msgid "ROBOTS"
 msgstr "РОБОТЫ"
 
-#: src/words.py:93
+#: src/resources.py:93
 msgid "TREES"
 msgstr "ДЕРЕВЬЯ"
 
-#: src/words.py:94
+#: src/resources.py:94
 msgid "WIZARDS"
 msgstr "ВОЛШЕБНИКИ"
 
-#: src/words.py:95
+#: src/resources.py:95
 msgid "VOLCANO"
 msgstr "ВУЛКАН"
 
-#: src/words.py:96
+#: src/resources.py:96
 msgid "DRAGONS"
 msgstr "ДРАКОНЫ"
 
-#: src/words.py:97
+#: src/resources.py:97
 msgid "MIRRORS"
 msgstr "ЗЕРКАЛА"
 
-#: src/words.py:98
+#: src/resources.py:98
 msgid "FAIRIES"
 msgstr "ФЕИ"
 
-#: src/words.py:99
+#: src/resources.py:99
 msgid "MARKETS"
 msgstr "РЫНКИ"
 
-#: src/words.py:100
+#: src/resources.py:100
 msgid "TUNNELS"
 msgstr "ТУННЕЛИ"
