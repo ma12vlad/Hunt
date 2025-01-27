@@ -181,3 +181,8 @@ css = """
           border-radius: 10px;
         }
 """
+
+letters = {
+    'en_US.UTF-8': "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    'ru_RU.UTF-8': "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+}

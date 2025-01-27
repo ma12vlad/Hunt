@@ -38,6 +38,18 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.0.5" date="2025-1-26">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.5</url>
+      <description translate="no">
+        <p>Hunt v1.0.5</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Fix a bug that occures when changing categories</li>
+          <li>Created a proper help dialog</li>
+          <li>Added Russian language support</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.4" date="2025-1-5">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.4</url>
       <description translate="no">

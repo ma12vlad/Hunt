@@ -257,7 +257,14 @@ class HuntWindow(Adw.ApplicationWindow):
             motion_controller.connect("enter", self.on_button_hovered)
             button.add_controller(motion_controller)
 
-            button.set_label(random.choice(string.ascii_uppercase)) #Give each a random letter
+            import os
+            locale = os.environ.get("LANG", "C")
+
+            if(locale not in letters.keys()): #Use the correct alphabet for the user's language
+                button.set_label(random.choice(letters['en_US.UTF-8'])) #defaults to English if not defined in resources.py
+            else:
+                button.set_label(random.choice(letters[locale]))
+
             col += 1
             if(i % self.length == 0):
                 col = 0
