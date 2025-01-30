@@ -8,7 +8,7 @@
   <summary xml:lang="ru">Найдите каждое слово</summary>
   <description>
     <p>Hunt is an easy word search game. You can play with or without a timer, or a blitz mode, where you must find each individual word in a much smaller length of time.</p>
-    <p xml:lang="ru">Hunt - это простая игра для поиска слов. Вы можете играть с таймером или без, а также в блиц-режиме, где нужно найти каждое отдельное слово маленький промежуток времени.</p>
+    <p xml:lang="ru">Hunt это простая игра для поиска слов. Вы можете играть с таймером или без, а также в блиц-режиме, где нужно найти каждое отдельное слово маленький промежуток времени.</p>
   </description>
   <developer id="io.github.swordpuffin.hunt">
     <name>Nathan Perlman</name>
