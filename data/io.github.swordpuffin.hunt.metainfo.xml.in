@@ -40,6 +40,18 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.0.6" date="2025-1-30">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.6</url>
+      <description translate="no">
+        <p>Hunt v1.0.6</p>
+        <p>Changes:</p>
+        <p xml:lang="ru">изменения:</p>
+        <ul>
+          <li>More complete Russian translation.</li>
+          <li xml:lang="ru">Более полный русский перевод.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.5" date="2025-1-26">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.5</url>
       <description translate="no">
