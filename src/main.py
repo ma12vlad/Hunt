@@ -47,7 +47,7 @@ class HuntApplication(Adw.Application):
                                 developer_name='Nathan Perlman',
                                 version='1.0.5',
                                 issue_url='https://github.com/SwordPuffin/Hunt/issues',
-                                developers=['Nathan Perlman'],
+                                developers=['Nathan Perlman', 'DodoLeDev'],
                                 copyright='© 2025 Nathan Perlman')
         about.present(self.props.active_window)
 

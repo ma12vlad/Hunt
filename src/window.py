@@ -13,12 +13,12 @@ class HuntWindow(Adw.ApplicationWindow):
     grid = Gtk.Template.Child()
     main_box = Gtk.Template.Child()
     frame = Gtk.Template.Child()
-    start_box = Gtk.Template.Child()
+    #start_box = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
-    clock = Gtk.Template.Child()
-    standard = Gtk.Template.Child()
-    blitz = Gtk.Template.Child()
-    clocked = Gtk.Template.Child()
+    #clock = Gtk.Template.Child()
+    #standard = Gtk.Template.Child()
+    #blitz = Gtk.Template.Child()
+    #clocked = Gtk.Template.Child()
     option_grid = Gtk.Template.Child()
     words_value = Gtk.Template.Child()
     height_value = Gtk.Template.Child()
@@ -26,8 +26,10 @@ class HuntWindow(Adw.ApplicationWindow):
     time_value = Gtk.Template.Child()
     category_list = Gtk.Template.Child()
     search_entry = Gtk.Template.Child()
-    random_category = Gtk.Template.Child()
     active_category = Gtk.Template.Child()
+    main_window_content = Gtk.Template.Child()
+    sidebar_view = Gtk.Template.Child()
+    theme_selector = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -75,20 +77,28 @@ class HuntWindow(Adw.ApplicationWindow):
         HuntApplication.create_action(self, 'standard', self.normal)
         HuntApplication.create_action(self, 'speed', self.speed)
         HuntApplication.create_action(self, 'restart', self.back_to_main_menu)
-        HuntApplication.create_action(self, 'random_category', self.on_row_activated)
-
-        self.main_box.set_visible(False)
-        self.grid.set_visible(False)
-        self.custom_box.set_visible(False)
+        self.theme_selector.connect("toggled",  lambda cb: self.on_row_activated(cb, "Random") if cb.get_active() else None)
 
         for item in sorted(list(related_words.keys())):
-            label = Gtk.Label()
-            label.set_label(item.upper())
-            label.set_margin_bottom(14)
-            label.set_margin_top(14)
-            self.category_list.append(label)
+            listEntry = Gtk.ListBoxRow()
+            actionEntry = Adw.ActionRow()
+
+            listEntry.set_child(actionEntry)
+            actionEntry.set_title(item.capitalize())
+
+            checkbox = Gtk.CheckButton()
+            if self.selected_category == actionEntry.get_title().upper():
+                checkbox.set_active(True)
+            else:
+                checkbox.set_active(False)
+            checkbox.set_group(self.theme_selector)
+            actionEntry.add_suffix(checkbox)
+            actionEntry.set_activatable_widget(checkbox)
+            checkbox.connect("toggled", lambda cb, actName: self.on_row_activated(cb, actName) if cb.get_active() else None, actionEntry.get_title())
+
+            self.category_list.append(listEntry)
+        self.category_list.connect("row-selected", lambda _, row: row.get_child().activate() if row else None)
         self.search_entry.connect("search-changed", self.list_changed)
-        self.category_list.connect("row-activated", self.on_row_activated)
 
     def list_changed(self, search_entry):
         # Get the query from the search box and convert it to lowercase
@@ -103,20 +113,29 @@ class HuntWindow(Adw.ApplicationWindow):
 
         # Add rows for the filtered categories
         for category in sorted(filtered_categories):
-            row = Gtk.Label(label=category)
-            row.set_xalign(0.5)  # Center align text
-            row.set_margin_bottom(14)
-            row.set_margin_top(14)
-            self.category_list.append(row)
+            listEntry = Gtk.ListBoxRow()
+            actionEntry = Adw.ActionRow()
+
+            listEntry.set_child(actionEntry)
+            actionEntry.set_title(category.capitalize())
+
+            checkbox = Gtk.CheckButton()
+            if self.selected_category == actionEntry.get_title().upper():
+                checkbox.set_active(True)
+            else:
+                checkbox.set_active(False)
+            checkbox.set_group(self.theme_selector)
+            actionEntry.add_suffix(checkbox)
+            actionEntry.set_activatable_widget(checkbox)
+            checkbox.connect("toggled", lambda cb, actName: self.on_row_activated(cb, actName) if cb.get_active() else None, actionEntry.get_title())
+
+            self.category_list.append(listEntry)
 
     #Changes the active category depending on what row in self.category_list is selected
-    def on_row_activated(self, listbox, row):
-        if(row is not None):
-            self.selected_category = row.get_child().get_text()
-            self.active_category.get_first_child().set_label(row.get_child().get_text())
-        else:
-            self.selected_category = "RANDOM"
-            self.active_category.get_first_child().set_label(_("RANDOM"))
+    def on_row_activated(self, checkbox, actionName):
+        self.selected_category = actionName.upper()
+        self.active_category.set_title(actionName)
+        self.sidebar_view.pop()
 
     #back_to_main_menus the game
     def reload(self, action, _):
@@ -204,9 +223,7 @@ class HuntWindow(Adw.ApplicationWindow):
             GLib.Source.remove(self.timer_id)
         self.found_words.clear()
         self.set_default_size(700, 450)
-        self.start_box.set_visible(True)
-        self.main_box.set_visible(False)
-        self.grid.set_visible(False)
+        self.main_window_content.pop()
 
     #Function that is the timer of the game. Return false/return true ends or continues the function
     def update(self):
@@ -233,8 +250,7 @@ class HuntWindow(Adw.ApplicationWindow):
                 self.divided_timer = self.timer / self.word_count
                 self.timer = 0 #Reset timer so it will be equal to self.divided_timer on first execution
 
-        self.start_box.set_visible(False)
-        self.main_box.set_visible(True)
+        self.main_window_content.push_by_tag("game")
         self.grid.set_visible(True)
         while(self.grid.get_child_at(0,0) is not None): #Clear the entire main grid where all the letters are
             self.grid.remove_row(0)
@@ -282,8 +298,18 @@ class HuntWindow(Adw.ApplicationWindow):
                 used_words.add(label.get_label())
                 #This is needed because sometimes words would be added to self.frame that are not in self.words, or words that are in self.frame are placed in multiple times
                 #Occurs with words that fail to be placed
-                if(label.get_label().lower() in related_words[self.random_key] and all(child.get_first_child().get_label() != label.get_label() for child in self.frame)):
-                    self.frame.append(label)
+                if(label.get_label().lower() in related_words[self.random_key] and all(child.get_first_child().get_title().upper() != label.get_label() for child in self.frame)):
+                    listbox = Gtk.ListBoxRow()
+                    actionRow = Adw.ActionRow()
+                    checkbutton = Gtk.CheckButton()
+
+                    listbox.set_child(actionRow)
+                    actionRow.add_suffix(checkbutton)
+                    checkbutton.set_visible(False)
+
+                    actionRow.set_title(label.get_label().capitalize())
+
+                    self.frame.append(listbox)
         else: #Add self.divided_timer to however much it was before, and place the one new word into the grid as well as onto the GTKListBox.
             self.timer += self.divided_timer
             self.clock.set_label(str(round(self.timer, 1)))

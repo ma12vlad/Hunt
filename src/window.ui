@@ -1,485 +1,545 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.94.1 -->
 <interface>
-  <requires lib="gtk" version="4.0"/>
-  <requires lib="Adw" version="1.0"/>
+  <requires lib="gio" version="2.0"/>
+  <requires lib="gtk" version="4.14"/>
+  <requires lib="libadwaita" version="1.6"/>
   <template class="HuntWindow" parent="AdwApplicationWindow">
-    <property name="title" translatable="yes">Hunt</property>
-    <property name="default-width">700</property>
-    <property name="default-height">450</property>
     <property name="content">
-      <object class="AdwToolbarView">
-        <child type="top">
-          <object class="AdwHeaderBar">
-            <child type="end">
-              <object class="GtkMenuButton">
-                <property name="primary">True</property>
-                <property name="icon-name">open-menu-symbolic</property>
-                <property name="tooltip-text" translatable="yes">Main Menu</property>
-                <property name="menu-model">primary_menu</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <property name="content">
-          <object class="GtkBox">
-            <property name="margin-start">20</property>
-            <property name="margin-end">20</property>
-            <property name="margin-top">20</property>
-            <property name="margin-bottom">20</property>
-            <child>
-              <object class="GtkBox" id="start_box">
-                <property name="vexpand">true</property>
-                <property name="hexpand">true</property>
-                <property name="valign">center</property>
-                <property name="halign">center</property>
-                <child>
-                  <object class="GtkBox" id="custom_box">
-                    <property name="orientation">1</property>
-                    <property name="height-request">420</property>
-                    <property name="vexpand">true</property>
-                    <property name="valign">center</property>
-                    <property name="hexpand">true</property>
-                    <property name="halign">center</property>
-                    <property name="margin-end">60</property>
-                    <child>
-                      <object class="GtkGrid">
-                        <property name="vexpand">true</property>
-                        <property name="valign">center</property>
-                        <property name="column-spacing">20</property>
-                        <property name="row-spacing">20</property>
-                        <style>
-                          <class name="title-4"/>
-                        </style>
+      <object class="AdwNavigationView" id="main_window_content">
+        <child>
+          <object class="AdwNavigationPage">
+            <property name="can-pop">False</property>
+            <property name="child">
+              <object class="AdwOverlaySplitView">
+                <property name="content">
+                  <object class="GtkCenterBox">
+                    <property name="orientation">vertical</property>
+                    <child type="center">
+                      <object class="AdwCarousel" id="game_selector">
+                        <property name="allow-long-swipes">True</property>
+                        <property name="vexpand">True</property>
                         <child>
-                          <object class="GtkLabel">
-                            <property name="label" translatable="yes">Height</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">0</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="height_value">
-                              <property name="value">10</property>
-                              <property name="climb-rate">1</property>
-                              <property name="adjustment">
-                                <object class="GtkAdjustment">
-                                  <property name="lower">8</property>
-                                  <property name="upper">18</property>
-                                  <property name="step-increment">1</property>
-                                  <property name="value">10</property>
-                                </object>
-                              </property>
-                              <layout>
-                                <property name="column">1</property>
-                                <property name="row">0</property>
-                              </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel">
-                            <property name="label" translatable="yes">Width</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">1</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="length_value">
-                              <property name="value">10</property>
-                              <property name="climb-rate">1</property>
-                              <property name="adjustment">
-                                <object class="GtkAdjustment">
-                                  <property name="lower">8</property>
-                                  <property name="upper">18</property>
-                                  <property name="step-increment">1</property>
-                                  <property name="value">10</property>
-                                </object>
-                              </property>
-                              <layout>
-                                <property name="column">1</property>
-                                <property name="row">1</property>
-                              </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel">
-                            <property name="label" translatable="yes">Words</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">3</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="words_value">
-                              <property name="value">5</property>
-                              <property name="climb-rate">1</property>
-                              <property name="adjustment">
-                              <object class="GtkAdjustment">
-                               <property name="lower">1</property>
-                               <property name="upper">10</property>
-                               <property name="step-increment">1</property>
-                               <property name="value">5</property>
-                              </object>
-                              </property>
-                              <layout>
-                                <property name="column">1</property>
-                                <property name="row">3</property>
-                              </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel">
-                            <property name="label" translatable="yes">Time (seconds)</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">4</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="time_value">
-                              <property name="value">10</property>
-                              <property name="climb-rate">5</property>
-                              <property name="adjustment">
-                              <object class="GtkAdjustment">
-                               <property name="lower">5</property>
-                               <property name="upper">500000</property>
-                               <property name="step-increment">5</property>
-                               <property name="value">10</property>
-                              </object>
-                              </property>
-                              <layout>
-                                <property name="column">1</property>
-                                <property name="row">4</property>
-                              </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton">
-                            <property name="label" translatable="yes">Start</property>
-                            <property name="action-name">win.custom_start</property>
-                            <style>
-                              <class name="suggested-action"/>
-                            </style>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">5</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton">
-                            <property name="label" translatable="yes">Back</property>
-                            <property name="action-name">win.back</property>
-                            <style>
-                              <class name="destructive-action"/>
-                            </style>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">5</property>
-                            </layout>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkGrid" id="option_grid">
-                    <property name="row-spacing">20</property>
-                    <property name="column-spacing">20</property>
-                    <property name="margin-end">20</property>
-                    <style>
-                      <class name="title-2"/>
-                    </style>
-                    <child>
-                      <object class="GtkButton" id="button1">
-                        <property name="width-request">200</property>
-                        <property name="height-request">200</property>
-                        <child>
-                          <object class="GtkLabel">
-                              <property name="label" translatable="yes">8 x 8 grid
+                          <object class="AdwClamp">
+                            <property name="hexpand">True</property>
+                            <property name="margin-end">15</property>
+                            <property name="margin-start">15</property>
+                            <property name="maximum-size">500</property>
+                            <property name="tightening-threshold">200</property>
+                            <property name="vexpand">True</property>
+                            <child>
+                              <object class="AdwClamp">
+                                <property name="maximum-size">500</property>
+                                <property name="orientation">vertical</property>
+                                <property name="tightening-threshold">200</property>
+                                <child>
+                                  <object class="GtkGrid" id="option_grid">
+                                    <property name="column-homogeneous">True</property>
+                                    <property name="column-spacing">20</property>
+                                    <property name="row-homogeneous">True</property>
+                                    <property name="row-spacing">20</property>
+                                    <child>
+                                      <object class="GtkButton" id="button1">
+                                        <property name="action-name">win.small</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="justify">center</property>
+                                            <property name="label" translatable="yes">8 x 8 grid
 
 5 words
 (30 seconds)</property>
-                            <property name="justify">center</property>
-                          </object>
-                        </child>
-                        <property name="action-name">win.small</property>
-                        <layout>
-                          <property name="column">0</property>
-                          <property name="row">0</property>
-                        </layout>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="button2">
-                        <property name="width-request">200</property>
-                        <property name="height-request">200</property>
-                        <property name="action-name">win.medium</property>
-                        <child>
-                          <object class="GtkLabel">
-                              <property name="label" translatable="yes">12 x 12 grid
+                                          </object>
+                                        </child>
+                                        <layout>
+                                          <property name="column">0</property>
+                                          <property name="row">0</property>
+                                        </layout>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="button2">
+                                        <property name="action-name">win.medium</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="justify">center</property>
+                                            <property name="label" translatable="yes">12 x 12 grid
 
 8 words
 (60 seconds)</property>
-                            <property name="justify">center</property>
-                          </object>
-                        </child>
-                        <layout>
-                          <property name="column">1</property>
-                          <property name="row">0</property>
-                        </layout>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="button3">
-                        <property name="width-request">200</property>
-                        <property name="height-request">200</property>
-                        <property name="action-name">win.large</property>
-                        <child>
-                          <object class="GtkLabel">
-                              <property name="label" translatable="yes">16 x 16 grid
+                                          </object>
+                                        </child>
+                                        <layout>
+                                          <property name="column">1</property>
+                                          <property name="row">0</property>
+                                        </layout>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="button3">
+                                        <property name="action-name">win.large</property>
+                                        <child>
+                                          <object class="GtkLabel">
+                                            <property name="justify">center</property>
+                                            <property name="label" translatable="yes">16 x 16 grid
 
 10 words
 (80 seconds)</property>
-                            <property name="justify">center</property>
+                                          </object>
+                                        </child>
+                                        <layout>
+                                          <property name="column">0</property>
+                                          <property name="row">1</property>
+                                        </layout>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkButton" id="button4">
+                                        <property name="action-name">win.custom</property>
+                                        <property name="child">
+                                          <object class="GtkBox">
+                                            <property name="halign">center</property>
+                                            <property name="spacing">6</property>
+                                            <property name="valign">center</property>
+                                            <child>
+                                              <object class="GtkLabel">
+                                                <property name="label">Custom</property>
+                                              </object>
+                                            </child>
+                                            <child>
+                                              <object class="GtkImage">
+                                                <property name="icon-name">go-next</property>
+                                              </object>
+                                            </child>
+                                          </object>
+                                        </property>
+                                        <layout>
+                                          <property name="column">1</property>
+                                          <property name="row">1</property>
+                                        </layout>
+                                      </object>
+                                    </child>
+                                    <style/>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
                           </object>
                         </child>
-                        <layout>
-                          <property name="column">0</property>
-                          <property name="row">1</property>
-                        </layout>
+                        <child>
+                          <object class="AdwStatusPage">
+                            <property name="child">
+                              <object class="AdwClamp">
+                                <property name="maximum-size">400</property>
+                                <child>
+                                  <object class="AdwPreferencesGroup" id="custom_box">
+                                    <child>
+                                      <object class="AdwSpinRow" id="height_value">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">8.0</property>
+                                            <property name="step-increment">1.0</property>
+                                            <property name="upper">18.0</property>
+                                          </object>
+                                        </property>
+                                        <property name="icon-name">object-flip-vertical</property>
+                                        <property name="subtitle">How many lines you want</property>
+                                        <property name="title">Height</property>
+                                        <property name="value">10.0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwSpinRow" id="length_value">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">8.0</property>
+                                            <property name="step-increment">1.0</property>
+                                            <property name="upper">18.0</property>
+                                          </object>
+                                        </property>
+                                        <property name="icon-name">object-flip-horizontal</property>
+                                        <property name="subtitle">How many columns you want</property>
+                                        <property name="title">Width</property>
+                                        <property name="value">10.0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwSpinRow" id="words_value">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">1.0</property>
+                                            <property name="step-increment">1.0</property>
+                                            <property name="upper">10.0</property>
+                                          </object>
+                                        </property>
+                                        <property name="icon-name">completion-word-symbolic</property>
+                                        <property name="subtitle">How many words you will have to guess</property>
+                                        <property name="title">Words</property>
+                                        <property name="value">5.0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwSpinRow" id="time_value">
+                                        <property name="adjustment">
+                                          <object class="GtkAdjustment">
+                                            <property name="lower">5.0</property>
+                                            <property name="step-increment">5.0</property>
+                                            <property name="upper">9999.0</property>
+                                          </object>
+                                        </property>
+                                        <property name="icon-name">alarm-symbolic</property>
+                                        <property name="subtitle">The time you will have to find all the words</property>
+                                        <property name="title">Time (in seconds)</property>
+                                        <property name="value">10.0</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkCenterBox">
+                                        <property name="margin-top">25</property>
+                                        <child type="start">
+                                          <object class="GtkButton">
+                                            <property name="action-name">win.back</property>
+                                            <property name="has-frame">False</property>
+                                            <property name="icon-name">go-previous</property>
+                                            <property name="margin-end">7</property>
+                                            <property name="width-request">45</property>
+                                            <style>
+                                              <class name="circular"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                        <child type="center">
+                                          <object class="GtkButton">
+                                            <property name="action-name">win.custom_start</property>
+                                            <property name="child">
+                                              <object class="AdwButtonContent">
+                                                <property name="icon-name">media-playback-start-symbolic</property>
+                                                <property name="label">Start</property>
+                                              </object>
+                                            </property>
+                                            <style>
+                                              <class name="pill"/>
+                                              <class name="suggested-action"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                            <property name="description">Create the game of your dreams!</property>
+                            <property name="icon-name">wrench-wide-symbolic</property>
+                            <property name="title">Custom settings</property>
+                            <style>
+                              <class name="compact"/>
+                            </style>
+                          </object>
+                        </child>
                       </object>
                     </child>
-                    <child>
-                      <object class="GtkButton" id="button4">
-                        <property name="width-request">200</property>
-                        <property name="height-request">200</property>
-                        <property name="action-name">win.custom</property>
-                        <property name="label" translatable="yes">
-    Custom
-                        </property>
-                        <layout>
-                          <property name="column">1</property>
-                          <property name="row">1</property>
-                        </layout>
+                    <child type="start">
+                      <object class="AdwHeaderBar">
+                        <property name="show-title">False</property>
+                        <style>
+                          <class name="background"/>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child type="end">
+                      <object class="AdwCarouselIndicatorLines">
+                        <property name="carousel">game_selector</property>
+                        <property name="margin-bottom">7</property>
                       </object>
                     </child>
                   </object>
-                </child>
-                <child>
-                  <object class="GtkBox">
-                    <property name="orientation">1</property>
-                    <property name="spacing">10</property>
-                    <property name="width-request">120</property>
-                    <style>
-                      <class name="title-2"/>
-                    </style>
+                </property>
+                <property name="min-sidebar-width">250.0</property>
+                <property name="sidebar">
+                  <object class="AdwNavigationView" id="sidebar_view">
                     <child>
-                      <object class="GtkFrame">
-                        <property name="vexpand">true</property>
-                        <property name="valign">end</property>
-                        <property name="height-request">63</property>
-                        <property name="width-request">162</property>
-                        <style>
-                          <class name="frame"/>
-                        </style>
-                        <child>
-                          <object class="GtkCheckButton" id="standard">
-                            <property name="hexpand">true</property>
-                            <property name="halign">center</property>
-                            <property name="active">true</property>
-                            <property name="label" translatable="yes">    No timer</property>
-                            <property name="action-name">win.standard</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkFrame">
-                        <property name="vexpand">true</property>
-                        <property name="valign">center</property>
-                        <property name="height-request">63</property>
-                        <property name="width-request">162</property>
-                        <style>
-                          <class name="frame"/>
-                        </style>
-                        <child>
-                          <object class="GtkCheckButton" id="clocked">
-                            <property name="hexpand">true</property>
-                            <property name="halign">center</property>
-                            <property name="active">false</property>
-                            <property name="label" translatable="yes">   With timer</property>
-                            <property name="action-name">win.timed</property>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkFrame">
-                        <property name="vexpand">true</property>
-                        <property name="valign">start</property>
-                        <property name="height-request">63</property>
-                        <property name="width-request">162</property>
-                        <style>
-                          <class name="frame"/>
-                        </style>
-                        <child>
-                          <object class="GtkBox">
+                      <object class="AdwNavigationPage">
+                        <property name="child">
+                          <object class="AdwToolbarView">
                             <child>
-                              <object class="GtkCheckButton" id="blitz">
-                                <property name="hexpand">true</property>
-                                <property name="halign">center</property>
-                                <property name="active">false</property>
-                                <property name="label" translatable="yes">     Blitz</property>
-                                <property name="action-name">win.speed</property>
+                              <object class="AdwPreferencesPage">
+                                <child>
+                                  <object class="AdwPreferencesGroup">
+                                    <property name="title">Theme</property>
+                                    <child>
+                                      <object class="AdwActionRow" id="active_category">
+                                        <property name="action-name">navigation.push</property>
+                                        <property name="action-target">'theme_selector'</property>
+                                        <property name="activatable">True</property>
+                                        <property name="title">Random</property>
+                                        <child>
+                                          <object class="GtkImage">
+                                            <property name="icon-name">go-next</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="AdwPreferencesGroup">
+                                    <property name="title">Game mode</property>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="activatable-widget">gamemode</property>
+                                        <property name="title">No timer</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="gamemode">
+                                            <property name="active">True</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="activatable-widget">gamemode_1</property>
+                                        <property name="title">With timer</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="gamemode_1">
+                                            <property name="group">gamemode</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="activatable-widget">gamemode_2</property>
+                                        <property name="title">Blitz</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="gamemode_2">
+                                            <property name="group">gamemode</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="top">
+                              <object class="AdwHeaderBar">
+                                <property name="title-widget">
+                                  <object class="AdwWindowTitle">
+                                    <property name="title">Hunt</property>
+                                  </object>
+                                </property>
+                                <child type="end">
+                                  <object class="GtkMenuButton">
+                                    <property name="icon-name">open-menu-symbolic</property>
+                                    <property name="menu-model">primary_menu</property>
+                                    <property name="primary">True</property>
+                                    <property name="tooltip-text" translatable="yes">Main Menu</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                        <property name="tag">main_options</property>
+                        <property name="title">Options</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwNavigationPage">
+                        <property name="child">
+                          <object class="AdwToolbarView">
+                            <child>
+                              <object class="AdwPreferencesPage">
+                                <child>
+                                  <object class="AdwPreferencesGroup">
+                                    <property name="separate-rows">True</property>
+                                    <child>
+                                      <object class="AdwActionRow">
+                                        <property name="activatable">True</property>
+                                        <property name="activatable-widget">theme_selector</property>
+                                        <property name="title">Random</property>
+                                        <child>
+                                          <object class="GtkCheckButton" id="theme_selector">
+                                            <property name="active">True</property>
+                                          </object>
+                                        </child>
+                                        <style/>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkListBox" id="category_list">
+                                        <property name="margin-top">15</property>
+                                        <property name="valign">start</property>
+                                        <property name="vexpand">true</property>
+                                        <style>
+                                          <class name="boxed-list"/>
+                                        </style>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="top">
+                              <object class="AdwHeaderBar">
+                                <child type="end">
+                                  <object class="GtkToggleButton" id="search_themes_button">
+                                    <property name="icon-name">system-search</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child type="top">
+                              <object class="GtkSearchBar">
+                                <property name="child">
+                                  <object class="GtkSearchEntry" id="search_entry">
+                                    <property name="placeholder-text">Search themes</property>
+                                  </object>
+                                </property>
+                                <property name="search-mode-enabled" bind-source="search_themes_button" bind-property="active">False</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                        <property name="tag">theme_selector</property>
+                        <property name="title">Themes</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+            <property name="tag">preferences</property>
+            <property name="title">Hunt</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwNavigationPage">
+            <property name="child">
+              <object class="AdwOverlaySplitView" id="main_box">
+                <property name="content">
+                  <object class="GtkCenterBox">
+                    <property name="orientation">vertical</property>
+                    <child type="start">
+                      <object class="AdwHeaderBar">
+                        <property name="show-title">False</property>
+                        <child type="end">
+                          <object class="GtkMenuButton">
+                            <property name="icon-name">open-menu-symbolic</property>
+                            <property name="menu-model">primary_menu</property>
+                            <property name="primary">True</property>
+                            <property name="tooltip-text" translatable="yes">Main Menu</property>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="background"/>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child type="center">
+                      <object class="GtkGrid" id="grid">
+                        <property name="halign">center</property>
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+                <property name="min-sidebar-width">250.0</property>
+                <property name="sidebar">
+                  <object class="AdwToolbarView">
+                    <child type="top">
+                      <object class="AdwHeaderBar">
+                        <child type="end">
+                          <object class="GtkButton">
+                            <property name="has-frame">False</property>
+                            <property name="icon-name">update-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesPage">
+                        <child>
+                          <object class="AdwPreferencesGroup" id="timer">
+                            <property name="description">14.3 seconds</property>
+                            <property name="title">Time left</property>
+                            <child>
+                              <object class="GtkProgressBar">
+                                <property name="ellipsize">middle</property>
+                                <property name="fraction">0.8</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwPreferencesGroup">
+                            <property name="description">1/3 left</property>
+                            <property name="title">Words to find</property>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="sensitive">False</property>
+                                <property name="title">&lt;s&gt;Word1&lt;/s&gt;</property>
+                                <child>
+                                  <object class="GtkCheckButton">
+                                    <property name="active">True</property>
+                                    <style>
+                                      <class name="selection-mode"/>
+                                    </style>
+                                  </object>
+                                </child>
+                                <style>
+                                  <class name="success"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow">
+                                <property name="title">Word1</property>
+                                <child>
+                                  <object class="GtkImage">
+                                    <style/>
+                                  </object>
+                                </child>
+                                <style/>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkListBox" id="frame">
+                                <style>
+                                  <class name="boxed-list"/>
+                                </style>
                               </object>
                             </child>
                           </object>
                         </child>
                       </object>
                     </child>
-                    <child>
-                      <object class="AdwSplitButton" id="active_category">
-                        <property name="label" translatable="yes">RANDOM</property>
-                        <property name="height-request">50</property>
-                        <property name="popover">category_popover</property>
-                        <property name="vexpand">true</property>
-                        <property name="valign">start</property>
-                        <property name="width-request">260</property>
-                      </object>
-                    </child>
                   </object>
-                </child>
+                </property>
               </object>
-            </child>
-            <child>
-              <object class="GtkBox" id="main_box">
-                <property name="orientation">vertical</property>
-                <property name="valign">center</property>
-                <child>
-                  <object class="GtkBox">
-                    <child>
-                      <object class="GtkButton">
-                        <property name="margin-start">10</property>
-                        <property name="margin-end">20</property>
-                        <property name="margin-top">30</property>
-                        <property name="icon-name">update-symbolic</property>
-                        <property name="action-name">win.reload</property>
-                        <style>
-                          <class name="circular"/>
-                        </style>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton">
-                        <property name="margin-end">20</property>
-                        <property name="margin-top">30</property>
-                        <property name="label" translatable="yes">Back to menu</property>
-                        <property name="action-name">win.restart</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkButton" id="clock">
-                        <property name="width-request">120</property>
-                        <property name="margin-end">30</property>
-                        <property name="margin-top">30</property>
-                        <property name="visible">false</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkListBox" id="frame">
-                    <property name="width-request">200</property>
-                    <property name="margin-end">20</property>
-                    <property name="margin-top">20</property>
-                    <property name="margin-bottom">60</property>
-                    <style>
-                      <class name="title-2"/>
-                      <class name="boxed-list"/>
-                    </style>
-                    <child>
-                      <object class="GtkLabel" id="frame_label">
-                        <property name="wrap">True</property>
-                        <property name="xalign">0.5</property>
-                        <property name="valign">start</property>
-                        <property name="justify">center</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
-              <object class="GtkGrid" id="grid">
-                <property name="halign">center</property>
-                <property name="valign">center</property>
-              </object>
-            </child>
+            </property>
+            <property name="tag">game</property>
+            <property name="title">Game</property>
           </object>
-        </property>
+        </child>
       </object>
     </property>
   </template>
-  <object class="GtkPopover" id="category_popover">
-    <child>
-      <object class="GtkBox">
-        <property name="orientation">1</property>
-        <child>
-          <object class="GtkButton" id="random_category">
-            <property name="margin-top">10</property>
-            <property name="margin-bottom">15</property>
-            <property name="margin-start">25</property>
-            <property name="margin-end">25</property>
-            <property name="label" translatable="yes">Random Category</property>
-            <property name="action-name">win.random_category</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkSearchEntry" id="search_entry">
-            <property name="placeholder-text" translatable="yes">Search categories</property>
-            <property name="margin-bottom">10</property>
-            <property name="margin-start">15</property>
-            <property name="margin-end">15</property>
-          </object>
-        </child>
-        <child>
-          <object class="AdwStatusPage">
-            <child>
-              <object class="GtkListBox" id="category_list">
-                <property name="width-request">300</property>
-                <property name="vexpand">true</property>
-                <property name="valign">start</property>
-                <style>
-                  <class name="title-4"/>
-                  <class name="frame"/>
-                </style>
-              </object>
-            </child>
-          </object>
-        </child>
-      </object>
-    </child>
-  </object>
   <menu id="primary_menu">
     <section>
       <item>
-        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
         <attribute name="action">win.show-help-overlay</attribute>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_About Hunt</attribute>
         <attribute name="action">app.about</attribute>
+        <attribute name="label" translatable="yes">_About Hunt</attribute>
       </item>
       <item>
-        <attribute name="label" translatable="yes">_Help</attribute>
         <attribute name="action">app.help</attribute>
+        <attribute name="label" translatable="yes">_Help</attribute>
       </item>
     </section>
   </menu>
