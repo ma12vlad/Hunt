@@ -20,7 +20,7 @@
                         <property name="allow-long-swipes">True</property>
                         <property name="vexpand">True</property>
                         <child>
-                          <object class="AdwClamp">
+                          <object class="AdwClamp" id="recommended_settings">
                             <property name="hexpand">True</property>
                             <property name="margin-end">15</property>
                             <property name="margin-start">15</property>
@@ -126,7 +126,7 @@
                           </object>
                         </child>
                         <child>
-                          <object class="AdwStatusPage">
+                          <object class="AdwStatusPage" id="custom_settings">
                             <property name="child">
                               <object class="AdwClamp">
                                 <property name="maximum-size">400</property>

@@ -30,6 +30,9 @@ class HuntWindow(Adw.ApplicationWindow):
     main_window_content = Gtk.Template.Child()
     sidebar_view = Gtk.Template.Child()
     theme_selector = Gtk.Template.Child()
+    game_selector = Gtk.Template.Child()
+    custom_settings = Gtk.Template.Child()
+    recommended_settings = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -198,15 +201,11 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Player wants a custom game, display the options menu
     def custom(self, action, _):
-        self.custom_box.set_visible(True)
-        self.option_grid.set_visible(False)
+        self.game_selector.scroll_to(self.custom_settings, True)
 
     #Pull back from the custom game options menu to the main menu
     def back(self, action, _):
-        if(self.clock.is_visible()):
-            GLib.Source.remove(self.timer_id)
-        self.custom_box.set_visible(False)
-        self.option_grid.set_visible(True)
+        self.game_selector.scroll_to(self.recommended_settings, True)
 
     #Start the game with the custom values set by the player in self.custom_box
     def custom_start(self, action, _):
