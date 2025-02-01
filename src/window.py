@@ -15,10 +15,7 @@ class HuntWindow(Adw.ApplicationWindow):
     frame = Gtk.Template.Child()
     #start_box = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
-    #clock = Gtk.Template.Child()
-    #standard = Gtk.Template.Child()
-    #blitz = Gtk.Template.Child()
-    #clocked = Gtk.Template.Child()
+    clock = Gtk.Template.Child()
     option_grid = Gtk.Template.Child()
     words_value = Gtk.Template.Child()
     height_value = Gtk.Template.Child()
@@ -33,6 +30,9 @@ class HuntWindow(Adw.ApplicationWindow):
     game_selector = Gtk.Template.Child()
     custom_settings = Gtk.Template.Child()
     recommended_settings = Gtk.Template.Child()
+    gamemode = Gtk.Template.Child()
+    gamemode_timed = Gtk.Template.Child()
+    gamemode_blitz = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -76,11 +76,11 @@ class HuntWindow(Adw.ApplicationWindow):
         HuntApplication.create_action(self, 'custom', self.custom)
         HuntApplication.create_action(self, 'back', self.back)
         HuntApplication.create_action(self, 'custom_start', self.custom_start)
-        HuntApplication.create_action(self, 'timed', self.timed)
-        HuntApplication.create_action(self, 'standard', self.normal)
-        HuntApplication.create_action(self, 'speed', self.speed)
         HuntApplication.create_action(self, 'restart', self.back_to_main_menu)
         self.theme_selector.connect("toggled",  lambda cb: self.on_row_activated(cb, "Random") if cb.get_active() else None)
+        self.gamemode.connect("toggled",  lambda cb: self.normal() if cb.get_active() else None)
+        self.gamemode_timed.connect("toggled",  lambda cb: self.timed() if cb.get_active() else None)
+        self.gamemode_blitz.connect("toggled",  lambda cb: self.speed() if cb.get_active() else None)
 
         for item in sorted(list(related_words.keys())):
             listEntry = Gtk.ListBoxRow()
@@ -149,25 +149,19 @@ class HuntWindow(Adw.ApplicationWindow):
         self.make_grid("clicked", _)
 
     #No timer and not in blitz mode
-    def normal(self, action, _):
-        self.clocked.set_active(False), self.blitz.set_active(False)
-        self.standard.set_active(True)
+    def normal(self):
         self.clock.set_visible(False)
         self.timed_game = False
         self.fast = False
 
     #With timer, but not blitz
-    def timed(self, action, _):
-        self.standard.set_active(False), self.blitz.set_active(False)
-        self.clocked.set_active(True)
+    def timed(self):
         self.clock.set_visible(True)
         self.timed_game = True
         self.fast = False
 
     #Blitz mode, gives words one at a time, sets the timer at: length of time/# of words
-    def speed(self, action, _):
-        self.standard.set_active(False), self.clocked.set_active(False)
-        self.blitz.set_active(True)
+    def speed(self):
         self.clock.set_visible(True)
         self.timed_game = False
         self.fast = True
@@ -242,7 +236,7 @@ class HuntWindow(Adw.ApplicationWindow):
         if(self.timed_game and len(self.found_words) == 0 or self.fast and len(self.found_words) == 0): #Create a timer only on first execution of timed or blitz games
             if(self.timer_id is not None): #Remove the active timer, as if the grid failed to generate, it would create multiple timers at once
                 GLib.Source.remove(self.timer_id)
-            self.timer_id = GLib.timeout_add(100, self.update)
+            self.timer_id = GLib.timeout_add(100, self.update, "12")
             self.clock.set_visible(True)
             self.timer = self.saved_time
             if(self.fast):
@@ -299,6 +293,8 @@ class HuntWindow(Adw.ApplicationWindow):
                 #Occurs with words that fail to be placed
                 if(label.get_label().lower() in related_words[self.random_key] and all(child.get_first_child().get_title().upper() != label.get_label() for child in self.frame)):
                     listbox = Gtk.ListBoxRow()
+                    listbox.set_selectable(False)
+                    listbox.set_activatable(False)
                     actionRow = Adw.ActionRow()
                     checkbutton = Gtk.CheckButton()
 
@@ -379,8 +375,15 @@ class HuntWindow(Adw.ApplicationWindow):
 
             if(word in self.words and word not in self.found_words):
                 for child in self.frame:
-                    if(child.get_first_child().get_label() == word):
-                        child.add_css_class("green_button")
+                    if(child.get_first_child().get_title().upper() == word):
+                        child.get_first_child().add_css_class("success")
+                        child.get_first_child().set_sensitive(False)
+                        child.get_first_child().set_title(f"<s>{child.get_first_child().get_title()}</s>")
+
+                        checkIcon = Gtk.CheckButton()
+                        checkIcon.set_active(True)
+                        checkIcon.add_css_class("selection-mode")
+                        child.get_first_child().add_suffix(checkIcon)
                 color = random.choice(self.colors)
                 for child in self.word_buttons:
                     child.remove_css_class("green_button")

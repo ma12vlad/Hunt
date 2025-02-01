@@ -298,10 +298,10 @@
                                     </child>
                                     <child>
                                       <object class="AdwActionRow">
-                                        <property name="activatable-widget">gamemode_1</property>
+                                        <property name="activatable-widget">gamemode_timed</property>
                                         <property name="title">With timer</property>
                                         <child>
-                                          <object class="GtkCheckButton" id="gamemode_1">
+                                          <object class="GtkCheckButton" id="gamemode_timed">
                                             <property name="group">gamemode</property>
                                           </object>
                                         </child>
@@ -309,10 +309,10 @@
                                     </child>
                                     <child>
                                       <object class="AdwActionRow">
-                                        <property name="activatable-widget">gamemode_2</property>
+                                        <property name="activatable-widget">gamemode_blitz</property>
                                         <property name="title">Blitz</property>
                                         <child>
-                                          <object class="GtkCheckButton" id="gamemode_2">
+                                          <object class="GtkCheckButton" id="gamemode_blitz">
                                             <property name="group">gamemode</property>
                                           </object>
                                         </child>
@@ -462,7 +462,7 @@
                     <child>
                       <object class="AdwPreferencesPage">
                         <child>
-                          <object class="AdwPreferencesGroup" id="timer">
+                          <object class="AdwPreferencesGroup" id="clock">
                             <property name="description">14.3 seconds</property>
                             <property name="title">Time left</property>
                             <child>
@@ -477,34 +477,6 @@
                           <object class="AdwPreferencesGroup">
                             <property name="description">1/3 left</property>
                             <property name="title">Words to find</property>
-                            <child>
-                              <object class="AdwActionRow">
-                                <property name="sensitive">False</property>
-                                <property name="title">&lt;s&gt;Word1&lt;/s&gt;</property>
-                                <child>
-                                  <object class="GtkCheckButton">
-                                    <property name="active">True</property>
-                                    <style>
-                                      <class name="selection-mode"/>
-                                    </style>
-                                  </object>
-                                </child>
-                                <style>
-                                  <class name="success"/>
-                                </style>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="AdwActionRow">
-                                <property name="title">Word1</property>
-                                <child>
-                                  <object class="GtkImage">
-                                    <style/>
-                                  </object>
-                                </child>
-                                <style/>
-                              </object>
-                            </child>
                             <child>
                               <object class="GtkListBox" id="frame">
                                 <style>
