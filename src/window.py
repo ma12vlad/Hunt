@@ -232,7 +232,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
         if(self.timer <= 0.1 and self.grid.is_visible):
             self.clock.set_description("Timer ended!")
-            self.end_dialogue()
+            self.end_dialogue(hasWon=False)
             return False
         else: #Reduces timer by 0.1 seconds every (obviously) 0.1 seconds
             self.timer -= 0.1
@@ -423,7 +423,7 @@ class HuntWindow(Adw.ApplicationWindow):
                     child.add_css_class(f"{color}")
                 self.found_words.append(word)
                 if(len(self.found_words) == self.word_count): #End the game if the player has found all the words
-                    self.end_dialogue()
+                    self.end_dialogue(hasWon=True)
                     return
                 if(self.fast):
                     self.make_grid("activate", _)
@@ -527,64 +527,60 @@ class HuntWindow(Adw.ApplicationWindow):
         return path_buttons
 
     #Dialog that runs when the player has found all the words or run out of time.
-    def end_dialogue(self):
+    def end_dialogue(self, hasWon=False):
         game_over = True
         #If the player back_to_main_menus the game, self.current_word gets set to the first button and returns errors. Don't know why it happens, so this is the fix ¯\_(ツ)_/¯
         self.current_word = None
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
-        self.dialog = Gtk.Dialog(title=(_("Game Over")), transient_for=self, modal=True)
-        self.dialog.set_default_size(300, 200)
-        self.dialog.set_decorated(False)
 
-        # Apply the title-4 CSS class to make the text bigger
-        self.dialog.get_style_context().add_class("title-4")
+        endDialog_obj = EndDialog(self.random_key, f"{self.length} ⨯ {self.height}", len(self.found_words), self.word_count, hasWon)
+        endDialog_obj.set_actions(self.close_end_dialogue, self.back_to_main_menu_game)
+        endDialog_obj.present(self)
 
-        # Dialog content area
-        content_area = self.dialog.get_content_area()
-
-        # Create a box to vertically center the content
-        vbox = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=20)
-        vbox.set_valign(Gtk.Align.CENTER)
-        vbox.set_halign(Gtk.Align.CENTER)
-        content_area.append(vbox)
-
-        # Create a label to display the end-game message
-        message = Gtk.Label(
-            label=f"\nCategory: {self.random_key}\n\nGrid size: {self.length} x {self.height} tiles\n\nTotal words:  {self.word_count}\n# of words found:  {len(self.found_words)}",
-            halign=Gtk.Align.CENTER,
-            valign=Gtk.Align.CENTER,
-            margin_start=30,
-            margin_end=30,
-            justify=Gtk.Justification.CENTER
-        )
-        vbox.append(message)
-
-        # Create a button box to center the buttons
-        button_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
-        button_box.set_halign(Gtk.Align.CENTER)
-
-        # Add buttons to the button box
-        new_game_button = Gtk.Button(label=(_("New Game")))
-        new_game_button.connect("clicked", lambda _: self.back_to_main_menu_game("activate", _))
-        button_box.append(new_game_button)
-
-        close_button = Gtk.Button(label=(_("Close")))
-        close_button.connect("clicked", lambda _: self.close_end_dialogue("activate", _))
-        button_box.append(close_button)
-        button_box.set_margin_bottom(15)
-
-        # Add the button box to the vbox
-        vbox.append(button_box)
-        self.dialog.show()
         self.found_words.clear()
 
     #back_to_main_menu the game when it ends
-    def back_to_main_menu_game(self, action, _):
-        self.dialog.destroy()
+    def back_to_main_menu_game(self):
         self.make_grid("activate", _)
 
     #Destroy the dialogue so that the player can see the grid
-    def close_end_dialogue(self, action, _):
-        self.dialog.destroy()
+    def close_end_dialogue(self):
+        self.main_window_content.pop()
 
+@Gtk.Template(resource_path='/io/github/swordpuffin/hunt/end_dialog.ui')
+class EndDialog(Adw.AlertDialog):
+    __gtype_name__ = 'EndGame'
+
+    #All relevant items from window.ui that are used here
+    category = Gtk.Template.Child()
+    grid_size = Gtk.Template.Child()
+    progress = Gtk.Template.Child()
+    words_found = Gtk.Template.Child()
+
+    def __init__(self, categoryName: str, gridSize: str, wordsFound: int, wordsTotal: int, hasWon: bool = False, **kwargs):
+        super().__init__(**kwargs)
+        if hasWon:
+            self.set_body("Congratulations!")
+            self.set_heading("You won the game!")
+            self.add_css_class('success')
+        else:
+            self.set_body("Time's out!")
+            self.set_heading("You ran out of time!")
+            self.add_css_class('warning')
+
+        self.category.set_subtitle(categoryName.capitalize())
+        self.grid_size.set_subtitle(gridSize)
+        self.words_found.set_subtitle(f"{wordsFound} out of {wordsTotal}")
+        self.progress.set_fraction(wordsFound/wordsTotal)
+        self.connect("response", self.end_dialog_callback)
+
+    def set_actions(self, closeAction: callable, newGameAction: callable):
+        self.newGameAction = newGameAction
+        self.closeAction = closeAction
+
+    def end_dialog_callback(self, EndGameDialog: Adw.AlertDialog, responseID: str):
+        if responseID == 'newgame':
+            self.newGameAction()
+        else:
+            self.closeAction()
