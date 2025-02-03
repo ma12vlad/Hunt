@@ -442,6 +442,9 @@
                     <child type="center">
                       <object class="GtkGrid" id="grid">
                         <property name="halign">center</property>
+                        <property name="margin-bottom">15</property>
+                        <property name="margin-end">15</property>
+                        <property name="margin-start">15</property>
                         <property name="valign">center</property>
                       </object>
                     </child>
@@ -454,6 +457,7 @@
                       <object class="AdwHeaderBar">
                         <child type="end">
                           <object class="GtkButton">
+                            <property name="action-name">win.reload</property>
                             <property name="has-frame">False</property>
                             <property name="icon-name">update-symbolic</property>
                           </object>
