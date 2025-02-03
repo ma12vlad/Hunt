@@ -18,6 +18,10 @@ actions_icons = [
   actions_dir / 'wrench-wide-symbolic.svg',
   actions_dir / 'update-symbolic.svg',
   actions_dir / 'question-round-outline-symbolic.svg',
+  actions_dir / 'dice3-symbolic.svg',
+  actions_dir / 'camera-flash-symbolic.svg',
+  actions_dir / 'playlist-infinite-symbolic.svg',
+  actions_dir / 'timer-symbolic.svg',
 ]
 install_data(
   actions_icons,

@@ -296,6 +296,7 @@
                                     <child>
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode</property>
+                                        <property name="icon-name">playlist-infinite-symbolic</property>
                                         <property name="title">No timer</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode">
@@ -307,6 +308,7 @@
                                     <child>
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode_timed</property>
+                                        <property name="icon-name">timer-symbolic</property>
                                         <property name="title">With timer</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode_timed">
@@ -318,6 +320,7 @@
                                     <child>
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode_blitz</property>
+                                        <property name="icon-name">camera-flash-symbolic</property>
                                         <property name="title">Blitz</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode_blitz">
@@ -358,6 +361,7 @@
                                       <object class="AdwActionRow">
                                         <property name="activatable">True</property>
                                         <property name="activatable-widget">theme_selector</property>
+                                        <property name="icon-name">dice3-symbolic</property>
                                         <property name="title">Random</property>
                                         <child>
                                           <object class="GtkCheckButton" id="theme_selector">
