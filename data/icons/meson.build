@@ -11,3 +11,15 @@ install_data(
   symbolic_dir / ('@0@-symbolic.svg').format(application_id),
   install_dir: get_option('datadir') / 'icons' / symbolic_dir
 )
+
+actions_dir = 'hicolor' / 'scalable' / 'actions'
+actions_icons = [
+  actions_dir / 'external-link-symbolic.svg',
+  actions_dir / 'wrench-wide-symbolic.svg',
+  actions_dir / 'update-symbolic.svg',
+  actions_dir / 'question-round-outline-symbolic.svg',
+]
+install_data(
+  actions_icons,
+  install_dir: get_option('datadir') / 'icons' / actions_dir
+)
