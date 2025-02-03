@@ -22,6 +22,10 @@ actions_icons = [
   actions_dir / 'camera-flash-symbolic.svg',
   actions_dir / 'playlist-infinite-symbolic.svg',
   actions_dir / 'timer-symbolic.svg',
+  actions_dir / 'branch-compare-arrows-symbolic.svg',
+  actions_dir / 'gamepad-symbolic.svg',
+  actions_dir / 'lightbulb-symbolic.svg',
+  actions_dir / 'gamepad-symbolic.svg',
 ]
 install_data(
   actions_icons,
