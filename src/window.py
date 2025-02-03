@@ -33,6 +33,7 @@ class HuntWindow(Adw.ApplicationWindow):
     gamemode = Gtk.Template.Child()
     gamemode_timed = Gtk.Template.Child()
     gamemode_blitz = Gtk.Template.Child()
+    timer_progBar = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -220,12 +221,23 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Function that is the timer of the game. Return false/return true ends or continues the function
     def update(self):
+        if self.timer_progBar.get_fraction() < 0.25:
+            self.timer_progBar.remove_css_class("warning")
+            self.timer_progBar.add_css_class("error")
+        elif self.timer_progBar.get_fraction() < 0.5:
+            self.timer_progBar.add_css_class("warning")
+        else:
+            self.timer_progBar.remove_css_class("warning")
+            self.timer_progBar.remove_css_class("error")
+
         if(self.timer <= 0.1 and self.grid.is_visible):
+            self.clock.set_description("Timer ended!")
             self.end_dialogue()
             return False
         else: #Reduces timer by 0.1 seconds every (obviously) 0.1 seconds
             self.timer -= 0.1
-            self.clock.set_label("Time: " + str(round(self.timer, 1)) + "s")
+            self.clock.set_description(str(round(self.timer, 1)) + " seconds")
+            self.timer_progBar.set_fraction(self.timer / self.saved_time)
             return True
 
     #Main function that is the start of the game. As the name suggests, makes the grid for all the letters
@@ -236,19 +248,22 @@ class HuntWindow(Adw.ApplicationWindow):
         if(self.timed_game and len(self.found_words) == 0 or self.fast and len(self.found_words) == 0): #Create a timer only on first execution of timed or blitz games
             if(self.timer_id is not None): #Remove the active timer, as if the grid failed to generate, it would create multiple timers at once
                 GLib.Source.remove(self.timer_id)
-            self.timer_id = GLib.timeout_add(100, self.update, "12")
+            self.timer_id = GLib.timeout_add(100, self.update)
             self.clock.set_visible(True)
             self.timer = self.saved_time
             if(self.fast):
                 self.divided_timer = self.timer / self.word_count
                 self.timer = 0 #Reset timer so it will be equal to self.divided_timer on first execution
 
-        self.main_window_content.push_by_tag("game")
+        if not self.divided_timer or self.main_window_content.get_visible_page().get_tag() != "game":
+            while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid, only on start of game (not when blitz refreshes grid)
+                self.frame.remove(self.frame.get_first_child())
+            if self.main_window_content.get_visible_page().get_tag() != "game":
+                self.main_window_content.push_by_tag("game")
+
         self.grid.set_visible(True)
         while(self.grid.get_child_at(0,0) is not None): #Clear the entire main grid where all the letters are
             self.grid.remove_row(0)
-        while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid
-            self.frame.remove(self.frame.get_first_child())
 
         row = 0
         col = 0
@@ -307,8 +322,22 @@ class HuntWindow(Adw.ApplicationWindow):
                     self.frame.append(listbox)
         else: #Add self.divided_timer to however much it was before, and place the one new word into the grid as well as onto the GTKListBox.
             self.timer += self.divided_timer
-            self.clock.set_label(str(round(self.timer, 1)))
-            self.frame.append(Gtk.Label(label=self.words[len(self.found_words)], margin_bottom=14, margin_top=14))
+            self.saved_time = self.timer
+            self.clock.set_description(str(round(self.timer, 1)) + " seconds")
+
+            listbox = Gtk.ListBoxRow()
+            listbox.set_selectable(False)
+            listbox.set_activatable(False)
+            actionRow = Adw.ActionRow()
+            checkbutton = Gtk.CheckButton()
+
+            listbox.set_child(actionRow)
+            actionRow.add_suffix(checkbutton)
+            checkbutton.set_visible(False)
+
+            actionRow.set_title(self.words[len(self.found_words)].capitalize())
+
+            self.frame.insert(listbox, 0)
             self.place_word_in_grid(self.words[len(self.found_words)])
 
     def make_word_list(self): #Creates the list of words for the player to search for.

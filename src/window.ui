@@ -241,6 +241,14 @@
                     <child type="start">
                       <object class="AdwHeaderBar">
                         <property name="show-title">False</property>
+                        <child type="end">
+                          <object class="GtkMenuButton">
+                            <property name="icon-name">open-menu-symbolic</property>
+                            <property name="menu-model">primary_menu</property>
+                            <property name="primary">True</property>
+                            <property name="tooltip-text" translatable="yes">Main Menu</property>
+                          </object>
+                        </child>
                         <style>
                           <class name="background"/>
                           <class name="flat"/>
@@ -329,14 +337,6 @@
                                     <property name="title">Hunt</property>
                                   </object>
                                 </property>
-                                <child type="end">
-                                  <object class="GtkMenuButton">
-                                    <property name="icon-name">open-menu-symbolic</property>
-                                    <property name="menu-model">primary_menu</property>
-                                    <property name="primary">True</property>
-                                    <property name="tooltip-text" translatable="yes">Main Menu</property>
-                                  </object>
-                                </child>
                               </object>
                             </child>
                           </object>
@@ -423,6 +423,7 @@
                     <property name="orientation">vertical</property>
                     <child type="start">
                       <object class="AdwHeaderBar">
+                        <property name="show-back-button">False</property>
                         <property name="show-title">False</property>
                         <child type="end">
                           <object class="GtkMenuButton">
@@ -465,8 +466,9 @@
                           <object class="AdwPreferencesGroup" id="clock">
                             <property name="description">14.3 seconds</property>
                             <property name="title">Time left</property>
+                            <property name="visible">False</property>
                             <child>
-                              <object class="GtkProgressBar">
+                              <object class="GtkProgressBar" id="timer_progBar">
                                 <property name="ellipsize">middle</property>
                                 <property name="fraction">0.8</property>
                               </object>
@@ -475,7 +477,6 @@
                         </child>
                         <child>
                           <object class="AdwPreferencesGroup">
-                            <property name="description">1/3 left</property>
                             <property name="title">Words to find</property>
                             <child>
                               <object class="GtkListBox" id="frame">
@@ -498,6 +499,7 @@
         </child>
       </object>
     </property>
+    <property name="default-width">800</property>
   </template>
   <menu id="primary_menu">
     <section>
