@@ -459,6 +459,11 @@
                   <object class="AdwToolbarView">
                     <child type="top">
                       <object class="AdwHeaderBar">
+                        <property name="title-widget">
+                          <object class="AdwWindowTitle" id="game_title">
+                            <property name="title">Game</property>
+                          </object>
+                        </property>
                         <child type="end">
                           <object class="GtkButton">
                             <property name="action-name">win.reload</property>

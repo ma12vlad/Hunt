@@ -13,7 +13,6 @@ class HuntWindow(Adw.ApplicationWindow):
     grid = Gtk.Template.Child()
     main_box = Gtk.Template.Child()
     frame = Gtk.Template.Child()
-    #start_box = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
     clock = Gtk.Template.Child()
     option_grid = Gtk.Template.Child()
@@ -34,6 +33,7 @@ class HuntWindow(Adw.ApplicationWindow):
     gamemode_timed = Gtk.Template.Child()
     gamemode_blitz = Gtk.Template.Child()
     timer_progBar = Gtk.Template.Child()
+    game_title = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -262,6 +262,7 @@ class HuntWindow(Adw.ApplicationWindow):
                 self.main_window_content.push_by_tag("game")
 
         self.grid.set_visible(True)
+        self.game_title.set_subtitle(self.random_key.capitalize())
         while(self.grid.get_child_at(0,0) is not None): #Clear the entire main grid where all the letters are
             self.grid.remove_row(0)
 
