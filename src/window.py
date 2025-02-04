@@ -58,7 +58,6 @@ class HuntWindow(Adw.ApplicationWindow):
     divided_timer = None
     selected_category = "RANDOM"
 
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         css_provider = Gtk.CssProvider()
@@ -364,31 +363,59 @@ class HuntWindow(Adw.ApplicationWindow):
         while(not placed and attempts < max_attempts):
             attempts += 1
             direction = random.choice(['horizontal', 'vertical', 'diagonal'])
-            row = random.randint(0, self.height - 1)  # Random start position
+            backward = random.choice([False, False, False, True])  # Randomly decide if word should be placed backwards. Only 1/3rd chance since half of all words being backwards is too much
+
+            if(direction == 'diagonal'):
+                diagonal_up = random.choice([True, False])  # Randomly decide if diagonal should go upwards
+
+            row = random.randint(0, self.height - 1)
             col = random.randint(0, self.length - 1)
-            # Check horizontal placement with intersection allowed
-            if(direction == 'horizontal' and col + len(word) <= self.length):
-                if(all(self.grid_data[row][col + i] == ' ' or self.grid_data[row][col + i] == word[i].upper() for i in range(len(word)))):
-                    for i in range(len(word)):
-                        self.grid_data[row][col + i] = word[i].upper()
-                        self.buttons[row * self.length + col + i].set_label(word[i].upper())
-                    placed = True
+            word_to_place = word[::-1] if backward else word  # Reverse word if placing backwards
 
-            # Check vertical placement with intersection allowed
-            elif(direction == 'vertical' and row + len(word) <= self.height):
-                if(all(self.grid_data[row + i][col] == ' ' or self.grid_data[row + i][col] == word[i].upper() for i in range(len(word)))):
-                    for i in range(len(word)):
-                        self.grid_data[row + i][col] = word[i].upper()
-                        self.buttons[(row + i) * self.length + col].set_label(word[i].upper())
-                    placed = True
+            # Check horizontal placement
+            if(direction == 'horizontal'):
+                if(backward):
+                    col -= len(word) - 1  # Adjust start position for backward placement
+                if(0 <= col and col + len(word) <= self.length):
+                    if all(self.grid_data[row][col + i] in [' ', word_to_place[i].upper()] for i in range(len(word))):
+                        for i in range(len(word)):
+                            self.grid_data[row][col + i] = word_to_place[i].upper()
+                            self.buttons[row * self.length + col + i].set_label(word_to_place[i].upper())
+                        placed = True
 
-            # Check diagonal placement with intersection allowed
-            elif(direction == 'diagonal' and row + len(word) <= self.height and col + len(word) <= self.length):
-                if(all(self.grid_data[row + i][col + i] == ' ' or self.grid_data[row + i][col + i] == word[i].upper() for i in range(len(word)))):
-                    for i in range(len(word)):
-                        self.grid_data[row + i][col + i] = word[i].upper()  # Use uppercase for consistency
-                        self.buttons[(row + i) * self.length + (col + i)].set_label(word[i].upper())
-                    placed = True
+            # Check vertical placement
+            elif(direction == 'vertical'):
+                if(backward):
+                    row -= len(word) - 1
+                if(0 <= row and row + len(word) <= self.height):
+                    if(all(self.grid_data[row + i][col] in [' ', word_to_place[i].upper()] for i in range(len(word)))):
+                        for i in range(len(word)):
+                            self.grid_data[row + i][col] = word_to_place[i].upper()
+                            self.buttons[(row + i) * self.length + col].set_label(word_to_place[i].upper())
+                        placed = True
+
+            # Check diagonal placement
+            elif(direction == 'diagonal'):
+                if(backward):
+                    word = word[::-1]
+                if(diagonal_up):
+                    if(row - (len(word) - 1) >= 0 and col + len(word) <= self.length):  # Ensure row stays within bounds
+                        if(all(self.grid_data[row - i][col + i] in [' ', word_to_place[i].upper()] for i in range(len(word)))):
+                            for i in range(len(word)):
+                                self.grid_data[row - i][col + i] = word_to_place[i].upper()
+                                self.buttons[(row - i) * self.length + (col + i)].set_label(word_to_place[i].upper())
+                            placed = True
+                else:
+                    if(0 <= row and row + len(word) <= self.height and col + len(word) <= self.length):
+                        if(all(self.grid_data[row + i][col + i] in [' ', word_to_place[i].upper()] for i in range(len(word)))):
+                            for i in range(len(word)):
+                                self.grid_data[row + i][col + i] = word_to_place[i].upper()
+                                self.buttons[(row + i) * self.length + (col + i)].set_label(word_to_place[i].upper())
+                            placed = True
+
+        if(not placed):
+            print(f"Failed to place word '{word}' after {max_attempts} attempts.")
+            self.make_grid("activate", _)
 
         if(not placed):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
@@ -403,7 +430,9 @@ class HuntWindow(Adw.ApplicationWindow):
             first_pos = self.grid.query_child(self.current_word) #Grab the position of the first selected button
             second_pos = self.grid.query_child(button) #Grab the position of the second selected button
             word = self.get_selected_word(first_pos, second_pos) #Find the word between the two
-
+            
+            if(word[::-1] in self.words and word[::-1] not in self.found_words):
+                word = word[::-1]
             if(word in self.words and word not in self.found_words):
                 for child in self.frame:
                     if(child.get_first_child().get_title().upper() == word):
