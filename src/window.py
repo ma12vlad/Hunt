@@ -82,6 +82,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.gamemode.connect("toggled",  lambda cb: self.normal() if cb.get_active() else None)
         self.gamemode_timed.connect("toggled",  lambda cb: self.timed() if cb.get_active() else None)
         self.gamemode_blitz.connect("toggled",  lambda cb: self.speed() if cb.get_active() else None)
+        self.main_window_content.connect("popped", lambda _, page: self.back_to_main_menu(None, None) if page.get_tag() == 'game' else None)
 
         for item in sorted(list(related_words.keys())):
             listEntry = Gtk.ListBoxRow()
@@ -216,8 +217,8 @@ class HuntWindow(Adw.ApplicationWindow):
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
         self.found_words.clear()
-        self.set_default_size(700, 450)
-        self.main_window_content.pop()
+        self.set_default_size(800, 650)
+        self.main_window_content.pop_to_tag("preferences")
 
     #Function that is the timer of the game. Return false/return true ends or continues the function
     def update(self):
