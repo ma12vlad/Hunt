@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.94.1 -->
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <requires lib="libadwaita" version="1.6"/>
+  <template class="EndGame" parent="AdwAlertDialog">
+    <property name="body">You ran out of time!</property>
+    <property name="extra-child">
+      <object class="AdwPreferencesGroup">
+        <child>
+          <object class="AdwActionRow" id="category">
+            <property name="subtitle">Shapes</property>
+            <property name="title">Category</property>
+            <style>
+              <class name="property"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="grid_size">
+            <property name="subtitle">8 x 8 tiles</property>
+            <property name="title">Grid size</property>
+            <style>
+              <class name="property"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="AdwActionRow" id="words_found">
+            <property name="subtitle">5 out of 5</property>
+            <property name="title">Words found</property>
+            <style>
+              <class name="property"/>
+              <class name="accent"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkProgressBar" id="progress">
+            <property name="fraction">0.1</property>
+            <property name="margin-end">15</property>
+            <property name="margin-start">15</property>
+            <style>
+              <class name="osd"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="heading">Time's out!</property>
+    <property name="prefer-wide-layout">True</property>
+    <property name="presentation-mode">auto</property>
+    <style/>
+    <!-- Custom template fragments -->
+    <responses>
+      <response id="close" translatable="yes">_Close</response>
+      <response id="newgame" translatable="yes" appearance="suggested">_New game</response>
+    </responses>
+  </template>
+</interface>

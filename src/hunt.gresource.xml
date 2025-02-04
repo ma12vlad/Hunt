@@ -2,8 +2,8 @@
 <gresources>
   <gresource prefix="/io/github/swordpuffin/hunt">
     <file preprocess="xml-stripblanks">window.ui</file>
+    <file preprocess="xml-stripblanks">help_dialog.ui</file>
+    <file preprocess="xml-stripblanks">end_dialog.ui</file>
     <file preprocess="xml-stripblanks">gtk/help-overlay.ui</file>
-    <file>icons/update-symbolic.svg</file>
-    <file>icons/question-round-outline-symbolic.svg</file>
   </gresource>
 </gresources>
