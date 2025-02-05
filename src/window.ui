@@ -27,6 +27,9 @@
                             <property name="maximum-size">500</property>
                             <property name="tightening-threshold">200</property>
                             <property name="vexpand">True</property>
+                            <style>
+                              <class name="title-2"/>
+                            </style>
                             <child>
                               <object class="AdwClamp">
                                 <property name="maximum-size">500</property>

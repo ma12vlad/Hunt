@@ -31,6 +31,10 @@
       <caption>Playing the game</caption>
       <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot2.png</image>
     </screenshot>
+    <screenshot>
+      <caption>Game over</caption>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot3.png</image>
+    </screenshot>
   </screenshots>
   <requires>
     <display_length compare="ge">905</display_length>
@@ -40,9 +44,21 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.0.7" date="2025-2-4">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.7</url>
+      <description translate="no">
+        <p>Hunt v1.0.7 includes many changes focused on making the game more polished</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Completely overhauled UI (credit of DodoLeDev).</li>
+          <li>Improved word placement, including backwards and diagonal words in all directions.</li>
+          <li>Better help dialog.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.6" date="2025-1-30">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.6</url>
-      <description translate="no">
+      <description translate="yes">
         <p>Hunt v1.0.6</p>
         <p>Changes:</p>
         <p xml:lang="ru">изменения:</p>

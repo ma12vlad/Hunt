@@ -102,7 +102,7 @@ related_words = {
 
 css = """
         .green_button {
-          background-color: @green_5;
+            background-color: @green_5;
         }
 
         .red1 {

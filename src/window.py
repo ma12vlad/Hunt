@@ -56,6 +56,7 @@ class HuntWindow(Adw.ApplicationWindow):
     random_key = None
     dialog = None
     divided_timer = None
+    reference_time = None
     selected_category = "RANDOM"
 
     def __init__(self, **kwargs):
@@ -172,7 +173,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.word_count = 5
         self.length = 8
         self.height = 8
-        self.timer = self.saved_time = 30
+        self.timer = self.saved_time = self.reference_time = 30
         self.make_grid("activate", _)
         self.grid.set_size_request(400, 400)
 
@@ -181,7 +182,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.word_count = 8
         self.length = 12
         self.height = 12
-        self.timer = self.saved_time = 60
+        self.timer = self.saved_time  = self.reference_time = 60
         self.make_grid("activate", _)
         self.grid.set_size_request(600, 600)
 
@@ -190,7 +191,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.word_count = 10
         self.length = 16
         self.height = 16
-        self.timer = self.saved_time = 80
+        self.timer = self.saved_time  = self.reference_time = 80
         self.make_grid("activate", _)
         self.grid.set_size_request(800, 800)
 
@@ -207,7 +208,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.word_count = int(self.words_value.get_value())
         self.height = int(self.height_value.get_value())
         self.length = int(self.length_value.get_value())
-        self.timer = self.saved_time = int(self.time_value.get_value())
+        self.timer = self.saved_time  = self.reference_time = int(self.time_value.get_value())
         self.make_grid("activate", _)
         self.grid.set_size_request(400 + (self.length - 8) / 2 * 100, 400 + (self.height - 8) / 2 * 100)
 
@@ -237,7 +238,7 @@ class HuntWindow(Adw.ApplicationWindow):
         else: #Reduces timer by 0.1 seconds every (obviously) 0.1 seconds
             self.timer -= 0.1
             self.clock.set_description(str(round(self.timer, 1)) + " seconds")
-            self.timer_progBar.set_fraction(self.timer / self.saved_time)
+            self.timer_progBar.set_fraction(self.timer / self.reference_time)
             return True
 
     #Main function that is the start of the game. As the name suggests, makes the grid for all the letters
@@ -245,6 +246,11 @@ class HuntWindow(Adw.ApplicationWindow):
         self.game_over = False
         if(len(self.found_words) == 0): #Only run at game start, this is here because the blitz mode will call this function to rebuild the grid every time a player finds a new word
             self.make_word_list()
+            while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid, only on start of game (not when blitz refreshes grid)
+                self.frame.remove(self.frame.get_first_child())
+            if self.main_window_content.get_visible_page().get_tag() != "game":
+                self.main_window_content.push_by_tag("game")
+
         if(self.timed_game and len(self.found_words) == 0 or self.fast and len(self.found_words) == 0): #Create a timer only on first execution of timed or blitz games
             if(self.timer_id is not None): #Remove the active timer, as if the grid failed to generate, it would create multiple timers at once
                 GLib.Source.remove(self.timer_id)
@@ -255,11 +261,7 @@ class HuntWindow(Adw.ApplicationWindow):
                 self.divided_timer = self.timer / self.word_count
                 self.timer = 0 #Reset timer so it will be equal to self.divided_timer on first execution
 
-        if not self.divided_timer or self.main_window_content.get_visible_page().get_tag() != "game":
-            while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid, only on start of game (not when blitz refreshes grid)
-                self.frame.remove(self.frame.get_first_child())
-            if self.main_window_content.get_visible_page().get_tag() != "game":
-                self.main_window_content.push_by_tag("game")
+        # if self.main_window_content.get_visible_page().get_tag() != "game":
 
         self.grid.set_visible(True)
         self.game_title.set_subtitle(self.random_key.capitalize())
@@ -323,7 +325,7 @@ class HuntWindow(Adw.ApplicationWindow):
                     self.frame.append(listbox)
         else: #Add self.divided_timer to however much it was before, and place the one new word into the grid as well as onto the GTKListBox.
             self.timer += self.divided_timer
-            self.saved_time = self.timer
+            self.reference_time = self.timer
             self.clock.set_description(str(round(self.timer, 1)) + " seconds")
 
             listbox = Gtk.ListBoxRow()
@@ -412,10 +414,6 @@ class HuntWindow(Adw.ApplicationWindow):
                                 self.grid_data[row + i][col + i] = word_to_place[i].upper()
                                 self.buttons[(row + i) * self.length + (col + i)].set_label(word_to_place[i].upper())
                             placed = True
-
-        if(not placed):
-            print(f"Failed to place word '{word}' after {max_attempts} attempts.")
-            self.make_grid("activate", _)
 
         if(not placed):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
@@ -559,11 +557,12 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Dialog that runs when the player has found all the words or run out of time.
     def end_dialogue(self, hasWon=False):
-        game_over = True
+        self.game_over = True
         #If the player back_to_main_menus the game, self.current_word gets set to the first button and returns errors. Don't know why it happens, so this is the fix ¯\_(ツ)_/¯
         self.current_word = None
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
+            self.divided_timer = None
 
         endDialog_obj = EndDialog(self.random_key, f"{self.length} ⨯ {self.height}", len(self.found_words), self.word_count, hasWon)
         endDialog_obj.set_actions(self.close_end_dialogue, self.back_to_main_menu_game)
