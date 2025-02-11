@@ -591,12 +591,12 @@ class EndDialog(Adw.AlertDialog):
     def __init__(self, categoryName: str, gridSize: str, wordsFound: int, wordsTotal: int, hasWon: bool = False, **kwargs):
         super().__init__(**kwargs)
         if hasWon:
-            self.set_body("Congratulations!")
-            self.set_heading("You won the game!")
+            self.set_body(_("Congratulations!"))
+            self.set_heading(_("You won the game!"))
             self.add_css_class('success')
         else:
-            self.set_body("Time's out!")
-            self.set_heading("You ran out of time!")
+            self.set_body(_("Time's out!"))
+            self.set_heading(_("You ran out of time!"))
             self.add_css_class('warning')
 
         self.category.set_subtitle(categoryName.capitalize())

@@ -105,7 +105,7 @@
                                             <property name="valign">center</property>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">Custom</property>
+                                                <property name="label" translatable="yes">Custom</property>
                                               </object>
                                             </child>
                                             <child>
@@ -145,8 +145,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">object-flip-vertical</property>
-                                        <property name="subtitle">How many lines you want</property>
-                                        <property name="title">Height</property>
+                                        <property name="subtitle" translatable="yes">How many lines you want</property>
+                                        <property name="title" translatable="yes">Height</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -160,8 +160,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">object-flip-horizontal</property>
-                                        <property name="subtitle">How many columns you want</property>
-                                        <property name="title">Width</property>
+                                        <property name="subtitle" translatable="yes">How many columns you want</property>
+                                        <property name="title" translatable="yes">Width</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -175,8 +175,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">completion-word-symbolic</property>
-                                        <property name="subtitle">How many words you will have to guess</property>
-                                        <property name="title">Words</property>
+                                        <property name="subtitle" translatable="yes">How many words you will have to guess</property>
+                                        <property name="title" translatable="yes">Words</property>
                                         <property name="value">5.0</property>
                                       </object>
                                     </child>
@@ -190,8 +190,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">alarm-symbolic</property>
-                                        <property name="subtitle">The time you will have to find all the words</property>
-                                        <property name="title">Time (in seconds)</property>
+                                        <property name="subtitle" translatable="yes">The time you will have to find all the words</property>
+                                        <property name="title" translatable="yes">Time (in seconds)</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -216,7 +216,7 @@
                                             <property name="child">
                                               <object class="AdwButtonContent">
                                                 <property name="icon-name">media-playback-start-symbolic</property>
-                                                <property name="label">Start</property>
+                                                <property name="label" translatable="yes">Start</property>
                                               </object>
                                             </property>
                                             <style>
@@ -231,9 +231,9 @@
                                 </child>
                               </object>
                             </property>
-                            <property name="description">Create the game of your dreams!</property>
+                            <property name="description" translatable="yes">Create the game of your dreams!</property>
                             <property name="icon-name">wrench-wide-symbolic</property>
-                            <property name="title">Custom settings</property>
+                            <property name="title" translatable="yes">Custom settings</property>
                             <style>
                               <class name="compact"/>
                             </style>
@@ -277,13 +277,13 @@
                               <object class="AdwPreferencesPage">
                                 <child>
                                   <object class="AdwPreferencesGroup">
-                                    <property name="title">Theme</property>
+                                    <property name="title" translatable="yes">Theme</property>
                                     <child>
                                       <object class="AdwActionRow" id="active_category">
                                         <property name="action-name">navigation.push</property>
                                         <property name="action-target">'theme_selector'</property>
                                         <property name="activatable">True</property>
-                                        <property name="title">Random</property>
+                                        <property name="title" translatable="yes">Random</property>
                                         <child>
                                           <object class="GtkImage">
                                             <property name="icon-name">go-next</property>
@@ -295,12 +295,12 @@
                                 </child>
                                 <child>
                                   <object class="AdwPreferencesGroup">
-                                    <property name="title">Game mode</property>
+                                    <property name="title" translatable="yes">Game mode</property>
                                     <child>
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode</property>
                                         <property name="icon-name">playlist-infinite-symbolic</property>
-                                        <property name="title">No timer</property>
+                                        <property name="title" translatable="yes">No timer</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode">
                                             <property name="active">True</property>
@@ -312,7 +312,7 @@
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode_timed</property>
                                         <property name="icon-name">timer-symbolic</property>
-                                        <property name="title">With timer</property>
+                                        <property name="title" translatable="yes">With timer</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode_timed">
                                             <property name="group">gamemode</property>
@@ -324,7 +324,7 @@
                                       <object class="AdwActionRow">
                                         <property name="activatable-widget">gamemode_blitz</property>
                                         <property name="icon-name">camera-flash-symbolic</property>
-                                        <property name="title">Blitz</property>
+                                        <property name="title" translatable="yes">Blitz</property>
                                         <child>
                                           <object class="GtkCheckButton" id="gamemode_blitz">
                                             <property name="group">gamemode</property>
@@ -348,7 +348,7 @@
                           </object>
                         </property>
                         <property name="tag">main_options</property>
-                        <property name="title">Options</property>
+                        <property name="title" translatable="yes">Options</property>
                       </object>
                     </child>
                     <child>
@@ -365,7 +365,7 @@
                                         <property name="activatable">True</property>
                                         <property name="activatable-widget">theme_selector</property>
                                         <property name="icon-name">dice3-symbolic</property>
-                                        <property name="title">Random</property>
+                                        <property name="title" translatable="yes">Random</property>
                                         <child>
                                           <object class="GtkCheckButton" id="theme_selector">
                                             <property name="active">True</property>
@@ -410,7 +410,7 @@
                           </object>
                         </property>
                         <property name="tag">theme_selector</property>
-                        <property name="title">Themes</property>
+                        <property name="title" translatable="yes">Themes</property>
                       </object>
                     </child>
                   </object>
@@ -464,7 +464,7 @@
                       <object class="AdwHeaderBar">
                         <property name="title-widget">
                           <object class="AdwWindowTitle" id="game_title">
-                            <property name="title">Game</property>
+                            <property name="title" translatable="yes">Game</property>
                           </object>
                         </property>
                         <child type="end">
@@ -481,7 +481,7 @@
                         <child>
                           <object class="AdwPreferencesGroup" id="clock">
                             <property name="description">14.3 seconds</property>
-                            <property name="title">Time left</property>
+                            <property name="title" translatable="yes">Time left</property>
                             <property name="visible">False</property>
                             <child>
                               <object class="GtkProgressBar" id="timer_progBar">
@@ -493,7 +493,7 @@
                         </child>
                         <child>
                           <object class="AdwPreferencesGroup">
-                            <property name="title">Words to find</property>
+                            <property name="title" translatable="yes">Words to find</property>
                             <child>
                               <object class="GtkListBox" id="frame">
                                 <style>
@@ -510,7 +510,7 @@
               </object>
             </property>
             <property name="tag">game</property>
-            <property name="title">Game</property>
+            <property name="title" translatable="yes">Game</property>
           </object>
         </child>
       </object>
