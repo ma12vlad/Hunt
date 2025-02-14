@@ -1,0 +1,3841 @@
+# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-02-11 20:37+0300\n"
+"PO-Revision-Date: 2025-02-11 20:38+0300\n"
+"Last-Translator: Krafting <contact@krafting.net>\n"
+"Language-Team: French <>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: end_dialog.ui:12
+msgid "Shapes"
+msgstr "Formes"
+
+#: end_dialog.ui:13
+msgid "Category"
+msgstr "Catégorie"
+
+#: end_dialog.ui:21
+msgid "8 x 8 tiles"
+msgstr "grille 8 x 8"
+
+#: end_dialog.ui:22
+msgid "Grid size"
+msgstr "Taille de la grille"
+
+#: end_dialog.ui:30
+msgid "5 out of 5"
+msgstr "5 sur 5"
+
+#: end_dialog.ui:31
+msgid "Words found"
+msgstr "Mots trouvés"
+
+#: end_dialog.ui:56
+msgid "_Close"
+msgstr "_Fermer"
+
+#: end_dialog.ui:57
+msgid "_New game"
+msgstr "_Nouvelle partie"
+
+#: gtk/help-overlay.ui:11
+msgid "General"
+msgstr "Général"
+
+#: gtk/help-overlay.ui:14
+msgid "Show Shortcuts"
+msgstr "Afficher les raccourcis"
+
+#: gtk/help-overlay.ui:20
+msgid "Quit"
+msgstr "Quitter"
+
+#: help_dialog.ui:8
+msgid "Help"
+msgstr "Aide"
+
+#: help_dialog.ui:12
+msgid "How to play"
+msgstr "Comment jouer"
+
+#: help_dialog.ui:15
+msgid "1 - Start a game"
+msgstr "1 - Commencer une partie"
+
+#: help_dialog.ui:19
+msgid "To start, select one of the four grid sizes:"
+msgstr "Pour commencer, sélectionnez l'une des quatre tailles de grille :"
+
+#: help_dialog.ui:27
+msgid ""
+"○ <b>8 × 8 board</b> with 5 words\n"
+"○ <b>12 × 12 board</b> with 8 words\n"
+"○ <b>16 × 16 board</b> with 10 words\n"
+"○ <b>Custom board</b>, where you choose the size and the number of words"
+msgstr ""
+"○ <b>grille 8 × 8</b> avec 5 mots\n"
+"○ <b>grille 12 × 12</b> avec 8 mots\n"
+"○ <b>grille 16 × 16</b> avec 10 mots\n"
+"○ <b>grille personnalisée</b>, où vous choisissez la taille et le nombre de mots"
+
+#: help_dialog.ui:52
+msgid "You can also choose between 3 differents game modes"
+msgstr "Vous pouvez également choisir entre 3 modes de jeu différents"
+
+#: help_dialog.ui:68
+msgid "2 - Find the words in the grid"
+msgstr "2 - Trouvez les mots dans la grille"
+
+#: help_dialog.ui:72
+msgid ""
+"To choose a term from the grid, click the first and the last letter of the "
+"word you want, and all letters in between the two is what Hunt will take as "
+"selected."
+msgstr ""
+"Pour choisir un terme dans la grille, cliquez sur la première et la dernière lettre "
+"du mot souhaité, et toutes les lettres entre les deux seront considérées comme sélectionnées par Hunt."
+
+#: help_dialog.ui:81
+msgid "To win, you must find all words that are hidden in the grid."
+msgstr "Pour gagner, vous devez trouver tous les mots cachés dans la grille."
+
+#: help_dialog.ui:101
+msgid ""
+"Avoid minimizing the grid size, and maximizing the word count, as it can "
+"occasionally lead to game crashes if some words are unable to be placed"
+msgstr ""
+"Évitez de minimiser la taille de la grille et de maximiser le nombre de mots, car cela peut "
+"parfois provoquer des plantages du jeu si certains mots ne peuvent pas être placés"
+
+#: help_dialog.ui:119
+msgid "Hunt offers 3 different game modes to play with"
+msgstr "Hunt propose 3 modes de jeu différents"
+
+#: help_dialog.ui:121
+msgid "Game modes"
+msgstr "Modes de jeu"
+
+#: help_dialog.ui:130
+msgid "Normal mode"
+msgstr "Mode normal"
+
+#: help_dialog.ui:134
+msgid "Play a game without being worried about the time!"
+msgstr "Jouez sans vous soucier du temps!"
+
+#: help_dialog.ui:150
+msgid "Timer mode"
+msgstr "Mode chronomètre"
+
+#: help_dialog.ui:154
+msgid "You will have a limited time to find all the words."
+msgstr "Vous aurez un temps limité pour trouver tous les mots."
+
+#: help_dialog.ui:170
+msgid "Blitz mode"
+msgstr "Mode éclair"
+
+#: help_dialog.ui:174
+msgid ""
+"Blitz mode reduces the amount of time the player has per word, and words in "
+"that category are given one at a time."
+msgstr ""
+"Le mode éclair réduit le temps dont dispose le joueur par mot, et les mots de "
+"cette catégorie sont donnés un par un."
+
+#: help_dialog.ui:194
+msgid ""
+"For example, with 60 seconds for 5 words, each word would only be available "
+"for 12 seconds (60 ÷ 5 = 12) before game over."
+msgstr ""
+"Par exemple, avec 60 secondes pour 5 mots, chaque mot ne serait disponible "
+"que pendant 12 secondes (60 ÷ 5 = 12) avant la fin du jeu."
+
+#: help_dialog.ui:209
+msgid ""
+"Whenever a word is found, the amount of time the game started with gets "
+"added to the remaining time the player has."
+msgstr ""
+"Chaque fois qu'un mot est trouvé, le temps de départ du jeu est "
+"ajouté au temps restant du joueur."
+
+#: help_dialog.ui:222
+msgid "Get involved"
+msgstr "S'impliquer"
+
+#: help_dialog.ui:231
+msgid "Contribute"
+msgstr "Contribuer"
+
+#: help_dialog.ui:242
+msgid ""
+"Everyone is welcome to participate in Hunt's development, whether by "
+"improving the game's code, or adding more language support."
+msgstr ""
+"Tout le monde est invité à participer au développement de Hunt, que ce soit en "
+"améliorant le code du jeu ou en ajoutant plus de support linguistique."
+
+#: help_dialog.ui:244
+msgid "Contribute to Hunt"
+msgstr "Contribuer à Hunt"
+
+#: resources.py:2
+msgid "ICE CREAM FLAVORS"
+msgstr "PARFUMS DE GLACE"
+
+#: resources.py:2
+msgid "berry"
+msgstr "fraise"
+
+#: resources.py:2 resources.py:41
+msgid "cream"
+msgstr "crème"
+
+#: resources.py:2
+msgid "ice"
+msgstr "glace"
+
+#: resources.py:2
+msgid "vanilla"
+msgstr "vanille"
+
+#: resources.py:2 resources.py:84
+msgid "choco"
+msgstr "choco"
+
+#: resources.py:2 resources.py:84
+msgid "sweet"
+msgstr "doux"
+
+#: resources.py:2
+msgid "cold"
+msgstr "froid"
+
+#: resources.py:2
+msgid "treat"
+msgstr "friandise"
+
+#: resources.py:2
+msgid "scoop"
+msgstr "boule"
+
+#: resources.py:2 resources.py:65
+msgid "cone"
+msgstr "cornet"
+
+#: resources.py:3
+msgid "FRUITS"
+msgstr "FRUITS"
+
+#: resources.py:3 resources.py:5 resources.py:21 resources.py:93
+#: resources.py:99
+msgid "fruit"
+msgstr "fruit"
+
+#: resources.py:3 resources.py:93
+msgid "apple"
+msgstr "pomme"
+
+#: resources.py:3
+msgid "banana"
+msgstr "banana"
+
+#: resources.py:3
+msgid "peach"
+msgstr "pêche"
+
+#: resources.py:3
+msgid "grape"
+msgstr "raisin"
+
+#: resources.py:3
+msgid "citrus"
+msgstr "agrumes"
+
+#: resources.py:3
+msgid "plum"
+msgstr "prune"
+
+#: resources.py:3
+msgid "melon"
+msgstr "melon"
+
+#: resources.py:3
+msgid "mango"
+msgstr "mangue"
+
+#: resources.py:3
+msgid "kiwi"
+msgstr "kiwi"
+
+#: resources.py:4
+msgid "VEGETABLES"
+msgstr "LÉGUMES"
+
+#: resources.py:4
+msgid "greens"
+msgstr "verts"
+
+#: resources.py:4
+msgid "carrot"
+msgstr "carotte"
+
+#: resources.py:4
+msgid "beans"
+msgstr "haricots"
+
+#: resources.py:4
+msgid "pea"
+msgstr "pois"
+
+#: resources.py:4
+msgid "beet"
+msgstr "betterave"
+
+#: resources.py:4
+msgid "onion"
+msgstr "oignon"
+
+#: resources.py:4
+msgid "cabbage"
+msgstr "chou"
+
+#: resources.py:4 resources.py:67
+msgid "squash"
+msgstr "courge"
+
+#: resources.py:4
+msgid "radish"
+msgstr "radis"
+
+#: resources.py:4
+msgid "turnip"
+msgstr "navet"
+
+#: resources.py:5
+msgid "BREAKFAST FOODS"
+msgstr "ALIMENTS DU PETIT-DÉJEUNER"
+
+#: resources.py:5
+msgid "bacon"
+msgstr "bacon"
+
+#: resources.py:5 resources.py:21 resources.py:40
+msgid "toast"
+msgstr "toast"
+
+#: resources.py:5
+msgid "waffle"
+msgstr "gaufre"
+
+#: resources.py:5
+msgid "pancake"
+msgstr "crêpe"
+
+#: resources.py:5
+msgid "egg"
+msgstr "oeuf"
+
+#: resources.py:5 resources.py:21
+msgid "meal"
+msgstr "repas"
+
+#: resources.py:5
+msgid "bagel"
+msgstr "bagel"
+
+#: resources.py:5
+msgid "cereal"
+msgstr "céréale"
+
+#: resources.py:5
+msgid "hash"
+msgstr "gâteaux"
+
+#: resources.py:6
+msgid "ANIMALS"
+msgstr "ANIMAUX"
+
+#: resources.py:6
+msgid "dog"
+msgstr "chien"
+
+#: resources.py:6
+msgid "cat"
+msgstr "chat"
+
+#: resources.py:6 resources.py:79
+msgid "fish"
+msgstr "poisson"
+
+#: resources.py:6
+msgid "horse"
+msgstr "cheval"
+
+#: resources.py:6 resources.py:18
+msgid "mouse"
+msgstr "souris"
+
+#: resources.py:6
+msgid "tiger"
+msgstr "tigre"
+
+#: resources.py:6
+msgid "lion"
+msgstr "lion"
+
+#: resources.py:6
+msgid "bat"
+msgstr "chauve-souris"
+
+#: resources.py:6 resources.py:79
+msgid "shark"
+msgstr "requin"
+
+#: resources.py:6
+msgid "sheep"
+msgstr "mouton"
+
+#: resources.py:7
+msgid "VEHICLES"
+msgstr "VÉHICULES"
+
+#: resources.py:7
+msgid "truck"
+msgstr "camion"
+
+#: resources.py:7
+msgid "car"
+msgstr "voiture"
+
+#: resources.py:7
+msgid "bus"
+msgstr "bus"
+
+#: resources.py:7 resources.py:38 resources.py:100
+msgid "train"
+msgstr "train"
+
+#: resources.py:7 resources.py:38
+msgid "plane"
+msgstr "avion"
+
+#: resources.py:7
+msgid "boat"
+msgstr "bateau"
+
+#: resources.py:7
+msgid "bike"
+msgstr "vélo"
+
+#: resources.py:7
+msgid "jeep"
+msgstr "jeep"
+
+#: resources.py:7
+msgid "scooter"
+msgstr "scooter"
+
+#: resources.py:7 resources.py:75
+msgid "wagon"
+msgstr "wagon"
+
+#: resources.py:8
+msgid "COLORS"
+msgstr "COULEURS"
+
+#: resources.py:8
+msgid "blue"
+msgstr "bleu"
+
+#: resources.py:8
+msgid "grey"
+msgstr "gris"
+
+#: resources.py:8 resources.py:89
+msgid "red"
+msgstr "rouge"
+
+#: resources.py:8 resources.py:86
+msgid "green"
+msgstr "vert"
+
+#: resources.py:8
+msgid "pink"
+msgstr "rose"
+
+#: resources.py:8
+msgid "white"
+msgstr "blanc"
+
+#: resources.py:8
+msgid "brown"
+msgstr "marron"
+
+#: resources.py:8
+msgid "teal"
+msgstr "bleu canard"
+
+#: resources.py:8
+msgid "black"
+msgstr "noir"
+
+#: resources.py:8
+msgid "beige"
+msgstr "beige"
+
+#: resources.py:9
+msgid "SPORTS"
+msgstr "SPORTS"
+
+#: resources.py:9
+msgid "ball"
+msgstr "balle"
+
+#: resources.py:9
+msgid "match"
+msgstr "match"
+
+#: resources.py:9
+msgid "game"
+msgstr "jeu"
+
+#: resources.py:9
+msgid "goal"
+msgstr "but"
+
+#: resources.py:9
+msgid "swim"
+msgstr "nager"
+
+#: resources.py:9
+msgid "tennis"
+msgstr "tennis"
+
+#: resources.py:9 resources.py:39
+msgid "run"
+msgstr "courir"
+
+#: resources.py:9
+msgid "golf"
+msgstr "golf"
+
+#: resources.py:9 resources.py:50
+msgid "coach"
+msgstr "entraîneur"
+
+#: resources.py:9 resources.py:39
+msgid "track"
+msgstr "piste"
+
+#: resources.py:10
+msgid "MUSIC GENRES"
+msgstr "GENRES MUSICAUX"
+
+#: resources.py:10 resources.py:37
+msgid "jazz"
+msgstr "jazz"
+
+#: resources.py:10
+msgid "blues"
+msgstr "blues"
+
+#: resources.py:10 resources.py:14 resources.py:95
+msgid "rock"
+msgstr "rock"
+
+#: resources.py:10
+msgid "pop"
+msgstr "pop"
+
+#: resources.py:10
+msgid "rap"
+msgstr "rap"
+
+#: resources.py:10
+msgid "folk"
+msgstr "folk"
+
+#: resources.py:10
+msgid "punk"
+msgstr "punk"
+
+#: resources.py:10 resources.py:36
+msgid "dance"
+msgstr "danse"
+
+#: resources.py:10
+msgid "opera"
+msgstr "opéra"
+
+#: resources.py:10 resources.py:92
+msgid "metal"
+msgstr "métal"
+
+#: resources.py:11
+msgid "MOVIES"
+msgstr "FILMS"
+
+#: resources.py:11
+msgid "movie"
+msgstr "film"
+
+#: resources.py:11
+msgid "comedy"
+msgstr "comédie"
+
+#: resources.py:11
+msgid "drama"
+msgstr "drame"
+
+#: resources.py:11
+msgid "horror"
+msgstr "horreur"
+
+#: resources.py:11
+msgid "thrill"
+msgstr "suspense"
+
+#: resources.py:11
+msgid "crime"
+msgstr "crime"
+
+#: resources.py:11
+msgid "action"
+msgstr "action"
+
+#: resources.py:11
+msgid "family"
+msgstr "famille"
+
+#: resources.py:11
+msgid "scary"
+msgstr "effrayant"
+
+#: resources.py:11
+msgid "spy"
+msgstr "espion"
+
+#: resources.py:12
+msgid "BOOKS"
+msgstr "LIVRES"
+
+#: resources.py:12
+msgid "book"
+msgstr "livre"
+
+#: resources.py:12
+msgid "novel"
+msgstr "roman"
+
+#: resources.py:12 resources.py:19
+msgid "story"
+msgstr "histoire"
+
+#: resources.py:12 resources.py:27
+msgid "essay"
+msgstr "essai"
+
+#: resources.py:12
+msgid "paper"
+msgstr "papier"
+
+#: resources.py:12
+msgid "author"
+msgstr "auteur"
+
+#: resources.py:12
+msgid "poetry"
+msgstr "poésie"
+
+#: resources.py:12
+msgid "title"
+msgstr "titre"
+
+#: resources.py:12
+msgid "genre"
+msgstr "genre"
+
+#: resources.py:12
+msgid "pages"
+msgstr "pages"
+
+#: resources.py:13
+msgid "CITIES"
+msgstr "VILLES"
+
+#: resources.py:13
+msgid "city"
+msgstr "ville"
+
+#: resources.py:13
+msgid "town"
+msgstr "ville"
+
+#: resources.py:13
+msgid "metro"
+msgstr "métro"
+
+#: resources.py:13
+msgid "block"
+msgstr "quartier"
+
+#: resources.py:13
+msgid "plaza"
+msgstr "place"
+
+#: resources.py:13 resources.py:65
+msgid "square"
+msgstr "carré"
+
+#: resources.py:13 resources.py:30
+msgid "urban"
+msgstr "urbain"
+
+#: resources.py:13
+msgid "park"
+msgstr "parc"
+
+#: resources.py:13
+msgid "village"
+msgstr "village"
+
+#: resources.py:13 resources.py:24 resources.py:87
+msgid "court"
+msgstr "tribunal"
+
+#: resources.py:14
+msgid "MOUNTAINS"
+msgstr "MONTAGNES"
+
+#: resources.py:14
+msgid "hill"
+msgstr "colline"
+
+#: resources.py:14
+msgid "peak"
+msgstr "sommet"
+
+#: resources.py:14
+msgid "ridge"
+msgstr "crête"
+
+#: resources.py:14 resources.py:61
+msgid "trail"
+msgstr "sentier"
+
+#: resources.py:14 resources.py:30 resources.py:31 resources.py:58
+#: resources.py:63 resources.py:87 resources.py:91
+msgid "stone"
+msgstr "pierre"
+
+#: resources.py:14
+msgid "path"
+msgstr "chemin"
+
+#: resources.py:14
+msgid "summit"
+msgstr "sommet"
+
+#: resources.py:14
+msgid "cliff"
+msgstr "falaise"
+
+#: resources.py:14
+msgid "crag"
+msgstr "rocaille"
+
+#: resources.py:15
+msgid "OCEANS"
+msgstr "OCÉANS"
+
+#: resources.py:15 resources.py:88
+msgid "sea"
+msgstr "mer"
+
+#: resources.py:15
+msgid "wave"
+msgstr "vague"
+
+#: resources.py:15 resources.py:38 resources.py:88
+msgid "beach"
+msgstr "plage"
+
+#: resources.py:15 resources.py:56 resources.py:88
+msgid "coast"
+msgstr "côte"
+
+#: resources.py:15 resources.py:56
+msgid "tide"
+msgstr "marée"
+
+#: resources.py:15 resources.py:56
+msgid "shore"
+msgstr "rivage"
+
+#: resources.py:15 resources.py:35 resources.py:47 resources.py:77
+msgid "water"
+msgstr "eau"
+
+#: resources.py:15
+msgid "island"
+msgstr "île"
+
+#: resources.py:15 resources.py:56 resources.py:88
+msgid "reef"
+msgstr "récif"
+
+#: resources.py:15
+msgid "bay"
+msgstr "baie"
+
+#: resources.py:16
+msgid "WEATHER"
+msgstr "MÉTÉO"
+
+#: resources.py:16
+msgid "rain"
+msgstr "pluie"
+
+#: resources.py:16 resources.py:54
+msgid "wind"
+msgstr "vent"
+
+#: resources.py:16 resources.py:22
+msgid "cloud"
+msgstr "nuage"
+
+#: resources.py:16 resources.py:45 resources.py:81
+msgid "snow"
+msgstr "neige"
+
+#: resources.py:16
+msgid "storm"
+msgstr "tempête"
+
+#: resources.py:16
+msgid "hail"
+msgstr "grêle"
+
+#: resources.py:16
+msgid "fog"
+msgstr "brouillard"
+
+#: resources.py:16 resources.py:56 resources.py:81
+msgid "breeze"
+msgstr "brise"
+
+#: resources.py:16
+msgid "frost"
+msgstr "gel"
+
+#: resources.py:16 resources.py:90
+msgid "chill"
+msgstr "froid"
+
+#: resources.py:17
+msgid "SPACE"
+msgstr "ESPACE"
+
+#: resources.py:17 resources.py:69 resources.py:86
+msgid "space"
+msgstr "espace"
+
+#: resources.py:17 resources.py:60
+msgid "moon"
+msgstr "lune"
+
+#: resources.py:17
+msgid "star"
+msgstr "étoile"
+
+#: resources.py:17
+msgid "comet"
+msgstr "comète"
+
+#: resources.py:17 resources.py:60 resources.py:69
+msgid "orbit"
+msgstr "orbite"
+
+#: resources.py:17 resources.py:69
+msgid "nova"
+msgstr "nova"
+
+#: resources.py:17 resources.py:69
+msgid "planet"
+msgstr "planète"
+
+#: resources.py:17
+msgid "rocket"
+msgstr "fusée"
+
+#: resources.py:17
+msgid "asteroid"
+msgstr "astéroïde"
+
+#: resources.py:17 resources.py:58 resources.py:60
+msgid "ring"
+msgstr "anneau"
+
+#: resources.py:18
+msgid "COMPUTERS"
+msgstr "ORDINATEURS"
+
+#: resources.py:18
+msgid "laptop"
+msgstr "portable"
+
+#: resources.py:18
+msgid "coding"
+msgstr "programmation"
+
+#: resources.py:18 resources.py:22 resources.py:44
+msgid "data"
+msgstr "données"
+
+#: resources.py:18 resources.py:22 resources.py:43 resources.py:92
+msgid "logic"
+msgstr "logique"
+
+#: resources.py:18
+msgid "files"
+msgstr "fichiers"
+
+#: resources.py:18
+msgid "click"
+msgstr "cliquer"
+
+#: resources.py:18
+msgid "input"
+msgstr "entrée"
+
+#: resources.py:18 resources.py:22
+msgid "server"
+msgstr "serveur"
+
+#: resources.py:18
+msgid "error"
+msgstr "erreur"
+
+#: resources.py:19
+msgid "SOCIAL MEDIA"
+msgstr "RÉSEAUX SOCIAUX"
+
+#: resources.py:19
+msgid "tweet"
+msgstr "tweet"
+
+#: resources.py:19
+msgid "post"
+msgstr "publication"
+
+#: resources.py:19
+msgid "chat"
+msgstr "chat"
+
+#: resources.py:19
+msgid "likes"
+msgstr "likes"
+
+#: resources.py:19
+msgid "viral"
+msgstr "viral"
+
+#: resources.py:19
+msgid "trend"
+msgstr "tendance"
+
+#: resources.py:19
+msgid "share"
+msgstr "partager"
+
+#: resources.py:19
+msgid "video"
+msgstr "vidéo"
+
+#: resources.py:19
+msgid "reels"
+msgstr "réels"
+
+#: resources.py:20
+msgid "FASHION"
+msgstr "MODE"
+
+#: resources.py:20 resources.py:41
+msgid "style"
+msgstr "style"
+
+#: resources.py:20 resources.py:48
+msgid "pants"
+msgstr "pantalon"
+
+#: resources.py:20 resources.py:48
+msgid "shirt"
+msgstr "chemise"
+
+#: resources.py:20 resources.py:48 resources.py:77
+msgid "boots"
+msgstr "bottes"
+
+#: resources.py:20 resources.py:48
+msgid "dress"
+msgstr "robe"
+
+#: resources.py:20 resources.py:48
+msgid "scarf"
+msgstr "écharpe"
+
+#: resources.py:20 resources.py:48
+msgid "jeans"
+msgstr "jeans"
+
+#: resources.py:20 resources.py:48
+msgid "skirt"
+msgstr "jupe"
+
+#: resources.py:20
+msgid "belt"
+msgstr "ceinture"
+
+#: resources.py:20
+msgid "glove"
+msgstr "gant"
+
+#: resources.py:21
+msgid "FOOD"
+msgstr "NOURRITURE"
+
+#: resources.py:21
+msgid "snack"
+msgstr "collation"
+
+#: resources.py:21 resources.py:45 resources.py:84
+msgid "candy"
+msgstr "bonbon"
+
+#: resources.py:21
+msgid "pizza"
+msgstr "pizza"
+
+#: resources.py:21
+msgid "bread"
+msgstr "pain"
+
+#: resources.py:21
+msgid "chips"
+msgstr "chips"
+
+#: resources.py:21
+msgid "soup"
+msgstr "soupe"
+
+#: resources.py:21
+msgid "nuts"
+msgstr "noix"
+
+#: resources.py:22
+msgid "TECHNOLOGY"
+msgstr "TECHNOLOGIE"
+
+#: resources.py:22
+msgid "app"
+msgstr "application"
+
+#: resources.py:22
+msgid "phone"
+msgstr "téléphone"
+
+#: resources.py:22
+msgid "robot"
+msgstr "robot"
+
+#: resources.py:22
+msgid "gadget"
+msgstr "gadgets"
+
+#: resources.py:22
+msgid "tablet"
+msgstr "tablette"
+
+#: resources.py:22
+msgid "screen"
+msgstr "écran"
+
+#: resources.py:23
+msgid "ECONOMICS"
+msgstr "ÉCONOMIE"
+
+#: resources.py:23 resources.py:99
+msgid "money"
+msgstr "argent"
+
+#: resources.py:23 resources.py:99
+msgid "trade"
+msgstr "commerce"
+
+#: resources.py:23
+msgid "stock"
+msgstr "bourse"
+
+#: resources.py:23 resources.py:99
+msgid "price"
+msgstr "prix"
+
+#: resources.py:23
+msgid "market"
+msgstr "marché"
+
+#: resources.py:23 resources.py:43 resources.py:99
+msgid "value"
+msgstr "valeur"
+
+#: resources.py:23
+msgid "profit"
+msgstr "profit"
+
+#: resources.py:23
+msgid "cost"
+msgstr "coût"
+
+#: resources.py:23
+msgid "tax"
+msgstr "taxe"
+
+#: resources.py:23 resources.py:99
+msgid "goods"
+msgstr "biens"
+
+#: resources.py:24
+msgid "POLITICS"
+msgstr "POLITIQUE"
+
+#: resources.py:24
+msgid "vote"
+msgstr "vote"
+
+#: resources.py:24 resources.py:45
+msgid "party"
+msgstr "parti"
+
+#: resources.py:24
+msgid "policy"
+msgstr "politique"
+
+#: resources.py:24
+msgid "power"
+msgstr "pouvoir"
+
+#: resources.py:24
+msgid "reform"
+msgstr "réforme"
+
+#: resources.py:24
+msgid "bills"
+msgstr "loi"
+
+#: resources.py:24
+msgid "debate"
+msgstr "débat"
+
+#: resources.py:24
+msgid "leader"
+msgstr "leader"
+
+#: resources.py:24
+msgid "rights"
+msgstr "droits"
+
+#: resources.py:25
+msgid "HISTORY"
+msgstr "HISTOIRE"
+
+#: resources.py:25
+msgid "past"
+msgstr "passé"
+
+#: resources.py:25
+msgid "event"
+msgstr "événement"
+
+#: resources.py:25
+msgid "war"
+msgstr "guerre"
+
+#: resources.py:25
+msgid "era"
+msgstr "ère"
+
+#: resources.py:25
+msgid "peace"
+msgstr "paix"
+
+#: resources.py:25
+msgid "reign"
+msgstr "règne"
+
+#: resources.py:25
+msgid "nation"
+msgstr "nation"
+
+#: resources.py:25
+msgid "empire"
+msgstr "empire"
+
+#: resources.py:25 resources.py:87
+msgid "king"
+msgstr "roi"
+
+#: resources.py:25 resources.py:87
+msgid "queen"
+msgstr "reine"
+
+#: resources.py:26
+msgid "HEALTH"
+msgstr "SANTÉ"
+
+#: resources.py:26
+msgid "diet"
+msgstr "régime"
+
+#: resources.py:26 resources.py:39
+msgid "fit"
+msgstr "forme"
+
+#: resources.py:26 resources.py:61
+msgid "sleep"
+msgstr "sommeil"
+
+#: resources.py:26
+msgid "heal"
+msgstr "guérir"
+
+#: resources.py:26 resources.py:44
+msgid "virus"
+msgstr "virus"
+
+#: resources.py:26
+msgid "meds"
+msgstr "médicaments"
+
+#: resources.py:26
+msgid "doctor"
+msgstr "docteur"
+
+#: resources.py:26
+msgid "pill"
+msgstr "pilule"
+
+#: resources.py:26 resources.py:50
+msgid "nurse"
+msgstr "infirmière"
+
+#: resources.py:26
+msgid "clinic"
+msgstr "clinique"
+
+#: resources.py:27
+msgid "EDUCATION"
+msgstr "ÉDUCATION"
+
+#: resources.py:27
+msgid "learn"
+msgstr "apprendre"
+
+#: resources.py:27 resources.py:44
+msgid "study"
+msgstr "étudier"
+
+#: resources.py:27
+msgid "grade"
+msgstr "note"
+
+#: resources.py:27 resources.py:44
+msgid "tests"
+msgstr "tests"
+
+#: resources.py:27 resources.py:94
+msgid "books"
+msgstr "livres"
+
+#: resources.py:27
+msgid "math"
+msgstr "mathématiques"
+
+#: resources.py:27
+msgid "class"
+msgstr "classe"
+
+#: resources.py:27
+msgid "teach"
+msgstr "enseigner"
+
+#: resources.py:27 resources.py:62
+msgid "notes"
+msgstr "notes"
+
+#: resources.py:28
+msgid "ART"
+msgstr "ART"
+
+#: resources.py:28 resources.py:32 resources.py:36
+msgid "paint"
+msgstr "peinture"
+
+#: resources.py:28 resources.py:32 resources.py:36
+msgid "craft"
+msgstr "artisanat"
+
+#: resources.py:28 resources.py:36 resources.py:87
+msgid "draw"
+msgstr "dessiner"
+
+#: resources.py:28
+msgid "color"
+msgstr "couleur"
+
+#: resources.py:28
+msgid "shape"
+msgstr "forme"
+
+#: resources.py:28
+msgid "sketch"
+msgstr "croquis"
+
+#: resources.py:28
+msgid "design"
+msgstr "design"
+
+#: resources.py:28 resources.py:97
+msgid "image"
+msgstr "image"
+
+#: resources.py:28
+msgid "canvas"
+msgstr "toile"
+
+#: resources.py:28
+msgid "line"
+msgstr "ligne"
+
+#: resources.py:29
+msgid "PHOTOGRAPHY"
+msgstr "PHOTOGRAPHIE"
+
+#: resources.py:29
+msgid "photo"
+msgstr "photo"
+
+#: resources.py:29 resources.py:97
+msgid "frame"
+msgstr "cadre"
+
+#: resources.py:29
+msgid "lens"
+msgstr "lentille"
+
+#: resources.py:29
+msgid "scene"
+msgstr "scène"
+
+#: resources.py:29
+msgid "focus"
+msgstr "focus"
+
+#: resources.py:29 resources.py:97
+msgid "angle"
+msgstr "angle"
+
+#: resources.py:29 resources.py:44 resources.py:98
+msgid "light"
+msgstr "lumière"
+
+#: resources.py:29
+msgid "flash"
+msgstr "flash"
+
+#: resources.py:29
+msgid "shot"
+msgstr "prise"
+
+#: resources.py:29
+msgid "view"
+msgstr "vue"
+
+#: resources.py:30
+msgid "ARCHITECTURE"
+msgstr "ARCHITECTURE"
+
+#: resources.py:30
+msgid "build"
+msgstr "construire"
+
+#: resources.py:30
+msgid "house"
+msgstr "maison"
+
+#: resources.py:30 resources.py:53 resources.py:63 resources.py:87
+msgid "tower"
+msgstr "tour"
+
+#: resources.py:30
+msgid "brick"
+msgstr "brique"
+
+#: resources.py:30
+msgid "plans"
+msgstr "plans"
+
+#: resources.py:30 resources.py:53
+msgid "roof"
+msgstr "toit"
+
+#: resources.py:30 resources.py:53
+msgid "rooms"
+msgstr "pièces"
+
+#: resources.py:30
+msgid "wall"
+msgstr "mur"
+
+#: resources.py:31
+msgid "NATURE"
+msgstr "NATURE"
+
+#: resources.py:31 resources.py:35
+msgid "plant"
+msgstr "plante"
+
+#: resources.py:31
+msgid "river"
+msgstr "rivière"
+
+#: resources.py:31
+msgid "trees"
+msgstr "arbres"
+
+#: resources.py:31
+msgid "grass"
+msgstr "herbe"
+
+#: resources.py:31
+msgid "flora"
+msgstr "flore"
+
+#: resources.py:31 resources.py:44
+msgid "field"
+msgstr "champ"
+
+#: resources.py:31
+msgid "woods"
+msgstr "bois"
+
+#: resources.py:31
+msgid "bush"
+msgstr "buisson"
+
+#: resources.py:31
+msgid "vine"
+msgstr "vigne"
+
+#: resources.py:32
+msgid "CRAFTS"
+msgstr "ARTISANAT"
+
+#: resources.py:32 resources.py:36
+msgid "sew"
+msgstr "coudre"
+
+#: resources.py:32 resources.py:36
+msgid "knit"
+msgstr "tricoter"
+
+#: resources.py:32
+msgid "mold"
+msgstr "mouler"
+
+#: resources.py:32
+msgid "lace"
+msgstr "dentelle"
+
+#: resources.py:32
+msgid "thread"
+msgstr "fil"
+
+#: resources.py:32
+msgid "bead"
+msgstr "perle"
+
+#: resources.py:32
+msgid "stitch"
+msgstr "point"
+
+#: resources.py:32
+msgid "diy"
+msgstr "bricolage"
+
+#: resources.py:33
+msgid "BOARD GAMES"
+msgstr "JEUX DE SOCIÉTÉ"
+
+#: resources.py:33 resources.py:52
+msgid "chess"
+msgstr "échecs"
+
+#: resources.py:33 resources.py:52
+msgid "dice"
+msgstr "dés"
+
+#: resources.py:33 resources.py:52
+msgid "clue"
+msgstr "indice"
+
+#: resources.py:33 resources.py:45 resources.py:52
+msgid "cards"
+msgstr "cartes"
+
+#: resources.py:33 resources.py:52
+msgid "risk"
+msgstr "risque"
+
+#: resources.py:33
+msgid "pawn"
+msgstr "pion"
+
+#: resources.py:33
+msgid "check"
+msgstr "échec"
+
+#: resources.py:33
+msgid "move"
+msgstr "bouger"
+
+#: resources.py:33 resources.py:52
+msgid "jenga"
+msgstr "jenga"
+
+#: resources.py:33 resources.py:52
+msgid "board"
+msgstr "plateau"
+
+#: resources.py:34
+msgid "VIDEO GAMES"
+msgstr "JEUX VIDÉO"
+
+#: resources.py:34
+msgid "games"
+msgstr "jeux"
+
+#: resources.py:34
+msgid "enemy"
+msgstr "ennemi"
+
+#: resources.py:34
+msgid "score"
+msgstr "score"
+
+#: resources.py:34 resources.py:51 resources.py:85
+msgid "level"
+msgstr "niveau"
+
+#: resources.py:34 resources.py:36
+msgid "play"
+msgstr "jouer"
+
+#: resources.py:34
+msgid "pixel"
+msgstr "pixel"
+
+#: resources.py:34
+msgid "quest"
+msgstr "quête"
+
+#: resources.py:34
+msgid "shoot"
+msgstr "tirer"
+
+#: resources.py:34
+msgid "jump"
+msgstr "sauter"
+
+#: resources.py:34
+msgid "fight"
+msgstr "combattre"
+
+#: resources.py:35
+msgid "GARDENING"
+msgstr "JARDINAGE"
+
+#: resources.py:35
+msgid "grow"
+msgstr "pousser"
+
+#: resources.py:35
+msgid "prune"
+msgstr "tailler"
+
+#: resources.py:35 resources.py:61 resources.py:92
+msgid "tools"
+msgstr "outils"
+
+#: resources.py:35
+msgid "soil"
+msgstr "sol"
+
+#: resources.py:35 resources.py:74
+msgid "seeds"
+msgstr "graines"
+
+#: resources.py:35 resources.py:74
+msgid "weeds"
+msgstr "plantes"
+
+#: resources.py:35 resources.py:74
+msgid "herbs"
+msgstr "herbes"
+
+#: resources.py:35
+msgid "pots"
+msgstr "pots"
+
+#: resources.py:36
+msgid "HOBBIES"
+msgstr "PASSIONS"
+
+#: resources.py:36
+msgid "read"
+msgstr "lire"
+
+#: resources.py:36 resources.py:40
+msgid "bake"
+msgstr "cuire"
+
+#: resources.py:36
+msgid "write"
+msgstr "écrire"
+
+#: resources.py:37
+msgid "DANCE"
+msgstr "DANSE"
+
+#: resources.py:37
+msgid "ballet"
+msgstr "ballet"
+
+#: resources.py:37
+msgid "tap"
+msgstr "claquettes"
+
+#: resources.py:37
+msgid "spin"
+msgstr "tourner"
+
+#: resources.py:37
+msgid "twirl"
+msgstr "pirouette"
+
+#: resources.py:37
+msgid "moves"
+msgstr "mouvements"
+
+#: resources.py:37
+msgid "rhythm"
+msgstr "rythme"
+
+#: resources.py:37
+msgid "break"
+msgstr "break"
+
+#: resources.py:37
+msgid "step"
+msgstr "step"
+
+#: resources.py:37
+msgid "tango"
+msgstr "tango"
+
+#: resources.py:38
+msgid "TRAVEL"
+msgstr "VOYAGE"
+
+#: resources.py:38
+msgid "trip"
+msgstr "voyage"
+
+#: resources.py:38
+msgid "hotel"
+msgstr "hôtel"
+
+#: resources.py:38
+msgid "map"
+msgstr "carte"
+
+#: resources.py:38
+msgid "roads"
+msgstr "routes"
+
+#: resources.py:38
+msgid "guide"
+msgstr "guide"
+
+#: resources.py:38
+msgid "visit"
+msgstr "visite"
+
+#: resources.py:38 resources.py:61
+msgid "camp"
+msgstr "camp"
+
+#: resources.py:39
+msgid "FITNESS"
+msgstr "FITNESS"
+
+#: resources.py:39
+msgid "walk"
+msgstr "marcher"
+
+#: resources.py:39
+msgid "yoga"
+msgstr "yoga"
+
+#: resources.py:39
+msgid "cycle"
+msgstr "vélo"
+
+#: resources.py:39 resources.py:57
+msgid "bench"
+msgstr "banc"
+
+#: resources.py:39
+msgid "pullup"
+msgstr "traction"
+
+#: resources.py:39
+msgid "squat"
+msgstr "squat"
+
+#: resources.py:39
+msgid "pushup"
+msgstr "pompe"
+
+#: resources.py:40
+msgid "COOKING"
+msgstr "CUISINE"
+
+#: resources.py:40 resources.py:50
+msgid "chef"
+msgstr "chef"
+
+#: resources.py:40
+msgid "cook"
+msgstr "cuisinier"
+
+#: resources.py:40 resources.py:61
+msgid "grill"
+msgstr "griller"
+
+#: resources.py:40
+msgid "slice"
+msgstr "trancher"
+
+#: resources.py:40
+msgid "stir"
+msgstr "remuer"
+
+#: resources.py:40
+msgid "boil"
+msgstr "bouillir"
+
+#: resources.py:40
+msgid "dough"
+msgstr "pâte"
+
+#: resources.py:40
+msgid "steam"
+msgstr "vapeur"
+
+#: resources.py:41
+msgid "BEAUTY"
+msgstr "BEAUTÉ"
+
+#: resources.py:41 resources.py:51
+msgid "nails"
+msgstr "ongles"
+
+#: resources.py:41
+msgid "skin"
+msgstr "peau"
+
+#: resources.py:41
+msgid "spa"
+msgstr "spa"
+
+#: resources.py:41
+msgid "hair"
+msgstr "cheveux"
+
+#: resources.py:41
+msgid "lip"
+msgstr "lèvre"
+
+#: resources.py:41
+msgid "face"
+msgstr "visage"
+
+#: resources.py:41
+msgid "gloss"
+msgstr "brillant"
+
+#: resources.py:41
+msgid "brush"
+msgstr "brosse"
+
+#: resources.py:42
+msgid "MYTHOLOGY"
+msgstr "MYTHOLOGIE"
+
+#: resources.py:42
+msgid "myth"
+msgstr "mythe"
+
+#: resources.py:42
+msgid "god"
+msgstr "dieu"
+
+#: resources.py:42 resources.py:64 resources.py:68 resources.py:73
+#: resources.py:96
+msgid "beast"
+msgstr "bête"
+
+#: resources.py:42 resources.py:76 resources.py:98
+msgid "lore"
+msgstr "légende"
+
+#: resources.py:42
+msgid "hero"
+msgstr "héros"
+
+#: resources.py:42 resources.py:70 resources.py:94 resources.py:98
+msgid "magic"
+msgstr "magie"
+
+#: resources.py:42 resources.py:68
+msgid "curse"
+msgstr "malédiction"
+
+#: resources.py:42
+msgid "fate"
+msgstr "destin"
+
+#: resources.py:42
+msgid "oracle"
+msgstr "oracle"
+
+#: resources.py:42 resources.py:64 resources.py:70 resources.py:91
+msgid "troll"
+msgstr "troll"
+
+#: resources.py:43
+msgid "PHILOSOPHY"
+msgstr "PHILOSOPHIE"
+
+#: resources.py:43
+msgid "truth"
+msgstr "vérité"
+
+#: resources.py:43
+msgid "mind"
+msgstr "esprit"
+
+#: resources.py:43
+msgid "faith"
+msgstr "foi"
+
+#: resources.py:43
+msgid "moral"
+msgstr "moral"
+
+#: resources.py:43
+msgid "ideal"
+msgstr "idéal"
+
+#: resources.py:43
+msgid "ideas"
+msgstr "idées"
+
+#: resources.py:43
+msgid "reason"
+msgstr "raison"
+
+#: resources.py:43
+msgid "thought"
+msgstr "pensée"
+
+#: resources.py:44
+msgid "SCIENCE"
+msgstr "SCIENCE"
+
+#: resources.py:44
+msgid "cells"
+msgstr "cellules"
+
+#: resources.py:44
+msgid "atoms"
+msgstr "atomes"
+
+#: resources.py:44
+msgid "force"
+msgstr "force"
+
+#: resources.py:44 resources.py:92
+msgid "brain"
+msgstr "cerveau"
+
+#: resources.py:45
+msgid "HOLIDAYS"
+msgstr "VACANCES"
+
+#: resources.py:45
+msgid "gifts"
+msgstr "cadeaux"
+
+#: resources.py:45
+msgid "feast"
+msgstr "festin"
+
+#: resources.py:45 resources.py:70
+msgid "elves"
+msgstr "elfes"
+
+#: resources.py:45
+msgid "tree"
+msgstr "arbre"
+
+#: resources.py:45
+msgid "cheer"
+msgstr "joie"
+
+#: resources.py:45
+msgid "sled"
+msgstr "luge"
+
+#: resources.py:46
+msgid "FLOWERS"
+msgstr "FLEURS"
+
+#: resources.py:46
+msgid "rose"
+msgstr "rose"
+
+#: resources.py:46
+msgid "lily"
+msgstr "lys"
+
+#: resources.py:46
+msgid "daisy"
+msgstr "marguerite"
+
+#: resources.py:46
+msgid "tulip"
+msgstr "tulipe
+
+#: resources.py:46
+msgid "bloom"
+msgstr "floraison"
+
+#: resources.py:46
+msgid "petal"
+msgstr "pétale"
+
+#: resources.py:46
+msgid "violet"
+msgstr "violette"
+
+#: resources.py:46
+msgid "poppy"
+msgstr "coquelicot"
+
+#: resources.py:46
+msgid "orchid"
+msgstr "orchidée"
+
+#: resources.py:46 resources.py:78
+msgid "bud"
+msgstr "bourgeon"
+
+#: resources.py:47
+msgid "DRINKS"
+msgstr "BOISSONS"
+
+#: resources.py:47
+msgid "juice"
+msgstr "jus"
+
+#: resources.py:47
+msgid "soda"
+msgstr "soda"
+
+#: resources.py:47
+msgid "shake"
+msgstr "milkshake"
+
+#: resources.py:47
+msgid "cider"
+msgstr "cidre"
+
+#: resources.py:47
+msgid "tea"
+msgstr "thé"
+
+#: resources.py:47
+msgid "tonic"
+msgstr "tonic"
+
+#: resources.py:47 resources.py:67
+msgid "latte"
+msgstr "latte"
+
+#: resources.py:47
+msgid "mocha"
+msgstr "mocha"
+
+#: resources.py:47
+msgid "milk"
+msgstr "lait"
+
+#: resources.py:48
+msgid "CLOTHING"
+msgstr "VÊTEMENTS"
+
+#: resources.py:48
+msgid "hat"
+msgstr "chapeau"
+
+#: resources.py:48
+msgid "vest"
+msgstr "gilet"
+
+#: resources.py:48
+msgid "socks"
+msgstr "chaussettes"
+
+#: resources.py:49
+msgid "INSECTS"
+msgstr "INSECTES"
+
+#: resources.py:49
+msgid "bee"
+msgstr "abeille"
+
+#: resources.py:49
+msgid "ant"
+msgstr "fourmi"
+
+#: resources.py:49
+msgid "moth"
+msgstr "papillon de nuit"
+
+#: resources.py:49
+msgid "fly"
+msgstr "mouche"
+
+#: resources.py:49
+msgid "gnat"
+msgstr "moucheron"
+
+#: resources.py:49
+msgid "roach"
+msgstr "cafard"
+
+#: resources.py:49
+msgid "wasp"
+msgstr "guêpe"
+
+#: resources.py:49
+msgid "spider"
+msgstr "araignée"
+
+#: resources.py:49
+msgid "beetle"
+msgstr "scarabée"
+
+#: resources.py:49
+msgid "tick"
+msgstr "tique"
+
+#: resources.py:50
+msgid "JOBS"
+msgstr "EMPLOIS"
+
+#: resources.py:50
+msgid "pilot"
+msgstr "pilote"
+
+#: resources.py:50
+msgid "clerk"
+msgstr "employé"
+
+#: resources.py:50
+msgid "actor"
+msgstr "acteur"
+
+#: resources.py:50
+msgid "guard"
+msgstr "gardien"
+
+#: resources.py:50
+msgid "miner"
+msgstr "mineur"
+
+#: resources.py:50
+msgid "agent"
+msgstr "agent"
+
+#: resources.py:50
+msgid "judge"
+msgstr "juge"
+
+#: resources.py:51 resources.py:85
+msgid "TOOLS"
+msgstr "OUTILS"
+
+#: resources.py:51
+msgid "hammer"
+msgstr "marteau"
+
+#: resources.py:51 resources.py:85
+msgid "screw"
+msgstr "vis"
+
+#: resources.py:51 resources.py:85
+msgid "blade"
+msgstr "lame"
+
+#: resources.py:51 resources.py:85
+msgid "drill"
+msgstr "perceuse"
+
+#: resources.py:51 resources.py:85
+msgid "plier"
+msgstr "pince"
+
+#: resources.py:51 resources.py:85
+msgid "saw"
+msgstr "scie"
+
+#: resources.py:51 resources.py:85
+msgid "ruler"
+msgstr "règle"
+
+#: resources.py:51 resources.py:85
+msgid "wrench"
+msgstr "clé"
+
+#: resources.py:52
+msgid "GAMES"
+msgstr "JEUX"
+
+#: resources.py:52
+msgid "poker"
+msgstr "poker"
+
+#: resources.py:52
+msgid "bingo"
+msgstr "bingo"
+
+#: resources.py:52
+msgid "go"
+msgstr "go"
+
+#: resources.py:53
+msgid "HOUSES"
+msgstr "MAISONS"
+
+#: resources.py:53
+msgid "home"
+msgstr "maison"
+
+#: resources.py:53
+msgid "cabin"
+msgstr "cabane"
+
+#: resources.py:53
+msgid "loft"
+msgstr "grenier"
+
+#: resources.py:53
+msgid "barn"
+msgstr "grange"
+
+#: resources.py:53
+msgid "villa"
+msgstr "villa"
+
+#: resources.py:53 resources.py:63 resources.py:70
+msgid "castle"
+msgstr "château"
+
+#: resources.py:53
+msgid "ranch"
+msgstr "ranch"
+
+#: resources.py:54
+msgid "DESERTS"
+msgstr "DÉSERTS"
+
+#: resources.py:54
+msgid "dunes"
+msgstr "dunes"
+
+#: resources.py:54
+msgid "cactus"
+msgstr "cactus"
+
+#: resources.py:54 resources.py:88
+msgid "sands"
+msgstr "sables"
+
+#: resources.py:54 resources.py:77 resources.py:91
+msgid "rocks"
+msgstr "roches"
+
+#: resources.py:54 resources.py:98
+msgid "dust"
+msgstr "poussière"
+
+#: resources.py:54
+msgid "oasis"
+msgstr "oasis"
+
+#: resources.py:54
+msgid "heat"
+msgstr "chaleur"
+
+#: resources.py:54
+msgid "dry"
+msgstr "sec"
+
+#: resources.py:54 resources.py:56
+msgid "sun"
+msgstr "soleil"
+
+#: resources.py:55
+msgid "BIRDS"
+msgstr "OISEAUX"
+
+#: resources.py:55
+msgid "crow"
+msgstr "corbeau"
+
+#: resources.py:55
+msgid "swan"
+msgstr "cygne"
+
+#: resources.py:55
+msgid "robin"
+msgstr "rouge-gorge"
+
+#: resources.py:55 resources.py:80
+msgid "eagle"
+msgstr "aigle"
+
+#: resources.py:55
+msgid "finch"
+msgstr "pinson"
+
+#: resources.py:55
+msgid "crane"
+msgstr "grue"
+
+#: resources.py:55 resources.py:71
+msgid "parrot"
+msgstr "perroquet"
+
+#: resources.py:55
+msgid "pigeon"
+msgstr "pigeon"
+
+#: resources.py:55
+msgid "sparrow"
+msgstr "moineau"
+
+#: resources.py:55
+msgid "heron"
+msgstr "héron"
+
+#: resources.py:56
+msgid "BEACHES"
+msgstr "PLAGES"
+
+#: resources.py:56
+msgid "sand"
+msgstr "sable"
+
+#: resources.py:56
+msgid "waves"
+msgstr "vagues"
+
+#: resources.py:56
+msgid "ocean"
+msgstr "océan"
+
+#: resources.py:56
+msgid "shell"
+msgstr "coquillage"
+
+#: resources.py:57
+msgid "FURNITURE"
+msgstr "MEUBLES"
+
+#: resources.py:57
+msgid "chair"
+msgstr "chaise"
+
+#: resources.py:57
+msgid "table"
+msgstr "table"
+
+#: resources.py:57
+msgid "sofa"
+msgstr "canapé"
+
+#: resources.py:57
+msgid "stool"
+msgstr "tabouret"
+
+#: resources.py:57
+msgid "desk"
+msgstr "bureau"
+
+#: resources.py:57 resources.py:61
+msgid "lamp"
+msgstr "lampe"
+
+#: resources.py:57
+msgid "bed"
+msgstr "lit"
+
+#: resources.py:57
+msgid "shelf"
+msgstr "étagère"
+
+#: resources.py:57
+msgid "couch"
+msgstr "divan"
+
+#: resources.py:58
+msgid "JEWELRY"
+msgstr "BIJOUX"
+
+#: resources.py:58
+msgid "brace"
+msgstr "bracelet"
+
+#: resources.py:58 resources.py:82
+msgid "pearl"
+msgstr "perle"
+
+#: resources.py:58
+msgid "beads"
+msgstr "perles"
+
+#: resources.py:58
+msgid "chain"
+msgstr "chaîne"
+
+#: resources.py:58
+msgid "gold"
+msgstr "or"
+
+#: resources.py:58
+msgid "gem"
+msgstr "joyau"
+
+#: resources.py:58
+msgid "watch"
+msgstr "montre"
+
+#: resources.py:58
+msgid "band"
+msgstr "anneau"
+
+#: resources.py:59
+msgid "LANGUAGES"
+msgstr "LANGUES"
+
+#: resources.py:59
+msgid "latin"
+msgstr "latin"
+
+#: resources.py:59
+msgid "greek"
+msgstr "grec"
+
+#: resources.py:59
+msgid "hindi"
+msgstr "hindi"
+
+#: resources.py:59
+msgid "hebrew"
+msgstr "hébreu"
+
+#: resources.py:59
+msgid "dutch"
+msgstr "néerlandais"
+
+#: resources.py:59
+msgid "swahili"
+msgstr "swahili"
+
+#: resources.py:59
+msgid "korean"
+msgstr "coréen"
+
+#: resources.py:59
+msgid "arabic"
+msgstr "arabe"
+
+#: resources.py:60
+msgid "PLANETS"
+msgstr "PLANÈTES"
+
+#: resources.py:60 resources.py:86
+msgid "mars"
+msgstr "mars"
+
+#: resources.py:60
+msgid "venus"
+msgstr "vénus"
+
+#: resources.py:60 resources.py:95 resources.py:100
+msgid "earth"
+msgstr "terre"
+
+#: resources.py:60
+msgid "pluto"
+msgstr "pluton"
+
+#: resources.py:60
+msgid "jupiter"
+msgstr "jupiter"
+
+#: resources.py:60
+msgid "saturn"
+msgstr "saturne"
+
+#: resources.py:60
+msgid "neptune"
+msgstr "neptune"
+
+#: resources.py:61
+msgid "CAMPING"
+msgstr "CAMPING"
+
+#: resources.py:61
+msgid "tent"
+msgstr "tente"
+
+#: resources.py:61 resources.py:95 resources.py:96
+msgid "fire"
+msgstr "feu"
+
+#: resources.py:61 resources.py:92
+msgid "gear"
+msgstr "équipement"
+
+#: resources.py:61
+msgid "hike"
+msgstr "randonnée"
+
+#: resources.py:62
+msgid "MUSIC"
+msgstr "MUSIQUE"
+
+#: resources.py:62
+msgid "piano"
+msgstr "piano"
+
+#: resources.py:62
+msgid "lyric"
+msgstr "parole"
+
+#: resources.py:62
+msgid "vocal"
+msgstr "vocal"
+
+#: resources.py:62
+msgid "drums"
+msgstr "tambours"
+
+#: resources.py:62
+msgid "bass"
+msgstr "basse"
+
+#: resources.py:62
+msgid "guitar"
+msgstr "guitare"
+
+#: resources.py:62
+msgid "flute"
+msgstr "flûte"
+
+#: resources.py:62
+msgid "violin"
+msgstr "violon"
+
+#: resources.py:62
+msgid "horn"
+msgstr "cor"
+
+#: resources.py:63
+msgid "WONDERS"
+msgstr "MERVEILLES"
+
+#: resources.py:63
+msgid "ruins"
+msgstr "ruines"
+
+#: resources.py:63
+msgid "temple"
+msgstr "temple"
+
+#: resources.py:63
+msgid "bridge"
+msgstr "pont"
+
+#: resources.py:63
+msgid "garden"
+msgstr "jardin"
+
+#: resources.py:63
+msgid "pyramid"
+msgstr "pyramide"
+
+#: resources.py:63
+msgid "palace"
+msgstr "palais"
+
+#: resources.py:63
+msgid "statue"
+msgstr "statue"
+
+#: resources.py:64
+msgid "MYTHICAL CREATURES"
+msgstr "CRÉATURES MYTHIQUES"
+
+#: resources.py:64 resources.py:98
+msgid "elf"
+msgstr "elfe"
+
+#: resources.py:64
+msgid "fairy"
+msgstr "fée"
+
+#: resources.py:64 resources.py:73
+msgid "hydra"
+msgstr "hydre"
+
+#: resources.py:64
+msgid "phoenix"
+msgstr "phénix"
+
+#: resources.py:64 resources.py:70
+msgid "dragon"
+msgstr "dragon"
+
+#: resources.py:64 resources.py:67
+msgid "sprite"
+msgstr "lutin"
+
+#: resources.py:64
+msgid "mermaid"
+msgstr "sirène"
+
+#: resources.py:64
+msgid "giant"
+msgstr "géant"
+
+#: resources.py:65
+msgid "SHAPES"
+msgstr "FORMES"
+
+#: resources.py:65
+msgid "circle"
+msgstr "cercle"
+
+#: resources.py:65
+msgid "sphere"
+msgstr "sphère"
+
+#: resources.py:65
+msgid "cube"
+msgstr "cube"
+
+#: resources.py:65
+msgid "oval"
+msgstr "ovale"
+
+#: resources.py:65
+msgid "hexagon"
+msgstr "hexagone"
+
+#: resources.py:65
+msgid "rhombus"
+msgstr "losange"
+
+#: resources.py:65
+msgid "prism"
+msgstr "prisme"
+
+#: resources.py:65
+msgid "arc"
+msgstr "arc"
+
+#: resources.py:66
+msgid "DESSERTS"
+msgstr "DESSERTS"
+
+#: resources.py:66
+msgid "cake"
+msgstr "gâteau"
+
+#: resources.py:66
+msgid "pie"
+msgstr "tarte"
+
+#: resources.py:66
+msgid "cookie"
+msgstr "biscuit"
+
+#: resources.py:66
+msgid "tart"
+msgstr "tarte"
+
+#: resources.py:66 resources.py:84
+msgid "fudge"
+msgstr "fudge"
+
+#: resources.py:66
+msgid "mousse"
+msgstr "mousse"
+
+#: resources.py:66
+msgid "sorbet"
+msgstr "sorbet"
+
+#: resources.py:66
+msgid "gelato"
+msgstr "glace"
+
+#: resources.py:66
+msgid "pudding"
+msgstr "pudding"
+
+#: resources.py:66
+msgid "donut"
+msgstr "beignet"
+
+#: resources.py:67
+msgid "BEVERAGES"
+msgstr "BOISSONS"
+
+#: resources.py:67
+msgid "coffee"
+msgstr "café"
+
+#: resources.py:67
+msgid "mojito"
+msgstr "mojito"
+
+#: resources.py:67
+msgid "tonics"
+msgstr "toniques"
+
+#: resources.py:67
+msgid "cocoa"
+msgstr "cacao"
+
+#: resources.py:67
+msgid "smooth"
+msgstr "smoothie"
+
+#: resources.py:67
+msgid "seltz"
+msgstr "seltz"
+
+#: resources.py:67
+msgid "chai"
+msgstr "chai"
+
+#: resources.py:68
+msgid "HORROR"
+msgstr "HORREUR"
+
+#: resources.py:68 resources.py:90 resources.py:97
+msgid "ghost"
+msgstr "fantôme"
+
+#: resources.py:68 resources.py:90
+msgid "haunt"
+msgstr "hanter"
+
+#: resources.py:68
+msgid "spirit"
+msgstr "esprit"
+
+#: resources.py:68
+msgid "scream"
+msgstr "crier"
+
+#: resources.py:68 resources.py:90
+msgid "crypt"
+msgstr "crypt"
+
+#: resources.py:68 resources.py:72 resources.py:85
+msgid "knife"
+msgstr "couteau"
+
+#: resources.py:68 resources.py:73
+msgid "zombie"
+msgstr "zombie"
+
+#: resources.py:68
+msgid "creepy"
+msgstr "effrayant"
+
+#: resources.py:69
+msgid "ASTRONOMY"
+msgstr "ASTRONOMIE"
+
+#: resources.py:69
+msgid "nebula"
+msgstr "nébuleuse"
+
+#: resources.py:69
+msgid "cosmos"
+msgstr "cosmos"
+
+#: resources.py:69
+msgid "galaxy"
+msgstr "galaxie"
+
+#: resources.py:69
+msgid "comets"
+msgstr "comètes"
+
+#: resources.py:69
+msgid "lunar"
+msgstr "lunaire"
+
+#: resources.py:69
+msgid "stars"
+msgstr "étoiles"
+
+#: resources.py:70
+msgid "FANTASY"
+msgstr "FANTASY"
+
+#: resources.py:70
+msgid "wizard"
+msgstr "sorcier"
+
+#: resources.py:70
+msgid "realm"
+msgstr "royaume"
+
+#: resources.py:70
+msgid "sword"
+msgstr "épée"
+
+#: resources.py:70 resources.py:76
+msgid "giants"
+msgstr "géants"
+
+#: resources.py:70
+msgid "knight"
+msgstr "chevalier"
+
+#: resources.py:71
+msgid "PIRATES"
+msgstr "PIRATES"
+
+#: resources.py:71 resources.py:76
+msgid "swords"
+msgstr "épées"
+
+#: resources.py:71
+msgid "golden"
+msgstr "doré"
+
+#: resources.py:71
+msgid "rum"
+msgstr "rhum"
+
+#: resources.py:71
+msgid "ships"
+msgstr "navires"
+
+#: resources.py:71
+msgid "shanty"
+msgstr "cabanon"
+
+#: resources.py:71
+msgid "cannon"
+msgstr "canon"
+
+#: resources.py:71
+msgid "mutiny"
+msgstr "mutinerie"
+
+#: resources.py:71
+msgid "booty"
+msgstr "butin"
+
+#: resources.py:71
+msgid "pegleg"
+msgstr "bateaux"
+
+#: resources.py:72
+msgid "KITCHEN"
+msgstr "CUISINE"
+
+#: resources.py:72
+msgid "spices"
+msgstr "épices"
+
+#: resources.py:72
+msgid "plates"
+msgstr "assiettes"
+
+#: resources.py:72
+msgid "spoons"
+msgstr "cuillères"
+
+#: resources.py:72
+msgid "mixers"
+msgstr "mixeurs"
+
+#: resources.py:72
+msgid "aprons"
+msgstr "tabliers"
+
+#: resources.py:72
+msgid "utens"
+msgstr "ustensile"
+
+#: resources.py:72
+msgid "mixer"
+msgstr "mélangeur"
+
+#: resources.py:72
+msgid "dishes"
+msgstr "vaisselle"
+
+#: resources.py:72
+msgid "gloves"
+msgstr "gants"
+
+#: resources.py:73
+msgid "MONSTERS"
+msgstr "MONSTRES"
+
+#: resources.py:73 resources.py:94
+msgid "witch"
+msgstr "sorcière"
+
+#: resources.py:73 resources.py:90
+msgid "ghoul"
+msgstr "goule"
+
+#: resources.py:73
+msgid "kraken"
+msgstr "kraken"
+
+#: resources.py:73
+msgid "goblin"
+msgstr "gobelin"
+
+#: resources.py:73
+msgid "slime"
+msgstr "gelée"
+
+#: resources.py:73
+msgid "ghosts"
+msgstr "fantômes"
+
+#: resources.py:73
+msgid "fiends"
+msgstr "démons"
+
+#: resources.py:74
+msgid "GARDENS"
+msgstr "JARDINS"
+
+#: resources.py:74
+msgid "roses"
+msgstr "roses"
+
+#: resources.py:74
+msgid "hedges"
+msgstr "haies"
+
+#: resources.py:74
+msgid "shrubs"
+msgstr "arbustes"
+
+#: resources.py:74
+msgid "vines"
+msgstr "vignes"
+
+#: resources.py:74
+msgid "blooms"
+msgstr "fleurs"
+
+#: resources.py:74 resources.py:78 resources.py:93
+msgid "roots"
+msgstr "racines"
+
+#: resources.py:74
+msgid "petals"
+msgstr "pétales"
+
+#: resources.py:75
+msgid "TRAINS"
+msgstr "TRAINS"
+
+#: resources.py:75
+msgid "engine"
+msgstr "moteur"
+
+#: resources.py:75
+msgid "tracks"
+msgstr "rails"
+
+#: resources.py:75
+msgid "cargos"
+msgstr "cargos"
+
+#: resources.py:75
+msgid "ticket"
+msgstr "billet"
+
+#: resources.py:75
+msgid "rails"
+msgstr "rails"
+
+#: resources.py:75
+msgid "diesel"
+msgstr "diesel"
+
+#: resources.py:75
+msgid "signal"
+msgstr "signal"
+
+#: resources.py:75
+msgid "horns"
+msgstr "cornes"
+
+#: resources.py:75
+msgid "switch"
+msgstr "interrupteur"
+
+#: resources.py:76
+msgid "LEGENDS"
+msgstr "LÉGENDES"
+
+#: resources.py:76
+msgid "heroes"
+msgstr "héros"
+
+#: resources.py:76
+msgid "mythos"
+msgstr "mythes"
+
+#: resources.py:76
+msgid "quests"
+msgstr "quêtes"
+
+#: resources.py:76
+msgid "scroll"
+msgstr "parchemin"
+
+#: resources.py:76 resources.py:94
+msgid "runes"
+msgstr "runes"
+
+#: resources.py:76
+msgid "epics"
+msgstr "épopées"
+
+#: resources.py:76
+msgid "tales"
+msgstr "contes"
+
+#: resources.py:77
+msgid "HIKING"
+msgstr "RANDONNÉE"
+
+#: resources.py:77
+msgid "trails"
+msgstr "sentiers"
+
+#: resources.py:77
+msgid "climbs"
+msgstr "montées"
+
+#: resources.py:77
+msgid "packs"
+msgstr "sacs"
+
+#: resources.py:77
+msgid "views"
+msgstr "vues"
+
+#: resources.py:77
+msgid "camped"
+msgstr "campé"
+
+#: resources.py:77
+msgid "poles"
+msgstr "poteaux"
+
+#: resources.py:77
+msgid "steps"
+msgstr "marches"
+
+#: resources.py:78
+msgid "PLANTS"
+msgstr "PLANTES"
+
+#: resources.py:78
+msgid "fern"
+msgstr "fougère"
+
+#: resources.py:78
+msgid "bamboo"
+msgstr "bambou"
+
+#: resources.py:78
+msgid "ivy"
+msgstr "lierre"
+
+#: resources.py:78
+msgid "shrub"
+msgstr "arbuste"
+
+#: resources.py:78 resources.py:93
+msgid "bark"
+msgstr "écorce"
+
+#: resources.py:78
+msgid "leaf"
+msgstr "feuille"
+
+#: resources.py:78
+msgid "stem"
+msgstr "tige"
+
+#: resources.py:78 resources.py:93
+msgid "moss"
+msgstr "mousse"
+
+#: resources.py:79
+msgid "UNDERWATER LIFE"
+msgstr "VIE SOUS-MARINE"
+
+#: resources.py:79
+msgid "shrimp"
+msgstr "crevette"
+
+#: resources.py:79
+msgid "coral"
+msgstr "corail"
+
+#: resources.py:79
+msgid "whale"
+msgstr "baleine"
+
+#: resources.py:79
+msgid "tuna"
+msgstr "thon"
+
+#: resources.py:79
+msgid "crab"
+msgstr "crabe"
+
+#: resources.py:79
+msgid "squid"
+msgstr "calmar"
+
+#: resources.py:79
+msgid "angler"
+msgstr "pêcheur"
+
+#: resources.py:79
+msgid "urchin"
+msgstr "oursin"
+
+#: resources.py:80
+msgid "WILDLIFE"
+msgstr "FAUNE"
+
+#: resources.py:80
+msgid "deer"
+msgstr "cerf"
+
+#: resources.py:80
+msgid "fox"
+msgstr "renard"
+
+#: resources.py:80
+msgid "wolf"
+msgstr "loup"
+
+#: resources.py:80
+msgid "bear"
+msgstr "ours"
+
+#: resources.py:80
+msgid "owl"
+msgstr "hibou"
+
+#: resources.py:80
+msgid "snake"
+msgstr "serpent"
+
+#: resources.py:80
+msgid "frog"
+msgstr "grenouille"
+
+#: resources.py:80
+msgid "moose"
+msgstr "orignal"
+
+#: resources.py:80
+msgid "otter"
+msgstr "loutre"
+
+#: resources.py:81
+msgid "SEASONS"
+msgstr "SAISONS"
+
+#: resources.py:81
+msgid "summer"
+msgstr "été"
+
+#: resources.py:81
+msgid "winter"
+msgstr "hiver"
+
+#: resources.py:81
+msgid "autumn"
+msgstr "automne"
+
+#: resources.py:81
+msgid "spring"
+msgstr "printemps"
+
+#: resources.py:81
+msgid "fall"
+msgstr "chute"
+
+#: resources.py:81
+msgid "season"
+msgstr "saison"
+
+#: resources.py:81
+msgid "harvest"
+msgstr "récolte"
+
+#: resources.py:81
+msgid "blossom"
+msgstr "floraison"
+
+#: resources.py:82
+msgid "GEMS"
+msgstr "GEMMES"
+
+#: resources.py:82
+msgid "diamond"
+msgstr "diamant"
+
+#: resources.py:82
+msgid "ruby"
+msgstr "rubis"
+
+#: resources.py:82
+msgid "lapis"
+msgstr "lapis"
+
+#: resources.py:82
+msgid "opal"
+msgstr "opale"
+
+#: resources.py:82
+msgid "jasper"
+msgstr "jaspe"
+
+#: resources.py:82
+msgid "emerald"
+msgstr "émeraude"
+
+#: resources.py:82
+msgid "topaz"
+msgstr "topaze"
+
+#: resources.py:82
+msgid "garnet"
+msgstr "grenat"
+
+#: resources.py:82
+msgid "onyx"
+msgstr "onyx"
+
+#: resources.py:83
+msgid "EMOTIONS"
+msgstr "ÉMOTIONS"
+
+#: resources.py:83
+msgid "happy"
+msgstr "joyeux"
+
+#: resources.py:83
+msgid "sad"
+msgstr "triste"
+
+#: resources.py:83
+msgid "angry"
+msgstr "furieux"
+
+#: resources.py:83
+msgid "excited"
+msgstr "excité"
+
+#: resources.py:83
+msgid "fear"
+msgstr "peur"
+
+#: resources.py:83
+msgid "love"
+msgstr "amour"
+
+#: resources.py:83
+msgid "joy"
+msgstr "joie"
+
+#: resources.py:83
+msgid "angst"
+msgstr "angoisse"
+
+#: resources.py:83
+msgid "grief"
+msgstr "chagrin"
+
+#: resources.py:83
+msgid "relief"
+msgstr "soulagement"
+
+#: resources.py:84
+msgid "CANDY"
+msgstr "BONBON"
+
+#: resources.py:84
+msgid "sugar"
+msgstr "sucre"
+
+#: resources.py:84
+msgid "mint"
+msgstr "menthe"
+
+#: resources.py:84
+msgid "gummy"
+msgstr "gomme"
+
+#: resources.py:84
+msgid "treats"
+msgstr "friandises"
+
+#: resources.py:84
+msgid "caramel"
+msgstr "caramel"
+
+#: resources.py:84
+msgid "nougat"
+msgstr "nougat"
+
+#: resources.py:85
+msgid "bolts"
+msgstr "boulons"
+
+#: resources.py:86
+msgid "ALIENS"
+msgstr "EXTRATERRESTRES"
+
+#: resources.py:86
+msgid "alien"
+msgstr "alien"
+
+#: resources.py:86
+msgid "ufo"
+msgstr "ovni"
+
+#: resources.py:86
+msgid "ship"
+msgstr "vaisseau"
+
+#: resources.py:86
+msgid "probe"
+msgstr "sonde"
+
+#: resources.py:86
+msgid "beam"
+msgstr "faisceau"
+
+#: resources.py:86
+msgid "zoom"
+msgstr "zoom"
+
+#: resources.py:86
+msgid "zap"
+msgstr "zap"
+
+#: resources.py:87
+msgid "CASTLES"
+msgstr "CHÂTEAUX"
+
+#: resources.py:87
+msgid "moat"
+msgstr "fossé"
+
+#: resources.py:87
+msgid "arch"
+msgstr "arche"
+
+#: resources.py:87
+msgid "walls"
+msgstr "murs"
+
+#: resources.py:87
+msgid "gate"
+msgstr "porte"
+
+#: resources.py:88
+msgid "ISLANDS"
+msgstr "ÎLES"
+
+#: resources.py:88
+msgid "palm"
+msgstr "palmier"
+
+#: resources.py:88
+msgid "cove"
+msgstr "crique"
+
+#: resources.py:88
+msgid "boats"
+msgstr "bateaux"
+
+#: resources.py:88
+msgid "docks"
+msgstr "quais"
+
+#: resources.py:88
+msgid "tropic"
+msgstr "tropiques"
+
+#: resources.py:89
+msgid "CLOWNS"
+msgstr "CLOWNS"
+
+#: resources.py:89
+msgid "clown"
+msgstr "clown"
+
+#: resources.py:89
+msgid "mime"
+msgstr "mime"
+
+#: resources.py:89
+msgid "wig"
+msgstr "perruque"
+
+#: resources.py:89
+msgid "mask"
+msgstr "masque"
+
+#: resources.py:89
+msgid "nose"
+msgstr "nez"
+
+#: resources.py:89
+msgid "balloon"
+msgstr "ballon"
+
+#: resources.py:89
+msgid "laugh"
+msgstr "rire"
+
+#: resources.py:89
+msgid "joke"
+msgstr "blague"
+
+#: resources.py:89
+msgid "prank"
+msgstr "farce"
+
+#: resources.py:90
+msgid "GHOSTS"
+msgstr "FANTÔMES"
+
+#: resources.py:90
+msgid "spook"
+msgstr "spectre"
+
+#: resources.py:90
+msgid "scare"
+msgstr "effrayer"
+
+#: resources.py:90
+msgid "eerie"
+msgstr "étrange"
+
+#: resources.py:90
+msgid "fright"
+msgstr "peur"
+
+#: resources.py:90
+msgid "wail"
+msgstr "gémir"
+
+#: resources.py:91
+msgid "CAVES"
+msgstr "GROTTES"
+
+#: resources.py:91
+msgid "bats"
+msgstr "chauves-souris"
+
+#: resources.py:91 resources.py:100
+msgid "dark"
+msgstr "sombre"
+
+#: resources.py:91
+msgid "stalag"
+msgstr "stalagmite"
+
+#: resources.py:91
+msgid "depth"
+msgstr "profondeur"
+
+#: resources.py:91
+msgid "echo"
+msgstr "écho"
+
+#: resources.py:91
+msgid "gloom"
+msgstr "obscurité"
+
+#: resources.py:91
+msgid "vault"
+msgstr "voûte"
+
+#: resources.py:92
+msgid "ROBOTS"
+msgstr "ROBOTS"
+
+#: resources.py:92
+msgid "servo"
+msgstr "servomoteur"
+
+#: resources.py:92
+msgid "cog"
+msgstr "rouage"
+
+#: resources.py:92
+msgid "bolt"
+msgstr "boulon"
+
+#: resources.py:92
+msgid "cable"
+msgstr "câble"
+
+#: resources.py:92
+msgid "arm"
+msgstr "bras"
+
+#: resources.py:93
+msgid "TREES"
+msgstr "ARBRES"
+
+#: resources.py:93
+msgid "oak"
+msgstr "chêne"
+
+#: resources.py:93
+msgid "pine"
+msgstr "pin"
+
+#: resources.py:93
+msgid "leaves"
+msgstr "feuilles"
+
+#: resources.py:93
+msgid "twig"
+msgstr "brindille"
+
+#: resources.py:93
+msgid "shade"
+msgstr "ombre"
+
+#: resources.py:94
+msgid "WIZARDS"
+msgstr "SORCIERS"
+
+#: resources.py:94
+msgid "spell"
+msgstr "sort"
+
+#: resources.py:94
+msgid "cloak"
+msgstr "cape"
+
+#: resources.py:94
+msgid "staff"
+msgstr "bâton"
+
+#: resources.py:94
+msgid "potion"
+msgstr "potion"
+
+#: resources.py:94 resources.py:98
+msgid "charm"
+msgstr "charme"
+
+#: resources.py:94
+msgid "wand"
+msgstr "baguette"
+
+#: resources.py:95
+msgid "VOLCANO"
+msgstr "VOLCAN"
+
+#: resources.py:95
+msgid "lava"
+msgstr "lave"
+
+#: resources.py:95
+msgid "smoke"
+msgstr "fumée"
+
+#: resources.py:95
+msgid "ash"
+msgstr "cendre"
+
+#: resources.py:95
+msgid "crust"
+msgstr "croûte"
+
+#: resources.py:95
+msgid "erupts"
+msgstr "érupte"
+
+#: resources.py:95
+msgid "crack"
+msgstr "fissure"
+
+#: resources.py:95
+msgid "magma"
+msgstr "magma"
+
+#: resources.py:96
+msgid "DRAGONS"
+msgstr "DRAGONS"
+
+#: resources.py:96
+msgid "scales"
+msgstr "écailles"
+
+#: resources.py:96 resources.py:98
+msgid "wings"
+msgstr "ailes"
+
+#: resources.py:96
+msgid "tail"
+msgstr "queue"
+
+#: resources.py:96
+msgid "claws"
+msgstr "griffes"
+
+#: resources.py:96
+msgid "roar"
+msgstr "rugir"
+
+#: resources.py:96
+msgid "flame"
+msgstr "flamme"
+
+#: resources.py:96
+msgid "fangs"
+msgstr "crocs"
+
+#: resources.py:96
+msgid "lair"
+msgstr "antre"
+
+#: resources.py:97
+msgid "MIRRORS"
+msgstr "MIROIRS"
+
+#: resources.py:97
+msgid "glass"
+msgstr "verre"
+
+#: resources.py:97
+msgid "look"
+msgstr "regard"
+
+#: resources.py:97
+msgid "shine"
+msgstr "briller"
+
+#: resources.py:97
+msgid "reflect"
+msgstr "réfléchir"
+
+#: resources.py:97
+msgid "room"
+msgstr "pièce"
+
+#: resources.py:97
+msgid "clean"
+msgstr "propre"
+
+#: resources.py:98
+msgid "FAIRIES"
+msgstr "FÉES"
+
+#: resources.py:98
+msgid "pixie"
+msgstr "lutin"
+
+#: resources.py:98
+msgid "tiny"
+msgstr "petit"
+
+#: resources.py:98
+msgid "spark"
+msgstr "étincelle"
+
+#: resources.py:99
+msgid "MARKETS"
+msgstr "MARCHÉS"
+
+#: resources.py:99
+msgid "stalls"
+msgstr "étals"
+
+#: resources.py:99
+msgid "crowd"
+msgstr "foule"
+
+#: resources.py:99
+msgid "sales"
+msgstr "ventes"
+
+#: resources.py:99
+msgid "deals"
+msgstr "accords"
+
+#: resources.py:100
+msgid "TUNNELS"
+msgstr "TUNNELS"
+
+#: resources.py:100
+msgid "shaft"
+msgstr "puits"
+
+#: resources.py:100
+msgid "mines"
+msgstr "mines"
+
+#: resources.py:100
+msgid "pipes"
+msgstr "tuyaux"
+
+#: resources.py:100
+msgid "crawl"
+msgstr "ramper"
+
+#: resources.py:100
+msgid "route"
+msgstr "itinéraire"
+
+#: resources.py:100
+msgid "gates"
+msgstr "portails"
+
+#: resources.py:100
+msgid "dig"
+msgstr "creuser"
+
+#: window.py:594
+msgid "Congratulations!"
+msgstr "Félicitations!"
+
+#: window.py:595
+msgid "You won the game!"
+msgstr "Vous avez gagné!"
+
+#: window.py:598
+msgid "Time's out!"
+msgstr "Le temps est écoulé!"
+
+#: window.py:599
+msgid "You ran out of time!"
+msgstr "Vous avez manqué de temps!"
+
+#: window.ui:50
+msgid ""
+"8 x 8 grid\n"
+"\n"
+"5 words\n"
+"(30 seconds)"
+msgstr ""
+"grille 8 x 8\n"
+"5 mots\n"
+"(30 secondes)"
+
+#: window.ui:68
+msgid ""
+"12 x 12 grid\n"
+"\n"
+"8 words\n"
+"(60 seconds)"
+msgstr ""
+"grille 12 x 12\n"
+"8 mots\n"
+"(60 secondes)"
+
+#: window.ui:86
+msgid ""
+"16 x 16 grid\n"
+"\n"
+"10 words\n"
+"(80 seconds)"
+msgstr ""
+"grille 16 x 16\n"
+"10 mots\n"
+"(80 secondes)"
+
+#: window.ui:108
+msgid "Custom"
+msgstr "Personnalisé"
+
+#: window.ui:148
+msgid "How many lines you want"
+msgstr "Combien de lignes voulez-vous"
+
+#: window.ui:149
+msgid "Height"
+msgstr "Hauteur"
+
+#: window.ui:163
+msgid "How many columns you want"
+msgstr "Combien de colonnes voulez-vous"
+
+#: window.ui:164
+msgid "Width"
+msgstr "Largeur"
+
+#: window.ui:178
+msgid "How many words you will have to guess"
+msgstr "Combien de mots devrez-vous deviner"
+
+#: window.ui:179
+msgid "Words"
+msgstr "Mots"
+
+#: window.ui:193
+msgid "The time you will have to find all the words"
+msgstr "Le temps que vous aurez pour trouver tous les mots"
+
+#: window.ui:194
+msgid "Time (in seconds)"
+msgstr "Temps (en secondes)"
+
+#: window.ui:219
+msgid "Start"
+msgstr "Démarrer"
+
+#: window.ui:234
+msgid "Create the game of your dreams!"
+msgstr "Créez le jeu de vos rêves!"
+
+#: window.ui:236
+msgid "Custom settings"
+msgstr "Paramètres personnalisés"
+
+#: window.ui:252 window.ui:440
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: window.ui:280
+msgid "Theme"
+msgstr "Thème"
+
+#: window.ui:286 window.ui:368
+msgid "Random"
+msgstr "Aléatoire"
+
+#: window.ui:298
+msgid "Game mode"
+msgstr "Mode de jeu"
+
+#: window.ui:303
+msgid "No timer"
+msgstr "Sans minuterie"
+
+#: window.ui:315
+msgid "With timer"
+msgstr "Avec minuterie"
+
+#: window.ui:327
+msgid "Blitz"
+msgstr "Éclair"
+
+#: window.ui:351
+msgid "Options"
+msgstr "Options"
+
+#: window.ui:413
+msgid "Themes"
+msgstr "Thèmes"
+
+#: window.ui:467 window.ui:513
+msgid "Game"
+msgstr "Jeu"
+
+#: window.ui:484
+msgid "Time left"
+msgstr "Temps restant"
+
+#: window.ui:496
+msgid "Words to find"
+msgstr "Mots à trouver"
+
+#: window.ui:524
+msgid "_Keyboard Shortcuts"
+msgstr "_Raccourcis clavier"
+
+#: window.ui:528
+msgid "_About Hunt"
+msgstr "_À propos de Hunt"
+
+#: window.ui:532
+msgid "_Help"
+msgstr "_Aide"
