@@ -269,6 +269,9 @@
                 <property name="min-sidebar-width">250.0</property>
                 <property name="sidebar">
                   <object class="AdwNavigationView" id="sidebar_view">
+                    <style>
+                      <class name="contrast-label"/>
+                    </style>
                     <child>
                       <object class="AdwNavigationPage">
                         <property name="child">
@@ -460,6 +463,9 @@
                 <property name="min-sidebar-width">250.0</property>
                 <property name="sidebar">
                   <object class="AdwToolbarView">
+                    <style>
+                      <class name="contrast-label"/>
+                    </style>
                     <child type="top">
                       <object class="AdwHeaderBar">
                         <property name="title-widget">

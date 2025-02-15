@@ -170,6 +170,7 @@ css = """
             background-color: @green_1;
             color: black;
         }
+
         .box {
           background-color: @borders;
           border: none;
@@ -180,9 +181,20 @@ css = """
           background-color: @card_bg_color;
           border-radius: 10px;
         }
+
+        .dim-label {
+            opacity: 0.75;
+            color: var(--window-fg-color);
+        }
+
+        .contrast-label {
+            color: var(--window-fg-color);
+            font-weight: bold;
+        }
 """
 
 letters = {
     'en_US.UTF-8': "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    'ru_RU.UTF-8': "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"
+    'ru_RU.UTF-8': "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
+    'fr_FR.UTF-8': "AÀÂÄÆBCÇDEÈÉÊËFGHIÎÏJKLMNOÔŒPQRSTUÙÛÜVWXYZ"
 }

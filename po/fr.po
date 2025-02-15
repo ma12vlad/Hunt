@@ -1941,7 +1941,7 @@ msgstr "marguerite"
 
 #: resources.py:46
 msgid "tulip"
-msgstr "tulipe
+msgstr "tulipe"
 
 #: resources.py:46
 msgid "bloom"

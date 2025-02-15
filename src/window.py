@@ -271,6 +271,16 @@ class HuntWindow(Adw.ApplicationWindow):
         row = 0
         col = 0
         self.buttons = []
+
+        import os
+        locale = os.environ.get("LANG", "C") #Grabs the system language
+
+        #Use the correct alphabet for the user's language
+        if(locale not in letters.keys()):
+            if(locale in ["fr_BE.UTF-8", "fr_CA.UTF-8", "fr_CH.UTF-8", "fr_LU.UTF-8"]):
+                locale = "fr_FR.UTF-8"
+            else:
+                locale = "en_US.UTF-8" #defaults to English if not defined in resources.py
         for i in range(1, self.length * self.height + 1): #Generate the grid with all the buttons in it
             button = Gtk.Button(hexpand=True, vexpand=True)
             self.grid.attach(button, col, row, 1, 1)
@@ -284,13 +294,7 @@ class HuntWindow(Adw.ApplicationWindow):
             motion_controller.connect("enter", self.on_button_hovered)
             button.add_controller(motion_controller)
 
-            import os
-            locale = os.environ.get("LANG", "C")
-
-            if(locale not in letters.keys()): #Use the correct alphabet for the user's language
-                button.set_label(random.choice(letters['en_US.UTF-8'])) #defaults to English if not defined in resources.py
-            else:
-                button.set_label(random.choice(letters[locale]))
+            button.set_label(random.choice(letters[locale]))
 
             col += 1
             if(i % self.length == 0):
