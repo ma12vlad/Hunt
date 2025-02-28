@@ -42,8 +42,7 @@
                                     <property name="row-homogeneous">True</property>
                                     <property name="row-spacing">20</property>
                                     <child>
-                                      <object class="GtkButton" id="button1">
-                                        <property name="action-name">win.small</property>
+                                      <object class="GtkButton" id="small_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -60,8 +59,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button2">
-                                        <property name="action-name">win.medium</property>
+                                      <object class="GtkButton" id="medium_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -78,8 +76,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button3">
-                                        <property name="action-name">win.large</property>
+                                      <object class="GtkButton" id="large_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -96,7 +93,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button4">
+                                      <object class="GtkButton">
                                         <property name="action-name">win.custom</property>
                                         <property name="child">
                                           <object class="GtkBox">
@@ -499,7 +496,24 @@
                         </child>
                         <child>
                           <object class="AdwPreferencesGroup">
-                            <property name="title" translatable="yes">Words to find</property>
+                            <child>
+                              <object class="GtkBox">
+                                  <child>
+                                    <object class="GtkLabel">
+                                      <property name="label" translatable="yes">Words to find</property>
+                                    </object>
+                                  </child>
+                                  <child>
+                                    <object class="GtkButton">
+                                      <property name="halign">end</property>
+                                      <property name="hexpand">true</property>
+                                      <property name="margin-bottom">5</property>
+                                      <property name="icon-name">lightbulb-symbolic</property>
+                                      <property name="action-name">win.hint</property>
+                                    </object>
+                                  </child>
+                              </object>
+                            </child>
                             <child>
                               <object class="GtkListBox" id="frame">
                                 <style>

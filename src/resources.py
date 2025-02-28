@@ -103,6 +103,8 @@ related_words = {
 css = """
         .green_button {
             background-color: @green_5;
+            outline: 3px solid @green_5;
+            outline-offset: -2px;
         }
 
         .red1 {
@@ -191,8 +193,36 @@ css = """
             color: var(--window-fg-color);
             font-weight: bold;
         }
-"""
 
+        .shake {
+            animation: shake_animation 0.35s ease;
+        }
+
+        .outline-red1 { outline: 3px solid @red_1; outline-offset: -2px;}
+        .outline-red2 { outline: 3px solid @red_2; outline-offset: -2px;}
+        .outline-red3 { outline: 3px solid @red_3; outline-offset: -2px;}
+        .outline-orange3 { outline: 3px solid @orange_3; outline-offset: -2px;}
+        .outline-purple2 { outline: 3px solid @purple_2; outline-offset: -2px;}
+        .outline-blue1 { outline: 3px solid @blue_1; outline-offset: -2px;}
+        .outline-blue2 { outline: 3px solid @blue_2; outline-offset: -2px;}
+        .outline-blue3 { outline: 3px solid @blue_3; outline-offset: -2px;}
+        .outline-blue4 { outline: 3px solid @blue_4; outline-offset: -2px;}
+        .outline-blue5 { outline: 3px solid @blue_5; outline-offset: -2px;}
+        .outline-yellow1 { outline: 3px solid @yellow_1; outline-offset: -2px;}
+        .outline-yellow2 { outline: 3px solid @yellow_2; outline-offset: -2px;}
+        .outline-yellow3 { outline: 3px solid @yellow_3; outline-offset: -2px;}
+        .outline-yellow4 { outline: 3px solid @yellow_4; outline-offset: -2px;}
+        .outline-green1 { outline: 3px solid @green_1; outline-offset: -2px;}
+
+        @keyframes shake_animation {
+            0% { transform: translateX(0px); background-color: @green_5;}
+            20% { transform: translateX(-4px);}
+            40% { transform: translateX(4px); background-color: @green_5;}
+            60% { transform: translateX(-4px); }
+            80% { transform: translateX(4px); background-color: @green_5;}
+            100% { transform: translateX(0px); }
+        }
+"""
 letters = {
     'en_US.UTF-8': "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     'ru_RU.UTF-8': "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
