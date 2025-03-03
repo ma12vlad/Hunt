@@ -5,6 +5,7 @@
   <project_license>GPL-3.0-or-later</project_license>
   <name>Hunt</name>
   <summary>Find every word</summary>
+  <summary xml:lang="fr">Trouvez chaque mot</summary>
   <summary xml:lang="ru">Найдите каждое слово</summary>
   <description>
     <p>Hunt is an easy word search game. You can play with or without a timer, or a blitz mode, where you must find each individual word in a much smaller length of time.</p>
@@ -44,6 +45,16 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.1.1" date="2025-3-2">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.1</url>
+      <description translate="no">
+        <p>Hunt v1.1.1</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Players can now use multiple word categories simultaneously in one game</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.1.0" date="2025-2-28">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.0</url>
       <description translate="no">

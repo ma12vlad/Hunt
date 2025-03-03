@@ -37,8 +37,10 @@ class HuntWindow(Adw.ApplicationWindow):
     used_letters = []
     words = []
     word_buttons = []
-    colors = ["red1", "red2", "red3", "orange3", "purple2", "blue1", "blue2", "blue3", "blue4", "blue5", "yellow1", "yellow2", "yellow3", "yellow4", "green1"]
+    word_list = []
     copy_colors = []
+    checkbuttons = []
+    colors = ["red1", "red2", "red3", "orange3", "purple2", "blue1", "blue2", "blue3", "blue4", "blue5", "yellow1", "yellow2", "yellow3", "yellow4", "green1"]
 
     length = 10
     height = 10
@@ -57,7 +59,7 @@ class HuntWindow(Adw.ApplicationWindow):
     dialog = None
     divided_timer = None
     reference_time = None
-    selected_category = "RANDOM"
+    selected_categories = {"RANDOM"}
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -79,7 +81,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.small_game.connect("clicked", self.start_game, _, 5, 8, 8, 30, 400, 400)
         self.medium_game.connect("clicked", self.start_game, _, 8, 12, 12, 60, 600, 600)
         self.large_game.connect("clicked", self.start_game, _, 10, 16, 16, 80, 800, 800)
-        self.theme_selector.connect("toggled",  lambda cb: self.on_row_activated(cb, "Random") if cb.get_active() else None)
+        self.theme_selector.connect("toggled", lambda cb, cat="RANDOM": self.on_row_activated(cb, cat))
         self.gamemode.connect("toggled",  lambda cb: self.game_mode(False, False, False) if cb.get_active() else None)
         self.gamemode_timed.connect("toggled",  lambda cb: self.game_mode(True, True, False) if cb.get_active() else None)
         self.gamemode_blitz.connect("toggled",  lambda cb: self.game_mode(True, False, True) if cb.get_active() else None)
@@ -93,16 +95,17 @@ class HuntWindow(Adw.ApplicationWindow):
             actionEntry.set_title(item.capitalize())
 
             checkbox = Gtk.CheckButton()
-            if self.selected_category == actionEntry.get_title().upper():
+            if(actionEntry.get_title().upper() in self.selected_categories):
                 checkbox.set_active(True)
             else:
                 checkbox.set_active(False)
-            checkbox.set_group(self.theme_selector)
+            self.checkbuttons.append(checkbox)
             actionEntry.add_suffix(checkbox)
             actionEntry.set_activatable_widget(checkbox)
-            checkbox.connect("toggled", lambda cb, actName: self.on_row_activated(cb, actName) if cb.get_active() else None, actionEntry.get_title())
+            checkbox.connect("toggled", lambda cb, cat=item.upper(): self.on_row_activated(cb, cat))
 
             self.category_list.append(listEntry)
+        self.category_list.set_sensitive(False)
         self.category_list.connect("row-selected", lambda _, row: row.get_child().activate() if row else None)
         self.search_entry.connect("search-changed", self.list_changed)
 
@@ -113,6 +116,7 @@ class HuntWindow(Adw.ApplicationWindow):
         # Filter the categories based on the query
         filtered_categories = filter(lambda c: query in c.lower(), related_words.keys())
 
+        self.checkbuttons.clear()
         # Clear existing rows in the ListBox
         while(self.category_list.get_first_child() is not None):
             self.category_list.remove(self.category_list.get_first_child())
@@ -126,22 +130,32 @@ class HuntWindow(Adw.ApplicationWindow):
             actionEntry.set_title(category.capitalize())
 
             checkbox = Gtk.CheckButton()
-            if self.selected_category == actionEntry.get_title().upper():
+            self.checkbuttons.append(checkbox)
+            if(actionEntry.get_title().upper() in self.selected_categories):
                 checkbox.set_active(True)
             else:
                 checkbox.set_active(False)
-            checkbox.set_group(self.theme_selector)
             actionEntry.add_suffix(checkbox)
             actionEntry.set_activatable_widget(checkbox)
-            checkbox.connect("toggled", lambda cb, actName: self.on_row_activated(cb, actName) if cb.get_active() else None, actionEntry.get_title())
+            checkbox.connect("toggled", lambda cb, cat=category.upper(): self.on_row_activated(cb, cat))
 
             self.category_list.append(listEntry)
 
     #Changes the active category depending on what row in self.category_list is selected
-    def on_row_activated(self, checkbox, actionName):
-        self.selected_category = actionName.upper()
-        self.active_category.set_title(actionName)
-        self.sidebar_view.pop()
+    def on_row_activated(self, cb, actionName):
+        if(cb.get_active()):
+            self.selected_categories.add(actionName)
+        else:
+            self.selected_categories.remove(actionName.upper())
+        if(actionName == "RANDOM" and cb.get_active()):
+            self.category_list.set_sensitive(False)
+            for child in self.checkbuttons:
+                child.set_active(False)
+            self.selected_categories.clear()
+            self.selected_categories.add("RANDOM")
+        elif(actionName == "RANDOM" and not cb.get_active()):
+            self.category_list.set_sensitive(True)
+        self.active_category.set_title(", ".join(item.capitalize() for item in self.selected_categories))
 
     #restarts the game
     def reload(self, action, _):
@@ -221,6 +235,18 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Main function that is the start of the game. As the name suggests, makes the grid for all the letters
     def make_grid(self, action, _):
+        if(len(self.selected_categories) == 0):
+            dialog = Adw.AlertDialog(
+            heading='Warning',
+            body='Please select at least one theme before playing!',
+            close_response="ok"
+            )
+            dialog.add_response("ok", "_OK")
+            dialog.set_response_enabled("ok", True)  # Ensure OK button is enabled
+            dialog.set_default_response("ok")
+            dialog.present(self)
+            dialog.get_child().add_css_class("warning")
+            return
         self.game_over = False
         self.copy_colors = self.colors.copy()
         if(len(self.found_words) == 0): #Only run at game start, this is here because the blitz mode will call this function to rebuild the grid every time a player finds a new word
@@ -240,10 +266,11 @@ class HuntWindow(Adw.ApplicationWindow):
                 self.divided_timer = self.timer / self.word_count
                 self.timer = 0 #Reset timer so it will be equal to self.divided_timer on first execution
 
-        # if self.main_window_content.get_visible_page().get_tag() != "game":
-
         self.grid.set_visible(True)
-        self.game_title.set_subtitle(self.random_key.capitalize())
+        if(len(self.random_key) > 1):
+            self.game_title.set_subtitle(", ".join(item.capitalize() for item in self.random_key))
+        else:
+            self.game_title.set_subtitle(self.random_key[0].capitalize())
         while(self.grid.get_child_at(0,0) is not None): #Clear the entire main grid where all the letters are
             self.grid.remove_row(0)
 
@@ -292,7 +319,7 @@ class HuntWindow(Adw.ApplicationWindow):
                 used_words.add(label.get_label())
                 #This is needed because sometimes words would be added to self.frame that are not in self.words, or words that are in self.frame are placed in multiple times
                 #Occurs with words that fail to be placed
-                if(label.get_label().lower() in related_words[self.random_key] and all(child.get_first_child().get_title().upper() != label.get_label() for child in self.frame)):
+                if(label.get_label().lower() in self.word_list and all(child.get_first_child().get_title().upper() != label.get_label() for child in self.frame)):
                     listbox = Gtk.ListBoxRow()
                     listbox.set_selectable(False)
                     listbox.set_activatable(False)
@@ -328,16 +355,18 @@ class HuntWindow(Adw.ApplicationWindow):
 
     def make_word_list(self): #Creates the list of words for the player to search for.
         self.words.clear()
-        if(self.selected_category == "RANDOM"):
-            self.random_key = random.choice(list(related_words.keys()))
-            value = related_words[self.random_key]
+        if("RANDOM" in self.selected_categories):
+            self.random_key = [random.choice(list(related_words.keys()))]
+            self.word_list = related_words[self.random_key[0]]
         else:
-            value = related_words[self.selected_category]
-            self.random_key = self.selected_category #For the end dialog when stating the category
+            self.word_list = []
+            for item in self.selected_categories:
+                self.word_list += related_words[item]
+            self.random_key = list(self.selected_categories) #For the end dialog when stating the category
         self.grid_data = [[' ' for _ in range(self.length)] for _ in range(self.height)]
+        random.shuffle(self.word_list)
         for i in range(self.word_count):
-            self.words.append(value[i].upper())
-        random.shuffle(self.words)
+            self.words.append(self.word_list[i].upper())
 
     # Places the words in self.words into the grid in random places and in random directions
     def place_word_in_grid(self, word):
@@ -579,7 +608,7 @@ class EndDialog(Adw.AlertDialog):
 
     def __init__(self, categoryName: str, gridSize: str, wordsFound: int, wordsTotal: int, hasWon: bool = False, **kwargs):
         super().__init__(**kwargs)
-        if hasWon:
+        if(hasWon):
             self.set_body(_("Congratulations!"))
             self.set_heading(_("You won the game!"))
             self.add_css_class('success')
@@ -588,7 +617,7 @@ class EndDialog(Adw.AlertDialog):
             self.set_heading(_("You ran out of time!"))
             self.add_css_class('warning')
 
-        self.category.set_subtitle(categoryName.capitalize())
+        self.category.set_subtitle(", ".join(item.capitalize() for item in categoryName))
         self.grid_size.set_subtitle(gridSize)
         self.words_found.set_subtitle(f"{wordsFound} out of {wordsTotal}")
         self.progress.set_fraction(wordsFound/wordsTotal)
