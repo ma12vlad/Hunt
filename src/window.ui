@@ -11,9 +11,273 @@
           <object class="AdwNavigationPage">
             <property name="can-pop">False</property>
             <property name="child">
-              <object class="AdwOverlaySplitView">
-                <property name="content">
-                  <object class="GtkCenterBox">
+              <object class="AdwMultiLayoutView" id="multi_layout">
+                <child>
+                  <object class="AdwLayout">
+                    <property name="name">landscape</property>
+                    <child>
+                      <object class="AdwOverlaySplitView">
+                        <property name="content">
+                          <object class="AdwLayoutSlot">
+                            <property name="id">lyt_game-selector</property>
+                          </object>
+                        </property>
+                        <property name="min-sidebar-width">250.0</property>
+                        <property name="sidebar">
+                          <object class="AdwNavigationView" id="sidebar_view">
+                            <child>
+                              <object class="AdwNavigationPage">
+                                <property name="child">
+                                  <object class="AdwToolbarView">
+                                    <child type="top">
+                                      <object class="AdwHeaderBar">
+                                        <property name="title-widget">
+                                          <object class="AdwWindowTitle">
+                                            <property name="title">Hunt</property>
+                                          </object>
+                                        </property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="AdwLayoutSlot">
+                                        <property name="id">lyt_preferences</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <property name="tag">main_options</property>
+                                <property name="title">Options</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwNavigationPage">
+                                <property name="child">
+                                  <object class="AdwToolbarView">
+                                    <child>
+                                      <object class="AdwLayoutSlot">
+                                        <property name="id">lyt_themes-page</property>
+                                      </object>
+                                    </child>
+                                    <child type="top">
+                                      <object class="AdwHeaderBar">
+                                        <child type="end">
+                                          <object class="GtkToggleButton" id="search_themes_button">
+                                            <property name="icon-name">system-search</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                    <child type="top">
+                                      <object class="GtkSearchBar">
+                                        <property name="child">
+                                          <object class="AdwLayoutSlot">
+                                            <property name="id">lyt_search_entry</property>
+                                          </object>
+                                        </property>
+                                        <property name="search-mode-enabled" bind-source="search_themes_button" bind-property="active">False</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <property name="tag">theme_selector</property>
+                                <property name="title">Themes</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="AdwLayout">
+                    <property name="name">portrait</property>
+                    <child>
+                      <object class="AdwBottomSheet">
+                        <property name="bottom-bar">
+                          <object class="GtkBox">
+                            <property name="halign">center</property>
+                            <property name="hexpand">True</property>
+                            <property name="spacing">20</property>
+                            <child>
+                              <object class="AdwActionRow" id="gamemode_mobile">
+                                <property name="icon-name">gamepad-symbolic</property>
+                                <property name="subtitle">Blitz</property>
+                                <property name="title">Game mode</property>
+                                <style>
+                                  <class name="property"/>
+                                </style>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwActionRow" id="theme_mobile">
+                                <property name="icon-name">view-list-bullet-symbolic</property>
+                                <property name="subtitle">Random</property>
+                                <property name="title">Theme</property>
+                                <style>
+                                  <class name="property"/>
+                                </style>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                        <property name="content">
+                          <object class="AdwLayoutSlot">
+                            <property name="id">lyt_game-selector</property>
+                          </object>
+                        </property>
+                        <property name="sheet">
+                          <object class="AdwNavigationView">
+                            <child>
+                              <object class="AdwNavigationPage">
+                                <property name="tag">main_options</property>
+                                <property name="title">Options</property>
+                                <child>
+                                  <object class="AdwLayoutSlot">
+                                    <property name="id">lyt_preferences</property>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="AdwNavigationPage">
+                                <property name="child">
+                                  <object class="AdwToolbarView">
+                                    <child>
+                                      <object class="AdwLayoutSlot">
+                                        <property name="id">lyt_themes-page</property>
+                                      </object>
+                                    </child>
+                                    <child type="bottom">
+                                      <object class="AdwHeaderBar">
+                                        <property name="show-end-title-buttons">False</property>
+                                        <child type="title">
+                                          <object class="AdwClamp">
+                                            <property name="child">
+                                              <object class="AdwLayoutSlot">
+                                                <property name="id">lyt_search_entry</property>
+                                              </object>
+                                            </property>
+                                            <property name="hexpand">True</property>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </property>
+                                <property name="tag">theme_selector</property>
+                                <property name="title">Themes</property>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="lyt_preferences">
+                  <object class="AdwPreferencesPage" id="lyt_preferences">
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title">Theme</property>
+                        <child>
+                          <object class="AdwActionRow" id="active_category">
+                            <property name="action-name">navigation.push</property>
+                            <property name="action-target">'theme_selector'</property>
+                            <property name="activatable">True</property>
+                            <property name="title">Random</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">go-next</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title">Game mode</property>
+                        <child>
+                          <object class="AdwActionRow" id="gamemode_ar">
+                            <property name="activatable-widget">gamemode</property>
+                            <property name="icon-name">playlist-infinite-symbolic</property>
+                            <property name="title">No timer</property>
+                            <child>
+                              <object class="GtkCheckButton" id="gamemode">
+                                <property name="active">True</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="gamemode_timed_ar">
+                            <property name="activatable-widget">gamemode_timed</property>
+                            <property name="icon-name">timer-symbolic</property>
+                            <property name="title">With timer</property>
+                            <child>
+                              <object class="GtkCheckButton" id="gamemode_timed">
+                                <property name="group">gamemode</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="AdwActionRow" id="gamemode_blitz_ar">
+                            <property name="activatable-widget">gamemode_blitz</property>
+                            <property name="icon-name">camera-flash-symbolic</property>
+                            <property name="title">Blitz</property>
+                            <child>
+                              <object class="GtkCheckButton" id="gamemode_blitz">
+                                <property name="group">gamemode</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="lyt_themes-page">
+                  <object class="AdwPreferencesPage" id="lyt_themes-page">
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="separate-rows">True</property>
+                        <child>
+                          <object class="AdwActionRow">
+                            <property name="activatable">True</property>
+                            <property name="activatable-widget">theme_selector</property>
+                            <property name="icon-name">dice3-symbolic</property>
+                            <property name="title">Random</property>
+                            <child>
+                              <object class="GtkCheckButton" id="theme_selector">
+                                <property name="active">True</property>
+                              </object>
+                            </child>
+                            <style/>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkListBox" id="category_list">
+                            <property name="margin-top">15</property>
+                            <property name="valign">start</property>
+                            <property name="vexpand">true</property>
+                            <style>
+                              <class name="boxed-list"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="lyt_search_entry">
+                  <object class="GtkSearchEntry" id="search_entry">
+                    <property name="placeholder-text">Search themes</property>
+                  </object>
+                </child>
+                <child type="lyt_game-selector">
+                  <object class="GtkCenterBox" id="lyt_game-selector">
                     <property name="orientation">vertical</property>
                     <child type="center">
                       <object class="AdwCarousel" id="game_selector">
@@ -262,156 +526,7 @@
                       </object>
                     </child>
                   </object>
-                </property>
-                <property name="min-sidebar-width">250.0</property>
-                <property name="sidebar">
-                  <object class="AdwNavigationView" id="sidebar_view">
-                    <child>
-                      <object class="AdwNavigationPage">
-                        <property name="child">
-                          <object class="AdwToolbarView">
-                            <child>
-                              <object class="AdwPreferencesPage">
-                                <child>
-                                  <object class="AdwPreferencesGroup">
-                                    <property name="title">Theme</property>
-                                    <child>
-                                      <object class="AdwActionRow" id="active_category">
-                                        <property name="action-name">navigation.push</property>
-                                        <property name="action-target">'theme_selector'</property>
-                                        <property name="activatable">True</property>
-                                        <property name="title">Random</property>
-                                        <child>
-                                          <object class="GtkImage">
-                                            <property name="icon-name">go-next</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="AdwPreferencesGroup">
-                                    <property name="title">Game mode</property>
-                                    <child>
-                                      <object class="AdwActionRow">
-                                        <property name="activatable-widget">gamemode</property>
-                                        <property name="icon-name">playlist-infinite-symbolic</property>
-                                        <property name="title">No timer</property>
-                                        <child>
-                                          <object class="GtkCheckButton" id="gamemode">
-                                            <property name="active">True</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="AdwActionRow">
-                                        <property name="activatable-widget">gamemode_timed</property>
-                                        <property name="icon-name">timer-symbolic</property>
-                                        <property name="title">With timer</property>
-                                        <child>
-                                          <object class="GtkCheckButton" id="gamemode_timed">
-                                            <property name="group">gamemode</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="AdwActionRow">
-                                        <property name="activatable-widget">gamemode_blitz</property>
-                                        <property name="icon-name">camera-flash-symbolic</property>
-                                        <property name="title">Blitz</property>
-                                        <child>
-                                          <object class="GtkCheckButton" id="gamemode_blitz">
-                                            <property name="group">gamemode</property>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child type="top">
-                              <object class="AdwHeaderBar">
-                                <property name="title-widget">
-                                  <object class="AdwWindowTitle">
-                                    <property name="title">Hunt</property>
-                                  </object>
-                                </property>
-                              </object>
-                            </child>
-                          </object>
-                        </property>
-                        <property name="tag">main_options</property>
-                        <property name="title">Options</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="AdwNavigationPage">
-                        <property name="child">
-                          <object class="AdwToolbarView">
-                            <child>
-                              <object class="AdwPreferencesPage">
-                                <child>
-                                  <object class="AdwPreferencesGroup">
-                                    <property name="separate-rows">True</property>
-                                    <child>
-                                      <object class="AdwActionRow">
-                                        <property name="activatable">True</property>
-                                        <property name="activatable-widget">theme_selector</property>
-                                        <property name="icon-name">dice3-symbolic</property>
-                                        <property name="title">Random</property>
-                                        <child>
-                                          <object class="GtkCheckButton" id="theme_selector">
-                                            <property name="active">True</property>
-                                          </object>
-                                        </child>
-                                        <style/>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkListBox" id="category_list">
-                                        <property name="margin-top">15</property>
-                                        <property name="valign">start</property>
-                                        <property name="vexpand">true</property>
-                                        <style>
-                                          <class name="boxed-list"/>
-                                        </style>
-                                      </object>
-                                    </child>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child type="top">
-                              <object class="AdwHeaderBar">
-                                <child type="end">
-                                  <object class="GtkToggleButton" id="search_themes_button">
-                                    <property name="icon-name">system-search</property>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child type="top">
-                              <object class="GtkSearchBar">
-                                <property name="child">
-                                  <object class="GtkSearchEntry" id="search_entry">
-                                    <property name="placeholder-text">Search themes</property>
-                                  </object>
-                                </property>
-                                <property name="search-mode-enabled" bind-source="search_themes_button" bind-property="active">False</property>
-                              </object>
-                            </child>
-                          </object>
-                        </property>
-                        <property name="tag">theme_selector</property>
-                        <property name="title">Themes</property>
-                      </object>
-                    </child>
-                  </object>
-                </property>
+                </child>
               </object>
             </property>
             <property name="tag">preferences</property>
@@ -513,6 +628,13 @@
       </object>
     </property>
     <property name="default-width">800</property>
+    <child>
+      <object class="AdwBreakpoint">
+        <!-- Custom object fragments -->
+        <condition>max-width: 600px</condition>
+        <setter object="multi_layout" property="layout-name">portrait</setter>
+      </object>
+    </child>
   </template>
   <menu id="primary_menu">
     <section>

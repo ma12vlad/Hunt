@@ -32,8 +32,13 @@ class HuntWindow(Adw.ApplicationWindow):
     gamemode = Gtk.Template.Child()
     gamemode_timed = Gtk.Template.Child()
     gamemode_blitz = Gtk.Template.Child()
+    gamemode_ar = Gtk.Template.Child()
+    gamemode_timed_ar = Gtk.Template.Child()
+    gamemode_blitz_ar = Gtk.Template.Child()
     timer_progBar = Gtk.Template.Child()
     game_title = Gtk.Template.Child()
+    theme_mobile = Gtk.Template.Child()
+    gamemode_mobile = Gtk.Template.Child()
 
     found_words = []
     words = []
@@ -58,6 +63,11 @@ class HuntWindow(Adw.ApplicationWindow):
     divided_timer = None
     selected_category = "RANDOM"
 
+    def update_gamemode(self, checkbox, function, actionrow):
+        if checkbox.get_active():
+            function()
+            self.gamemode_mobile.set_subtitle(actionrow.get_title())
+            self.gamemode_mobile.set_icon_name(actionrow.get_icon_name())
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -79,9 +89,9 @@ class HuntWindow(Adw.ApplicationWindow):
         HuntApplication.create_action(self, 'custom_start', self.custom_start)
         HuntApplication.create_action(self, 'restart', self.back_to_main_menu)
         self.theme_selector.connect("toggled",  lambda cb: self.on_row_activated(cb, "Random") if cb.get_active() else None)
-        self.gamemode.connect("toggled",  lambda cb: self.normal() if cb.get_active() else None)
-        self.gamemode_timed.connect("toggled",  lambda cb: self.timed() if cb.get_active() else None)
-        self.gamemode_blitz.connect("toggled",  lambda cb: self.speed() if cb.get_active() else None)
+        self.gamemode.connect("toggled",  self.update_gamemode, self.normal, self.gamemode_ar)
+        self.gamemode_timed.connect("toggled",  self.update_gamemode, self.timed, self.gamemode_timed_ar)
+        self.gamemode_blitz.connect("toggled",  self.update_gamemode, self.speed, self.gamemode_blitz_ar)
         self.main_window_content.connect("popped", lambda _, page: self.back_to_main_menu(None, None) if page.get_tag() == 'game' else None)
 
         for item in sorted(list(related_words.keys())):
@@ -140,6 +150,7 @@ class HuntWindow(Adw.ApplicationWindow):
     def on_row_activated(self, checkbox, actionName):
         self.selected_category = actionName.upper()
         self.active_category.set_title(actionName)
+        self.theme_mobile.set_subtitle(actionName)
         self.sidebar_view.pop()
 
     #back_to_main_menus the game

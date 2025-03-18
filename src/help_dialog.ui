@@ -4,7 +4,6 @@
   <requires lib="gtk" version="4.12"/>
   <requires lib="libadwaita" version="1.6"/>
   <object class="AdwPreferencesDialog" id="HelpDialog">
-    <property name="presentation-mode">floating</property>
     <property name="title">Help</property>
     <child>
       <object class="AdwPreferencesPage">
