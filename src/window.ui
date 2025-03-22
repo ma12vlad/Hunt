@@ -547,9 +547,8 @@
                     <child>
                       <object class="AdwOverlaySplitView" id="main_box">
                         <property name="content">
-                          <object class="GtkCenterBox">
-                            <property name="orientation">vertical</property>
-                            <child type="start">
+                          <object class="AdwToolbarView">
+                            <child type="top">
                               <object class="AdwHeaderBar">
                                 <property name="show-back-button">False</property>
                                 <property name="show-title">False</property>
@@ -567,7 +566,7 @@
                                 </style>
                               </object>
                             </child>
-                            <child type="center">
+                            <child>
                               <object class="AdwLayoutSlot">
                                 <property name="id">lyt_grid</property>
                               </object>
@@ -710,9 +709,8 @@
                           </object>
                         </property>
                         <property name="content">
-                          <object class="GtkCenterBox">
-                            <property name="orientation">vertical</property>
-                            <child type="start">
+                          <object class="AdwToolbarView">
+                            <child type="top">
                               <object class="AdwHeaderBar">
                                 <property name="show-back-button">False</property>
                                 <child type="end">
@@ -729,10 +727,10 @@
                                 </style>
                               </object>
                             </child>
-                            <child type="center">
+                            <child>
                               <object class="AdwLayoutSlot">
                                 <property name="id">lyt_grid</property>
-                                <property name="margin-bottom">130</property>
+                                <property name="margin-bottom">160</property>
                               </object>
                             </child>
                           </object>
@@ -781,12 +779,16 @@
                   </object>
                 </child>
                 <child type="lyt_grid">
-                  <object class="GtkGrid" id="grid">
-                    <property name="halign">center</property>
-                    <property name="margin-bottom">15</property>
-                    <property name="margin-end">15</property>
-                    <property name="margin-start">15</property>
-                    <property name="valign">center</property>
+                  <object class="GtkScrolledWindow" id="lyt_grid">
+                    <child>
+                      <object class="GtkGrid" id="grid">
+                        <property name="halign">center</property>
+                        <property name="margin-bottom">15</property>
+                        <property name="margin-end">15</property>
+                        <property name="margin-start">15</property>
+                        <property name="valign">center</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
                 <child type="lyt_game-options">
