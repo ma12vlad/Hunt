@@ -9,6 +9,7 @@ class HuntWindow(Adw.ApplicationWindow):
     #All relevant items from window.ui that are used here
     grid = Gtk.Template.Child()
     frame = Gtk.Template.Child()
+    frame_light = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
     clock = Gtk.Template.Child()
     small_game = Gtk.Template.Child()
@@ -30,10 +31,17 @@ class HuntWindow(Adw.ApplicationWindow):
     gamemode = Gtk.Template.Child()
     gamemode_timed = Gtk.Template.Child()
     gamemode_blitz = Gtk.Template.Child()
+    gamemode_ar = Gtk.Template.Child()
+    gamemode_timed_ar = Gtk.Template.Child()
+    gamemode_blitz_ar = Gtk.Template.Child()
     timer_progBar = Gtk.Template.Child()
     game_title = Gtk.Template.Child()
+    theme_mobile = Gtk.Template.Child()
+    gamemode_mobile = Gtk.Template.Child()
+    ingame_bottomSheet = Gtk.Template.Child()
 
     found_words = []
+    words_left = []
     used_letters = []
     words = []
     word_buttons = []
@@ -61,6 +69,12 @@ class HuntWindow(Adw.ApplicationWindow):
     reference_time = None
     selected_categories = {"RANDOM"}
 
+    def update_gamemode(self, checkbox, clock, timed_game, blitz_game, actionrow):
+        if checkbox.get_active():
+            self.game_mode(clock, timed_game, blitz_game)
+            self.gamemode_mobile.set_subtitle(actionrow.get_title())
+            self.gamemode_mobile.set_icon_name(actionrow.get_icon_name())
+
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         css_provider = Gtk.CssProvider()
@@ -82,9 +96,9 @@ class HuntWindow(Adw.ApplicationWindow):
         self.medium_game.connect("clicked", self.start_game, _, 8, 12, 12, 60, 600, 600)
         self.large_game.connect("clicked", self.start_game, _, 10, 16, 16, 80, 800, 800)
         self.theme_selector.connect("toggled", lambda cb, cat="RANDOM": self.on_row_activated(cb, cat))
-        self.gamemode.connect("toggled",  lambda cb: self.game_mode(False, False, False) if cb.get_active() else None)
-        self.gamemode_timed.connect("toggled",  lambda cb: self.game_mode(True, True, False) if cb.get_active() else None)
-        self.gamemode_blitz.connect("toggled",  lambda cb: self.game_mode(True, False, True) if cb.get_active() else None)
+        self.gamemode.connect("toggled",  self.update_gamemode, False, False, False, self.gamemode_ar)
+        self.gamemode_timed.connect("toggled", self.update_gamemode, True, True, False, self.gamemode_timed_ar)
+        self.gamemode_blitz.connect("toggled",self.update_gamemode, True, False, True, self.gamemode_blitz_ar)
         self.main_window_content.connect("popped", lambda _, page: self.back_to_main_menu(None, None) if page.get_tag() == 'game' else None)
 
         for item in sorted(list(related_words.keys())):
@@ -157,6 +171,9 @@ class HuntWindow(Adw.ApplicationWindow):
             self.category_list.set_sensitive(True)
         self.active_category.set_title(", ".join(item.capitalize() for item in self.selected_categories))
 
+        # Display the number of selected categories if more than one in mobile mode
+        self.theme_mobile.set_subtitle([item.capitalize() for item in self.selected_categories][0] if len(self.selected_categories) == 1 else f"{len(self.selected_categories)} selected")
+
     #restarts the game
     def reload(self, action, _):
         if(self.timed_game or self.blitz_game):
@@ -205,6 +222,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.main_window_content.pop_to_tag("preferences")
 
     def hint(self, action, _):
+        self.ingame_bottomSheet.set_open(False)
         used_button = random.choice(self.used_letters)
         used_button.add_css_class("shake")
         def remove_shake():
@@ -307,6 +325,8 @@ class HuntWindow(Adw.ApplicationWindow):
                 col = 0
                 row += 1
 
+        self.refresh_lightlist(1 if self.blitz_game else 3)
+
         if(not self.blitz_game):
             #Add each word the the GTKListBox, and place each word in the grid. Does not run in blitz mode because only one word needs to be in the grid and in the GTKListBox at a time
             used_words = set()
@@ -355,6 +375,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     def make_word_list(self): #Creates the list of words for the player to search for.
         self.words.clear()
+        self.words_left.clear()
         if("RANDOM" in self.selected_categories):
             self.random_key = [random.choice(list(related_words.keys()))]
             self.word_list = related_words[self.random_key[0]]
@@ -366,7 +387,9 @@ class HuntWindow(Adw.ApplicationWindow):
         self.grid_data = [[' ' for _ in range(self.length)] for _ in range(self.height)]
         random.shuffle(self.word_list)
         for i in range(self.word_count):
-            self.words.append(self.word_list[i].upper())
+            newWord = self.word_list[i].upper()
+            self.words.append(newWord)
+            self.words_left.append(newWord)
 
     # Places the words in self.words into the grid in random places and in random directions
     def place_word_in_grid(self, word):
@@ -435,9 +458,29 @@ class HuntWindow(Adw.ApplicationWindow):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
             self.make_grid("activate", _)
 
+    def refresh_lightlist(self, maxWords=3):
+        self.frame_light.remove_all()
+        def generate_new_entry(word, empty=False):
+            label = Gtk.Label(label=word, xalign=(0.0 if not empty else 0.5), margin_top=5, margin_bottom=5, margin_start=5, use_markup=empty, css_classes=(["dim-label"] if empty else None))
+            return Gtk.ListBoxRow(activatable=False, selectable=False, child=label)
+
+        if len(self.words_left) > 0:
+            for i in range(min(maxWords, len(self.words_left))):
+                self.frame_light.append(generate_new_entry(self.words_left[i].capitalize()))
+
+            if not self.frame_light.has_css_class('boxed-list'): self.frame_light.add_css_class('boxed-list')
+            if self.frame_light.has_css_class('background'): self.frame_light.remove_css_class('background')
+        else:
+            self.frame_light.append(generate_new_entry("<i>No words left</i>", True))
+
+            if self.frame_light.has_css_class('boxed-list'): self.frame_light.remove_css_class('boxed-list')
+            if not self.frame_light.has_css_class('background'): self.frame_light.add_css_class('background')
+
+
     #Fetches the word in between the two selected buttons. Also checks if the word that is made is one of words the player is supposed to find
     def letter_selected(self, action, _, button):
         if(not self.current_word and self.game_over == False):
+            self.ingame_bottomSheet.set_open(False) # Close BottomSheet when letter pressed
             self.current_word = button
             button.add_css_class("green_button")
         elif(self.current_word and self.game_over == False):
@@ -458,6 +501,8 @@ class HuntWindow(Adw.ApplicationWindow):
                         checkIcon.add_css_class("selection-mode")
                         child.get_first_child().add_suffix(checkIcon)
                 color = random.choice(self.copy_colors)
+                self.words_left.remove(word)
+                self.refresh_lightlist(1 if self.blitz_game else 3)
                 self.copy_colors.remove(color)
                 for child in self.word_buttons:
                     if(child in self.used_letters):
