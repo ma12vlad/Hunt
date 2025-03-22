@@ -13,6 +13,7 @@ class HuntWindow(Adw.ApplicationWindow):
     grid = Gtk.Template.Child()
     main_box = Gtk.Template.Child()
     frame = Gtk.Template.Child()
+    frame_light = Gtk.Template.Child()
     custom_box = Gtk.Template.Child()
     clock = Gtk.Template.Child()
     option_grid = Gtk.Template.Child()
@@ -268,8 +269,8 @@ class HuntWindow(Adw.ApplicationWindow):
                 self.timer = 0 #Reset timer so it will be equal to self.divided_timer on first execution
 
         if not self.divided_timer or self.main_window_content.get_visible_page().get_tag() != "game":
-            while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid, only on start of game (not when blitz refreshes grid)
-                self.frame.remove(self.frame.get_first_child())
+            self.frame.remove_all()
+            #self.frame_light.remove_all()
             if self.main_window_content.get_visible_page().get_tag() != "game":
                 self.main_window_content.push_by_tag("game")
 
