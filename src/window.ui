@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Created with Cambalache 0.94.1 -->
 <interface>
+  <!-- interface-name window.ui -->
   <requires lib="gio" version="2.0"/>
   <requires lib="gtk" version="4.14"/>
   <requires lib="libadwaita" version="1.6"/>
@@ -10,7 +11,9 @@
         <child>
           <object class="AdwNavigationPage">
             <property name="can-pop">False</property>
-            <property name="child">
+            <property name="tag">preferences</property>
+            <property name="title">Hunt</property>
+            <child>
               <object class="AdwMultiLayoutView" id="multi_layout">
                 <child>
                   <object class="AdwLayout">
@@ -101,8 +104,8 @@
                             <property name="spacing">20</property>
                             <child>
                               <object class="AdwActionRow" id="gamemode_mobile">
-                                <property name="icon-name">gamepad-symbolic</property>
-                                <property name="subtitle">Blitz</property>
+                                <property name="icon-name">playlist-infinite-symbolic</property>
+                                <property name="subtitle">No timer</property>
                                 <property name="title">Game mode</property>
                                 <style>
                                   <class name="property"/>
@@ -179,30 +182,12 @@
                   <object class="AdwPreferencesPage" id="lyt_preferences">
                     <child>
                       <object class="AdwPreferencesGroup">
-                        <property name="title">Theme</property>
-                        <child>
-                          <object class="AdwActionRow" id="active_category">
-                            <property name="action-name">navigation.push</property>
-                            <property name="action-target">'theme_selector'</property>
-                            <property name="activatable">True</property>
-                            <property name="title">Random</property>
-                            <child>
-                              <object class="GtkImage">
-                                <property name="icon-name">go-next</property>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="AdwPreferencesGroup">
-                        <property name="title">Game mode</property>
+                        <property name="title" translatable="yes">Game mode</property>
                         <child>
                           <object class="AdwActionRow" id="gamemode_ar">
                             <property name="activatable-widget">gamemode</property>
                             <property name="icon-name">playlist-infinite-symbolic</property>
-                            <property name="title">No timer</property>
+                            <property name="title" translatable="yes">No timer</property>
                             <child>
                               <object class="GtkCheckButton" id="gamemode">
                                 <property name="active">True</property>
@@ -214,7 +199,7 @@
                           <object class="AdwActionRow" id="gamemode_timed_ar">
                             <property name="activatable-widget">gamemode_timed</property>
                             <property name="icon-name">timer-symbolic</property>
-                            <property name="title">With timer</property>
+                            <property name="title" translatable="yes">With timer</property>
                             <child>
                               <object class="GtkCheckButton" id="gamemode_timed">
                                 <property name="group">gamemode</property>
@@ -226,10 +211,28 @@
                           <object class="AdwActionRow" id="gamemode_blitz_ar">
                             <property name="activatable-widget">gamemode_blitz</property>
                             <property name="icon-name">camera-flash-symbolic</property>
-                            <property name="title">Blitz</property>
+                            <property name="title" translatable="yes">Blitz</property>
                             <child>
                               <object class="GtkCheckButton" id="gamemode_blitz">
                                 <property name="group">gamemode</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPreferencesGroup">
+                        <property name="title" translatable="yes">Theme</property>
+                        <child>
+                          <object class="AdwActionRow" id="active_category">
+                            <property name="action-name">navigation.push</property>
+                            <property name="action-target">'theme_selector'</property>
+                            <property name="activatable">True</property>
+                            <property name="title" translatable="yes">Random</property>
+                            <child>
+                              <object class="GtkImage">
+                                <property name="icon-name">go-next</property>
                               </object>
                             </child>
                           </object>
@@ -279,6 +282,29 @@
                 <child type="lyt_game-selector">
                   <object class="GtkCenterBox" id="lyt_game-selector">
                     <property name="orientation">vertical</property>
+                    <child type="end">
+                      <object class="AdwCarouselIndicatorLines">
+                        <property name="carousel">game_selector</property>
+                        <property name="margin-bottom">7</property>
+                      </object>
+                    </child>
+                    <child type="start">
+                      <object class="AdwHeaderBar">
+                        <property name="show-title">False</property>
+                        <child type="end">
+                          <object class="GtkMenuButton">
+                            <property name="icon-name">open-menu-symbolic</property>
+                            <property name="menu-model">primary_menu</property>
+                            <property name="primary">True</property>
+                            <property name="tooltip-text" translatable="yes">Main Menu</property>
+                          </object>
+                        </child>
+                        <style>
+                          <class name="background"/>
+                          <class name="flat"/>
+                        </style>
+                      </object>
+                    </child>
                     <child type="center">
                       <object class="AdwCarousel" id="game_selector">
                         <property name="allow-long-swipes">True</property>
@@ -303,8 +329,7 @@
                                     <property name="row-homogeneous">True</property>
                                     <property name="row-spacing">20</property>
                                     <child>
-                                      <object class="GtkButton" id="button1">
-                                        <property name="action-name">win.small</property>
+                                      <object class="GtkButton" id="small_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -321,8 +346,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button2">
-                                        <property name="action-name">win.medium</property>
+                                      <object class="GtkButton" id="medium_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -339,8 +363,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button3">
-                                        <property name="action-name">win.large</property>
+                                      <object class="GtkButton" id="large_game">
                                         <child>
                                           <object class="GtkLabel">
                                             <property name="justify">center</property>
@@ -357,7 +380,7 @@
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton" id="button4">
+                                      <object class="GtkButton">
                                         <property name="action-name">win.custom</property>
                                         <property name="child">
                                           <object class="GtkBox">
@@ -366,7 +389,7 @@
                                             <property name="valign">center</property>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">Custom</property>
+                                                <property name="label" translatable="yes">Custom</property>
                                               </object>
                                             </child>
                                             <child>
@@ -387,6 +410,9 @@
                                 </child>
                               </object>
                             </child>
+                            <style>
+                              <class name="title-2"/>
+                            </style>
                           </object>
                         </child>
                         <child>
@@ -406,8 +432,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">object-flip-vertical</property>
-                                        <property name="subtitle">How many lines you want</property>
-                                        <property name="title">Height</property>
+                                        <property name="subtitle" translatable="yes">How many lines you want</property>
+                                        <property name="title" translatable="yes">Height</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -421,8 +447,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">object-flip-horizontal</property>
-                                        <property name="subtitle">How many columns you want</property>
-                                        <property name="title">Width</property>
+                                        <property name="subtitle" translatable="yes">How many columns you want</property>
+                                        <property name="title" translatable="yes">Width</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -436,8 +462,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">completion-word-symbolic</property>
-                                        <property name="subtitle">How many words you will have to guess</property>
-                                        <property name="title">Words</property>
+                                        <property name="subtitle" translatable="yes">How many words you will have to guess</property>
+                                        <property name="title" translatable="yes">Words</property>
                                         <property name="value">5.0</property>
                                       </object>
                                     </child>
@@ -451,8 +477,8 @@
                                           </object>
                                         </property>
                                         <property name="icon-name">alarm-symbolic</property>
-                                        <property name="subtitle">The time you will have to find all the words</property>
-                                        <property name="title">Time (in seconds)</property>
+                                        <property name="subtitle" translatable="yes">The time you will have to find all the words</property>
+                                        <property name="title" translatable="yes">Time (in seconds)</property>
                                         <property name="value">10.0</property>
                                       </object>
                                     </child>
@@ -477,7 +503,7 @@
                                             <property name="child">
                                               <object class="AdwButtonContent">
                                                 <property name="icon-name">media-playback-start-symbolic</property>
-                                                <property name="label">Start</property>
+                                                <property name="label" translatable="yes">Start</property>
                                               </object>
                                             </property>
                                             <style>
@@ -492,9 +518,9 @@
                                 </child>
                               </object>
                             </property>
-                            <property name="description">Create the game of your dreams!</property>
+                            <property name="description" translatable="yes">Create the game of your dreams!</property>
                             <property name="icon-name">wrench-wide-symbolic</property>
-                            <property name="title">Custom settings</property>
+                            <property name="title" translatable="yes">Custom settings</property>
                             <style>
                               <class name="compact"/>
                             </style>
@@ -502,41 +528,16 @@
                         </child>
                       </object>
                     </child>
-                    <child type="start">
-                      <object class="AdwHeaderBar">
-                        <property name="show-title">False</property>
-                        <child type="end">
-                          <object class="GtkMenuButton">
-                            <property name="icon-name">open-menu-symbolic</property>
-                            <property name="menu-model">primary_menu</property>
-                            <property name="primary">True</property>
-                            <property name="tooltip-text" translatable="yes">Main Menu</property>
-                          </object>
-                        </child>
-                        <style>
-                          <class name="background"/>
-                          <class name="flat"/>
-                        </style>
-                      </object>
-                    </child>
-                    <child type="end">
-                      <object class="AdwCarouselIndicatorLines">
-                        <property name="carousel">game_selector</property>
-                        <property name="margin-bottom">7</property>
-                      </object>
-                    </child>
                   </object>
                 </child>
               </object>
-            </property>
-            <property name="tag">preferences</property>
-            <property name="title">Hunt</property>
+            </child>
           </object>
         </child>
         <child>
           <object class="AdwNavigationPage">
             <property name="tag">game</property>
-            <property name="title">Game</property>
+            <property name="title" translatable="yes">Game</property>
             <child>
               <object class="AdwMultiLayoutView" id="ingame_layouts">
                 <child>
@@ -617,8 +618,8 @@
                               <object class="AdwPreferencesGroup">
                                 <property name="header-suffix">
                                   <object class="GtkProgressBar">
-                                    <property name="css-classes" bind-source="timer_progBar" bind-property="css-classes"/>
-                                    <property name="fraction" bind-source="timer_progBar" bind-property="fraction">0.0</property>
+                                    <property name="css-classes"/>
+                                    <property name="fraction">0.0</property>
                                     <property name="valign">center</property>
                                     <style/>
                                   </object>
@@ -785,7 +786,7 @@
                     <child>
                       <object class="AdwPreferencesGroup" id="clock">
                         <property name="description">14.3 seconds</property>
-                        <property name="title">Time left</property>
+                        <property name="title" translatable="yes">Time left</property>
                         <property name="visible">False</property>
                         <child>
                           <object class="GtkProgressBar" id="timer_progBar">
@@ -797,7 +798,24 @@
                     </child>
                     <child>
                       <object class="AdwPreferencesGroup">
-                        <property name="title">Words to find</property>
+                        <child>
+                          <object class="GtkBox">
+                            <child>
+                              <object class="GtkLabel">
+                                <property name="label" translatable="yes">Words to find</property>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton">
+                                <property name="action-name">win.hint</property>
+                                <property name="halign">end</property>
+                                <property name="hexpand">true</property>
+                                <property name="icon-name">lightbulb-symbolic</property>
+                                <property name="margin-bottom">5</property>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
                         <child>
                           <object class="GtkListBox" id="frame">
                             <style>

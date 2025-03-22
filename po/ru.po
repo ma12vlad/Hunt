@@ -1,25 +1,58 @@
 # SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
-# SPDX-FileCopyrightText: 2025 SPDX-FileCopyrightText :
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-01-29 19:54+0300\n"
-"PO-Revision-Date: 2025-01-30 15:58+0300\n"
+"POT-Creation-Date: 2025-02-11 20:37+0300\n"
+"PO-Revision-Date: 2025-02-11 20:38+0300\n"
 "Last-Translator: Владислав Малышев <ma12@rambler.ru>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Poedit-Basepath: ../src\n"
 "X-Poedit-SearchPath-0: gtk/help-overlay.ui\n"
-"X-Poedit-SearchPath-1: main.py\n"
-"X-Poedit-SearchPath-2: resources.py\n"
-"X-Poedit-SearchPath-3: window.py\n"
-"X-Poedit-SearchPath-4: window.ui\n"
+"X-Poedit-SearchPath-1: end_dialog.ui\n"
+"X-Poedit-SearchPath-2: help_dialog.ui\n"
+"X-Poedit-SearchPath-3: main.py\n"
+"X-Poedit-SearchPath-4: resources.py\n"
+"X-Poedit-SearchPath-5: window.py\n"
+"X-Poedit-SearchPath-6: window.ui\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: end_dialog.ui:12
+msgid "Shapes"
+msgstr "Формы"
+
+#: end_dialog.ui:13
+msgid "Category"
+msgstr "Категория"
+
+#: end_dialog.ui:21
+msgid "8 x 8 tiles"
+msgstr "8 x 8 букв"
+
+#: end_dialog.ui:22
+msgid "Grid size"
+msgstr "Размер доски"
+
+#: end_dialog.ui:30
+msgid "5 out of 5"
+msgstr "5 из 5"
+
+#: end_dialog.ui:31
+msgid "Words found"
+msgstr "Найдено слов"
+
+#: end_dialog.ui:56
+msgid "_Close"
+msgstr "_Закрыть"
+
+#: end_dialog.ui:57
+msgid "_New game"
+msgstr "_Новая  игра"
 
 #: gtk/help-overlay.ui:11
 msgid "General"
@@ -27,81 +60,139 @@ msgstr "Основные"
 
 #: gtk/help-overlay.ui:14
 msgid "Show Shortcuts"
-msgstr "Показать сочетания клавиш"
+msgstr "Клавиатурные сочетания"
 
 #: gtk/help-overlay.ui:20
 msgid "Quit"
 msgstr "Выйти"
 
-#: main.py:60
+#: help_dialog.ui:8
+msgid "Help"
+msgstr "Помощь"
+
+#: help_dialog.ui:12
+msgid "How to play"
+msgstr "Как играть"
+
+#: help_dialog.ui:15
+msgid "1 - Start a game"
+msgstr "1 - Начало игры"
+
+#: help_dialog.ui:19
+msgid "To start, select one of the four grid sizes:"
+msgstr "Для начала выберите один из четырех размеров доски:"
+
+#: help_dialog.ui:27
 msgid ""
-"<span size=\"large\"><big><b>How to play:</b></big>\n"
-"______________________________________________________________________\n"
-"\n"
-"To start, select one of the four grid sizes: \n"
-"\n"
-"○  8 × 8 board with 5 words \n"
-"○  12 × 12 board with 8 words \n"
-"○  16 × 16 board with 10 words \n"
-"○  Custom board, where you choose the size and the number of words\n"
-"\n"
+"○ <b>8 × 8 board</b> with 5 words\n"
+"○ <b>12 × 12 board</b> with 8 words\n"
+"○ <b>16 × 16 board</b> with 10 words\n"
+"○ <b>Custom board</b>, where you choose the size and the number of words"
+msgstr ""
+"○ <b>доска 8 × 8</b> с 5 словами\n"
+"○ <b>доска 12 × 12</b> с 8 словами\n"
+"○ <b>доска 16 × 16</b> с 10 словами\n"
+"○ <b>Слоя доска</b>, где вы выбираете её размер и количество слов"
+
+#: help_dialog.ui:52
+msgid "You can also choose between 3 differents game modes"
+msgstr "Вы можете выбрать один из трёх режимов игры"
+
+#: help_dialog.ui:68
+msgid "2 - Find the words in the grid"
+msgstr "2 - Найдите слова  на доске"
+
+#: help_dialog.ui:72
+msgid ""
 "To choose a term from the grid, click the first and the last letter of the "
 "word you want, and all letters in between the two is what Hunt will take as "
-"selected.\n"
-"\n"
-"To win, you must find all words that are hidden in the grid.\n"
-"\n"
-"Avoid minimizing the grid size, and maximizing the word count, as it can "
-"occasionally lead to game crashes if some words are unable to be placed.\n"
-"\n"
-"</span><span size=\"large\"><big><b>Blitz Mode:</b></big>\n"
-"______________________________________________________________________\n"
-"\n"
-"Blitz mode reduces the amount of time the player has per word, and words in "
-"that category are given one at a time.\n"
-"\n"
-"For example, with 60 seconds for 5 words, each word would only be available "
-"for 12 seconds (60 ÷ 5 = 12) before game over.\n"
-"\n"
-"Whenever a word is found, the amount of time the game started with gets added "
-"to the remaining time the player has. \n"
-"\n"
-"</span><span size=\"large\"><big><b>Get Involved:</b></big>\n"
-"______________________________________________________________________\n"
-"\n"
-"Everyone is welcome to participate in Hunt's development, whether by "
-"improving the game's code, or adding more language support.</span>"
+"selected."
 msgstr ""
-"<span size=\"large\"><big><b>Как играть:</b></big>\n"
-"1.Выберите категорию слов, либо оставьте случайный выбор. Внимание: "
-"выпадающий список категорий появляется только если "
-"снизу достаточно места для его раскрытия!\n"
-"2.Выберите игру с таймером, без таймера или блиц\n"
-"3.Выберите один из четырех размеров доски:\n"
-"○  8 × 8 доска с 5 словами \n"
-"○  12 × 12 доска с 8 словами \n"
-"○  16 × 16 доска с 10 словами \n"
-"○  Пользовательская доска, задайте размер и количество слов. избегайте "
-"маленького размера доски и большого количества слов, это может привести к "
-"сбою игры.\n"
-"Для выбора слова на доске, щелкните по первой и последней букве, если выбор "
-"верный то всё слово будет выделено цветом. Чтобы выиграть, вы должны найти "
-"все спрятанные слова.\n"
-"\n"
-"</span><span size=\"large\"><big><b>Режим Блиц:</b></big>\n"
-"Блиц-режим сокращает количество времени, отводимого игроку на каждое слово. "
-"Например, при 60 секундах на 5 слов каждое слово будет доступно только в "
-"течение 12 секунд (60 ÷ 5 = 12) до окончания игры. Всякий раз, когда найдено "
-"слово, количество времени, с которого началась игра, прибавляется к "
-"оставшемуся у игрока времени. \n"
-"\n"
-"</span><span size=\"large\"><big><b>Принять участие:</b></big>\n"
-"Каждый желающий может принять участие в разработке Hunt, будь то путем "
-"улучшения кода игры или добавления языковой поддержки.</span>"
+"Щелкните по первой и последней букве нужного вам слова.  Если выбор верный то "
+"всё слово будет выделено цветом."
 
-#: main.py:65
-msgid "<span size=\"large\"><b>You can contribute here</b></span>"
-msgstr "<span size=\"large\"><b>Вы можете внести свой вклад здесь</b></span>"
+#: help_dialog.ui:81
+msgid "To win, you must find all words that are hidden in the grid."
+msgstr "Чтобы выиграть, вы должны найти все спрятанные слова."
+
+#: help_dialog.ui:101
+msgid ""
+"Avoid minimizing the grid size, and maximizing the word count, as it can "
+"occasionally lead to game crashes if some words are unable to be placed"
+msgstr ""
+"Избегайте маленького размера доски и большого количества слов, это может "
+"привести к сбою игры"
+
+#: help_dialog.ui:119
+msgid "Hunt offers 3 different game modes to play with"
+msgstr "Hunt предлагает 3 различных режима игры"
+
+#: help_dialog.ui:121
+msgid "Game modes"
+msgstr "Режимы игры"
+
+#: help_dialog.ui:130
+msgid "Normal mode"
+msgstr "Обычный режим"
+
+#: help_dialog.ui:134
+msgid "Play a game without being worried about the time!"
+msgstr "Играйте и не беспокоясь о времени!"
+
+#: help_dialog.ui:150
+msgid "Timer mode"
+msgstr "Режим таймера"
+
+#: help_dialog.ui:154
+msgid "You will have a limited time to find all the words."
+msgstr "У вас будет ограниченное время, чтобы найти все нужные слова."
+
+#: help_dialog.ui:170
+msgid "Blitz mode"
+msgstr "Блиц-режим"
+
+#: help_dialog.ui:174
+msgid ""
+"Blitz mode reduces the amount of time the player has per word, and words in "
+"that category are given one at a time."
+msgstr ""
+"Блиц-режим сокращает количество времени, отводимого игроку на каждое слово."
+
+#: help_dialog.ui:194
+msgid ""
+"For example, with 60 seconds for 5 words, each word would only be available "
+"for 12 seconds (60 ÷ 5 = 12) before game over."
+msgstr ""
+"Например, при 60 секундах на 5 слов каждое слово будет доступно только в "
+"\"\"течение 12 секунд (60 ÷ 5 = 12) до окончания игры."
+
+#: help_dialog.ui:209
+msgid ""
+"Whenever a word is found, the amount of time the game started with gets "
+"added to the remaining time the player has."
+msgstr ""
+"Всякий раз, когда найдено слово, количество времени, с которого началась "
+"игра, прибавляется к оставшемуся у игрока времени."
+
+#: help_dialog.ui:222
+msgid "Get involved"
+msgstr "Принять участие"
+
+#: help_dialog.ui:231
+msgid "Contribute"
+msgstr "Внести вклад"
+
+#: help_dialog.ui:242
+msgid ""
+"Everyone is welcome to participate in Hunt's development, whether by "
+"improving the game's code, or adding more language support."
+msgstr ""
+"Каждый желающий может принять участие в разработке Hunt, будь то "
+"путемулучшения кода игры или дополнительной языковой поддержки."
+
+#: help_dialog.ui:244
+msgid "Contribute to Hunt"
+msgstr "Внести вклад в Hunt"
 
 #: resources.py:2
 msgid "ICE CREAM FLAVORS"
@@ -151,7 +242,8 @@ msgstr "рожок"
 msgid "FRUITS"
 msgstr "ФРУКТЫ"
 
-#: resources.py:3 resources.py:5 resources.py:21 resources.py:93 resources.py:99
+#: resources.py:3 resources.py:5 resources.py:21 resources.py:93
+#: resources.py:99
 msgid "fruit"
 msgstr "фрукт"
 
@@ -726,7 +818,7 @@ msgstr "ветер"
 
 #: resources.py:16 resources.py:22
 msgid "cloud"
-msgstr "облака"
+msgstr "облако"
 
 #: resources.py:16 resources.py:45 resources.py:81
 msgid "snow"
@@ -1638,7 +1730,7 @@ msgstr "пробежка"
 
 #: resources.py:39
 msgid "pushup"
-msgstr "отжимание"
+msgstr "кросс"
 
 #: resources.py:40
 msgid "COOKING"
@@ -1743,7 +1835,7 @@ msgstr "магия"
 
 #: resources.py:42 resources.py:68
 msgid "curse"
-msgstr "проклятие"
+msgstr "анафема"
 
 #: resources.py:42
 msgid "fate"
@@ -2555,7 +2647,7 @@ msgstr "шербет"
 
 #: resources.py:66
 msgid "gelato"
-msgstr "мороженое"
+msgstr "пломбир"
 
 #: resources.py:66
 msgid "pudding"
@@ -2647,7 +2739,7 @@ msgstr "космос"
 
 #: resources.py:69
 msgid "galaxy"
-msgstr "галактика"
+msgstr "квазар"
 
 #: resources.py:69
 msgid "comets"
@@ -2835,7 +2927,7 @@ msgstr "ПОЕЗДА"
 
 #: resources.py:75
 msgid "engine"
-msgstr "двигатель"
+msgstr "мотор"
 
 #: resources.py:75
 msgid "tracks"
@@ -2951,7 +3043,7 @@ msgstr "ива"
 
 #: resources.py:78
 msgid "shrub"
-msgstr "кустарник"
+msgstr "куст"
 
 #: resources.py:78 resources.py:93
 msgid "bark"
@@ -3219,7 +3311,7 @@ msgstr "марсиане"
 
 #: resources.py:86
 msgid "beam"
-msgstr "вторжение"
+msgstr "луч"
 
 #: resources.py:86
 msgid "zoom"
@@ -3359,7 +3451,7 @@ msgstr "глубина"
 
 #: resources.py:91
 msgid "echo"
-msgstr "'[j]"
+msgstr "эхо"
 
 #: resources.py:91
 msgid "gloom"
@@ -3391,7 +3483,7 @@ msgstr "робот"
 
 #: resources.py:92
 msgid "arm"
-msgstr "терминатор"
+msgstr "киборг"
 
 #: resources.py:93
 msgid "TREES"
@@ -3551,7 +3643,7 @@ msgstr "пикси"
 
 #: resources.py:98
 msgid "tiny"
-msgstr "маленькая"
+msgstr "крошка"
 
 #: resources.py:98
 msgid "spark"
@@ -3609,55 +3701,23 @@ msgstr "ворота"
 msgid "dig"
 msgstr "копатель"
 
-#: window.py:119 window.ui:349
-msgid "RANDOM"
-msgstr "СЛУЧАЙНО"
+#: window.py:594
+msgid "Congratulations!"
+msgstr "Поздравляем!"
 
-#: window.py:479
-msgid "Game Over"
-msgstr "Конец игры"
+#: window.py:595
+msgid "You won the game!"
+msgstr "Вы выиграли!"
 
-#: window.py:511
-msgid "New Game"
-msgstr "Новая игра"
+#: window.py:598
+msgid "Time's out!"
+msgstr "Время вышло!"
 
-#: window.py:515
-msgid "Close"
-msgstr "Закрыть"
+#: window.py:599
+msgid "You ran out of time!"
+msgstr "У вас не хватило времени!"
 
-#: window.ui:6
-msgid "Hunt"
-msgstr ""
-
-#: window.ui:17
-msgid "Main Menu"
-msgstr "Главное меню"
-
-#: window.ui:55
-msgid "Height"
-msgstr "Высота"
-
-#: window.ui:82
-msgid "Width"
-msgstr "Ширина"
-
-#: window.ui:109
-msgid "Words"
-msgstr "Слова"
-
-#: window.ui:136
-msgid "Time (seconds)"
-msgstr "Время(секунды)"
-
-#: window.ui:163
-msgid "Start"
-msgstr "Cтарт"
-
-#: window.ui:176
-msgid "Back"
-msgstr "Назад"
-
-#: window.ui:205
+#: window.ui:50
 msgid ""
 "8 x 8 grid\n"
 "\n"
@@ -3668,7 +3728,7 @@ msgstr ""
 "5 слов\n"
 "(30 секунд)"
 
-#: window.ui:226
+#: window.ui:68
 msgid ""
 "12 x 12 grid\n"
 "\n"
@@ -3679,7 +3739,7 @@ msgstr ""
 "8 слов\n"
 "(60 секунд)"
 
-#: window.ui:246
+#: window.ui:86
 msgid ""
 "16 x 16 grid\n"
 "\n"
@@ -3690,49 +3750,110 @@ msgstr ""
 "10 слов\n"
 "(80 секунд)"
 
-#: window.ui:264
-msgid ""
-"\n"
-"    Custom\n"
-"                        "
-msgstr ""
-"\n"
-"    Пользовательская\n"
-"                доска\n"
-"                                            "
+#: window.ui:108
+msgid "Custom"
+msgstr "Своя доска"
 
-#: window.ui:297
-msgid "    No timer"
-msgstr "  Без таймера"
+#: window.ui:148
+msgid "How many lines you want"
+msgstr "Сколько строк вы хотите"
 
-#: window.ui:317
-msgid "   With timer"
-msgstr "  С таймером"
+#: window.ui:149
+msgid "Height"
+msgstr "Высота"
 
-#: window.ui:339
-msgid "     Blitz"
-msgstr "  Блиц              "
+#: window.ui:163
+msgid "How many columns you want"
+msgstr "Сколько столбцов вы хотите"
 
-#: window.ui:383
-msgid "Back to menu"
-msgstr "Возврат в меню"
+#: window.ui:164
+msgid "Width"
+msgstr "Ширина"
 
-#: window.ui:440
-msgid "Random Category"
-msgstr "Случайная категория"
+#: window.ui:178
+msgid "How many words you will have to guess"
+msgstr "Сколько слов нужно будет угадать"
 
-#: window.ui:446
-msgid "Search categories"
-msgstr "Категории поиска"
+#: window.ui:179
+msgid "Words"
+msgstr "Слова"
 
-#: window.ui:473
+#: window.ui:193
+msgid "The time you will have to find all the words"
+msgstr "За которое вам нужно найти все слова"
+
+#: window.ui:194
+msgid "Time (in seconds)"
+msgstr "Время (в секундах)"
+
+#: window.ui:219
+msgid "Start"
+msgstr "Старт"
+
+#: window.ui:234
+msgid "Create the game of your dreams!"
+msgstr "Создайте игру своей мечты!"
+
+#: window.ui:236
+msgid "Custom settings"
+msgstr "Свои настройки"
+
+#: window.ui:252 window.ui:440
+msgid "Main Menu"
+msgstr "Главное меню"
+
+#: window.ui:280
+msgid "Theme"
+msgstr "Тема"
+
+#: window.ui:286 window.ui:368
+msgid "Random"
+msgstr "Случайно"
+
+#: window.ui:298
+msgid "Game mode"
+msgstr "Режим игры"
+
+#: window.ui:303
+msgid "No timer"
+msgstr "Без таймера"
+
+#: window.ui:315
+msgid "With timer"
+msgstr "С таймером"
+
+#: window.ui:327
+msgid "Blitz"
+msgstr "Блиц"
+
+#: window.ui:351
+msgid "Options"
+msgstr "Опции"
+
+#: window.ui:413
+msgid "Themes"
+msgstr "Темы"
+
+#: window.ui:467 window.ui:513
+msgid "Game"
+msgstr "Игра"
+
+#: window.ui:484
+msgid "Time left"
+msgstr "Времени осталось"
+
+#: window.ui:496
+msgid "Words to find"
+msgstr "Нужно найти"
+
+#: window.ui:524
 msgid "_Keyboard Shortcuts"
 msgstr "_Сочетания клавиш"
 
-#: window.ui:477
+#: window.ui:528
 msgid "_About Hunt"
 msgstr "_О Hunt"
 
-#: window.ui:481
+#: window.ui:532
 msgid "_Help"
 msgstr "_Помощь"

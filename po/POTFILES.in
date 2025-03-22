@@ -5,3 +5,5 @@ src/main.py
 src/resources.py
 src/window.py
 src/window.ui
+src/help_dialog.ui
+src/end_dialog.ui

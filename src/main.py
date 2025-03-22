@@ -45,7 +45,7 @@ class HuntApplication(Adw.Application):
         about = Adw.AboutDialog(application_name='Hunt',
                                 application_icon='io.github.swordpuffin.hunt',
                                 developer_name='Nathan Perlman',
-                                version='1.0.6',
+                                version='1.1.1',
                                 issue_url='https://github.com/SwordPuffin/Hunt/issues',
                                 developers=['Nathan Perlman', 'DodoLeDev'],
                                 copyright='© 2025 Nathan Perlman')

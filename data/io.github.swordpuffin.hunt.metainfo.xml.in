@@ -5,6 +5,7 @@
   <project_license>GPL-3.0-or-later</project_license>
   <name>Hunt</name>
   <summary>Find every word</summary>
+  <summary xml:lang="fr">Trouvez chaque mot</summary>
   <summary xml:lang="ru">Найдите каждое слово</summary>
   <description>
     <p>Hunt is an easy word search game. You can play with or without a timer, or a blitz mode, where you must find each individual word in a much smaller length of time.</p>
@@ -31,6 +32,10 @@
       <caption>Playing the game</caption>
       <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot2.png</image>
     </screenshot>
+    <screenshot>
+      <caption>Game over</caption>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot3.png</image>
+    </screenshot>
   </screenshots>
   <requires>
     <display_length compare="ge">905</display_length>
@@ -40,9 +45,63 @@
     <control>pointing</control>
   </supports>
   <releases>
+    <release version="1.1.1" date="2025-3-2">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.1</url>
+      <description translate="no">
+        <p>Hunt v1.1.1</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Players can now use multiple word categories simultaneously in one game</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.1.0" date="2025-2-28">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.0</url>
+      <description translate="no">
+        <p>Hunt v1.1.0</p>
+        <p>New additions:</p>
+        <ul>
+          <li>Added a hint system</li>
+          <li>Minor visual changes for word intersections to improve clarity</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.9" date="2025-2-14">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.9</url>
+      <description translate="no">
+        <p>Hunt v1.0.9</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Added French translations</li>
+          <li>UI tweaks for external themes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.8" date="2025-2-11">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.8</url>
+      <description translate="no">
+        <p>Hunt v1.0.8</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Updated Russian translations for the new UI</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.0.7" date="2025-2-4">
+      <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.7</url>
+      <description translate="no">
+        <p>Hunt v1.0.7 includes many changes focused on making the game more polished</p>
+        <p>Changes:</p>
+        <ul>
+          <li>Completely overhauled UI (credit of DodoLeDev).</li>
+          <li>Improved word placement, including backwards and diagonal words in all directions.</li>
+          <li>Better help dialog.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.0.6" date="2025-1-30">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.0.6</url>
-      <description translate="no">
+      <description translate="yes">
         <p>Hunt v1.0.6</p>
         <p>Changes:</p>
         <p xml:lang="ru">изменения:</p>
