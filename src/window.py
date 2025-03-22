@@ -38,8 +38,10 @@ class HuntWindow(Adw.ApplicationWindow):
     game_title = Gtk.Template.Child()
     theme_mobile = Gtk.Template.Child()
     gamemode_mobile = Gtk.Template.Child()
+    ingame_bottomSheet = Gtk.Template.Child()
 
     found_words = []
+    words_left = []
     used_letters = []
     words = []
     word_buttons = []
@@ -220,6 +222,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.main_window_content.pop_to_tag("preferences")
 
     def hint(self, action, _):
+        self.ingame_bottomSheet.set_open(False)
         used_button = random.choice(self.used_letters)
         used_button.add_css_class("shake")
         def remove_shake():
@@ -322,6 +325,8 @@ class HuntWindow(Adw.ApplicationWindow):
                 col = 0
                 row += 1
 
+        self.refresh_lightlist(1 if self.blitz_game else 3)
+
         if(not self.blitz_game):
             #Add each word the the GTKListBox, and place each word in the grid. Does not run in blitz mode because only one word needs to be in the grid and in the GTKListBox at a time
             used_words = set()
@@ -370,6 +375,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     def make_word_list(self): #Creates the list of words for the player to search for.
         self.words.clear()
+        self.words_left.clear()
         if("RANDOM" in self.selected_categories):
             self.random_key = [random.choice(list(related_words.keys()))]
             self.word_list = related_words[self.random_key[0]]
@@ -381,7 +387,9 @@ class HuntWindow(Adw.ApplicationWindow):
         self.grid_data = [[' ' for _ in range(self.length)] for _ in range(self.height)]
         random.shuffle(self.word_list)
         for i in range(self.word_count):
-            self.words.append(self.word_list[i].upper())
+            newWord = self.word_list[i].upper()
+            self.words.append(newWord)
+            self.words_left.append(newWord)
 
     # Places the words in self.words into the grid in random places and in random directions
     def place_word_in_grid(self, word):
@@ -450,6 +458,25 @@ class HuntWindow(Adw.ApplicationWindow):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
             self.make_grid("activate", _)
 
+    def refresh_lightlist(self, maxWords=3):
+        self.frame_light.remove_all()
+        def generate_new_entry(word, empty=False):
+            label = Gtk.Label(label=word, xalign=(0.0 if not empty else 0.5), margin_top=5, margin_bottom=5, margin_start=5, use_markup=empty, css_classes=(["dim-label"] if empty else None))
+            return Gtk.ListBoxRow(activatable=False, selectable=False, child=label)
+
+        if len(self.words_left) > 0:
+            for i in range(min(maxWords, len(self.words_left))):
+                self.frame_light.append(generate_new_entry(self.words_left[i].capitalize()))
+
+            if not self.frame_light.has_css_class('boxed-list'): self.frame_light.add_css_class('boxed-list')
+            if self.frame_light.has_css_class('background'): self.frame_light.remove_css_class('background')
+        else:
+            self.frame_light.append(generate_new_entry("<i>No words left</i>", True))
+
+            if self.frame_light.has_css_class('boxed-list'): self.frame_light.remove_css_class('boxed-list')
+            if not self.frame_light.has_css_class('background'): self.frame_light.add_css_class('background')
+
+
     #Fetches the word in between the two selected buttons. Also checks if the word that is made is one of words the player is supposed to find
     def letter_selected(self, action, _, button):
         if(not self.current_word and self.game_over == False):
@@ -473,6 +500,8 @@ class HuntWindow(Adw.ApplicationWindow):
                         checkIcon.add_css_class("selection-mode")
                         child.get_first_child().add_suffix(checkIcon)
                 color = random.choice(self.copy_colors)
+                self.words_left.remove(word)
+                self.refresh_lightlist(1 if self.blitz_game else 3)
                 self.copy_colors.remove(color)
                 for child in self.word_buttons:
                     if(child in self.used_letters):
