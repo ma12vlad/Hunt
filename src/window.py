@@ -480,6 +480,7 @@ class HuntWindow(Adw.ApplicationWindow):
     #Fetches the word in between the two selected buttons. Also checks if the word that is made is one of words the player is supposed to find
     def letter_selected(self, action, _, button):
         if(not self.current_word and self.game_over == False):
+            self.ingame_bottomSheet.set_open(False) # Close BottomSheet when letter pressed
             self.current_word = button
             button.add_css_class("green_button")
         elif(self.current_word and self.game_over == False):
