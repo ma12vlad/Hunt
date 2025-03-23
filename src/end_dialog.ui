@@ -10,7 +10,7 @@
         <child>
           <object class="AdwActionRow" id="category">
             <property name="subtitle">Shapes</property>
-            <property name="title">Category</property>
+            <property name="title" translatable="yes">Category</property>
             <style>
               <class name="property"/>
             </style>
@@ -19,7 +19,7 @@
         <child>
           <object class="AdwActionRow" id="grid_size">
             <property name="subtitle">8 x 8 tiles</property>
-            <property name="title">Grid size</property>
+            <property name="title" translatable="yes">Grid size</property>
             <style>
               <class name="property"/>
             </style>
@@ -27,8 +27,8 @@
         </child>
         <child>
           <object class="AdwActionRow" id="words_found">
-            <property name="subtitle">5 out of 5</property>
-            <property name="title">Words found</property>
+            <property name="subtitle" translatable="yes">5 out of 5</property>
+            <property name="title" translatable="yes">Words found</property>
             <style>
               <class name="property"/>
               <class name="accent"/>
