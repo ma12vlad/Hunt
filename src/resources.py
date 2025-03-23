@@ -194,6 +194,22 @@ css = """
             font-weight: bold;
         }
 
+        .small_game {
+            color: var(--accent-green);
+        }
+
+        .medium_game {
+            color: var(--accent-yellow);
+        }
+
+        .large_game {
+            color: var(--accent-red);
+        }
+
+        .custom {
+            color: var(--accent-blue);
+        }
+
         .shake {
             animation: shake_animation 0.35s ease;
         }

@@ -3717,42 +3717,22 @@ msgstr "Время вышло!"
 msgid "You ran out of time!"
 msgstr "У вас не хватило времени!"
 
-#: window.ui:50
-msgid ""
-"8 x 8 grid\n"
-"\n"
-"5 words\n"
-"(30 seconds)"
-msgstr ""
-"доска 8 х 8\n"
-"5 слов\n"
-"(30 секунд)"
+#: window.py:87
+msgid "\n<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n<b>5 words\n(30 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>доска 8 х 8</span>\n<b>5 слов\n(30 секунд)</b>\n"
 
-#: window.ui:68
-msgid ""
-"12 x 12 grid\n"
-"\n"
-"8 words\n"
-"(60 seconds)"
-msgstr ""
-"доска 12 x 12\n"
-"8 слов\n"
-"(60 секунд)"
+#: window.py:88
+msgid "\n<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n<b>8 words\n(60 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>доска 12 х 12</span>\n<b>8 слов\n(60 секунд)</b>\n"
 
-#: window.ui:86
-msgid ""
-"16 x 16 grid\n"
-"\n"
-"10 words\n"
-"(80 seconds)"
-msgstr ""
-"доска 16 x 16\n"
-"10 слов\n"
-"(80 секунд)"
 
-#: window.ui:108
-msgid "Custom"
-msgstr "Своя доска"
+#: window.py:89
+msgid "\n<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n<b>10 words\n(80 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>доска 16 х 16</span>\n<b>10 слов\n(80 секунд)</b>\n"
+
+#: window.py:90
+msgid "\n<span size='large' weight='ultrabold'>Custom</span>\n"
+msgstr "\n<span size='large' weight='ultrabold'>Своя доска</span>\n"
 
 #: window.ui:148
 msgid "How many lines you want"

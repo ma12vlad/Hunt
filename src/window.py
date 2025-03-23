@@ -15,6 +15,7 @@ class HuntWindow(Adw.ApplicationWindow):
     small_game = Gtk.Template.Child()
     medium_game = Gtk.Template.Child()
     large_game = Gtk.Template.Child()
+    custom_start_button = Gtk.Template.Child()
     words_value = Gtk.Template.Child()
     height_value = Gtk.Template.Child()
     length_value = Gtk.Template.Child()
@@ -83,6 +84,10 @@ class HuntWindow(Adw.ApplicationWindow):
             Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_USER
         )
 
+        self.small_game.set_title(_("\n<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n<b>5 words\n(30 seconds)</b>\n"))
+        self.medium_game.set_title(_("\n<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n<b>8 words\n(60 seconds)</b>\n"))
+        self.large_game.set_title(_("\n<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n<b>10 words\n(80 seconds)</b>\n"))
+        self.custom_start_button.set_title(_("\n<span size='large' weight='ultrabold'>Custom</span>\n"))
         from .main import HuntApplication
 
         #Connect each button to its designated function
@@ -92,9 +97,9 @@ class HuntWindow(Adw.ApplicationWindow):
         HuntApplication.create_action(self, 'custom_start', self.custom_start)
         HuntApplication.create_action(self, 'restart', self.back_to_main_menu)
         HuntApplication.create_action(self, 'hint', self.hint)
-        self.small_game.connect("clicked", self.start_game, _, 5, 8, 8, 30, 400, 400)
-        self.medium_game.connect("clicked", self.start_game, _, 8, 12, 12, 60, 600, 600)
-        self.large_game.connect("clicked", self.start_game, _, 10, 16, 16, 80, 800, 800)
+        self.small_game.connect("activated", self.start_game, _, 5, 8, 8, 30, 400, 400)
+        self.medium_game.connect("activated", self.start_game, _, 8, 12, 12, 60, 600, 600)
+        self.large_game.connect("activated", self.start_game, _, 10, 16, 16, 80, 800, 800)
         self.theme_selector.connect("toggled", lambda cb, cat="RANDOM": self.on_row_activated(cb, cat))
         self.gamemode.connect("toggled",  self.update_gamemode, False, False, False, self.gamemode_ar)
         self.gamemode_timed.connect("toggled", self.update_gamemode, True, True, False, self.gamemode_timed_ar)
@@ -102,7 +107,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.main_window_content.connect("popped", lambda _, page: self.back_to_main_menu(None, None) if page.get_tag() == 'game' else None)
 
         for item in sorted(list(related_words.keys())):
-            listEntry = Gtk.ListBoxRow()
+            listEntry = Gtk.ListBoxRow(selectable=False)
             actionEntry = Adw.ActionRow()
 
             listEntry.set_child(actionEntry)
@@ -137,7 +142,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
         # Add rows for the filtered categories
         for category in sorted(filtered_categories):
-            listEntry = Gtk.ListBoxRow()
+            listEntry = Gtk.ListBoxRow(selectable=False)
             actionEntry = Adw.ActionRow()
 
             listEntry.set_child(actionEntry)
@@ -207,6 +212,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Start the game with the custom values set by the player in self.custom_box
     def custom_start(self, action, _):
+        print("hell")
         self.word_count = int(self.words_value.get_value())
         self.height = int(self.height_value.get_value())
         self.length = int(self.length_value.get_value())
@@ -382,9 +388,11 @@ class HuntWindow(Adw.ApplicationWindow):
         else:
             self.word_list = []
             for item in self.selected_categories:
-                self.word_list += related_words[item]
+                if related_words[item] not in self.word_list:
+                    self.word_list += related_words[item]
             self.random_key = list(self.selected_categories) #For the end dialog when stating the category
         self.grid_data = [[' ' for _ in range(self.length)] for _ in range(self.height)]
+        self.word_list = list(set(self.word_list)) #Kind of stupid, but removes all the duplicate words if there are two or more active themes and they have a few in common
         random.shuffle(self.word_list)
         for i in range(self.word_count):
             newWord = self.word_list[i].upper()
@@ -461,12 +469,14 @@ class HuntWindow(Adw.ApplicationWindow):
     def refresh_lightlist(self, maxWords=3):
         self.frame_light.remove_all()
         def generate_new_entry(word, empty=False):
-            label = Gtk.Label(label=word, xalign=(0.0 if not empty else 0.5), margin_top=5, margin_bottom=5, margin_start=5, use_markup=empty, css_classes=(["dim-label"] if empty else None))
+            label = Gtk.Label(label=word, xalign=(0.5), margin_top=5, margin_bottom=5, margin_start=5, use_markup=empty, css_classes=(["dim-label"] if empty else None))
             return Gtk.ListBoxRow(activatable=False, selectable=False, child=label)
-
         if len(self.words_left) > 0:
-            for i in range(min(maxWords, len(self.words_left))):
-                self.frame_light.append(generate_new_entry(self.words_left[i].capitalize()))
+            for i in range(0, min(maxWords, len(self.words_left)), 2):
+                try:
+                    self.frame_light.append(generate_new_entry(self.words_left[i].capitalize() + "                                  " + self.words_left[i + 1].capitalize()))
+                except Exception:
+                    self.frame_light.append(generate_new_entry(self.words_left[i].capitalize() + "                                             "))
 
             if not self.frame_light.has_css_class('boxed-list'): self.frame_light.add_css_class('boxed-list')
             if self.frame_light.has_css_class('background'): self.frame_light.remove_css_class('background')

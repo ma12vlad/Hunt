@@ -10,7 +10,6 @@ A simple word search game built with GTK4 and Python.
 
 Hunt is an easy word search app. You can play with or without a timer, or in blitz mode, where you must find each individual word in a much smaller length of time.
 
-
 ## Screenshots
 
 ![Screenshot](https://github.com/SwordPuffin/Hunt/blob/main/data/screenshots/Screenshot1.png)
@@ -29,9 +28,20 @@ cd Projects
 ```
 git clone https://github.com/SwordPuffin/Hunt
 ```
-Then, in Gnome-Builder you can add it to your projects.
+Then, in Builder you can add it to your projects.
 
 ---
+## Translating
 Any help with translating Hunt into other languages would be much appreciated :).
+
+Obviously the accuracy of the translation matters most, however please try as much as possible to keep words between 4 -> 8 characters long.
+
+It just helps as when the words are too long they are really easy to spot, and can even cause errors if they are larger than the grid. 
+**Because of this, words can be AT MOST 16 characters, but ideally none are over 12 characters.**
+
+### Contact
+I (Swordpuffin) can be reached at nathan.c.perlman@gmail.com, my preferred language is English but I can get by in French.
+
+
 
 

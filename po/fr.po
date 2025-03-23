@@ -3699,42 +3699,22 @@ msgstr "Le temps est écoulé!"
 msgid "You ran out of time!"
 msgstr "Vous avez manqué de temps!"
 
-#: window.ui:50
-msgid ""
-"8 x 8 grid\n"
-"\n"
-"5 words\n"
-"(30 seconds)"
-msgstr ""
-"grille 8 x 8\n"
-"5 mots\n"
-"(30 secondes)"
+#: window.py:87
+msgid "\n<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n<b>5 words\n(30 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>Grille 8 × 8</span>\n<b>5 mots\n(30 secondes)</b>\n"
 
-#: window.ui:68
-msgid ""
-"12 x 12 grid\n"
-"\n"
-"8 words\n"
-"(60 seconds)"
-msgstr ""
-"grille 12 x 12\n"
-"8 mots\n"
-"(60 secondes)"
+#: window.py:88
+msgid "\n<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n<b>8 words\n(60 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>Grille 12 × 12 </span>\n<b>8 mots\n(60 secondes)</b>\n"
 
-#: window.ui:86
-msgid ""
-"16 x 16 grid\n"
-"\n"
-"10 words\n"
-"(80 seconds)"
-msgstr ""
-"grille 16 x 16\n"
-"10 mots\n"
-"(80 secondes)"
 
-#: window.ui:108
-msgid "Custom"
-msgstr "Personnalisé"
+#: window.py:89
+msgid "\n<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n<b>10 words\n(80 seconds)</b>\n"
+msgstr "\n<span size='x-large' weight='ultrabold'>Grille 16 × 16 </span>\n<b>10 mots\n(80 secondes)</b>\n"
+
+#: window.py:90
+msgid "\n<span size='large' weight='ultrabold'>Custom</span>\n"
+msgstr "\n<span size='large' weight='ultrabold'>Personnalisé</span>\n"
 
 #: window.ui:148
 msgid "How many lines you want"

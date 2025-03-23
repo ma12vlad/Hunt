@@ -36,15 +36,36 @@
       <caption>Game over</caption>
       <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot3.png</image>
     </screenshot>
+    <screenshot>
+      <caption>Playing the game - mobile UI</caption>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot4.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Home menu - mobile UI</caption>
+      <image>https://raw.githubusercontent.com/SwordPuffin/Hunt/main/data/screenshots/Screenshot5.png</image>
+    </screenshot>
   </screenshots>
   <requires>
-    <display_length compare="ge">905</display_length>
+    <display_length compare="ge">360</display_length>
     <internet>offline-only</internet>
   </requires>
   <supports>
     <control>pointing</control>
+    <control>touch</control>
+    <control>keyboard</control>
   </supports>
   <releases>
+    <release version="1.1.2" date="2025-3-23">
+        <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.2</url>
+        <description translate="no">
+          <p>Hunt v1.1.2</p>
+          <p>Changes:</p>
+          <ul>
+            <li>Added mobile/tablet support</li>
+            <li>Minor bug fixes</li>
+          </ul>
+        </description>
+    </release>
     <release version="1.1.1" date="2025-3-2">
       <url type="details">https://github.com/SwordPuffin/Hunt/releases/tag/v1.1.1</url>
       <description translate="no">
