@@ -2,3854 +2,3815 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: hunt\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:23+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: hunt 1.1.2\n"
+"POT-Creation-Date: 2025-03-23 18:32+0300\n"
+"PO-Revision-Date: 2025-03-23 18:33+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Basepath: hunt-1.0.7/src\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ../src\n"
 "X-Poedit-SearchPath-0: gtk/help-overlay.ui\n"
-"X-Poedit-SearchPath-1: main.py\n"
-"X-Poedit-SearchPath-2: resources.py\n"
-"X-Poedit-SearchPath-3: window.py\n"
-"X-Poedit-SearchPath-4: window.ui\n"
-
-#: end_dialog.ui:12
-msgid "Shapes"
-msgstr "Формы"
+"X-Poedit-SearchPath-1: end_dialog.ui\n"
+"X-Poedit-SearchPath-2: help_dialog.ui\n"
+"X-Poedit-SearchPath-3: main.py\n"
+"X-Poedit-SearchPath-4: resources.py\n"
+"X-Poedit-SearchPath-5: window.py\n"
+"X-Poedit-SearchPath-6: window.ui\n"
 
 #: end_dialog.ui:13
 msgid "Category"
-msgstr "Категория"
-
-#: end_dialog.ui:21
-msgid "8 x 8 tiles"
-msgstr "8 x 8 букв"
+msgstr ""
 
 #: end_dialog.ui:22
 msgid "Grid size"
-msgstr "Размер доски"
-
-#: end_dialog.ui:30
-msgid "5 out of 5"
-msgstr "5 из 5"
+msgstr ""
 
 #: end_dialog.ui:31
 msgid "Words found"
-msgstr "Найдено слов"
+msgstr ""
 
 #: end_dialog.ui:56
 msgid "_Close"
-msgstr "_Закрыть"
+msgstr ""
 
 #: end_dialog.ui:57
 msgid "_New game"
-msgstr "_Новая  игра"
+msgstr ""
 
 #: gtk/help-overlay.ui:11
 msgid "General"
-msgstr "Основные"
+msgstr ""
 
 #: gtk/help-overlay.ui:14
 msgid "Show Shortcuts"
-msgstr "Клавиатурные сочетания"
+msgstr ""
 
 #: gtk/help-overlay.ui:20
 msgid "Quit"
-msgstr "Выйти"
+msgstr ""
 
-#: help_dialog.ui:8
+#: help_dialog.ui:7
 msgid "Help"
-msgstr "Помощь"
+msgstr ""
 
-#: help_dialog.ui:12
+#: help_dialog.ui:11
 msgid "How to play"
-msgstr "Как играть"
+msgstr ""
 
-#: help_dialog.ui:15
+#: help_dialog.ui:14
 msgid "1 - Start a game"
-msgstr "1 - Начало игры"
+msgstr ""
 
-#: help_dialog.ui:19
+#: help_dialog.ui:18
 msgid "To start, select one of the four grid sizes:"
-msgstr "Для начала выберите один из четырех размеров доски:"
+msgstr ""
 
-#: help_dialog.ui:27
+#: help_dialog.ui:26
 msgid ""
 "○ <b>8 × 8 board</b> with 5 words\n"
 "○ <b>12 × 12 board</b> with 8 words\n"
 "○ <b>16 × 16 board</b> with 10 words\n"
 "○ <b>Custom board</b>, where you choose the size and the number of words"
 msgstr ""
-"○ <b>доска 8 × 8 </b> с 5 словами\n"
-"○ <b>доска 12 × 12 </b> с 8 словами\n"
-"○ <b>доска 16 × 16 </b> с 10 словами\n"
-"○ <b>Слоя доска</b>, где вы выбираете её размер и количество слов"
 
-#: help_dialog.ui:52
+#: help_dialog.ui:51
 msgid "You can also choose between 3 differents game modes"
-msgstr "Кроме этого вы можете выбрать один из трёх режимов игры"
+msgstr ""
 
-#: help_dialog.ui:68
+#: help_dialog.ui:67
 msgid "2 - Find the words in the grid"
-msgstr "2 - Найдите слова  на доске"
+msgstr ""
 
-#: help_dialog.ui:72
+#: help_dialog.ui:71
 msgid ""
 "To choose a term from the grid, click the first and the last letter of the "
 "word you want, and all letters in between the two is what Hunt will take as "
 "selected."
 msgstr ""
-"Щелкните по первой и последней букве нужного вам слова.  Если выбор верный то "
-"всё слово будет выделено цветом."
 
-#: help_dialog.ui:81
+#: help_dialog.ui:80
 msgid "To win, you must find all words that are hidden in the grid."
-msgstr "Чтобы выиграть, вы должны найти все спрятанные слова."
+msgstr ""
 
-#: help_dialog.ui:101
+#: help_dialog.ui:100
 msgid ""
 "Avoid minimizing the grid size, and maximizing the word count, as it can "
 "occasionally lead to game crashes if some words are unable to be placed"
 msgstr ""
-"Избегайте маленького размера доски и большого количества слов, это может "
-"привести к сбою игры"
 
-#: help_dialog.ui:119
+#: help_dialog.ui:118
 msgid "Hunt offers 3 different game modes to play with"
-msgstr "Hunt предлагает 3 различных режима игры"
+msgstr ""
 
-#: help_dialog.ui:121
+#: help_dialog.ui:120
 msgid "Game modes"
-msgstr "Режимы игры"
+msgstr ""
 
-#: help_dialog.ui:130
+#: help_dialog.ui:129
 msgid "Normal mode"
-msgstr "Обычный режим"
+msgstr ""
 
-#: help_dialog.ui:134
+#: help_dialog.ui:133
 msgid "Play a game without being worried about the time!"
-msgstr "Играйте и не беспокоясь о времени!"
+msgstr ""
 
-#: help_dialog.ui:150
+#: help_dialog.ui:149
 msgid "Timer mode"
-msgstr "Режим таймера"
+msgstr ""
 
-#: help_dialog.ui:154
+#: help_dialog.ui:153
 msgid "You will have a limited time to find all the words."
-msgstr "У вас будет ограниченное время, чтобы найти все нужные слова."
+msgstr ""
 
-#: help_dialog.ui:170
+#: help_dialog.ui:169
 msgid "Blitz mode"
-msgstr "Блиц-режим"
+msgstr ""
 
-#: help_dialog.ui:174
+#: help_dialog.ui:173
 msgid ""
 "Blitz mode reduces the amount of time the player has per word, and words in "
 "that category are given one at a time."
 msgstr ""
-"Блиц-режим сокращает количество времени, отводимого игроку на каждое слово."
 
-#: help_dialog.ui:194
+#: help_dialog.ui:193
 msgid ""
 "For example, with 60 seconds for 5 words, each word would only be available "
 "for 12 seconds (60 ÷ 5 = 12) before game over."
 msgstr ""
-"Например, при 60 секундах на 5 слов, каждое слово будет доступно только в "
-"течение 12 секунд (60 ÷ 5 = 12) до окончания игры."
 
-#: help_dialog.ui:209
+#: help_dialog.ui:208
 msgid ""
-"Whenever a word is found, the amount of time the game started with gets added "
-"to the remaining time the player has."
+"Whenever a word is found, the amount of time the game started with gets "
+"added to the remaining time the player has."
 msgstr ""
-"Всякий раз, когда найдено слово, количество времени, с которого началась "
-"игра, прибавляется к оставшемуся у игрока времени."
 
-#: help_dialog.ui:222
+#: help_dialog.ui:221
 msgid "Get involved"
-msgstr "Принять участие"
+msgstr ""
 
-#: help_dialog.ui:231
+#: help_dialog.ui:230
 msgid "Contribute"
-msgstr "Внести вклад"
+msgstr ""
 
-#: help_dialog.ui:242
+#: help_dialog.ui:241
 msgid ""
 "Everyone is welcome to participate in Hunt's development, whether by "
 "improving the game's code, or adding more language support."
 msgstr ""
-"Каждый желающий может принять участие в разработке Hunt, будь то "
-"путемулучшения кода игры или дополнительной языковой поддержки."
 
-#: help_dialog.ui:244
+#: help_dialog.ui:243
 msgid "Contribute to Hunt"
-msgstr "Внести вклад в Hunt"
+msgstr ""
 
 #: resources.py:2
 msgid "ICE CREAM FLAVORS"
-msgstr "ВКУСЫ МОРОЖЕНОГО"
+msgstr ""
 
 #: resources.py:2
 msgid "berry"
-msgstr "ягода"
+msgstr ""
 
 #: resources.py:2 resources.py:41
 msgid "cream"
-msgstr "сливки"
+msgstr ""
 
 #: resources.py:2
 msgid "ice"
-msgstr "лёд"
+msgstr ""
 
 #: resources.py:2
 msgid "vanilla"
-msgstr "ваниль"
+msgstr ""
 
 #: resources.py:2 resources.py:84
 msgid "choco"
-msgstr "шоколад"
+msgstr ""
 
 #: resources.py:2 resources.py:84
 msgid "sweet"
-msgstr "сладко"
+msgstr ""
 
 #: resources.py:2
 msgid "cold"
-msgstr "холод"
+msgstr ""
 
 #: resources.py:2
 msgid "treat"
-msgstr "палочка"
+msgstr ""
 
 #: resources.py:2
 msgid "scoop"
-msgstr "стаканчик"
+msgstr ""
 
 #: resources.py:2 resources.py:65
 msgid "cone"
-msgstr "рожок"
+msgstr ""
 
 #: resources.py:3
 msgid "FRUITS"
-msgstr "ФРУКТЫ"
+msgstr ""
 
-#: resources.py:3 resources.py:5 resources.py:21 resources.py:93 resources.py:99
+#: resources.py:3 resources.py:5 resources.py:21 resources.py:93
+#: resources.py:99
 msgid "fruit"
-msgstr "фрукт"
+msgstr ""
 
 #: resources.py:3 resources.py:93
 msgid "apple"
-msgstr "яблоко"
+msgstr ""
 
 #: resources.py:3
 msgid "banana"
-msgstr "банан"
+msgstr ""
 
 #: resources.py:3
 msgid "peach"
-msgstr "персик"
+msgstr ""
 
 #: resources.py:3
 msgid "grape"
-msgstr "виноград"
+msgstr ""
 
 #: resources.py:3
 msgid "citrus"
-msgstr "цитрус"
+msgstr ""
 
 #: resources.py:3
 msgid "plum"
-msgstr "слива"
+msgstr ""
 
 #: resources.py:3
 msgid "melon"
-msgstr "дыня"
+msgstr ""
 
 #: resources.py:3
 msgid "mango"
-msgstr "манго"
+msgstr ""
 
 #: resources.py:3
 msgid "kiwi"
-msgstr "киви"
+msgstr ""
 
 #: resources.py:4
 msgid "VEGETABLES"
-msgstr "ОВОЩИ"
+msgstr ""
 
 #: resources.py:4
 msgid "greens"
-msgstr "зелень"
+msgstr ""
 
 #: resources.py:4
 msgid "carrot"
-msgstr "морковь"
+msgstr ""
 
 #: resources.py:4
 msgid "beans"
-msgstr "семечки"
+msgstr ""
 
 #: resources.py:4
 msgid "pea"
-msgstr "горох"
+msgstr ""
 
 #: resources.py:4
 msgid "beet"
-msgstr "свекла"
+msgstr ""
 
 #: resources.py:4
 msgid "onion"
-msgstr "лук"
+msgstr ""
 
 #: resources.py:4
 msgid "cabbage"
-msgstr "капуста"
+msgstr ""
 
 #: resources.py:4 resources.py:67
 msgid "squash"
-msgstr "капуста"
+msgstr ""
 
 #: resources.py:4
 msgid "radish"
-msgstr "редис"
+msgstr ""
 
 #: resources.py:4
 msgid "turnip"
-msgstr "репа"
+msgstr ""
 
 #: resources.py:5
 msgid "BREAKFAST FOODS"
-msgstr "ЗАВТРАК"
+msgstr ""
 
 #: resources.py:5
 msgid "bacon"
-msgstr "бекон"
+msgstr ""
 
 #: resources.py:5 resources.py:21 resources.py:40
 msgid "toast"
-msgstr "тост"
+msgstr ""
 
 #: resources.py:5
 msgid "waffle"
-msgstr "вафли"
+msgstr ""
 
 #: resources.py:5
 msgid "pancake"
-msgstr "блин"
+msgstr ""
 
 #: resources.py:5
 msgid "egg"
-msgstr "яйцо"
+msgstr ""
 
 #: resources.py:5 resources.py:21
 msgid "meal"
-msgstr "еда"
+msgstr ""
 
 #: resources.py:5
 msgid "bagel"
-msgstr "хлеб"
+msgstr ""
 
 #: resources.py:5
 msgid "cereal"
-msgstr "бутерброт"
+msgstr ""
 
 #: resources.py:5
 msgid "hash"
-msgstr "масло"
+msgstr ""
 
 #: resources.py:6
 msgid "ANIMALS"
-msgstr "ЖИВОТНЫЕ"
+msgstr ""
 
 #: resources.py:6
 msgid "dog"
-msgstr "собака"
+msgstr ""
 
 #: resources.py:6
 msgid "cat"
-msgstr "кошка"
+msgstr ""
 
 #: resources.py:6 resources.py:79
 msgid "fish"
-msgstr "рыба"
+msgstr ""
 
 #: resources.py:6
 msgid "horse"
-msgstr "лошадь"
+msgstr ""
 
 #: resources.py:6 resources.py:18
 msgid "mouse"
-msgstr "мышь"
+msgstr ""
 
 #: resources.py:6
 msgid "tiger"
-msgstr "тигр"
+msgstr ""
 
 #: resources.py:6
 msgid "lion"
-msgstr "лев"
+msgstr ""
 
 #: resources.py:6
 msgid "bat"
-msgstr "носорог"
+msgstr ""
 
 #: resources.py:6 resources.py:79
 msgid "shark"
-msgstr "акула"
+msgstr ""
 
 #: resources.py:6
 msgid "sheep"
-msgstr "овца"
+msgstr ""
 
 #: resources.py:7
 msgid "VEHICLES"
-msgstr "ТРАНСПОРТ"
+msgstr ""
 
 #: resources.py:7
 msgid "truck"
-msgstr "грузовик"
+msgstr ""
 
 #: resources.py:7
 msgid "car"
-msgstr "машина"
+msgstr ""
 
 #: resources.py:7
 msgid "bus"
-msgstr "автобус"
+msgstr ""
 
 #: resources.py:7 resources.py:38 resources.py:100
 msgid "train"
-msgstr "поезд"
+msgstr ""
 
 #: resources.py:7 resources.py:38
 msgid "plane"
-msgstr "самолёт"
+msgstr ""
 
 #: resources.py:7
 msgid "boat"
-msgstr "лодка"
+msgstr ""
 
 #: resources.py:7
 msgid "bike"
-msgstr "мотоцикл"
+msgstr ""
 
 #: resources.py:7
 msgid "jeep"
-msgstr "джип"
+msgstr ""
 
 #: resources.py:7
 msgid "scooter"
-msgstr "скутер"
+msgstr ""
 
 #: resources.py:7 resources.py:75
 msgid "wagon"
-msgstr "вагон"
+msgstr ""
 
 #: resources.py:8
 msgid "COLORS"
-msgstr "ЦВЕТА"
+msgstr ""
 
 #: resources.py:8
 msgid "blue"
-msgstr "кармин"
+msgstr ""
 
 #: resources.py:8
 msgid "grey"
-msgstr "серый"
+msgstr ""
 
 #: resources.py:8 resources.py:89
 msgid "red"
-msgstr "аквамарин"
+msgstr ""
 
 #: resources.py:8 resources.py:86
 msgid "green"
-msgstr "зелёный"
+msgstr ""
 
 #: resources.py:8
 msgid "pink"
-msgstr "розовый"
+msgstr ""
 
 #: resources.py:8
 msgid "white"
-msgstr "перванж"
+msgstr ""
 
 #: resources.py:8
 msgid "brown"
-msgstr "маренго"
+msgstr ""
 
 #: resources.py:8
 msgid "teal"
-msgstr "хаки"
+msgstr ""
 
 #: resources.py:8
 msgid "black"
-msgstr "чёрный"
+msgstr ""
 
 #: resources.py:8
 msgid "beige"
-msgstr "бежевый"
+msgstr ""
 
 #: resources.py:9
 msgid "SPORTS"
-msgstr "СПОРТ"
+msgstr ""
 
 #: resources.py:9
 msgid "ball"
-msgstr "мяч"
+msgstr ""
 
 #: resources.py:9
 msgid "match"
-msgstr "матч"
+msgstr ""
 
 #: resources.py:9
 msgid "game"
-msgstr "игра"
+msgstr ""
 
 #: resources.py:9
 msgid "goal"
-msgstr "гол"
+msgstr ""
 
 #: resources.py:9
 msgid "swim"
-msgstr "плавание"
+msgstr ""
 
 #: resources.py:9
 msgid "tennis"
-msgstr "тенис"
+msgstr ""
 
 #: resources.py:9 resources.py:39
 msgid "run"
-msgstr "бег"
+msgstr ""
 
 #: resources.py:9
 msgid "golf"
-msgstr "гольф"
+msgstr ""
 
 #: resources.py:9 resources.py:50
 msgid "coach"
-msgstr "тренер"
+msgstr ""
 
 #: resources.py:9 resources.py:39
 msgid "track"
-msgstr "бокс"
+msgstr ""
 
 #: resources.py:10
 msgid "MUSIC GENRES"
-msgstr "ЖАНРЫ МУЗЫКИ"
+msgstr ""
 
 #: resources.py:10 resources.py:37
 msgid "jazz"
-msgstr "джаз"
+msgstr ""
 
 #: resources.py:10
 msgid "blues"
-msgstr "блюз"
+msgstr ""
 
 #: resources.py:10 resources.py:14 resources.py:95
 msgid "rock"
-msgstr "рок"
+msgstr ""
 
 #: resources.py:10
 msgid "pop"
-msgstr "поп"
+msgstr ""
 
 #: resources.py:10
 msgid "rap"
-msgstr "рэп"
+msgstr ""
 
 #: resources.py:10
 msgid "folk"
-msgstr "народ"
+msgstr ""
 
 #: resources.py:10
 msgid "punk"
-msgstr "панк"
+msgstr ""
 
 #: resources.py:10 resources.py:36
 msgid "dance"
-msgstr "диско"
+msgstr ""
 
 #: resources.py:10
 msgid "opera"
-msgstr "опера"
+msgstr ""
 
 #: resources.py:10 resources.py:92
 msgid "metal"
-msgstr "металл"
+msgstr ""
 
 #: resources.py:11
 msgid "MOVIES"
-msgstr "ФИЛЬМЫ"
+msgstr ""
 
 #: resources.py:11
 msgid "movie"
-msgstr "фильм"
+msgstr ""
 
 #: resources.py:11
 msgid "comedy"
-msgstr "комедия"
+msgstr ""
 
 #: resources.py:11
 msgid "drama"
-msgstr "драма"
+msgstr ""
 
 #: resources.py:11
 msgid "horror"
-msgstr "ужас"
+msgstr ""
 
 #: resources.py:11
 msgid "thrill"
-msgstr "триллер"
+msgstr ""
 
 #: resources.py:11
 msgid "crime"
-msgstr "детектив"
+msgstr ""
 
 #: resources.py:11
 msgid "action"
-msgstr "действие"
+msgstr ""
 
 #: resources.py:11
 msgid "family"
-msgstr "семейный"
+msgstr ""
 
 #: resources.py:11
 msgid "scary"
-msgstr "сериал"
+msgstr ""
 
 #: resources.py:11
 msgid "spy"
-msgstr "шпионский"
+msgstr ""
 
 #: resources.py:12
 msgid "BOOKS"
-msgstr "КНИГИ"
+msgstr ""
 
 #: resources.py:12
 msgid "book"
-msgstr "книга"
+msgstr ""
 
 #: resources.py:12
 msgid "novel"
-msgstr "новелла"
+msgstr ""
 
 #: resources.py:12 resources.py:19
 msgid "story"
-msgstr "история"
+msgstr ""
 
 #: resources.py:12 resources.py:27
 msgid "essay"
-msgstr "эссе"
+msgstr ""
 
 #: resources.py:12
 msgid "paper"
-msgstr "бумага"
+msgstr ""
 
 #: resources.py:12
 msgid "author"
-msgstr "автор"
+msgstr ""
 
 #: resources.py:12
 msgid "poetry"
-msgstr "поэзия"
+msgstr ""
 
 #: resources.py:12
 msgid "title"
-msgstr "заголовок"
+msgstr ""
 
 #: resources.py:12
 msgid "genre"
-msgstr "жанр"
+msgstr ""
 
 #: resources.py:12
 msgid "pages"
-msgstr "страница"
+msgstr ""
 
 #: resources.py:13
 msgid "CITIES"
-msgstr "ГОРОД"
+msgstr ""
 
 #: resources.py:13
 msgid "city"
-msgstr "город"
+msgstr ""
 
 #: resources.py:13
 msgid "town"
-msgstr "посёлок"
+msgstr ""
 
 #: resources.py:13
 msgid "metro"
-msgstr "метро"
+msgstr ""
 
 #: resources.py:13
 msgid "block"
-msgstr "район"
+msgstr ""
 
 #: resources.py:13
 msgid "plaza"
-msgstr "площадь"
+msgstr ""
 
 #: resources.py:13 resources.py:65
 msgid "square"
-msgstr "сквер"
+msgstr ""
 
 #: resources.py:13 resources.py:30
 msgid "urban"
-msgstr "стоянка"
+msgstr ""
 
 #: resources.py:13
 msgid "park"
-msgstr "парк"
+msgstr ""
 
 #: resources.py:13
 msgid "village"
-msgstr "деревня"
+msgstr ""
 
 #: resources.py:13 resources.py:24 resources.py:87
 msgid "court"
-msgstr "двор"
+msgstr ""
 
 #: resources.py:14
 msgid "MOUNTAINS"
-msgstr "ГОРЫ"
+msgstr ""
 
 #: resources.py:14
 msgid "hill"
-msgstr "холм"
+msgstr ""
 
 #: resources.py:14
 msgid "peak"
-msgstr "пик"
+msgstr ""
 
 #: resources.py:14
 msgid "ridge"
-msgstr "хребет"
+msgstr ""
 
 #: resources.py:14 resources.py:61
 msgid "trail"
-msgstr "трасса"
+msgstr ""
 
 #: resources.py:14 resources.py:30 resources.py:31 resources.py:58
 #: resources.py:63 resources.py:87 resources.py:91
 msgid "stone"
-msgstr "скала"
+msgstr ""
 
 #: resources.py:14
 msgid "path"
-msgstr "тропинка"
+msgstr ""
 
 #: resources.py:14
 msgid "summit"
-msgstr "вершина"
+msgstr ""
 
 #: resources.py:14
 msgid "cliff"
-msgstr "утёс"
+msgstr ""
 
 #: resources.py:14
 msgid "crag"
-msgstr "склон"
+msgstr ""
 
 #: resources.py:15
 msgid "OCEANS"
-msgstr "ОКЕАНЫ"
+msgstr ""
 
 #: resources.py:15 resources.py:88
 msgid "sea"
-msgstr "море"
+msgstr ""
 
 #: resources.py:15
 msgid "wave"
-msgstr "волна"
+msgstr ""
 
 #: resources.py:15 resources.py:38 resources.py:88
 msgid "beach"
-msgstr "берег"
+msgstr ""
 
 #: resources.py:15 resources.py:56 resources.py:88
 msgid "coast"
-msgstr "побережье"
+msgstr ""
 
 #: resources.py:15 resources.py:56
 msgid "tide"
-msgstr "прилив"
+msgstr ""
 
 #: resources.py:15 resources.py:56
 msgid "shore"
-msgstr "побережье"
+msgstr ""
 
 #: resources.py:15 resources.py:35 resources.py:47 resources.py:77
 msgid "water"
-msgstr "вода"
+msgstr ""
 
 #: resources.py:15
 msgid "island"
-msgstr "остров"
+msgstr ""
 
 #: resources.py:15 resources.py:56 resources.py:88
 msgid "reef"
-msgstr "риф"
+msgstr ""
 
 #: resources.py:15
 msgid "bay"
-msgstr "бухта"
+msgstr ""
 
 #: resources.py:16
 msgid "WEATHER"
-msgstr "ПОГОДА"
+msgstr ""
 
 #: resources.py:16
 msgid "rain"
-msgstr "дождь"
+msgstr ""
 
 #: resources.py:16 resources.py:54
 msgid "wind"
-msgstr "ветер"
+msgstr ""
 
 #: resources.py:16 resources.py:22
 msgid "cloud"
-msgstr "облако"
+msgstr ""
 
 #: resources.py:16 resources.py:45 resources.py:81
 msgid "snow"
-msgstr "снег"
+msgstr ""
 
 #: resources.py:16
 msgid "storm"
-msgstr "шторм"
+msgstr ""
 
 #: resources.py:16
 msgid "hail"
-msgstr "град"
+msgstr ""
 
 #: resources.py:16
 msgid "fog"
-msgstr "туман"
+msgstr ""
 
 #: resources.py:16 resources.py:56 resources.py:81
 msgid "breeze"
-msgstr "бриз"
+msgstr ""
 
 #: resources.py:16
 msgid "frost"
-msgstr "мороз"
+msgstr ""
 
 #: resources.py:16 resources.py:90
 msgid "chill"
-msgstr "штиль"
+msgstr ""
 
 #: resources.py:17
 msgid "SPACE"
-msgstr "КОСМОС"
+msgstr ""
 
 #: resources.py:17 resources.py:69 resources.py:86
 msgid "space"
-msgstr "космос"
+msgstr ""
 
 #: resources.py:17 resources.py:60
 msgid "moon"
-msgstr "луна"
+msgstr ""
 
 #: resources.py:17
 msgid "star"
-msgstr "звезда"
+msgstr ""
 
 #: resources.py:17
 msgid "comet"
-msgstr "комета"
+msgstr ""
 
 #: resources.py:17 resources.py:60 resources.py:69
 msgid "orbit"
-msgstr "орбита"
+msgstr ""
 
 #: resources.py:17 resources.py:69
 msgid "nova"
-msgstr "бездна"
+msgstr ""
 
 #: resources.py:17 resources.py:69
 msgid "planet"
-msgstr "планета"
+msgstr ""
 
 #: resources.py:17
 msgid "rocket"
-msgstr "ракета"
+msgstr ""
 
 #: resources.py:17
 msgid "asteroid"
-msgstr "астероид"
+msgstr ""
 
 #: resources.py:17 resources.py:58 resources.py:60
 msgid "ring"
-msgstr "спутник"
+msgstr ""
 
 #: resources.py:18
 msgid "COMPUTERS"
-msgstr "КОМПЬЮТЕРЫ"
+msgstr ""
 
 #: resources.py:18
 msgid "laptop"
-msgstr "ноутбук"
+msgstr ""
 
 #: resources.py:18
 msgid "coding"
-msgstr "код"
+msgstr ""
 
 #: resources.py:18 resources.py:22 resources.py:44
 msgid "data"
-msgstr "данные"
+msgstr ""
 
 #: resources.py:18 resources.py:22 resources.py:43 resources.py:92
 msgid "logic"
-msgstr "логика"
+msgstr ""
 
 #: resources.py:18
 msgid "files"
-msgstr "файлы"
+msgstr ""
 
 #: resources.py:18
 msgid "click"
-msgstr "клик"
+msgstr ""
 
 #: resources.py:18
 msgid "input"
-msgstr "ввод"
+msgstr ""
 
 #: resources.py:18 resources.py:22
 msgid "server"
-msgstr "сервер"
+msgstr ""
 
 #: resources.py:18
 msgid "error"
-msgstr "ошибка"
+msgstr ""
 
 #: resources.py:19
 msgid "SOCIAL MEDIA"
-msgstr "СОЦСЕТИ"
+msgstr ""
 
 #: resources.py:19
 msgid "tweet"
-msgstr "твиттер"
+msgstr ""
 
 #: resources.py:19
 msgid "post"
-msgstr "почта"
+msgstr ""
 
 #: resources.py:19
 msgid "chat"
-msgstr "чат"
+msgstr ""
 
 #: resources.py:19
 msgid "likes"
-msgstr "лайк"
+msgstr ""
 
 #: resources.py:19
 msgid "viral"
-msgstr "вирус"
+msgstr ""
 
 #: resources.py:19
 msgid "trend"
-msgstr "тренд"
+msgstr ""
 
 #: resources.py:19
 msgid "share"
-msgstr "обмен"
+msgstr ""
 
 #: resources.py:19
 msgid "video"
-msgstr "видео"
+msgstr ""
 
 #: resources.py:19
 msgid "reels"
-msgstr "соцсеть"
+msgstr ""
 
 #: resources.py:20
 msgid "FASHION"
-msgstr "МОДА"
+msgstr ""
 
 #: resources.py:20 resources.py:41
 msgid "style"
-msgstr "стиль"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "pants"
-msgstr "брюки"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "shirt"
-msgstr "шорты"
+msgstr ""
 
 #: resources.py:20 resources.py:48 resources.py:77
 msgid "boots"
-msgstr "ботинки"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "dress"
-msgstr "одежда"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "scarf"
-msgstr "шарф"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "jeans"
-msgstr "джинсы"
+msgstr ""
 
 #: resources.py:20 resources.py:48
 msgid "skirt"
-msgstr "юбка"
+msgstr ""
 
 #: resources.py:20
 msgid "belt"
-msgstr "ремень"
+msgstr ""
 
 #: resources.py:20
 msgid "glove"
-msgstr "перчатка"
+msgstr ""
 
 #: resources.py:21
 msgid "FOOD"
-msgstr "ЕДА"
+msgstr ""
 
 #: resources.py:21
 msgid "snack"
-msgstr "снеки"
+msgstr ""
 
 #: resources.py:21 resources.py:45 resources.py:84
 msgid "candy"
-msgstr "конфета"
+msgstr ""
 
 #: resources.py:21
 msgid "pizza"
-msgstr "пицца"
+msgstr ""
 
 #: resources.py:21
 msgid "bread"
-msgstr "хлеб"
+msgstr ""
 
 #: resources.py:21
 msgid "chips"
-msgstr "чипсы"
+msgstr ""
 
 #: resources.py:21
 msgid "soup"
-msgstr "суп"
+msgstr ""
 
 #: resources.py:21
 msgid "nuts"
-msgstr "орехи"
+msgstr ""
 
 #: resources.py:22
 msgid "TECHNOLOGY"
-msgstr "ТЕХНОЛОГИЯ"
+msgstr ""
 
 #: resources.py:22
 msgid "app"
-msgstr "прога"
+msgstr ""
 
 #: resources.py:22
 msgid "phone"
-msgstr "телефон"
+msgstr ""
 
 #: resources.py:22
 msgid "robot"
-msgstr "робот"
+msgstr ""
 
 #: resources.py:22
 msgid "gadget"
-msgstr "гаджет"
+msgstr ""
 
 #: resources.py:22
 msgid "tablet"
-msgstr "планшет"
+msgstr ""
 
 #: resources.py:22
 msgid "screen"
-msgstr "экран"
+msgstr ""
 
 #: resources.py:23
 msgid "ECONOMICS"
-msgstr "ЭКОНОМИКА"
+msgstr ""
 
 #: resources.py:23 resources.py:99
 msgid "money"
-msgstr "деньги"
+msgstr ""
 
 #: resources.py:23 resources.py:99
 msgid "trade"
-msgstr "торговля"
+msgstr ""
 
 #: resources.py:23
 msgid "stock"
-msgstr "фонд"
+msgstr ""
 
 #: resources.py:23 resources.py:99
 msgid "price"
-msgstr "цена"
+msgstr ""
 
 #: resources.py:23
 msgid "market"
-msgstr "маркет"
+msgstr ""
 
 #: resources.py:23 resources.py:43 resources.py:99
 msgid "value"
-msgstr "оценка"
+msgstr ""
 
 #: resources.py:23
 msgid "profit"
-msgstr "доход"
+msgstr ""
 
 #: resources.py:23
 msgid "cost"
-msgstr "расходы"
+msgstr ""
 
 #: resources.py:23
 msgid "tax"
-msgstr "такса"
+msgstr ""
 
 #: resources.py:23 resources.py:99
 msgid "goods"
-msgstr "товары"
+msgstr ""
 
 #: resources.py:24
 msgid "POLITICS"
-msgstr "ПОЛИТИКА"
+msgstr ""
 
 #: resources.py:24
 msgid "vote"
-msgstr "голос"
+msgstr ""
 
 #: resources.py:24 resources.py:45
 msgid "party"
-msgstr "партия"
+msgstr ""
 
 #: resources.py:24
 msgid "policy"
-msgstr "политика"
+msgstr ""
 
 #: resources.py:24
 msgid "power"
-msgstr "сила"
+msgstr ""
 
 #: resources.py:24
 msgid "reform"
-msgstr "реформа"
+msgstr ""
 
 #: resources.py:24
 msgid "bills"
-msgstr "закон"
+msgstr ""
 
 #: resources.py:24
 msgid "debate"
-msgstr "дебаты"
+msgstr ""
 
 #: resources.py:24
 msgid "leader"
-msgstr "лидер"
+msgstr ""
 
 #: resources.py:24
 msgid "rights"
-msgstr "права"
+msgstr ""
 
 #: resources.py:25
 msgid "HISTORY"
-msgstr "ИСТОРИЯ"
+msgstr ""
 
 #: resources.py:25
 msgid "past"
-msgstr "прошлое"
+msgstr ""
 
 #: resources.py:25
 msgid "event"
-msgstr "событие"
+msgstr ""
 
 #: resources.py:25
 msgid "war"
-msgstr "война"
+msgstr ""
 
 #: resources.py:25
 msgid "era"
-msgstr "эра"
+msgstr ""
 
 #: resources.py:25
 msgid "peace"
-msgstr "мир"
+msgstr ""
 
 #: resources.py:25
 msgid "reign"
-msgstr "царство"
+msgstr ""
 
 #: resources.py:25
 msgid "nation"
-msgstr "нация"
+msgstr ""
 
 #: resources.py:25
 msgid "empire"
-msgstr "империя"
+msgstr ""
 
 #: resources.py:25 resources.py:87
 msgid "king"
-msgstr "король"
+msgstr ""
 
 #: resources.py:25 resources.py:87
 msgid "queen"
-msgstr "королева"
+msgstr ""
 
 #: resources.py:26
 msgid "HEALTH"
-msgstr "ЗДОРОВЬЕ"
+msgstr ""
 
 #: resources.py:26
 msgid "diet"
-msgstr "диета"
+msgstr ""
 
 #: resources.py:26 resources.py:39
 msgid "fit"
-msgstr "фитнес"
+msgstr ""
 
 #: resources.py:26 resources.py:61
 msgid "sleep"
-msgstr "сон"
+msgstr ""
 
 #: resources.py:26
 msgid "heal"
-msgstr "лечение"
+msgstr ""
 
 #: resources.py:26 resources.py:44
 msgid "virus"
-msgstr "вирус"
+msgstr ""
 
 #: resources.py:26
 msgid "meds"
-msgstr "лекарство"
+msgstr ""
 
 #: resources.py:26
 msgid "doctor"
-msgstr "доктор"
+msgstr ""
 
 #: resources.py:26
 msgid "pill"
-msgstr "таблетка"
+msgstr ""
 
 #: resources.py:26 resources.py:50
 msgid "nurse"
-msgstr "медсестра"
+msgstr ""
 
 #: resources.py:26
 msgid "clinic"
-msgstr "клиника"
+msgstr ""
 
 #: resources.py:27
 msgid "EDUCATION"
-msgstr "ОБРАЗОВАНИЕ"
+msgstr ""
 
 #: resources.py:27
 msgid "learn"
-msgstr "учёба"
+msgstr ""
 
 #: resources.py:27 resources.py:44
 msgid "study"
-msgstr "студент"
+msgstr ""
 
 #: resources.py:27
 msgid "grade"
-msgstr "оценка"
+msgstr ""
 
 #: resources.py:27 resources.py:44
 msgid "tests"
-msgstr "тест"
+msgstr ""
 
 #: resources.py:27 resources.py:94
 msgid "books"
-msgstr "книги"
+msgstr ""
 
 #: resources.py:27
 msgid "math"
-msgstr "математика"
+msgstr ""
 
 #: resources.py:27
 msgid "class"
-msgstr "класс"
+msgstr ""
 
 #: resources.py:27
 msgid "teach"
-msgstr "учитель"
+msgstr ""
 
 #: resources.py:27 resources.py:62
 msgid "notes"
-msgstr "тетрадь"
+msgstr ""
 
 #: resources.py:28
 msgid "ART"
-msgstr "ИСКУССТВО"
+msgstr ""
 
 #: resources.py:28 resources.py:32 resources.py:36
 msgid "paint"
-msgstr "картина"
+msgstr ""
 
 #: resources.py:28 resources.py:32 resources.py:36
 msgid "craft"
-msgstr "ремесло"
+msgstr ""
 
 #: resources.py:28 resources.py:36 resources.py:87
 msgid "draw"
-msgstr "рисунок"
+msgstr ""
 
 #: resources.py:28
 msgid "color"
-msgstr "цвет"
+msgstr ""
 
 #: resources.py:28
 msgid "shape"
-msgstr "фигура"
+msgstr ""
 
 #: resources.py:28
 msgid "sketch"
-msgstr "набросок"
+msgstr ""
 
 #: resources.py:28
 msgid "design"
-msgstr "дизайн"
+msgstr ""
 
 #: resources.py:28 resources.py:97
 msgid "image"
-msgstr "изображение"
+msgstr ""
 
 #: resources.py:28
 msgid "canvas"
-msgstr "холст"
+msgstr ""
 
 #: resources.py:28
 msgid "line"
-msgstr "линия"
+msgstr ""
 
 #: resources.py:29
 msgid "PHOTOGRAPHY"
-msgstr "ФОТОГРАФИЯ"
+msgstr ""
 
 #: resources.py:29
 msgid "photo"
-msgstr "фото"
+msgstr ""
 
 #: resources.py:29 resources.py:97
 msgid "frame"
-msgstr "рамка"
+msgstr ""
 
 #: resources.py:29
 msgid "lens"
-msgstr "объектив"
+msgstr ""
 
 #: resources.py:29
 msgid "scene"
-msgstr "пейзаж"
+msgstr ""
 
 #: resources.py:29
 msgid "focus"
-msgstr "фокус"
+msgstr ""
 
 #: resources.py:29 resources.py:97
 msgid "angle"
-msgstr "угол"
+msgstr ""
 
 #: resources.py:29 resources.py:44 resources.py:98
 msgid "light"
-msgstr "свет"
+msgstr ""
 
 #: resources.py:29
 msgid "flash"
-msgstr "вспышка"
+msgstr ""
 
 #: resources.py:29
 msgid "shot"
-msgstr "затвор"
+msgstr ""
 
 #: resources.py:29
 msgid "view"
-msgstr "просмотр"
+msgstr ""
 
 #: resources.py:30
 msgid "ARCHITECTURE"
-msgstr "АРХИТЕКТУРА"
+msgstr ""
 
 #: resources.py:30
 msgid "build"
-msgstr "здание"
+msgstr ""
 
 #: resources.py:30
 msgid "house"
-msgstr "дом"
+msgstr ""
 
 #: resources.py:30 resources.py:53 resources.py:63 resources.py:87
 msgid "tower"
-msgstr "башня"
+msgstr ""
 
 #: resources.py:30
 msgid "brick"
-msgstr "кирпич"
+msgstr ""
 
 #: resources.py:30
 msgid "plans"
-msgstr "планы"
+msgstr ""
 
 #: resources.py:30 resources.py:53
 msgid "roof"
-msgstr "крыша"
+msgstr ""
 
 #: resources.py:30 resources.py:53
 msgid "rooms"
-msgstr "комнаты"
+msgstr ""
 
 #: resources.py:30
 msgid "wall"
-msgstr "стена"
+msgstr ""
 
 #: resources.py:31
 msgid "NATURE"
-msgstr "ПРИРОДА"
+msgstr ""
 
 #: resources.py:31 resources.py:35
 msgid "plant"
-msgstr "растение"
+msgstr ""
 
 #: resources.py:31
 msgid "river"
-msgstr "река"
+msgstr ""
 
 #: resources.py:31
 msgid "trees"
-msgstr "деревья"
+msgstr ""
 
 #: resources.py:31
 msgid "grass"
-msgstr "трава"
+msgstr ""
 
 #: resources.py:31
 msgid "flora"
-msgstr "флора"
+msgstr ""
 
 #: resources.py:31 resources.py:44
 msgid "field"
-msgstr "поле"
+msgstr ""
 
 #: resources.py:31
 msgid "woods"
-msgstr "леса"
+msgstr ""
 
 #: resources.py:31
 msgid "bush"
-msgstr "куст"
+msgstr ""
 
 #: resources.py:31
 msgid "vine"
-msgstr "лоза"
+msgstr ""
 
 #: resources.py:32
 msgid "CRAFTS"
-msgstr "РЕМЁСЛА"
+msgstr ""
 
 #: resources.py:32 resources.py:36
 msgid "sew"
-msgstr "шитьё"
+msgstr ""
 
 #: resources.py:32 resources.py:36
 msgid "knit"
-msgstr "вязка"
+msgstr ""
 
 #: resources.py:32
 msgid "mold"
-msgstr "литьё"
+msgstr ""
 
 #: resources.py:32
 msgid "lace"
-msgstr "кружево"
+msgstr ""
 
 #: resources.py:32
 msgid "thread"
-msgstr "нить"
+msgstr ""
 
 #: resources.py:32
 msgid "bead"
-msgstr "бусина"
+msgstr ""
 
 #: resources.py:32
 msgid "stitch"
-msgstr "шов"
+msgstr ""
 
 #: resources.py:32
 msgid "diy"
-msgstr "пяльца"
+msgstr ""
 
 #: resources.py:33
 msgid "BOARD GAMES"
-msgstr "НАСТОЛЬНЫЕ ИГРЫ"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "chess"
-msgstr "шахматы"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "dice"
-msgstr "пазлы"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "clue"
-msgstr "уно"
+msgstr ""
 
 #: resources.py:33 resources.py:45 resources.py:52
 msgid "cards"
-msgstr "карты"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "risk"
-msgstr "шашки"
+msgstr ""
 
 #: resources.py:33
 msgid "pawn"
-msgstr "башня"
+msgstr ""
 
 #: resources.py:33
 msgid "check"
-msgstr "маджонг"
+msgstr ""
 
 #: resources.py:33
 msgid "move"
-msgstr "монополия"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "jenga"
-msgstr "дженга"
+msgstr ""
 
 #: resources.py:33 resources.py:52
 msgid "board"
-msgstr "нарды"
+msgstr ""
 
 #: resources.py:34
 msgid "VIDEO GAMES"
-msgstr "ВИДЕОИГРЫ"
+msgstr ""
 
 #: resources.py:34
 msgid "games"
-msgstr "игры"
+msgstr ""
 
 #: resources.py:34
 msgid "enemy"
-msgstr "враги"
+msgstr ""
 
 #: resources.py:34
 msgid "score"
-msgstr "счёт"
+msgstr ""
 
 #: resources.py:34 resources.py:51 resources.py:85
 msgid "level"
-msgstr "уровень"
+msgstr ""
 
 #: resources.py:34 resources.py:36
 msgid "play"
-msgstr "игра"
+msgstr ""
 
 #: resources.py:34
 msgid "pixel"
-msgstr "пиксел"
+msgstr ""
 
 #: resources.py:34
 msgid "quest"
-msgstr "квест"
+msgstr ""
 
 #: resources.py:34
 msgid "shoot"
-msgstr "стрельба"
+msgstr ""
 
 #: resources.py:34
 msgid "jump"
-msgstr "прыжок"
+msgstr ""
 
 #: resources.py:34
 msgid "fight"
-msgstr "драка"
+msgstr ""
 
 #: resources.py:35
 msgid "GARDENING"
-msgstr "САДОВОДСТВО"
+msgstr ""
 
 #: resources.py:35
 msgid "grow"
-msgstr "росток"
+msgstr ""
 
 #: resources.py:35
 msgid "prune"
-msgstr "чернослив"
+msgstr ""
 
 #: resources.py:35 resources.py:61 resources.py:92
 msgid "tools"
-msgstr "инвентарь"
+msgstr ""
 
 #: resources.py:35
 msgid "soil"
-msgstr "почва"
+msgstr ""
 
 #: resources.py:35 resources.py:74
 msgid "seeds"
-msgstr "семена"
+msgstr ""
 
 #: resources.py:35 resources.py:74
 msgid "weeds"
-msgstr "сорняки"
+msgstr ""
 
 #: resources.py:35 resources.py:74
 msgid "herbs"
-msgstr "травы"
+msgstr ""
 
 #: resources.py:35
 msgid "pots"
-msgstr "горшки"
+msgstr ""
 
 #: resources.py:36
 msgid "HOBBIES"
-msgstr "ХОББИ"
+msgstr ""
 
 #: resources.py:36
 msgid "read"
-msgstr "чтение"
+msgstr ""
 
 #: resources.py:36 resources.py:40
 msgid "bake"
-msgstr "выпечка"
+msgstr ""
 
 #: resources.py:36
 msgid "write"
-msgstr "писатель"
+msgstr ""
 
 #: resources.py:37
 msgid "DANCE"
-msgstr "ТАНЦЫ"
+msgstr ""
 
 #: resources.py:37
 msgid "ballet"
-msgstr "балет"
+msgstr ""
 
 #: resources.py:37
 msgid "tap"
-msgstr "вальс"
+msgstr ""
 
 #: resources.py:37
 msgid "spin"
-msgstr "вращение"
+msgstr ""
 
 #: resources.py:37
 msgid "twirl"
-msgstr "росчерк"
+msgstr ""
 
 #: resources.py:37
 msgid "moves"
-msgstr "полька"
+msgstr ""
 
 #: resources.py:37
 msgid "rhythm"
-msgstr "ритм"
+msgstr ""
 
 #: resources.py:37
 msgid "break"
-msgstr "брейк"
+msgstr ""
 
 #: resources.py:37
 msgid "step"
-msgstr "степ"
+msgstr ""
 
 #: resources.py:37
 msgid "tango"
-msgstr "танго"
+msgstr ""
 
 #: resources.py:38
 msgid "TRAVEL"
-msgstr "ПУТЕШЕСТВИЯ"
+msgstr ""
 
 #: resources.py:38
 msgid "trip"
-msgstr "поездка"
+msgstr ""
 
 #: resources.py:38
 msgid "hotel"
-msgstr "отель"
+msgstr ""
 
 #: resources.py:38
 msgid "map"
-msgstr "карта"
+msgstr ""
 
 #: resources.py:38
 msgid "roads"
-msgstr "дороги"
+msgstr ""
 
 #: resources.py:38
 msgid "guide"
-msgstr "гид"
+msgstr ""
 
 #: resources.py:38
 msgid "visit"
-msgstr "визит"
+msgstr ""
 
 #: resources.py:38 resources.py:61
 msgid "camp"
-msgstr "лагерь"
+msgstr ""
 
 #: resources.py:39
 msgid "FITNESS"
-msgstr "ФИТНЕС"
+msgstr ""
 
 #: resources.py:39
 msgid "walk"
-msgstr "прогулка"
+msgstr ""
 
 #: resources.py:39
 msgid "yoga"
-msgstr "йога"
+msgstr ""
 
 #: resources.py:39
 msgid "cycle"
-msgstr "гантели"
+msgstr ""
 
 #: resources.py:39 resources.py:57
 msgid "bench"
-msgstr "тренажёр"
+msgstr ""
 
 #: resources.py:39
 msgid "pullup"
-msgstr "прыжки"
+msgstr ""
 
 #: resources.py:39
 msgid "squat"
-msgstr "пробежка"
+msgstr ""
 
 #: resources.py:39
 msgid "pushup"
-msgstr "кросс"
+msgstr ""
 
 #: resources.py:40
 msgid "COOKING"
-msgstr "ПРИГОТОВЛЕНИЕ"
+msgstr ""
 
 #: resources.py:40 resources.py:50
 msgid "chef"
-msgstr "шеф"
+msgstr ""
 
 #: resources.py:40
 msgid "cook"
-msgstr "повар"
+msgstr ""
 
 #: resources.py:40 resources.py:61
 msgid "grill"
-msgstr "гриль"
+msgstr ""
 
 #: resources.py:40
 msgid "slice"
-msgstr "нарезка"
+msgstr ""
 
 #: resources.py:40
 msgid "stir"
-msgstr "смесь"
+msgstr ""
 
 #: resources.py:40
 msgid "boil"
-msgstr "чаша"
+msgstr ""
 
 #: resources.py:40
 msgid "dough"
-msgstr "тесто"
+msgstr ""
 
 #: resources.py:40
 msgid "steam"
-msgstr "пар"
+msgstr ""
 
 #: resources.py:41
 msgid "BEAUTY"
-msgstr "КРАСОТА"
+msgstr ""
 
 #: resources.py:41 resources.py:51
 msgid "nails"
-msgstr "ногти"
+msgstr ""
 
 #: resources.py:41
 msgid "skin"
-msgstr "кожа"
+msgstr ""
 
 #: resources.py:41
 msgid "spa"
-msgstr "спа"
+msgstr ""
 
 #: resources.py:41
 msgid "hair"
-msgstr "волосы"
+msgstr ""
 
 #: resources.py:41
 msgid "lip"
-msgstr "губы"
+msgstr ""
 
 #: resources.py:41
 msgid "face"
-msgstr "лицо"
+msgstr ""
 
 #: resources.py:41
 msgid "gloss"
-msgstr "блеск"
+msgstr ""
 
 #: resources.py:41
 msgid "brush"
-msgstr "кисть"
+msgstr ""
 
 #: resources.py:42
 msgid "MYTHOLOGY"
-msgstr "МИФОЛОГИЯ"
+msgstr ""
 
 #: resources.py:42
 msgid "myth"
-msgstr "миф"
+msgstr ""
 
 #: resources.py:42
 msgid "god"
-msgstr "бог"
+msgstr ""
 
 #: resources.py:42 resources.py:64 resources.py:68 resources.py:73
 #: resources.py:96
 msgid "beast"
-msgstr "чудовище"
+msgstr ""
 
 #: resources.py:42 resources.py:76 resources.py:98
 msgid "lore"
-msgstr "предание"
+msgstr ""
 
 #: resources.py:42
 msgid "hero"
-msgstr "герой"
+msgstr ""
 
 #: resources.py:42 resources.py:70 resources.py:94 resources.py:98
 msgid "magic"
-msgstr "магия"
+msgstr ""
 
 #: resources.py:42 resources.py:68
 msgid "curse"
-msgstr "анафема"
+msgstr ""
 
 #: resources.py:42
 msgid "fate"
-msgstr "судьба"
+msgstr ""
 
 #: resources.py:42
 msgid "oracle"
-msgstr "оракул"
+msgstr ""
 
 #: resources.py:42 resources.py:64 resources.py:70 resources.py:91
 msgid "troll"
-msgstr "тролль"
+msgstr ""
 
 #: resources.py:43
 msgid "PHILOSOPHY"
-msgstr "ФИЛОСОФИЯ"
+msgstr ""
 
 #: resources.py:43
 msgid "truth"
-msgstr "правда"
+msgstr ""
 
 #: resources.py:43
 msgid "mind"
-msgstr "мысль"
+msgstr ""
 
 #: resources.py:43
 msgid "faith"
-msgstr "вера"
+msgstr ""
 
 #: resources.py:43
 msgid "moral"
-msgstr "нрав"
+msgstr ""
 
 #: resources.py:43
 msgid "ideal"
-msgstr "идеал"
+msgstr ""
 
 #: resources.py:43
 msgid "ideas"
-msgstr "идея"
+msgstr ""
 
 #: resources.py:43
 msgid "reason"
-msgstr "причина"
+msgstr ""
 
 #: resources.py:43
 msgid "thought"
-msgstr "мышление"
+msgstr ""
 
 #: resources.py:44
 msgid "SCIENCE"
-msgstr "НАУКА"
+msgstr ""
 
 #: resources.py:44
 msgid "cells"
-msgstr "клетка"
+msgstr ""
 
 #: resources.py:44
 msgid "atoms"
-msgstr "атомы"
+msgstr ""
 
 #: resources.py:44
 msgid "force"
-msgstr "сила"
+msgstr ""
 
 #: resources.py:44 resources.py:92
 msgid "brain"
-msgstr "мозг"
+msgstr ""
 
 #: resources.py:45
 msgid "HOLIDAYS"
-msgstr "ПРАЗДНИКИ"
+msgstr ""
 
 #: resources.py:45
 msgid "gifts"
-msgstr "подарки"
+msgstr ""
 
 #: resources.py:45
 msgid "feast"
-msgstr "пир"
+msgstr ""
 
 #: resources.py:45 resources.py:70
 msgid "elves"
-msgstr "эльфы"
+msgstr ""
 
 #: resources.py:45
 msgid "tree"
-msgstr "застолье"
+msgstr ""
 
 #: resources.py:45
 msgid "cheer"
-msgstr "веселье"
+msgstr ""
 
 #: resources.py:45
 msgid "sled"
-msgstr "угощение"
+msgstr ""
 
 #: resources.py:46
 msgid "FLOWERS"
-msgstr "ЦВЕТЫ"
+msgstr ""
 
 #: resources.py:46
 msgid "rose"
-msgstr "роза"
+msgstr ""
 
 #: resources.py:46
 msgid "lily"
-msgstr "лилия"
+msgstr ""
 
 #: resources.py:46
 msgid "daisy"
-msgstr "мимоза"
+msgstr ""
 
 #: resources.py:46
 msgid "tulip"
-msgstr "тюльпан"
+msgstr ""
 
 #: resources.py:46
 msgid "bloom"
-msgstr "цветок"
+msgstr ""
 
 #: resources.py:46
 msgid "petal"
-msgstr "лепесток"
+msgstr ""
 
 #: resources.py:46
 msgid "violet"
-msgstr "фиалка"
+msgstr ""
 
 #: resources.py:46
 msgid "poppy"
-msgstr "ландыш"
+msgstr ""
 
 #: resources.py:46
 msgid "orchid"
-msgstr "орхидея"
+msgstr ""
 
 #: resources.py:46 resources.py:78
 msgid "bud"
-msgstr "бутон"
+msgstr ""
 
 #: resources.py:47
 msgid "DRINKS"
-msgstr "НАПИТКИ"
+msgstr ""
 
 #: resources.py:47
 msgid "juice"
-msgstr "сок"
+msgstr ""
 
 #: resources.py:47
 msgid "soda"
-msgstr "содовая"
+msgstr ""
 
 #: resources.py:47
 msgid "shake"
-msgstr "квас"
+msgstr ""
 
 #: resources.py:47
 msgid "cider"
-msgstr "сидр"
+msgstr ""
 
 #: resources.py:47
 msgid "tea"
-msgstr "чай"
+msgstr ""
 
 #: resources.py:47
 msgid "tonic"
-msgstr "тоник"
+msgstr ""
 
 #: resources.py:47 resources.py:67
 msgid "latte"
-msgstr "сливки"
+msgstr ""
 
 #: resources.py:47
 msgid "mocha"
-msgstr "лимонад"
+msgstr ""
 
 #: resources.py:47
 msgid "milk"
-msgstr "молоко"
+msgstr ""
 
 #: resources.py:48
 msgid "CLOTHING"
-msgstr "ОДЕЖДА"
+msgstr ""
 
 #: resources.py:48
 msgid "hat"
-msgstr "пальто"
+msgstr ""
 
 #: resources.py:48
 msgid "vest"
-msgstr "жилет"
+msgstr ""
 
 #: resources.py:48
 msgid "socks"
-msgstr "носки"
+msgstr ""
 
 #: resources.py:49
 msgid "INSECTS"
-msgstr "НАСЕКОМЫЕ"
+msgstr ""
 
 #: resources.py:49
 msgid "bee"
-msgstr "пчела"
+msgstr ""
 
 #: resources.py:49
 msgid "ant"
-msgstr "муравей"
+msgstr ""
 
 #: resources.py:49
 msgid "moth"
-msgstr "мотылёк"
+msgstr ""
 
 #: resources.py:49
 msgid "fly"
-msgstr "муха"
+msgstr ""
 
 #: resources.py:49
 msgid "gnat"
-msgstr "комар"
+msgstr ""
 
 #: resources.py:49
 msgid "roach"
-msgstr "таракан"
+msgstr ""
 
 #: resources.py:49
 msgid "wasp"
-msgstr "оса"
+msgstr ""
 
 #: resources.py:49
 msgid "spider"
-msgstr "паук"
+msgstr ""
 
 #: resources.py:49
 msgid "beetle"
-msgstr "жук"
+msgstr ""
 
 #: resources.py:49
 msgid "tick"
-msgstr "клещ"
+msgstr ""
 
 #: resources.py:50
 msgid "JOBS"
-msgstr "РАБОТА"
+msgstr ""
 
 #: resources.py:50
 msgid "pilot"
-msgstr "пилот"
+msgstr ""
 
 #: resources.py:50
 msgid "clerk"
-msgstr "клерк"
+msgstr ""
 
 #: resources.py:50
 msgid "actor"
-msgstr "актёр"
+msgstr ""
 
 #: resources.py:50
 msgid "guard"
-msgstr "охранник"
+msgstr ""
 
 #: resources.py:50
 msgid "miner"
-msgstr "шахтёр"
+msgstr ""
 
 #: resources.py:50
 msgid "agent"
-msgstr "агент"
+msgstr ""
 
 #: resources.py:50
 msgid "judge"
-msgstr "судья"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "TOOLS"
-msgstr "ИНСТРУМЕНТЫ"
+msgstr ""
 
 #: resources.py:51
 msgid "hammer"
-msgstr "кувалда"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "screw"
-msgstr "лобзик"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "blade"
-msgstr "ракель"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "drill"
-msgstr "дрель"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "plier"
-msgstr "болгарка"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "saw"
-msgstr "пила"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "ruler"
-msgstr "линейка"
+msgstr ""
 
 #: resources.py:51 resources.py:85
 msgid "wrench"
-msgstr "уровень"
+msgstr ""
 
 #: resources.py:52
 msgid "GAMES"
-msgstr "ИГРЫ"
+msgstr ""
 
 #: resources.py:52
 msgid "poker"
-msgstr "покер"
+msgstr ""
 
 #: resources.py:52
 msgid "bingo"
-msgstr "бинго"
+msgstr ""
 
 #: resources.py:52
 msgid "go"
-msgstr "го"
+msgstr ""
 
 #: resources.py:53
 msgid "HOUSES"
-msgstr "ДОМА"
+msgstr ""
 
 #: resources.py:53
 msgid "home"
-msgstr "дом"
+msgstr ""
 
 #: resources.py:53
 msgid "cabin"
-msgstr "хижина"
+msgstr ""
 
 #: resources.py:53
 msgid "loft"
-msgstr "чердак"
+msgstr ""
 
 #: resources.py:53
 msgid "barn"
-msgstr "сарай"
+msgstr ""
 
 #: resources.py:53
 msgid "villa"
-msgstr "вилла"
+msgstr ""
 
 #: resources.py:53 resources.py:63 resources.py:70
 msgid "castle"
-msgstr "замок"
+msgstr ""
 
 #: resources.py:53
 msgid "ranch"
-msgstr "ранчо"
+msgstr ""
 
 #: resources.py:54
 msgid "DESERTS"
-msgstr "ПУСТЫНИ"
+msgstr ""
 
 #: resources.py:54
 msgid "dunes"
-msgstr "дюны"
+msgstr ""
 
 #: resources.py:54
 msgid "cactus"
-msgstr "кактус"
+msgstr ""
 
 #: resources.py:54 resources.py:88
 msgid "sands"
-msgstr "пески"
+msgstr ""
 
 #: resources.py:54 resources.py:77 resources.py:91
 msgid "rocks"
-msgstr "колючки"
+msgstr ""
 
 #: resources.py:54 resources.py:98
 msgid "dust"
-msgstr "пыль"
+msgstr ""
 
 #: resources.py:54
 msgid "oasis"
-msgstr "оазис"
+msgstr ""
 
 #: resources.py:54
 msgid "heat"
-msgstr "жара"
+msgstr ""
 
 #: resources.py:54
 msgid "dry"
-msgstr "караван"
+msgstr ""
 
 #: resources.py:54 resources.py:56
 msgid "sun"
-msgstr "солнце"
+msgstr ""
 
 #: resources.py:55
 msgid "BIRDS"
-msgstr "ПТИЦЫ"
+msgstr ""
 
 #: resources.py:55
 msgid "crow"
-msgstr "ворона"
+msgstr ""
 
 #: resources.py:55
 msgid "swan"
-msgstr "лебедь"
+msgstr ""
 
 #: resources.py:55
 msgid "robin"
-msgstr "дрозд"
+msgstr ""
 
 #: resources.py:55 resources.py:80
 msgid "eagle"
-msgstr "орёл"
+msgstr ""
 
 #: resources.py:55
 msgid "finch"
-msgstr "зяблик"
+msgstr ""
 
 #: resources.py:55
 msgid "crane"
-msgstr "журавль"
+msgstr ""
 
 #: resources.py:55 resources.py:71
 msgid "parrot"
-msgstr "попугай"
+msgstr ""
 
 #: resources.py:55
 msgid "pigeon"
-msgstr "голубь"
+msgstr ""
 
 #: resources.py:55
 msgid "sparrow"
-msgstr "воробей"
+msgstr ""
 
 #: resources.py:55
 msgid "heron"
-msgstr "цапля"
+msgstr ""
 
 #: resources.py:56
 msgid "BEACHES"
-msgstr "ПЛЯЖИ"
+msgstr ""
 
 #: resources.py:56
 msgid "sand"
-msgstr "песок"
+msgstr ""
 
 #: resources.py:56
 msgid "waves"
-msgstr "зонтик"
+msgstr ""
 
 #: resources.py:56
 msgid "ocean"
-msgstr "океан"
+msgstr ""
 
 #: resources.py:56
 msgid "shell"
-msgstr "ракушка"
+msgstr ""
 
 #: resources.py:57
 msgid "FURNITURE"
-msgstr "МЕБЕЛЬ"
+msgstr ""
 
 #: resources.py:57
 msgid "chair"
-msgstr "стул"
+msgstr ""
 
 #: resources.py:57
 msgid "table"
-msgstr "стол"
+msgstr ""
 
 #: resources.py:57
 msgid "sofa"
-msgstr "софа"
+msgstr ""
 
 #: resources.py:57
 msgid "stool"
-msgstr "табурет"
+msgstr ""
 
 #: resources.py:57
 msgid "desk"
-msgstr "тумба"
+msgstr ""
 
 #: resources.py:57 resources.py:61
 msgid "lamp"
-msgstr "лампа"
+msgstr ""
 
 #: resources.py:57
 msgid "bed"
-msgstr "кровать"
+msgstr ""
 
 #: resources.py:57
 msgid "shelf"
-msgstr "полка"
+msgstr ""
 
 #: resources.py:57
 msgid "couch"
-msgstr "диван"
+msgstr ""
 
 #: resources.py:58
 msgid "JEWELRY"
-msgstr "ДРАГОЦЕННОСТИ"
+msgstr ""
 
 #: resources.py:58
 msgid "brace"
-msgstr "скоба"
+msgstr ""
 
 #: resources.py:58 resources.py:82
 msgid "pearl"
-msgstr "жемчуг"
+msgstr ""
 
 #: resources.py:58
 msgid "beads"
-msgstr "бусы"
+msgstr ""
 
 #: resources.py:58
 msgid "chain"
-msgstr "цепь"
+msgstr ""
 
 #: resources.py:58
 msgid "gold"
-msgstr "золото"
+msgstr ""
 
 #: resources.py:58
 msgid "gem"
-msgstr "самоцвет"
+msgstr ""
 
 #: resources.py:58
 msgid "watch"
-msgstr "часы"
+msgstr ""
 
 #: resources.py:58
 msgid "band"
-msgstr "браслет"
+msgstr ""
 
 #: resources.py:59
 msgid "LANGUAGES"
-msgstr "СТРАНЫ"
+msgstr ""
 
 #: resources.py:59
 msgid "latin"
-msgstr "китай"
+msgstr ""
 
 #: resources.py:59
 msgid "greek"
-msgstr "греция"
+msgstr ""
 
 #: resources.py:59
 msgid "hindi"
-msgstr "индия"
+msgstr ""
 
 #: resources.py:59
 msgid "hebrew"
-msgstr "тунис"
+msgstr ""
 
 #: resources.py:59
 msgid "dutch"
-msgstr "чад"
+msgstr ""
 
 #: resources.py:59
 msgid "swahili"
-msgstr "мали"
+msgstr ""
 
 #: resources.py:59
 msgid "korean"
-msgstr "кипр"
+msgstr ""
 
 #: resources.py:59
 msgid "arabic"
-msgstr "алжир"
+msgstr ""
 
 #: resources.py:59
 msgid "french"
-msgstr "ангола"
+msgstr ""
 
 #: resources.py:59
 msgid "spanish"
-msgstr "непал"
+msgstr ""
 
 #: resources.py:60
 msgid "PLANETS"
-msgstr "ПЛАНЕТЫ"
+msgstr ""
 
 #: resources.py:60 resources.py:86
 msgid "mars"
-msgstr "марс"
+msgstr ""
 
 #: resources.py:60
 msgid "venus"
-msgstr "венера"
+msgstr ""
 
 #: resources.py:60 resources.py:95 resources.py:100
 msgid "earth"
-msgstr "земля"
+msgstr ""
 
 #: resources.py:60
 msgid "pluto"
-msgstr "плутон"
+msgstr ""
 
 #: resources.py:60
 msgid "jupiter"
-msgstr "юпитер"
+msgstr ""
 
 #: resources.py:60
 msgid "saturn"
-msgstr "сатурн"
+msgstr ""
 
 #: resources.py:60
 msgid "neptune"
-msgstr "нептун"
+msgstr ""
 
 #: resources.py:61
 msgid "CAMPING"
-msgstr "КЕМПИНГ"
+msgstr ""
 
 #: resources.py:61
 msgid "tent"
-msgstr "тент"
+msgstr ""
 
 #: resources.py:61 resources.py:95 resources.py:96
 msgid "fire"
-msgstr "огонь"
+msgstr ""
 
 #: resources.py:61 resources.py:92
 msgid "gear"
-msgstr "мангал"
+msgstr ""
 
 #: resources.py:61
 msgid "hike"
-msgstr "поход"
+msgstr ""
 
 #: resources.py:62
 msgid "MUSIC"
-msgstr "МУЗЫКА"
+msgstr ""
 
 #: resources.py:62
 msgid "piano"
-msgstr "пианино"
+msgstr ""
 
 #: resources.py:62
 msgid "lyric"
-msgstr "лирика"
+msgstr ""
 
 #: resources.py:62
 msgid "vocal"
-msgstr "вокал"
+msgstr ""
 
 #: resources.py:62
 msgid "drums"
-msgstr "барабан"
+msgstr ""
 
 #: resources.py:62
 msgid "bass"
-msgstr "бас"
+msgstr ""
 
 #: resources.py:62
 msgid "guitar"
-msgstr "гитара"
+msgstr ""
 
 #: resources.py:62
 msgid "flute"
-msgstr "флейта"
+msgstr ""
 
 #: resources.py:62
 msgid "violin"
-msgstr "скрипка"
+msgstr ""
 
 #: resources.py:62
 msgid "horn"
-msgstr "горн"
+msgstr ""
 
 #: resources.py:63
 msgid "WONDERS"
-msgstr "ЧУДЕСА СВЕТА"
+msgstr ""
 
 #: resources.py:63
 msgid "ruins"
-msgstr "руины"
+msgstr ""
 
 #: resources.py:63
 msgid "temple"
-msgstr "храм"
+msgstr ""
 
 #: resources.py:63
 msgid "bridge"
-msgstr "мост"
+msgstr ""
 
 #: resources.py:63
 msgid "garden"
-msgstr "сад"
+msgstr ""
 
 #: resources.py:63
 msgid "pyramid"
-msgstr "пирамида"
+msgstr ""
 
 #: resources.py:63
 msgid "palace"
-msgstr "дворец"
+msgstr ""
 
 #: resources.py:63
 msgid "statue"
-msgstr "статуя"
+msgstr ""
 
 #: resources.py:64
 msgid "MYTHICAL CREATURES"
-msgstr "МИФИЧЕСКИЕ СУЩЕСТВА"
+msgstr ""
 
 #: resources.py:64 resources.py:98
 msgid "elf"
-msgstr "эльф"
+msgstr ""
 
 #: resources.py:64
 msgid "fairy"
-msgstr "фея"
+msgstr ""
 
 #: resources.py:64 resources.py:73
 msgid "hydra"
-msgstr "гидра"
+msgstr ""
 
 #: resources.py:64
 msgid "phoenix"
-msgstr "феникс"
+msgstr ""
 
 #: resources.py:64 resources.py:70
 msgid "dragon"
-msgstr "дракон"
+msgstr ""
 
 #: resources.py:64 resources.py:67
 msgid "sprite"
-msgstr "дух"
+msgstr ""
 
 #: resources.py:64
 msgid "mermaid"
-msgstr "русалка"
+msgstr ""
 
 #: resources.py:64
 msgid "giant"
-msgstr "великан"
+msgstr ""
 
 #: resources.py:65
 msgid "SHAPES"
-msgstr "ФОРМЫ"
+msgstr ""
 
 #: resources.py:65
 msgid "circle"
-msgstr "круг"
+msgstr ""
 
 #: resources.py:65
 msgid "sphere"
-msgstr "сфера"
+msgstr ""
 
 #: resources.py:65
 msgid "cube"
-msgstr "куб"
+msgstr ""
 
 #: resources.py:65
 msgid "oval"
-msgstr "овал"
+msgstr ""
 
 #: resources.py:65
 msgid "hexagon"
-msgstr "гексагон"
+msgstr ""
 
 #: resources.py:65
 msgid "rhombus"
-msgstr "ромб"
+msgstr ""
 
 #: resources.py:65
 msgid "prism"
-msgstr "призма"
+msgstr ""
 
 #: resources.py:65
 msgid "arc"
-msgstr "арка"
+msgstr ""
 
 #: resources.py:66
 msgid "DESSERTS"
-msgstr "ДЕСЕРТЫ"
+msgstr ""
 
 #: resources.py:66
 msgid "cake"
-msgstr "кекс"
+msgstr ""
 
 #: resources.py:66
 msgid "pie"
-msgstr "пирог"
+msgstr ""
 
 #: resources.py:66
 msgid "cookie"
-msgstr "печенье"
+msgstr ""
 
 #: resources.py:66
 msgid "tart"
-msgstr "торт"
+msgstr ""
 
 #: resources.py:66 resources.py:84
 msgid "fudge"
-msgstr "помадка"
+msgstr ""
 
 #: resources.py:66
 msgid "mousse"
-msgstr "мусс"
+msgstr ""
 
 #: resources.py:66
 msgid "sorbet"
-msgstr "шербет"
+msgstr ""
 
 #: resources.py:66
 msgid "gelato"
-msgstr "пломбир"
+msgstr ""
 
 #: resources.py:66
 msgid "pudding"
-msgstr "пудинг"
+msgstr ""
 
 #: resources.py:66
 msgid "donut"
-msgstr "пончик"
+msgstr ""
 
 #: resources.py:67
 msgid "BEVERAGES"
-msgstr "НАПИТОК"
+msgstr ""
 
 #: resources.py:67
 msgid "coffee"
-msgstr "кофе"
+msgstr ""
 
 #: resources.py:67
 msgid "mojito"
-msgstr "мохито"
+msgstr ""
 
 #: resources.py:67
 msgid "tonics"
-msgstr "тоник"
+msgstr ""
 
 #: resources.py:67
 msgid "cocoa"
-msgstr "какао"
+msgstr ""
 
 #: resources.py:67
 msgid "smooth"
-msgstr "квас"
+msgstr ""
 
 #: resources.py:67
 msgid "seltz"
-msgstr "сок"
+msgstr ""
 
 #: resources.py:67
 msgid "chai"
-msgstr "чай"
+msgstr ""
 
 #: resources.py:68
 msgid "HORROR"
-msgstr "УЖАС"
+msgstr ""
 
 #: resources.py:68 resources.py:90 resources.py:97
 msgid "ghost"
-msgstr "чудовище"
+msgstr ""
 
 #: resources.py:68 resources.py:90
 msgid "haunt"
-msgstr "призрак"
+msgstr ""
 
 #: resources.py:68
 msgid "spirit"
-msgstr "кошмар"
+msgstr ""
 
 #: resources.py:68
 msgid "scream"
-msgstr "крик"
+msgstr ""
 
 #: resources.py:68 resources.py:90
 msgid "crypt"
-msgstr "склеп"
+msgstr ""
 
 #: resources.py:68 resources.py:72 resources.py:85
 msgid "knife"
-msgstr "нож"
+msgstr ""
 
 #: resources.py:68 resources.py:73
 msgid "zombie"
-msgstr "зомби"
+msgstr ""
 
 #: resources.py:68
 msgid "creepy"
-msgstr "жуть"
+msgstr ""
 
 #: resources.py:69
 msgid "ASTRONOMY"
-msgstr "АСТРОНОМИЯ"
+msgstr ""
 
 #: resources.py:69
 msgid "nebula"
-msgstr "метеорит"
+msgstr ""
 
 #: resources.py:69
 msgid "cosmos"
-msgstr "космос"
+msgstr ""
 
 #: resources.py:69
 msgid "galaxy"
-msgstr "квазар"
+msgstr ""
 
 #: resources.py:69
 msgid "comets"
-msgstr "комета"
+msgstr ""
 
 #: resources.py:69
 msgid "lunar"
-msgstr "астероид"
+msgstr ""
 
 #: resources.py:69
 msgid "stars"
-msgstr "звёзды"
+msgstr ""
 
 #: resources.py:70
 msgid "FANTASY"
-msgstr "ФЭНТЕЗИ"
+msgstr ""
 
 #: resources.py:70
 msgid "wizard"
-msgstr "колдун"
+msgstr ""
 
 #: resources.py:70
 msgid "realm"
-msgstr "жанр"
+msgstr ""
 
 #: resources.py:70
 msgid "sword"
-msgstr "меч"
+msgstr ""
 
 #: resources.py:70 resources.py:76
 msgid "giants"
-msgstr "титан"
+msgstr ""
 
 #: resources.py:70
 msgid "knight"
-msgstr "рацарь"
+msgstr ""
 
 #: resources.py:71
 msgid "PIRATES"
-msgstr "ПИРАТЫ"
+msgstr ""
 
 #: resources.py:71 resources.py:76
 msgid "swords"
-msgstr "сабля"
+msgstr ""
 
 #: resources.py:71
 msgid "golden"
-msgstr "золото"
+msgstr ""
 
 #: resources.py:71
 msgid "rum"
-msgstr "ром"
+msgstr ""
 
 #: resources.py:71
 msgid "ships"
-msgstr "корабль"
+msgstr ""
 
 #: resources.py:71
 msgid "shanty"
-msgstr "лачуга"
+msgstr ""
 
 #: resources.py:71
 msgid "cannon"
-msgstr "пушка"
+msgstr ""
 
 #: resources.py:71
 msgid "mutiny"
-msgstr "бунт"
+msgstr ""
 
 #: resources.py:71
 msgid "booty"
-msgstr "добыча"
+msgstr ""
 
 #: resources.py:71
 msgid "pegleg"
-msgstr "крюк"
+msgstr ""
 
 #: resources.py:72
 msgid "KITCHEN"
-msgstr "КУХНЯ"
+msgstr ""
 
 #: resources.py:72
 msgid "spices"
-msgstr "специи"
+msgstr ""
 
 #: resources.py:72
 msgid "plates"
-msgstr "тарелка"
+msgstr ""
 
 #: resources.py:72
 msgid "spoons"
-msgstr "кастрюля"
+msgstr ""
 
 #: resources.py:72
 msgid "mixers"
-msgstr "черпак"
+msgstr ""
 
 #: resources.py:72
 msgid "aprons"
-msgstr "фартук"
+msgstr ""
 
 #: resources.py:72
 msgid "utens"
-msgstr "тёрка"
+msgstr ""
 
 #: resources.py:72
 msgid "mixer"
-msgstr "миксер"
+msgstr ""
 
 #: resources.py:72
 msgid "dishes"
-msgstr "повар"
+msgstr ""
 
 #: resources.py:72
 msgid "gloves"
-msgstr "перчатки"
+msgstr ""
 
 #: resources.py:73
 msgid "MONSTERS"
-msgstr "МОНСТРЫ"
+msgstr ""
 
 #: resources.py:73 resources.py:94
 msgid "witch"
-msgstr "ведьма"
+msgstr ""
 
 #: resources.py:73 resources.py:90
 msgid "ghoul"
-msgstr "упырь"
+msgstr ""
 
 #: resources.py:73
 msgid "kraken"
-msgstr "кракен"
+msgstr ""
 
 #: resources.py:73
 msgid "goblin"
-msgstr "гоблин"
+msgstr ""
 
 #: resources.py:73
 msgid "slime"
-msgstr "слизь"
+msgstr ""
 
 #: resources.py:73
 msgid "ghosts"
-msgstr "призрак"
+msgstr ""
 
 #: resources.py:73
 msgid "fiends"
-msgstr "изверг"
+msgstr ""
 
 #: resources.py:74
 msgid "GARDENS"
-msgstr "САД"
+msgstr ""
 
 #: resources.py:74
 msgid "roses"
-msgstr "роза"
+msgstr ""
 
 #: resources.py:74
 msgid "hedges"
-msgstr "изгородь"
+msgstr ""
 
 #: resources.py:74
 msgid "shrubs"
-msgstr "кустарник"
+msgstr ""
 
 #: resources.py:74
 msgid "vines"
-msgstr "лоза"
+msgstr ""
 
 #: resources.py:74
 msgid "blooms"
-msgstr "цветение"
+msgstr ""
 
 #: resources.py:74 resources.py:78 resources.py:93
 msgid "roots"
-msgstr "корни"
+msgstr ""
 
 #: resources.py:74
 msgid "petals"
-msgstr "лепесток"
+msgstr ""
 
 #: resources.py:75
 msgid "TRAINS"
-msgstr "ПОЕЗДА"
+msgstr ""
 
 #: resources.py:75
 msgid "engine"
-msgstr "мотор"
+msgstr ""
 
 #: resources.py:75
 msgid "tracks"
-msgstr "купе"
+msgstr ""
 
 #: resources.py:75
 msgid "cargos"
-msgstr "шпалы"
+msgstr ""
 
 #: resources.py:75
 msgid "ticket"
-msgstr "билет"
+msgstr ""
 
 #: resources.py:75
 msgid "rails"
-msgstr "рельсы"
+msgstr ""
 
 #: resources.py:75
 msgid "diesel"
-msgstr "дизель"
+msgstr ""
 
 #: resources.py:75
 msgid "signal"
-msgstr "гудок"
+msgstr ""
 
 #: resources.py:75
 msgid "horns"
-msgstr "плацкарт"
+msgstr ""
 
 #: resources.py:75
 msgid "switch"
-msgstr "стрелки"
+msgstr ""
 
 #: resources.py:76
 msgid "LEGENDS"
-msgstr "ЛЕГЕНДЫ"
+msgstr ""
 
 #: resources.py:76
 msgid "heroes"
-msgstr "герои"
+msgstr ""
 
 #: resources.py:76
 msgid "mythos"
-msgstr "мифы"
+msgstr ""
 
 #: resources.py:76
 msgid "quests"
-msgstr "призраки"
+msgstr ""
 
 #: resources.py:76
 msgid "scroll"
-msgstr "свиток"
+msgstr ""
 
 #: resources.py:76 resources.py:94
 msgid "runes"
-msgstr "руны"
+msgstr ""
 
 #: resources.py:76
 msgid "epics"
-msgstr "эпос"
+msgstr ""
 
 #: resources.py:76
 msgid "tales"
-msgstr "сказания"
+msgstr ""
 
 #: resources.py:77
 msgid "HIKING"
-msgstr "ЭКСКУРСИИ"
+msgstr ""
 
 #: resources.py:77
 msgid "trails"
-msgstr "тропа"
+msgstr ""
 
 #: resources.py:77
 msgid "climbs"
-msgstr "группа"
+msgstr ""
 
 #: resources.py:77
 msgid "packs"
-msgstr "гид"
+msgstr ""
 
 #: resources.py:77
 msgid "views"
-msgstr "осмотр"
+msgstr ""
 
 #: resources.py:77
 msgid "camped"
-msgstr "галерея"
+msgstr ""
 
 #: resources.py:77
 msgid "poles"
-msgstr "поездка"
+msgstr ""
 
 #: resources.py:77
 msgid "steps"
-msgstr "музей"
+msgstr ""
 
 #: resources.py:78
 msgid "PLANTS"
-msgstr "РАСТЕНИЯ"
+msgstr ""
 
 #: resources.py:78
 msgid "fern"
-msgstr "тёрн"
+msgstr ""
 
 #: resources.py:78
 msgid "bamboo"
-msgstr "бамбук"
+msgstr ""
 
 #: resources.py:78
 msgid "ivy"
-msgstr "ива"
+msgstr ""
 
 #: resources.py:78
 msgid "shrub"
-msgstr "куст"
+msgstr ""
 
 #: resources.py:78 resources.py:93
 msgid "bark"
-msgstr "кора"
+msgstr ""
 
 #: resources.py:78
 msgid "leaf"
-msgstr "лист"
+msgstr ""
 
 #: resources.py:78
 msgid "stem"
-msgstr "корень"
+msgstr ""
 
 #: resources.py:78 resources.py:93
 msgid "moss"
-msgstr "мох"
+msgstr ""
 
 #: resources.py:79
 msgid "UNDERWATER LIFE"
-msgstr "ПОДВОДНАЯ ЖИЗНЬ"
+msgstr ""
 
 #: resources.py:79
 msgid "shrimp"
-msgstr "креветка"
+msgstr ""
 
 #: resources.py:79
 msgid "coral"
-msgstr "коралл"
+msgstr ""
 
 #: resources.py:79
 msgid "whale"
-msgstr "кит"
+msgstr ""
 
 #: resources.py:79
 msgid "tuna"
-msgstr "тунец"
+msgstr ""
 
 #: resources.py:79
 msgid "crab"
-msgstr "краб"
+msgstr ""
 
 #: resources.py:79
 msgid "squid"
-msgstr "кальмар"
+msgstr ""
 
 #: resources.py:79
 msgid "angler"
-msgstr "рыболов"
+msgstr ""
 
 #: resources.py:79
 msgid "urchin"
-msgstr "ракушка"
+msgstr ""
 
 #: resources.py:80
 msgid "WILDLIFE"
-msgstr "ЖИВАЯ ПРИРОДА"
+msgstr ""
 
 #: resources.py:80
 msgid "deer"
-msgstr "олень"
+msgstr ""
 
 #: resources.py:80
 msgid "fox"
-msgstr "лиса"
+msgstr ""
 
 #: resources.py:80
 msgid "wolf"
-msgstr "волк"
+msgstr ""
 
 #: resources.py:80
 msgid "bear"
-msgstr "медведь"
+msgstr ""
 
 #: resources.py:80
 msgid "owl"
-msgstr "сова"
+msgstr ""
 
 #: resources.py:80
 msgid "snake"
-msgstr "змея"
+msgstr ""
 
 #: resources.py:80
 msgid "frog"
-msgstr "лягушка"
+msgstr ""
 
 #: resources.py:80
 msgid "moose"
-msgstr "лось"
+msgstr ""
 
 #: resources.py:80
 msgid "otter"
-msgstr "выдра"
+msgstr ""
 
 #: resources.py:81
 msgid "SEASONS"
-msgstr "СЕЗОНЫ"
+msgstr ""
 
 #: resources.py:81
 msgid "summer"
-msgstr "лето"
+msgstr ""
 
 #: resources.py:81
 msgid "winter"
-msgstr "зима"
+msgstr ""
 
 #: resources.py:81
 msgid "autumn"
-msgstr "весна"
+msgstr ""
 
 #: resources.py:81
 msgid "spring"
-msgstr "осень"
+msgstr ""
 
 #: resources.py:81
 msgid "fall"
-msgstr "посевная"
+msgstr ""
 
 #: resources.py:81
 msgid "season"
-msgstr "сезон"
+msgstr ""
 
 #: resources.py:81
 msgid "harvest"
-msgstr "жатва"
+msgstr ""
 
 #: resources.py:81
 msgid "blossom"
-msgstr "цветение"
+msgstr ""
 
 #: resources.py:82
 msgid "GEMS"
-msgstr "ДРАГОЦЕННЫЕ КАМНИ"
+msgstr ""
 
 #: resources.py:82
 msgid "diamond"
-msgstr "алмаз"
+msgstr ""
 
 #: resources.py:82
 msgid "ruby"
-msgstr "рубин"
+msgstr ""
 
 #: resources.py:82
 msgid "lapis"
-msgstr "камень"
+msgstr ""
 
 #: resources.py:82
 msgid "opal"
-msgstr "опал"
+msgstr ""
 
 #: resources.py:82
 msgid "jasper"
-msgstr "яшма"
+msgstr ""
 
 #: resources.py:82
 msgid "emerald"
-msgstr "изумруд"
+msgstr ""
 
 #: resources.py:82
 msgid "topaz"
-msgstr "топаз"
+msgstr ""
 
 #: resources.py:82
 msgid "garnet"
-msgstr "гранат"
+msgstr ""
 
 #: resources.py:82
 msgid "onyx"
-msgstr "оникс"
+msgstr ""
 
 #: resources.py:83
 msgid "EMOTIONS"
-msgstr "ЭМОЦИИ"
+msgstr ""
 
 #: resources.py:83
 msgid "happy"
-msgstr "счастье"
+msgstr ""
 
 #: resources.py:83
 msgid "sad"
-msgstr "грусть"
+msgstr ""
 
 #: resources.py:83
 msgid "angry"
-msgstr "зло"
+msgstr ""
 
 #: resources.py:83
 msgid "excited"
-msgstr "волнение"
+msgstr ""
 
 #: resources.py:83
 msgid "fear"
-msgstr "страх"
+msgstr ""
 
 #: resources.py:83
 msgid "love"
-msgstr "любовь"
+msgstr ""
 
 #: resources.py:83
 msgid "joy"
-msgstr "радость"
+msgstr ""
 
 #: resources.py:83
 msgid "angst"
-msgstr "гнев"
+msgstr ""
 
 #: resources.py:83
 msgid "grief"
-msgstr "горе"
+msgstr ""
 
 #: resources.py:83
 msgid "relief"
-msgstr "утешение"
+msgstr ""
 
 #: resources.py:84
 msgid "CANDY"
-msgstr "КОНФЕТЫ"
+msgstr ""
 
 #: resources.py:84
 msgid "sugar"
-msgstr "сахар"
+msgstr ""
 
 #: resources.py:84
 msgid "mint"
-msgstr "мята"
+msgstr ""
 
 #: resources.py:84
 msgid "gummy"
-msgstr "ириска"
+msgstr ""
 
 #: resources.py:84
 msgid "treats"
-msgstr "фантик"
+msgstr ""
 
 #: resources.py:84
 msgid "caramel"
-msgstr "карамель"
+msgstr ""
 
 #: resources.py:84
 msgid "nougat"
-msgstr "нуга"
+msgstr ""
 
 #: resources.py:85
 msgid "bolts"
-msgstr "леденец"
+msgstr ""
 
 #: resources.py:86
 msgid "ALIENS"
-msgstr "ЧУЖИЕ"
+msgstr ""
 
 #: resources.py:86
 msgid "alien"
-msgstr "чужой"
+msgstr ""
 
 #: resources.py:86
 msgid "ufo"
-msgstr "нло"
+msgstr ""
 
 #: resources.py:86
 msgid "ship"
-msgstr "существа"
+msgstr ""
 
 #: resources.py:86
 msgid "probe"
-msgstr "марсиане"
+msgstr ""
 
 #: resources.py:86
 msgid "beam"
-msgstr "луч"
+msgstr ""
 
 #: resources.py:86
 msgid "zoom"
-msgstr "сигнал"
+msgstr ""
 
 #: resources.py:86
 msgid "zap"
-msgstr "схватка"
+msgstr ""
 
 #: resources.py:87
 msgid "CASTLES"
-msgstr "ЗАМКИ"
+msgstr ""
 
 #: resources.py:87
 msgid "moat"
-msgstr "ров"
+msgstr ""
 
 #: resources.py:87
 msgid "arch"
-msgstr "арка"
+msgstr ""
 
 #: resources.py:87
 msgid "walls"
-msgstr "стены"
+msgstr ""
 
 #: resources.py:87
 msgid "gate"
-msgstr "ворота"
+msgstr ""
 
 #: resources.py:88
 msgid "ISLANDS"
-msgstr "ОСТРОВА"
+msgstr ""
 
 #: resources.py:88
 msgid "palm"
-msgstr "пальма"
+msgstr ""
 
 #: resources.py:88
 msgid "cove"
-msgstr "бухта"
+msgstr ""
 
 #: resources.py:88
 msgid "boats"
-msgstr "лодки"
+msgstr ""
 
 #: resources.py:88
 msgid "docks"
-msgstr "пристань"
+msgstr ""
 
 #: resources.py:88
 msgid "tropic"
-msgstr "тропики"
+msgstr ""
 
 #: resources.py:89
 msgid "CLOWNS"
-msgstr "КЛОУНЫ"
+msgstr ""
 
 #: resources.py:89
 msgid "clown"
-msgstr "клоун"
+msgstr ""
 
 #: resources.py:89
 msgid "mime"
-msgstr "мимика"
+msgstr ""
 
 #: resources.py:89
 msgid "wig"
-msgstr "парик"
+msgstr ""
 
 #: resources.py:89
 msgid "mask"
-msgstr "маска"
+msgstr ""
 
 #: resources.py:89
 msgid "nose"
-msgstr "нос"
+msgstr ""
 
 #: resources.py:89
 msgid "balloon"
-msgstr "шарик"
+msgstr ""
 
 #: resources.py:89
 msgid "laugh"
-msgstr "смех"
+msgstr ""
 
 #: resources.py:89
 msgid "joke"
-msgstr "шутка"
+msgstr ""
 
 #: resources.py:89
 msgid "prank"
-msgstr "шалость"
+msgstr ""
 
 #: resources.py:90
 msgid "GHOSTS"
-msgstr "ПРИЗРАКИ"
+msgstr ""
 
 #: resources.py:90
 msgid "spook"
-msgstr "фантом"
+msgstr ""
 
 #: resources.py:90
 msgid "scare"
-msgstr "ночь"
+msgstr ""
 
 #: resources.py:90
 msgid "eerie"
-msgstr "ужас"
+msgstr ""
 
 #: resources.py:90
 msgid "fright"
-msgstr "дух"
+msgstr ""
 
 #: resources.py:90
 msgid "wail"
-msgstr "боязнь"
+msgstr ""
 
 #: resources.py:91
 msgid "CAVES"
-msgstr "ПЕЩЕРЫ"
+msgstr ""
 
 #: resources.py:91
 msgid "bats"
-msgstr "мышь"
+msgstr ""
 
 #: resources.py:91 resources.py:100
 msgid "dark"
-msgstr "темнота"
+msgstr ""
 
 #: resources.py:91
 msgid "stalag"
-msgstr "сталагтит"
+msgstr ""
 
 #: resources.py:91
 msgid "depth"
-msgstr "глубина"
+msgstr ""
 
 #: resources.py:91
 msgid "echo"
-msgstr "эхо"
+msgstr ""
 
 #: resources.py:91
 msgid "gloom"
-msgstr "мрак"
+msgstr ""
 
 #: resources.py:91
 msgid "vault"
-msgstr "свод"
+msgstr ""
 
 #: resources.py:92
 msgid "ROBOTS"
-msgstr "РОБОТЫ"
+msgstr ""
 
 #: resources.py:92
 msgid "servo"
-msgstr "механизм"
+msgstr ""
 
 #: resources.py:92
 msgid "cog"
-msgstr "андроид"
+msgstr ""
 
 #: resources.py:92
 msgid "bolt"
-msgstr "киборг"
+msgstr ""
 
 #: resources.py:92
 msgid "cable"
-msgstr "робот"
+msgstr ""
 
 #: resources.py:92
 msgid "arm"
-msgstr "киборг"
+msgstr ""
 
 #: resources.py:93
 msgid "TREES"
-msgstr "ДЕРЕВЬЯ"
+msgstr ""
 
 #: resources.py:93
 msgid "oak"
-msgstr "дуб"
+msgstr ""
 
 #: resources.py:93
 msgid "pine"
-msgstr "сосна"
+msgstr ""
 
 #: resources.py:93
 msgid "leaves"
-msgstr "листья"
+msgstr ""
 
 #: resources.py:93
 msgid "twig"
-msgstr "ветка"
+msgstr ""
 
 #: resources.py:93
 msgid "shade"
-msgstr "тень"
+msgstr ""
 
 #: resources.py:94
 msgid "WIZARDS"
-msgstr "ВОЛШЕБНИКИ"
+msgstr ""
 
 #: resources.py:94
 msgid "spell"
-msgstr "кудесник"
+msgstr ""
 
 #: resources.py:94
 msgid "cloak"
-msgstr "плащ"
+msgstr ""
 
 #: resources.py:94
 msgid "staff"
-msgstr "шляпа"
+msgstr ""
 
 #: resources.py:94
 msgid "potion"
-msgstr "зелье"
+msgstr ""
 
 #: resources.py:94 resources.py:98
 msgid "charm"
-msgstr "шарм"
+msgstr ""
 
 #: resources.py:94
 msgid "wand"
-msgstr "палочка"
+msgstr ""
 
 #: resources.py:95
 msgid "VOLCANO"
-msgstr "ВУЛКАН"
+msgstr ""
 
 #: resources.py:95
 msgid "lava"
-msgstr "лава"
+msgstr ""
 
 #: resources.py:95
 msgid "smoke"
-msgstr "дым"
+msgstr ""
 
 #: resources.py:95
 msgid "ash"
-msgstr "пепел"
+msgstr ""
 
 #: resources.py:95
 msgid "crust"
-msgstr "кора"
+msgstr ""
 
 #: resources.py:95
 msgid "erupts"
-msgstr "извержение"
+msgstr ""
 
 #: resources.py:95
 msgid "crack"
-msgstr "взрыв"
+msgstr ""
 
 #: resources.py:95
 msgid "magma"
-msgstr "магма"
+msgstr ""
 
 #: resources.py:96
 msgid "DRAGONS"
-msgstr "ДРАКОНЫ"
+msgstr ""
 
 #: resources.py:96
 msgid "scales"
-msgstr "зубы"
+msgstr ""
 
 #: resources.py:96 resources.py:98
 msgid "wings"
-msgstr "крылья"
+msgstr ""
 
 #: resources.py:96
 msgid "tail"
-msgstr "хвост"
+msgstr ""
 
 #: resources.py:96
 msgid "claws"
-msgstr "когти"
+msgstr ""
 
 #: resources.py:96
 msgid "roar"
-msgstr "рычание"
+msgstr ""
 
 #: resources.py:96
 msgid "flame"
-msgstr "пламя"
+msgstr ""
 
 #: resources.py:96
 msgid "fangs"
-msgstr "клыки"
+msgstr ""
 
 #: resources.py:96
 msgid "lair"
-msgstr "логово"
+msgstr ""
 
 #: resources.py:97
 msgid "MIRRORS"
-msgstr "ЗЕРКАЛА"
+msgstr ""
 
 #: resources.py:97
 msgid "glass"
-msgstr "стекло"
+msgstr ""
 
 #: resources.py:97
 msgid "look"
-msgstr "взгляд"
+msgstr ""
 
 #: resources.py:97
 msgid "shine"
-msgstr "блеск"
+msgstr ""
 
 #: resources.py:97
 msgid "reflect"
-msgstr "отражение"
+msgstr ""
 
 #: resources.py:97
 msgid "room"
-msgstr "комната"
+msgstr ""
 
 #: resources.py:97
 msgid "clean"
-msgstr "чистота"
+msgstr ""
 
 #: resources.py:98
 msgid "FAIRIES"
-msgstr "ФЕИ"
+msgstr ""
 
 #: resources.py:98
 msgid "pixie"
-msgstr "пикси"
+msgstr ""
 
 #: resources.py:98
 msgid "tiny"
-msgstr "крошка"
+msgstr ""
 
 #: resources.py:98
 msgid "spark"
-msgstr "искра"
+msgstr ""
 
 #: resources.py:99
 msgid "MARKETS"
-msgstr "РЫНКИ"
+msgstr ""
 
 #: resources.py:99
 msgid "stalls"
-msgstr "павильон"
+msgstr ""
 
 #: resources.py:99
 msgid "crowd"
-msgstr "толпа"
+msgstr ""
 
 #: resources.py:99
 msgid "sales"
-msgstr "продажа"
+msgstr ""
 
 #: resources.py:99
 msgid "deals"
-msgstr "сделка"
+msgstr ""
 
 #: resources.py:100
 msgid "TUNNELS"
-msgstr "ТУННЕЛИ"
+msgstr ""
 
 #: resources.py:100
 msgid "shaft"
-msgstr "шахта"
+msgstr ""
 
 #: resources.py:100
 msgid "mines"
-msgstr "мины"
+msgstr ""
 
 #: resources.py:100
 msgid "pipes"
-msgstr "трубы"
+msgstr ""
 
 #: resources.py:100
 msgid "crawl"
-msgstr "свет"
+msgstr ""
 
 #: resources.py:100
 msgid "route"
-msgstr "маршрут"
+msgstr ""
 
 #: resources.py:100
 msgid "gates"
-msgstr "ворота"
+msgstr ""
 
 #: resources.py:100
 msgid "dig"
-msgstr "копатель"
+msgstr ""
 
-#: window.py:594
+#: window.py:87
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n"
+"<b>5 words\n"
+"(30 seconds)</b>\n"
+msgstr ""
+
+#: window.py:88
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n"
+"<b>8 words\n"
+"(60 seconds)</b>\n"
+msgstr ""
+
+#: window.py:89
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n"
+"<b>10 words\n"
+"(80 seconds)</b>\n"
+msgstr ""
+
+#: window.py:90
+msgid ""
+"\n"
+"<span size='large' weight='ultrabold'>Custom</span>\n"
+msgstr ""
+
+#: window.py:667
 msgid "Congratulations!"
-msgstr "Поздравляем!"
+msgstr ""
 
-#: window.py:595
+#: window.py:668
 msgid "You won the game!"
-msgstr "Вы выиграли!"
+msgstr ""
 
-#: window.py:598
+#: window.py:671
 msgid "Time's out!"
-msgstr "Время вышло!"
+msgstr ""
 
-#: window.py:599
+#: window.py:672
 msgid "You ran out of time!"
-msgstr "У вас не хватило времени!"
-
-#: window.ui:50
-msgid ""
-"8 x 8 grid\n"
-"\n"
-"5 words\n"
-"(30 seconds)"
 msgstr ""
-"доска 8 х 8\n"
-"5 слов\n"
-"(30 секунд)"
 
-#: window.ui:68
-msgid ""
-"12 x 12 grid\n"
-"\n"
-"8 words\n"
-"(60 seconds)"
-msgstr ""
-"доска 12 x 12\n"
-"8 слов\n"
-"(60 секунд)"
-
-#: window.ui:86
-msgid ""
-"16 x 16 grid\n"
-"\n"
-"10 words\n"
-"(80 seconds)"
-msgstr ""
-"доска 16 x 16\n"
-"10 слов\n"
-"(80 секунд)"
-
-#: window.ui:108
-msgid "Custom"
-msgstr "Своя доска"
-
-#: window.ui:148
-msgid "How many lines you want"
-msgstr "Сколько строк вы хотите"
-
-#: window.ui:149
-msgid "Height"
-msgstr "Высота"
-
-#: window.ui:163
-msgid "How many columns you want"
-msgstr "Сколько столбцов вы хотите"
-
-#: window.ui:164
-msgid "Width"
-msgstr "Ширина"
-
-#: window.ui:178
-msgid "How many words you will have to guess"
-msgstr "Сколько слов нужно будет угадать"
-
-#: window.ui:179
-msgid "Words"
-msgstr "Слова"
-
-#: window.ui:193
-msgid "The time you will have to find all the words"
-msgstr "За которое вам нужно найти все слова"
-
-#: window.ui:194
-msgid "Time (in seconds)"
-msgstr "Время (в секундах)"
-
-#: window.ui:219
-msgid "Start"
-msgstr "Старт"
-
-#: window.ui:234
-msgid "Create the game of your dreams!"
-msgstr "Создайте игру своей мечты!"
-
-#: window.ui:236
-msgid "Custom settings"
-msgstr "Свои настройки"
-
-#: window.ui:252 window.ui:440
-msgid "Main Menu"
-msgstr "Главное меню"
-
-#: window.ui:280
-msgid "Theme"
-msgstr "Тема"
-
-#: window.ui:286 window.ui:368
-msgid "Random"
-msgstr "Случайно"
-
-#: window.ui:298
+#: window.ui:186
 msgid "Game mode"
-msgstr "Режим игры"
+msgstr ""
 
-#: window.ui:303
+#: window.ui:191
 msgid "No timer"
-msgstr "Без таймера"
+msgstr ""
 
-#: window.ui:315
+#: window.ui:203
 msgid "With timer"
-msgstr "С таймером"
+msgstr ""
 
-#: window.ui:327
+#: window.ui:215
 msgid "Blitz"
-msgstr "Блиц"
+msgstr ""
 
-#: window.ui:351
-msgid "Options"
-msgstr "Опции"
+#: window.ui:227
+msgid "Theme"
+msgstr ""
 
-#: window.ui:413
-msgid "Themes"
-msgstr "Темы"
+#: window.ui:233
+msgid "Random"
+msgstr ""
 
-#: window.ui:467 window.ui:513
-msgid "Game"
-msgstr "Игра"
+#: window.ui:300 window.ui:520 window.ui:685
+msgid "Main Menu"
+msgstr ""
+
+#: window.ui:396
+msgid "How many lines you want"
+msgstr ""
+
+#: window.ui:397
+msgid "Height"
+msgstr ""
+
+#: window.ui:411
+msgid "How many columns you want"
+msgstr ""
+
+#: window.ui:412
+msgid "Width"
+msgstr ""
+
+#: window.ui:426
+msgid "How many words you will have to guess"
+msgstr ""
+
+#: window.ui:427
+msgid "Words"
+msgstr ""
+
+#: window.ui:441
+msgid "The time you will have to find all the words"
+msgstr ""
+
+#: window.ui:442
+msgid "Time (in seconds)"
+msgstr ""
+
+#: window.ui:467
+msgid "Start"
+msgstr ""
+
+#: window.ui:482
+msgid "Create the game of your dreams!"
+msgstr ""
 
 #: window.ui:484
+msgid "Custom settings"
+msgstr ""
+
+#: window.ui:501
+msgid "Game"
+msgstr ""
+
+#: window.ui:763
 msgid "Time left"
-msgstr "Времени осталось"
+msgstr ""
 
-#: window.ui:496
+#: window.ui:786
 msgid "Words to find"
-msgstr "Нужно найти"
+msgstr ""
 
-#: window.ui:524
+#: window.ui:818
 msgid "_Keyboard Shortcuts"
-msgstr "_Сочетания клавиш"
+msgstr ""
 
-#: window.ui:528
+#: window.ui:822
 msgid "_About Hunt"
-msgstr "_О Hunt"
+msgstr ""
 
-#: window.ui:532
+#: window.ui:826
 msgid "_Help"
-msgstr "_Помощь"
+msgstr ""
