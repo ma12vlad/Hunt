@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hunt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-11 19:23+0300\n"
-"PO-Revision-Date: 2025-03-24 12:26+0100\n"
+"POT-Creation-Date: 2025-03-23 18:32+0300\n"
+"PO-Revision-Date: 2025-03-24 12:30+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -20,25 +20,13 @@ msgstr ""
 "X-Poedit-SearchPath-3: window.py\n"
 "X-Poedit-SearchPath-4: window.ui\n"
 
-#: end_dialog.ui:12
-msgid "Shapes"
-msgstr "Vormen"
-
 #: end_dialog.ui:13
 msgid "Category"
 msgstr "Categorie"
 
-#: end_dialog.ui:21
-msgid "8 x 8 tiles"
-msgstr "Bord van 8x8"
-
 #: end_dialog.ui:22
 msgid "Grid size"
 msgstr "Bordgrootte"
-
-#: end_dialog.ui:30
-msgid "5 out of 5"
-msgstr "5 van 5"
 
 #: end_dialog.ui:31
 msgid "Words found"
@@ -64,43 +52,43 @@ msgstr "Sneltoetsen tonen"
 msgid "Quit"
 msgstr "Afsluiten"
 
-#: help_dialog.ui:8
+#: help_dialog.ui:7
 msgid "Help"
 msgstr "Hulp"
 
-#: help_dialog.ui:12
+#: help_dialog.ui:11
 msgid "How to play"
 msgstr "Speluitleg"
 
-#: help_dialog.ui:15
+#: help_dialog.ui:14
 msgid "1 - Start a game"
 msgstr "1 - Start een spel"
 
-#: help_dialog.ui:19
+#: help_dialog.ui:18
 msgid "To start, select one of the four grid sizes:"
 msgstr "Kies eerst een van de vier bordgroottes:"
 
-#: help_dialog.ui:27
+#: help_dialog.ui:26
 msgid ""
-"â <b>8 Ã 8 board</b> with 5 words\n"
-"â <b>12 Ã 12 board</b> with 8 words\n"
-"â <b>16 Ã 16 board</b> with 10 words\n"
-"â <b>Custom board</b>, where you choose the size and the number of words"
+"○ <b>8 × 8 board</b> with 5 words\n"
+"○ <b>12 × 12 board</b> with 8 words\n"
+"○ <b>16 × 16 board</b> with 10 words\n"
+"○ <b>Custom board</b>, where you choose the size and the number of words"
 msgstr ""
-"â <b>8Ã8</b> met 5 woorden\n"
-"â <b>12Ã12</b> met 8 woorden\n"
-"â <b>16Ã16</b> met 10 woorden\n"
-"â <b>Aangepast</b>, waar je zelf de grootte en het aantal woorden bepaalt"
+"○ <b>8x8</b> met 5 woorden\n"
+"○ <b>12x12</b> met 8 woorden\n"
+"○ <b>16x16</b> met 10 woorden\n"
+"○ <b>Aangepast</b>, waar je zelf de grootte en het aantal woorden bepaalt"
 
-#: help_dialog.ui:52
+#: help_dialog.ui:51
 msgid "You can also choose between 3 differents game modes"
 msgstr "Verder kun je kiezen uit drie verschillende spelvormen"
 
-#: help_dialog.ui:68
+#: help_dialog.ui:67
 msgid "2 - Find the words in the grid"
 msgstr "2 - Zoek de woorden op het bord"
 
-#: help_dialog.ui:72
+#: help_dialog.ui:71
 msgid ""
 "To choose a term from the grid, click the first and the last letter of the "
 "word you want, and all letters in between the two is what Hunt will take as "
@@ -109,11 +97,11 @@ msgstr ""
 "Klik op de eerste en laatste letter van een woord om een woord te maken. "
 "Alle tussenliggende letters worden automatisch geselecteerd."
 
-#: help_dialog.ui:81
+#: help_dialog.ui:80
 msgid "To win, you must find all words that are hidden in the grid."
 msgstr "Om te winnen moet je alle woorden op het bord zien te vinden."
 
-#: help_dialog.ui:101
+#: help_dialog.ui:100
 msgid ""
 "Avoid minimizing the grid size, and maximizing the word count, as it can "
 "occasionally lead to game crashes if some words are unable to be placed"
@@ -121,66 +109,66 @@ msgstr ""
 "Tip: verklein het bord niet te veel en kies ook niet te veel woorden om te "
 "raden, anders kan het spel mogelijk crashen."
 
-#: help_dialog.ui:119
+#: help_dialog.ui:118
 msgid "Hunt offers 3 different game modes to play with"
 msgstr "Woordzoeker biedt drie spelvormen aan"
 
-#: help_dialog.ui:121
+#: help_dialog.ui:120
 msgid "Game modes"
 msgstr "Spelvormen"
 
-#: help_dialog.ui:130
+#: help_dialog.ui:129
 msgid "Normal mode"
 msgstr "Vrij spelen"
 
-#: help_dialog.ui:134
+#: help_dialog.ui:133
 msgid "Play a game without being worried about the time!"
 msgstr "Speel zonder tijdsdruk!"
 
-#: help_dialog.ui:150
+#: help_dialog.ui:149
 msgid "Timer mode"
 msgstr "Race tegen de klok"
 
-#: help_dialog.ui:154
+#: help_dialog.ui:153
 msgid "You will have a limited time to find all the words."
 msgstr "Zoek alle woorden binnen de gestelde tijd."
 
-#: help_dialog.ui:170
+#: help_dialog.ui:169
 msgid "Blitz mode"
 msgstr "Turbo"
 
-#: help_dialog.ui:174
+#: help_dialog.ui:173
 msgid ""
 "Blitz mode reduces the amount of time the player has per word, and words in "
 "that category are given one at a time."
 msgstr ""
 "In de turbomodus heb je minder tijd en worden woorden een voor een gegeven."
 
-#: help_dialog.ui:194
+#: help_dialog.ui:193
 msgid ""
 "For example, with 60 seconds for 5 words, each word would only be available "
-"for 12 seconds (60 Ã· 5 = 12) before game over."
+"for 12 seconds (60 ÷ 5 = 12) before game over."
 msgstr ""
 "Voorbeeld: als je 60 seconden hebt om 5 woorden te zoeken, dan heb je per "
-"woord 12 seconden de tijd (60 Ã· 5 = 12)."
+"woord 12 seconden de tijd (60 ÷ 5 = 12)."
 
-#: help_dialog.ui:209
+#: help_dialog.ui:208
 msgid ""
 "Whenever a word is found, the amount of time the game started with gets "
 "added to the remaining time the player has."
 msgstr ""
-"Als je een woord gevonden hebt, wordt de overgebleven tijd toegevoegd aan "
-"de tijd die je hebt voor de rest van de woorden."
+"Als je een woord gevonden hebt, wordt de overgebleven tijd toegevoegd aan de "
+"tijd die je hebt voor de rest van de woorden."
 
-#: help_dialog.ui:222
+#: help_dialog.ui:221
 msgid "Get involved"
 msgstr "Help mee"
 
-#: help_dialog.ui:231
+#: help_dialog.ui:230
 msgid "Contribute"
 msgstr "Bijdragen"
 
-#: help_dialog.ui:242
+#: help_dialog.ui:241
 msgid ""
 "Everyone is welcome to participate in Hunt's development, whether by "
 "improving the game's code, or adding more language support."
@@ -188,7 +176,7 @@ msgstr ""
 "Iedereen kan bijdragen aan de ontwikkeling van Woordzoeker, of dat nu het "
 "aanleveren van code of vertalingen is."
 
-#: help_dialog.ui:244
+#: help_dialog.ui:243
 msgid "Contribute to Hunt"
 msgstr "Bijdragen aan Woordzoeker"
 
@@ -3699,162 +3687,209 @@ msgstr "toegang"
 msgid "dig"
 msgstr "graven"
 
-#: window.py:594
+#: window.py:87
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n"
+"<b>5 words\n"
+"(30 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 8×8</span>\n"
+"<b>5 woorden\n"
+"(30 seconden)</b>\n"
+
+#: window.py:88
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n"
+"<b>8 words\n"
+"(60 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 12×12</span>\r\n"
+"<b>8 woorden\r\n"
+"(60 seconden)</b>\r\n"
+
+#: window.py:89
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n"
+"<b>10 words\n"
+"(80 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 16×16</span>\r\n"
+"<b>10 woorden\r\n"
+"(80 seconden)</b>\r\n"
+
+#: window.py:90
+msgid ""
+"\n"
+"<span size='large' weight='ultrabold'>Custom</span>\n"
+msgstr ""
+"\n"
+"<span size='large' weight='ultrabold'>Aangepast</span>\n"
+
+#: window.py:667
 msgid "Congratulations!"
 msgstr "Gefeliciteerd!"
 
-#: window.py:595
+#: window.py:668
 msgid "You won the game!"
 msgstr "Je hebt het spel gewonnen!"
 
-#: window.py:598
+#: window.py:671
 msgid "Time's out!"
 msgstr "De tijd is op!"
 
-#: window.py:599
+#: window.py:672
 msgid "You ran out of time!"
 msgstr "Je hebt geen tijd meer!"
 
-#: window.ui:50
-msgid ""
-"8 x 8 grid\n"
-"\n"
-"5 words\n"
-"(30 seconds)"
-msgstr ""
-"bord van 8x8\n"
-"\n"
-"5 woorden\n"
-"(30 seconden)"
-
-#: window.ui:68
-msgid ""
-"12 x 12 grid\n"
-"\n"
-"8 words\n"
-"(60 seconds)"
-msgstr ""
-"bord van 12x12\n"
-"\n"
-"8 woorden\n"
-"(60 seconden)"
-
-#: window.ui:86
-msgid ""
-"16 x 16 grid\n"
-"\n"
-"10 words\n"
-"(80 seconds)"
-msgstr ""
-"bord van 16x16\n"
-"\n"
-"10 woorden\n"
-"(80 seconden)"
-
-#: window.ui:108
-msgid "Custom"
-msgstr "Aangepast"
-
-#: window.ui:148
-msgid "How many lines you want"
-msgstr "Hoeveel lijnen je wilt"
-
-#: window.ui:149
-msgid "Height"
-msgstr "Hoogte"
-
-#: window.ui:163
-msgid "How many columns you want"
-msgstr "Hoeveel kolommen je wilt"
-
-#: window.ui:164
-msgid "Width"
-msgstr "Breedte"
-
-#: window.ui:178
-msgid "How many words you will have to guess"
-msgstr "Hoeveel woorden je moet raden"
-
-#: window.ui:179
-msgid "Words"
-msgstr "Aantal woorden"
-
-#: window.ui:193
-msgid "The time you will have to find all the words"
-msgstr "De tijd die je hebt om alle woorden te vinden"
-
-#: window.ui:194
-msgid "Time (in seconds)"
-msgstr "Tijd (in seconden)"
-
-#: window.ui:219
-msgid "Start"
-msgstr "Starten"
-
-#: window.ui:234
-msgid "Create the game of your dreams!"
-msgstr "Maak het spel van je dromen!"
-
-#: window.ui:236
-msgid "Custom settings"
-msgstr "Aangepaste voorkeuren"
-
-#: window.ui:252 window.ui:440
-msgid "Main Menu"
-msgstr "Hoofdmenu"
-
-#: window.ui:280
-msgid "Theme"
-msgstr "Thema"
-
-#: window.ui:286 window.ui:368
-msgid "Random"
-msgstr "Willekeurig"
-
-#: window.ui:298
+#: window.ui:186
 msgid "Game mode"
 msgstr "Spelvorm"
 
-#: window.ui:303
+#: window.ui:191
 msgid "No timer"
 msgstr "Geen tijdklok"
 
-#: window.ui:315
+#: window.ui:203
 msgid "With timer"
 msgstr "Met tijdklok"
 
-#: window.ui:327
+#: window.ui:215
 msgid "Blitz"
 msgstr "Turbo"
 
-#: window.ui:351
-msgid "Options"
-msgstr "Opties"
+#: window.ui:227
+msgid "Theme"
+msgstr "Thema"
 
-#: window.ui:413
-msgid "Themes"
-msgstr "Thema's"
+#: window.ui:233
+msgid "Random"
+msgstr "Willekeurig"
 
-#: window.ui:467 window.ui:513
+#: window.ui:300 window.ui:520 window.ui:685
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: window.ui:396
+msgid "How many lines you want"
+msgstr "Hoeveel lijnen je wilt"
+
+#: window.ui:397
+msgid "Height"
+msgstr "Hoogte"
+
+#: window.ui:411
+msgid "How many columns you want"
+msgstr "Hoeveel kolommen je wilt"
+
+#: window.ui:412
+msgid "Width"
+msgstr "Breedte"
+
+#: window.ui:426
+msgid "How many words you will have to guess"
+msgstr "Hoeveel woorden je moet raden"
+
+#: window.ui:427
+msgid "Words"
+msgstr "Aantal woorden"
+
+#: window.ui:441
+msgid "The time you will have to find all the words"
+msgstr "De tijd die je hebt om alle woorden te vinden"
+
+#: window.ui:442
+msgid "Time (in seconds)"
+msgstr "Tijd (in seconden)"
+
+#: window.ui:467
+msgid "Start"
+msgstr "Starten"
+
+#: window.ui:482
+msgid "Create the game of your dreams!"
+msgstr "Maak het spel van je dromen!"
+
+#: window.ui:484
+msgid "Custom settings"
+msgstr "Aangepaste voorkeuren"
+
+#: window.ui:501
 msgid "Game"
 msgstr "Spel"
 
-#: window.ui:484
+#: window.ui:763
 msgid "Time left"
 msgstr "Resterende tijd"
 
-#: window.ui:496
+#: window.ui:786
 msgid "Words to find"
 msgstr "Aantal verstopte woorden"
 
-#: window.ui:524
+#: window.ui:818
 msgid "_Keyboard Shortcuts"
 msgstr "_Sneltoetsen"
 
-#: window.ui:528
+#: window.ui:822
 msgid "_About Hunt"
 msgstr "_Over Woordzoeker"
 
-#: window.ui:532
+#: window.ui:826
 msgid "_Help"
 msgstr "_Hulp"
+
+#~ msgid "Shapes"
+#~ msgstr "Vormen"
+
+#~ msgid "8 x 8 tiles"
+#~ msgstr "Bord van 8x8"
+
+#~ msgid "5 out of 5"
+#~ msgstr "5 van 5"
+
+#~ msgid ""
+#~ "8 x 8 grid\n"
+#~ "\n"
+#~ "5 words\n"
+#~ "(30 seconds)"
+#~ msgstr ""
+#~ "bord van 8x8\n"
+#~ "\n"
+#~ "5 woorden\n"
+#~ "(30 seconden)"
+
+#~ msgid ""
+#~ "12 x 12 grid\n"
+#~ "\n"
+#~ "8 words\n"
+#~ "(60 seconds)"
+#~ msgstr ""
+#~ "bord van 12x12\n"
+#~ "\n"
+#~ "8 woorden\n"
+#~ "(60 seconden)"
+
+#~ msgid ""
+#~ "16 x 16 grid\n"
+#~ "\n"
+#~ "10 words\n"
+#~ "(80 seconds)"
+#~ msgstr ""
+#~ "bord van 16x16\n"
+#~ "\n"
+#~ "10 woorden\n"
+#~ "(80 seconden)"
+
+#~ msgid "Custom"
+#~ msgstr "Aangepast"
+
+#~ msgid "Options"
+#~ msgstr "Opties"
+
+#~ msgid "Themes"
+#~ msgstr "Thema's"
