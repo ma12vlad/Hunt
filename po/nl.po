@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: hunt\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-02-11 19:23+0300\n"
-"PO-Revision-Date: 2025-03-23 20:34+0100\n"
+"PO-Revision-Date: 2025-03-24 12:26+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -98,7 +98,7 @@ msgstr "Verder kun je kiezen uit drie verschillende spelvormen"
 
 #: help_dialog.ui:68
 msgid "2 - Find the words in the grid"
-msgstr "2 - Zoek de woorden op het rooster"
+msgstr "2 - Zoek de woorden op het bord"
 
 #: help_dialog.ui:72
 msgid ""
