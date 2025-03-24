@@ -50,7 +50,7 @@
                                   </object>
                                 </property>
                                 <property name="tag">main_options</property>
-                                <property name="title">Options</property>
+                                <property name="title" translatable="yes">Options</property>
                               </object>
                             </child>
                             <child>
@@ -84,7 +84,7 @@
                                   </object>
                                 </property>
                                 <property name="tag">theme_selector</property>
-                                <property name="title">Themes</property>
+                                <property name="title" translatable="yes">Themes</property>
                               </object>
                             </child>
                           </object>
@@ -107,7 +107,7 @@
                               <object class="AdwActionRow" id="gamemode_mobile">
                                 <property name="icon-name">playlist-infinite-symbolic</property>
                                 <property name="subtitle">No timer</property>
-                                <property name="title">Game mode</property>
+                                <property name="title" translatable="yes">Game mode</property>
                                 <style>
                                   <class name="property"/>
                                 </style>
@@ -116,8 +116,8 @@
                             <child>
                               <object class="AdwActionRow" id="theme_mobile">
                                 <property name="icon-name">view-list-bullet-symbolic</property>
-                                <property name="subtitle">Random</property>
-                                <property name="title">Theme</property>
+                                <property name="subtitle" translatable="yes">Random</property>
+                                <property name="title" translatable="yes">Theme</property>
                                 <style>
                                   <class name="property"/>
                                 </style>
@@ -135,7 +135,7 @@
                             <child>
                               <object class="AdwNavigationPage">
                                 <property name="tag">main_options</property>
-                                <property name="title">Options</property>
+                                <property name="title" translatable="yes">Options</property>
                                 <child>
                                   <object class="AdwLayoutSlot">
                                     <property name="id">lyt_preferences</property>
@@ -170,7 +170,7 @@
                                   </object>
                                 </property>
                                 <property name="tag">theme_selector</property>
-                                <property name="title">Themes</property>
+                                <property name="title" translatable="yes">Themes</property>
                               </object>
                             </child>
                           </object>
@@ -252,7 +252,7 @@
                             <property name="activatable">True</property>
                             <property name="activatable-widget">theme_selector</property>
                             <property name="icon-name">dice3-symbolic</property>
-                            <property name="title">Random</property>
+                            <property name="title" translatable="yes">Random</property>
                             <child>
                               <object class="GtkCheckButton" id="theme_selector">
                                 <property name="active">True</property>
@@ -783,7 +783,7 @@
                             </style>
                           </object>
                         </property>
-                        <property name="title">Words to find</property>
+                        <property name="title" translatable="yes">Words to find</property>
                         <child>
                           <object class="GtkListBox" id="frame">
                             <style>

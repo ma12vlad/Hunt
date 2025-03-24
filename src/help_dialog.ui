@@ -4,18 +4,18 @@
   <requires lib="gtk" version="4.12"/>
   <requires lib="libadwaita" version="1.6"/>
   <object class="AdwPreferencesDialog" id="HelpDialog">
-    <property name="title">Help</property>
+    <property name="title" translatable="yes">Help</property>
     <child>
       <object class="AdwPreferencesPage">
         <property name="icon-name">question-round-outline-symbolic</property>
-        <property name="title">How to play</property>
+        <property name="title" translatable="yes">How to play</property>
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">1 - Start a game</property>
+            <property name="title" translatable="yes">1 - Start a game</property>
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">To start, select one of the four grid sizes:</property>
+                <property name="label" translatable="yes">To start, select one of the four grid sizes:</property>
                 <property name="use-markup">True</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -23,7 +23,7 @@
             </child>
             <child>
               <object class="GtkLabel">
-                <property name="label">○ &lt;b&gt;8 × 8 board&lt;/b&gt; with 5 words
+                <property name="label" translatable="yes">○ &lt;b&gt;8 × 8 board&lt;/b&gt; with 5 words
 ○ &lt;b&gt;12 × 12 board&lt;/b&gt; with 8 words
 ○ &lt;b&gt;16 × 16 board&lt;/b&gt; with 10 words
 ○ &lt;b&gt;Custom board&lt;/b&gt;, where you choose the size and the number of words</property>
@@ -48,7 +48,7 @@
                   <object class="GtkLabel">
                     <property name="hexpand">True</property>
                     <property name="justify">fill</property>
-                    <property name="label">You can also choose between 3 differents game modes</property>
+                    <property name="label" translatable="yes">You can also choose between 3 differents game modes</property>
                     <property name="margin-bottom">5</property>
                     <property name="margin-top">5</property>
                     <property name="wrap">True</property>
@@ -64,11 +64,11 @@
         </child>
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title">2 - Find the words in the grid</property>
+            <property name="title" translatable="yes">2 - Find the words in the grid</property>
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">To choose a term from the grid, click the first and the last letter of the word you want, and all letters in between the two is what Hunt will take as selected.</property>
+                <property name="label" translatable="yes">To choose a term from the grid, click the first and the last letter of the word you want, and all letters in between the two is what Hunt will take as selected.</property>
                 <property name="use-markup">True</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -77,7 +77,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">To win, you must find all words that are hidden in the grid.</property>
+                <property name="label" translatable="yes">To win, you must find all words that are hidden in the grid.</property>
                 <property name="margin-top">10</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -97,7 +97,7 @@
                   <object class="GtkLabel">
                     <property name="hexpand">True</property>
                     <property name="justify">fill</property>
-                    <property name="label">Avoid minimizing the grid size, and maximizing the word count, as it can occasionally lead to game crashes if some words are unable to be placed</property>
+                    <property name="label" translatable="yes">Avoid minimizing the grid size, and maximizing the word count, as it can occasionally lead to game crashes if some words are unable to be placed</property>
                     <property name="margin-bottom">5</property>
                     <property name="margin-top">5</property>
                     <property name="wrap">True</property>
@@ -115,9 +115,9 @@
     </child>
     <child>
       <object class="AdwPreferencesPage">
-        <property name="description">Hunt offers 3 different game modes to play with</property>
+        <property name="description" translatable="yes">Hunt offers 3 different game modes to play with</property>
         <property name="icon-name">gamepad-symbolic</property>
-        <property name="title">Game modes</property>
+        <property name="title" translatable="yes">Game modes</property>
         <child>
           <object class="AdwPreferencesGroup">
             <property name="header-suffix">
@@ -126,11 +126,11 @@
                 <style/>
               </object>
             </property>
-            <property name="title">Normal mode</property>
+            <property name="title" translatable="yes">Normal mode</property>
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">Play a game without being worried about the time!</property>
+                <property name="label" translatable="yes">Play a game without being worried about the time!</property>
                 <property name="use-markup">True</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -146,11 +146,11 @@
                 <style/>
               </object>
             </property>
-            <property name="title">Timer mode</property>
+            <property name="title" translatable="yes">Timer mode</property>
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">You will have a limited time to find all the words.</property>
+                <property name="label" translatable="yes">You will have a limited time to find all the words.</property>
                 <property name="use-markup">True</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -166,11 +166,11 @@
                 <style/>
               </object>
             </property>
-            <property name="title">Blitz mode</property>
+            <property name="title" translatable="yes">Blitz mode</property>
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">Blitz mode reduces the amount of time the player has per word, and words in that category are given one at a time.</property>
+                <property name="label" translatable="yes">Blitz mode reduces the amount of time the player has per word, and words in that category are given one at a time.</property>
                 <property name="use-markup">True</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -190,7 +190,7 @@
                   <object class="GtkLabel">
                     <property name="hexpand">True</property>
                     <property name="justify">fill</property>
-                    <property name="label">For example, with 60 seconds for 5 words, each word would only be available for 12 seconds (60 ÷ 5 = 12) before game over.</property>
+                    <property name="label" translatable="yes">For example, with 60 seconds for 5 words, each word would only be available for 12 seconds (60 ÷ 5 = 12) before game over.</property>
                     <property name="margin-bottom">5</property>
                     <property name="margin-top">5</property>
                     <property name="wrap">True</property>
@@ -205,7 +205,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="justify">fill</property>
-                <property name="label">Whenever a word is found, the amount of time the game started with gets added to the remaining time the player has.</property>
+                <property name="label" translatable="yes">Whenever a word is found, the amount of time the game started with gets added to the remaining time the player has.</property>
                 <property name="margin-top">10</property>
                 <property name="wrap">True</property>
                 <property name="xalign">0.0</property>
@@ -218,7 +218,7 @@
     <child>
       <object class="AdwPreferencesPage">
         <property name="icon-name">branch-compare-arrows-symbolic</property>
-        <property name="title">Get involved</property>
+        <property name="title" translatable="yes">Get involved</property>
         <child>
           <object class="AdwStatusPage">
             <property name="child">
@@ -227,7 +227,7 @@
                 <property name="child">
                   <object class="AdwButtonContent">
                     <property name="icon-name">external-link-symbolic</property>
-                    <property name="label">Contribute</property>
+                    <property name="label" translatable="yes">Contribute</property>
                   </object>
                 </property>
                 <property name="css-classes">pill
@@ -238,9 +238,9 @@ suggested-action</property>
                 <style/>
               </object>
             </property>
-            <property name="description">Everyone is welcome to participate in Hunt's development, whether by improving the game's code, or adding more language support.</property>
+            <property name="description" translatable="yes">Everyone is welcome to participate in Hunt's development, whether by improving the game's code, or adding more language support.</property>
             <property name="icon-name">branch-compare-arrows-symbolic</property>
-            <property name="title">Contribute to Hunt</property>
+            <property name="title" translatable="yes">Contribute to Hunt</property>
           </object>
         </child>
       </object>
