@@ -1,0 +1,3895 @@
+# LANGUAGE translation for Hunt.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: hunt\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-23 18:32+0300\n"
+"PO-Revision-Date: 2025-03-24 12:30+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: hunt-1.0.7/src\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SearchPath-0: gtk/help-overlay.ui\n"
+"X-Poedit-SearchPath-1: main.py\n"
+"X-Poedit-SearchPath-2: resources.py\n"
+"X-Poedit-SearchPath-3: window.py\n"
+"X-Poedit-SearchPath-4: window.ui\n"
+
+#: end_dialog.ui:13
+msgid "Category"
+msgstr "Categorie"
+
+#: end_dialog.ui:22
+msgid "Grid size"
+msgstr "Bordgrootte"
+
+#: end_dialog.ui:31
+msgid "Words found"
+msgstr "Aantal gevonden woorden"
+
+#: end_dialog.ui:56
+msgid "_Close"
+msgstr "_Sluiten"
+
+#: end_dialog.ui:57
+msgid "_New game"
+msgstr "_Nieuw spel"
+
+#: gtk/help-overlay.ui:11
+msgid "General"
+msgstr "Algemeen"
+
+#: gtk/help-overlay.ui:14
+msgid "Show Shortcuts"
+msgstr "Sneltoetsen tonen"
+
+#: gtk/help-overlay.ui:20
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: help_dialog.ui:7
+msgid "Help"
+msgstr "Hulp"
+
+#: help_dialog.ui:11
+msgid "How to play"
+msgstr "Speluitleg"
+
+#: help_dialog.ui:14
+msgid "1 - Start a game"
+msgstr "1 - Start een spel"
+
+#: help_dialog.ui:18
+msgid "To start, select one of the four grid sizes:"
+msgstr "Kies eerst een van de vier bordgroottes:"
+
+#: help_dialog.ui:26
+msgid ""
+"○ <b>8 × 8 board</b> with 5 words\n"
+"○ <b>12 × 12 board</b> with 8 words\n"
+"○ <b>16 × 16 board</b> with 10 words\n"
+"○ <b>Custom board</b>, where you choose the size and the number of words"
+msgstr ""
+"○ <b>8x8</b> met 5 woorden\n"
+"○ <b>12x12</b> met 8 woorden\n"
+"○ <b>16x16</b> met 10 woorden\n"
+"○ <b>Aangepast</b>, waar je zelf de grootte en het aantal woorden bepaalt"
+
+#: help_dialog.ui:51
+msgid "You can also choose between 3 differents game modes"
+msgstr "Verder kun je kiezen uit drie verschillende spelvormen"
+
+#: help_dialog.ui:67
+msgid "2 - Find the words in the grid"
+msgstr "2 - Zoek de woorden op het bord"
+
+#: help_dialog.ui:71
+msgid ""
+"To choose a term from the grid, click the first and the last letter of the "
+"word you want, and all letters in between the two is what Hunt will take as "
+"selected."
+msgstr ""
+"Klik op de eerste en laatste letter van een woord om een woord te maken. "
+"Alle tussenliggende letters worden automatisch geselecteerd."
+
+#: help_dialog.ui:80
+msgid "To win, you must find all words that are hidden in the grid."
+msgstr "Om te winnen moet je alle woorden op het bord zien te vinden."
+
+#: help_dialog.ui:100
+msgid ""
+"Avoid minimizing the grid size, and maximizing the word count, as it can "
+"occasionally lead to game crashes if some words are unable to be placed"
+msgstr ""
+"Tip: verklein het bord niet te veel en kies ook niet te veel woorden om te "
+"raden, anders kan het spel mogelijk crashen."
+
+#: help_dialog.ui:118
+msgid "Hunt offers 3 different game modes to play with"
+msgstr "Woordzoeker biedt drie spelvormen aan"
+
+#: help_dialog.ui:120
+msgid "Game modes"
+msgstr "Spelvormen"
+
+#: help_dialog.ui:129
+msgid "Normal mode"
+msgstr "Vrij spelen"
+
+#: help_dialog.ui:133
+msgid "Play a game without being worried about the time!"
+msgstr "Speel zonder tijdsdruk!"
+
+#: help_dialog.ui:149
+msgid "Timer mode"
+msgstr "Race tegen de klok"
+
+#: help_dialog.ui:153
+msgid "You will have a limited time to find all the words."
+msgstr "Zoek alle woorden binnen de gestelde tijd."
+
+#: help_dialog.ui:169
+msgid "Blitz mode"
+msgstr "Turbo"
+
+#: help_dialog.ui:173
+msgid ""
+"Blitz mode reduces the amount of time the player has per word, and words in "
+"that category are given one at a time."
+msgstr ""
+"In de turbomodus heb je minder tijd en worden woorden een voor een gegeven."
+
+#: help_dialog.ui:193
+msgid ""
+"For example, with 60 seconds for 5 words, each word would only be available "
+"for 12 seconds (60 ÷ 5 = 12) before game over."
+msgstr ""
+"Voorbeeld: als je 60 seconden hebt om 5 woorden te zoeken, dan heb je per "
+"woord 12 seconden de tijd (60 ÷ 5 = 12)."
+
+#: help_dialog.ui:208
+msgid ""
+"Whenever a word is found, the amount of time the game started with gets "
+"added to the remaining time the player has."
+msgstr ""
+"Als je een woord gevonden hebt, wordt de overgebleven tijd toegevoegd aan de "
+"tijd die je hebt voor de rest van de woorden."
+
+#: help_dialog.ui:221
+msgid "Get involved"
+msgstr "Help mee"
+
+#: help_dialog.ui:230
+msgid "Contribute"
+msgstr "Bijdragen"
+
+#: help_dialog.ui:241
+msgid ""
+"Everyone is welcome to participate in Hunt's development, whether by "
+"improving the game's code, or adding more language support."
+msgstr ""
+"Iedereen kan bijdragen aan de ontwikkeling van Woordzoeker, of dat nu het "
+"aanleveren van code of vertalingen is."
+
+#: help_dialog.ui:243
+msgid "Contribute to Hunt"
+msgstr "Bijdragen aan Woordzoeker"
+
+#: resources.py:2
+msgid "ICE CREAM FLAVORS"
+msgstr "IJSSMAKEN"
+
+#: resources.py:2
+msgid "berry"
+msgstr "bosbes"
+
+#: resources.py:2 resources.py:41
+msgid "cream"
+msgstr "slagroom"
+
+#: resources.py:2
+msgid "ice"
+msgstr "ijs"
+
+#: resources.py:2
+msgid "vanilla"
+msgstr "vanille"
+
+#: resources.py:2 resources.py:84
+msgid "choco"
+msgstr "chocola"
+
+#: resources.py:2 resources.py:84
+msgid "sweet"
+msgstr "zoet"
+
+#: resources.py:2
+msgid "cold"
+msgstr "koud"
+
+#: resources.py:2
+msgid "treat"
+msgstr "verwennerij"
+
+#: resources.py:2
+msgid "scoop"
+msgstr "bolletje"
+
+#: resources.py:2 resources.py:65
+msgid "cone"
+msgstr "hoorntje"
+
+#: resources.py:3
+msgid "FRUITS"
+msgstr "FRUIT"
+
+#: resources.py:3 resources.py:5 resources.py:21 resources.py:93
+#: resources.py:99
+msgid "fruit"
+msgstr "fruit"
+
+#: resources.py:3 resources.py:93
+msgid "apple"
+msgstr "appel"
+
+#: resources.py:3
+msgid "banana"
+msgstr "banaan"
+
+#: resources.py:3
+msgid "peach"
+msgstr "perzik"
+
+#: resources.py:3
+msgid "grape"
+msgstr "druif"
+
+#: resources.py:3
+msgid "citrus"
+msgstr "citrus"
+
+#: resources.py:3
+msgid "plum"
+msgstr "pruim"
+
+#: resources.py:3
+msgid "melon"
+msgstr "meloen"
+
+#: resources.py:3
+msgid "mango"
+msgstr "mango"
+
+#: resources.py:3
+msgid "kiwi"
+msgstr "kiwi"
+
+#: resources.py:4
+msgid "VEGETABLES"
+msgstr "GROENTE"
+
+#: resources.py:4
+msgid "greens"
+msgstr "groen"
+
+#: resources.py:4
+msgid "carrot"
+msgstr "wortel"
+
+#: resources.py:4
+msgid "beans"
+msgstr "bonen"
+
+#: resources.py:4
+msgid "pea"
+msgstr "erwten"
+
+#: resources.py:4
+msgid "beet"
+msgstr "bieten"
+
+#: resources.py:4
+msgid "onion"
+msgstr "uien"
+
+#: resources.py:4
+msgid "cabbage"
+msgstr "sla"
+
+#: resources.py:4 resources.py:67
+msgid "squash"
+msgstr "kalebas"
+
+#: resources.py:4
+msgid "radish"
+msgstr "radijs"
+
+#: resources.py:4
+msgid "turnip"
+msgstr "koolraap"
+
+#: resources.py:5
+msgid "BREAKFAST FOODS"
+msgstr "ONTBIJTPRODUCTEN"
+
+#: resources.py:5
+msgid "bacon"
+msgstr "brinta"
+
+#: resources.py:5 resources.py:21 resources.py:40
+msgid "toast"
+msgstr "brood"
+
+#: resources.py:5
+msgid "waffle"
+msgstr "wafels"
+
+#: resources.py:5
+msgid "pancake"
+msgstr "pannenkoeken"
+
+#: resources.py:5
+msgid "egg"
+msgstr "ei"
+
+#: resources.py:5 resources.py:21
+msgid "meal"
+msgstr "maaltijd"
+
+#: resources.py:5
+msgid "bagel"
+msgstr "bagel"
+
+#: resources.py:5
+msgid "cereal"
+msgstr "muesli"
+
+#: resources.py:5
+msgid "hash"
+msgstr "yoghurt"
+
+#: resources.py:6
+msgid "ANIMALS"
+msgstr "DIEREN"
+
+#: resources.py:6
+msgid "dog"
+msgstr "hond"
+
+#: resources.py:6
+msgid "cat"
+msgstr "kat"
+
+#: resources.py:6 resources.py:79
+msgid "fish"
+msgstr "vis"
+
+#: resources.py:6
+msgid "horse"
+msgstr "paard"
+
+#: resources.py:6 resources.py:18
+msgid "mouse"
+msgstr "muis"
+
+#: resources.py:6
+msgid "tiger"
+msgstr "tijger"
+
+#: resources.py:6
+msgid "lion"
+msgstr "leeuw"
+
+#: resources.py:6
+msgid "bat"
+msgstr "vleermuis"
+
+#: resources.py:6 resources.py:79
+msgid "shark"
+msgstr "haai"
+
+#: resources.py:6
+msgid "sheep"
+msgstr "schaap"
+
+#: resources.py:7
+msgid "VEHICLES"
+msgstr "VOERTUIGEN"
+
+#: resources.py:7
+msgid "truck"
+msgstr "vrachtwagen"
+
+#: resources.py:7
+msgid "car"
+msgstr "auto"
+
+#: resources.py:7
+msgid "bus"
+msgstr "bus"
+
+#: resources.py:7 resources.py:38 resources.py:100
+msgid "train"
+msgstr "trein"
+
+#: resources.py:7 resources.py:38
+msgid "plane"
+msgstr "vliegtuig"
+
+#: resources.py:7
+msgid "boat"
+msgstr "boot"
+
+#: resources.py:7
+msgid "bike"
+msgstr "fiets"
+
+#: resources.py:7
+msgid "jeep"
+msgstr "jeep"
+
+#: resources.py:7
+msgid "scooter"
+msgstr "scooter"
+
+#: resources.py:7 resources.py:75
+msgid "wagon"
+msgstr "wagon"
+
+#: resources.py:8
+msgid "COLORS"
+msgstr "KLEUREN"
+
+#: resources.py:8
+msgid "blue"
+msgstr "blauw"
+
+#: resources.py:8
+msgid "grey"
+msgstr "grijs"
+
+#: resources.py:8 resources.py:89
+msgid "red"
+msgstr "rood"
+
+#: resources.py:8 resources.py:86
+msgid "green"
+msgstr "groen"
+
+#: resources.py:8
+msgid "pink"
+msgstr "roze"
+
+#: resources.py:8
+msgid "white"
+msgstr "wit"
+
+#: resources.py:8
+msgid "brown"
+msgstr "bruin"
+
+#: resources.py:8
+msgid "teal"
+msgstr "turkoois"
+
+#: resources.py:8
+msgid "black"
+msgstr "zwart"
+
+#: resources.py:8
+msgid "beige"
+msgstr "beige"
+
+#: resources.py:9
+msgid "SPORTS"
+msgstr "SPORT"
+
+#: resources.py:9
+msgid "ball"
+msgstr "bal"
+
+#: resources.py:9
+msgid "match"
+msgstr "wedstrijd"
+
+#: resources.py:9
+msgid "game"
+msgstr "spel"
+
+#: resources.py:9
+msgid "goal"
+msgstr "doelpunt"
+
+#: resources.py:9
+msgid "swim"
+msgstr "zwemmen"
+
+#: resources.py:9
+msgid "tennis"
+msgstr "tennis"
+
+#: resources.py:9 resources.py:39
+msgid "run"
+msgstr "hardlopen"
+
+#: resources.py:9
+msgid "golf"
+msgstr "golf"
+
+#: resources.py:9 resources.py:50
+msgid "coach"
+msgstr "trainer"
+
+#: resources.py:9 resources.py:39
+msgid "track"
+msgstr "baan"
+
+#: resources.py:10
+msgid "MUSIC GENRES"
+msgstr "MUZIEKGENRES"
+
+#: resources.py:10 resources.py:37
+msgid "jazz"
+msgstr "jazz"
+
+#: resources.py:10
+msgid "blues"
+msgstr "blues"
+
+#: resources.py:10 resources.py:14 resources.py:95
+msgid "rock"
+msgstr "rock"
+
+#: resources.py:10
+msgid "pop"
+msgstr "pop"
+
+#: resources.py:10
+msgid "rap"
+msgstr "rap"
+
+#: resources.py:10
+msgid "folk"
+msgstr "folk"
+
+#: resources.py:10
+msgid "punk"
+msgstr "punk"
+
+#: resources.py:10 resources.py:36
+msgid "dance"
+msgstr "dance"
+
+#: resources.py:10
+msgid "opera"
+msgstr "opera"
+
+#: resources.py:10 resources.py:92
+msgid "metal"
+msgstr "metal"
+
+#: resources.py:11
+msgid "MOVIES"
+msgstr "FILMS"
+
+#: resources.py:11
+msgid "movie"
+msgstr "film"
+
+#: resources.py:11
+msgid "comedy"
+msgstr "komedie"
+
+#: resources.py:11
+msgid "drama"
+msgstr "drama"
+
+#: resources.py:11
+msgid "horror"
+msgstr "horror"
+
+#: resources.py:11
+msgid "thrill"
+msgstr "thriller"
+
+#: resources.py:11
+msgid "crime"
+msgstr "crimi"
+
+#: resources.py:11
+msgid "action"
+msgstr "actie"
+
+#: resources.py:11
+msgid "family"
+msgstr "familie"
+
+#: resources.py:11
+msgid "scary"
+msgstr "eng"
+
+#: resources.py:11
+msgid "spy"
+msgstr "spion"
+
+#: resources.py:12
+msgid "BOOKS"
+msgstr "BOEKEN"
+
+#: resources.py:12
+msgid "book"
+msgstr "boek"
+
+#: resources.py:12
+msgid "novel"
+msgstr "roman"
+
+#: resources.py:12 resources.py:19
+msgid "story"
+msgstr "verhaal"
+
+#: resources.py:12 resources.py:27
+msgid "essay"
+msgstr "essay"
+
+#: resources.py:12
+msgid "paper"
+msgstr "paper"
+
+#: resources.py:12
+msgid "author"
+msgstr "auteur"
+
+#: resources.py:12
+msgid "poetry"
+msgstr "poëzie"
+
+#: resources.py:12
+msgid "title"
+msgstr "titel"
+
+#: resources.py:12
+msgid "genre"
+msgstr "genre"
+
+#: resources.py:12
+msgid "pages"
+msgstr "pagina"
+
+#: resources.py:13
+msgid "CITIES"
+msgstr "STEDEN"
+
+#: resources.py:13
+msgid "city"
+msgstr "stad"
+
+#: resources.py:13
+msgid "town"
+msgstr "stadje"
+
+#: resources.py:13
+msgid "metro"
+msgstr "metro"
+
+#: resources.py:13
+msgid "block"
+msgstr "blok"
+
+#: resources.py:13
+msgid "plaza"
+msgstr "plaza"
+
+#: resources.py:13 resources.py:65
+msgid "square"
+msgstr "plein"
+
+#: resources.py:13 resources.py:30
+msgid "urban"
+msgstr "stedelijk"
+
+#: resources.py:13
+msgid "park"
+msgstr "park"
+
+#: resources.py:13
+msgid "village"
+msgstr "dorp"
+
+#: resources.py:13 resources.py:24 resources.py:87
+msgid "court"
+msgstr "binnenplaats"
+
+#: resources.py:14
+msgid "MOUNTAINS"
+msgstr "BERGEN"
+
+#: resources.py:14
+msgid "hill"
+msgstr "heuvel"
+
+#: resources.py:14
+msgid "peak"
+msgstr "punt"
+
+#: resources.py:14
+msgid "ridge"
+msgstr "afgrond"
+
+#: resources.py:14 resources.py:61
+msgid "trail"
+msgstr "wandelpad"
+
+#: resources.py:14 resources.py:30 resources.py:31 resources.py:58
+#: resources.py:63 resources.py:87 resources.py:91
+msgid "stone"
+msgstr "steen"
+
+#: resources.py:14
+msgid "path"
+msgstr "pad"
+
+#: resources.py:14
+msgid "summit"
+msgstr "top"
+
+#: resources.py:14
+msgid "cliff"
+msgstr "klif"
+
+#: resources.py:14
+msgid "crag"
+msgstr "crag"
+
+#: resources.py:15
+msgid "OCEANS"
+msgstr "OCEANEN"
+
+#: resources.py:15 resources.py:88
+msgid "sea"
+msgstr "zee"
+
+#: resources.py:15
+msgid "wave"
+msgstr "golf"
+
+#: resources.py:15 resources.py:38 resources.py:88
+msgid "beach"
+msgstr "strand"
+
+#: resources.py:15 resources.py:56 resources.py:88
+msgid "coast"
+msgstr "kust"
+
+#: resources.py:15 resources.py:56
+msgid "tide"
+msgstr "getijde"
+
+#: resources.py:15 resources.py:56
+msgid "shore"
+msgstr "aanspoelen"
+
+#: resources.py:15 resources.py:35 resources.py:47 resources.py:77
+msgid "water"
+msgstr "water"
+
+#: resources.py:15
+msgid "island"
+msgstr "eiland"
+
+#: resources.py:15 resources.py:56 resources.py:88
+msgid "reef"
+msgstr "rif"
+
+#: resources.py:15
+msgid "bay"
+msgstr "baai"
+
+#: resources.py:16
+msgid "WEATHER"
+msgstr "WEER"
+
+#: resources.py:16
+msgid "rain"
+msgstr "regen"
+
+#: resources.py:16 resources.py:54
+msgid "wind"
+msgstr "wind"
+
+#: resources.py:16 resources.py:22
+msgid "cloud"
+msgstr "wolk"
+
+#: resources.py:16 resources.py:45 resources.py:81
+msgid "snow"
+msgstr "sneeuw"
+
+#: resources.py:16
+msgid "storm"
+msgstr "storm"
+
+#: resources.py:16
+msgid "hail"
+msgstr "hagel"
+
+#: resources.py:16
+msgid "fog"
+msgstr "mist"
+
+#: resources.py:16 resources.py:56 resources.py:81
+msgid "breeze"
+msgstr "briesje"
+
+#: resources.py:16
+msgid "frost"
+msgstr "vrieskou"
+
+#: resources.py:16 resources.py:90
+msgid "chill"
+msgstr "kou"
+
+#: resources.py:17
+msgid "SPACE"
+msgstr "RUIMTE"
+
+#: resources.py:17 resources.py:69 resources.py:86
+msgid "space"
+msgstr "ruimte"
+
+#: resources.py:17 resources.py:60
+msgid "moon"
+msgstr "maan"
+
+#: resources.py:17
+msgid "star"
+msgstr "ster"
+
+#: resources.py:17
+msgid "comet"
+msgstr "komeet"
+
+#: resources.py:17 resources.py:60 resources.py:69
+msgid "orbit"
+msgstr "draaien"
+
+#: resources.py:17 resources.py:69
+msgid "nova"
+msgstr "nova"
+
+#: resources.py:17 resources.py:69
+msgid "planet"
+msgstr "planeet"
+
+#: resources.py:17
+msgid "rocket"
+msgstr "raket"
+
+#: resources.py:17
+msgid "asteroid"
+msgstr "planetoïde"
+
+#: resources.py:17 resources.py:58 resources.py:60
+msgid "ring"
+msgstr "ring"
+
+#: resources.py:18
+msgid "COMPUTERS"
+msgstr "COMPUTERS"
+
+#: resources.py:18
+msgid "laptop"
+msgstr "laptop"
+
+#: resources.py:18
+msgid "coding"
+msgstr "programmeren"
+
+#: resources.py:18 resources.py:22 resources.py:44
+msgid "data"
+msgstr "data"
+
+#: resources.py:18 resources.py:22 resources.py:43 resources.py:92
+msgid "logic"
+msgstr "logica"
+
+#: resources.py:18
+msgid "files"
+msgstr "bestanden"
+
+#: resources.py:18
+msgid "click"
+msgstr "klikken"
+
+#: resources.py:18
+msgid "input"
+msgstr "invoer"
+
+#: resources.py:18 resources.py:22
+msgid "server"
+msgstr "server"
+
+#: resources.py:18
+msgid "error"
+msgstr "foutmelding"
+
+#: resources.py:19
+msgid "SOCIAL MEDIA"
+msgstr "SOCIALE MEDIA"
+
+#: resources.py:19
+msgid "tweet"
+msgstr "tweet"
+
+#: resources.py:19
+msgid "post"
+msgstr "post"
+
+#: resources.py:19
+msgid "chat"
+msgstr "chat"
+
+#: resources.py:19
+msgid "likes"
+msgstr "leukjes"
+
+#: resources.py:19
+msgid "viral"
+msgstr "viraal"
+
+#: resources.py:19
+msgid "trend"
+msgstr "trend"
+
+#: resources.py:19
+msgid "share"
+msgstr "delen"
+
+#: resources.py:19
+msgid "video"
+msgstr "video"
+
+#: resources.py:19
+msgid "reels"
+msgstr "reels"
+
+#: resources.py:20
+msgid "FASHION"
+msgstr "MODE"
+
+#: resources.py:20 resources.py:41
+msgid "style"
+msgstr "stijl"
+
+#: resources.py:20 resources.py:48
+msgid "pants"
+msgstr "broek"
+
+#: resources.py:20 resources.py:48
+msgid "shirt"
+msgstr "shirt"
+
+#: resources.py:20 resources.py:48 resources.py:77
+msgid "boots"
+msgstr "schoenen"
+
+#: resources.py:20 resources.py:48
+msgid "dress"
+msgstr "jurk"
+
+#: resources.py:20 resources.py:48
+msgid "scarf"
+msgstr "sjaal"
+
+#: resources.py:20 resources.py:48
+msgid "jeans"
+msgstr "spijkerbroek"
+
+#: resources.py:20 resources.py:48
+msgid "skirt"
+msgstr "rokje"
+
+#: resources.py:20
+msgid "belt"
+msgstr "riem"
+
+#: resources.py:20
+msgid "glove"
+msgstr "handschoen"
+
+#: resources.py:21
+msgid "FOOD"
+msgstr "ETEN"
+
+#: resources.py:21
+msgid "snack"
+msgstr "snack"
+
+#: resources.py:21 resources.py:45 resources.py:84
+msgid "candy"
+msgstr "snoepgoed"
+
+#: resources.py:21
+msgid "pizza"
+msgstr "pizza"
+
+#: resources.py:21
+msgid "bread"
+msgstr "brood"
+
+#: resources.py:21
+msgid "chips"
+msgstr "chips"
+
+#: resources.py:21
+msgid "soup"
+msgstr "soep"
+
+#: resources.py:21
+msgid "nuts"
+msgstr "noten"
+
+#: resources.py:22
+msgid "TECHNOLOGY"
+msgstr "TECHNOLOGIE"
+
+#: resources.py:22
+msgid "app"
+msgstr "app"
+
+#: resources.py:22
+msgid "phone"
+msgstr "telefoon"
+
+#: resources.py:22
+msgid "robot"
+msgstr "robot"
+
+#: resources.py:22
+msgid "gadget"
+msgstr "gadget"
+
+#: resources.py:22
+msgid "tablet"
+msgstr "tablet"
+
+#: resources.py:22
+msgid "screen"
+msgstr "scherm"
+
+#: resources.py:23
+msgid "ECONOMICS"
+msgstr "ECONOMIE"
+
+#: resources.py:23 resources.py:99
+msgid "money"
+msgstr "geld"
+
+#: resources.py:23 resources.py:99
+msgid "trade"
+msgstr "handelen"
+
+#: resources.py:23
+msgid "stock"
+msgstr "aandelen"
+
+#: resources.py:23 resources.py:99
+msgid "price"
+msgstr "prijs"
+
+#: resources.py:23
+msgid "market"
+msgstr "markt"
+
+#: resources.py:23 resources.py:43 resources.py:99
+msgid "value"
+msgstr "waarde"
+
+#: resources.py:23
+msgid "profit"
+msgstr "winst"
+
+#: resources.py:23
+msgid "cost"
+msgstr "kosten"
+
+#: resources.py:23
+msgid "tax"
+msgstr "belasting"
+
+#: resources.py:23 resources.py:99
+msgid "goods"
+msgstr "goederen"
+
+#: resources.py:24
+msgid "POLITICS"
+msgstr "POLITIEK"
+
+#: resources.py:24
+msgid "vote"
+msgstr "stem"
+
+#: resources.py:24 resources.py:45
+msgid "party"
+msgstr "partij"
+
+#: resources.py:24
+msgid "policy"
+msgstr "beleid"
+
+#: resources.py:24
+msgid "power"
+msgstr "macht"
+
+#: resources.py:24
+msgid "reform"
+msgstr "hervorming"
+
+#: resources.py:24
+msgid "bills"
+msgstr "wetsvoorstel"
+
+#: resources.py:24
+msgid "debate"
+msgstr "debat"
+
+#: resources.py:24
+msgid "leader"
+msgstr "leider"
+
+#: resources.py:24
+msgid "rights"
+msgstr "rechten"
+
+#: resources.py:25
+msgid "HISTORY"
+msgstr "GESCHIEDENIS"
+
+#: resources.py:25
+msgid "past"
+msgstr "verleden"
+
+#: resources.py:25
+msgid "event"
+msgstr "gebeurtenis"
+
+#: resources.py:25
+msgid "war"
+msgstr "oorlog"
+
+#: resources.py:25
+msgid "era"
+msgstr "tijdperk"
+
+#: resources.py:25
+msgid "peace"
+msgstr "vrede"
+
+#: resources.py:25
+msgid "reign"
+msgstr "heersen"
+
+#: resources.py:25
+msgid "nation"
+msgstr "natie"
+
+#: resources.py:25
+msgid "empire"
+msgstr "koninkrijk"
+
+#: resources.py:25 resources.py:87
+msgid "king"
+msgstr "koning"
+
+#: resources.py:25 resources.py:87
+msgid "queen"
+msgstr "koningin"
+
+#: resources.py:26
+msgid "HEALTH"
+msgstr "GEZONDHEID"
+
+#: resources.py:26
+msgid "diet"
+msgstr "dieet"
+
+#: resources.py:26 resources.py:39
+msgid "fit"
+msgstr "fit"
+
+#: resources.py:26 resources.py:61
+msgid "sleep"
+msgstr "slaap"
+
+#: resources.py:26
+msgid "heal"
+msgstr "helen"
+
+#: resources.py:26 resources.py:44
+msgid "virus"
+msgstr "virus"
+
+#: resources.py:26
+msgid "meds"
+msgstr "medicatie"
+
+#: resources.py:26
+msgid "doctor"
+msgstr "dokter"
+
+#: resources.py:26
+msgid "pill"
+msgstr "pil"
+
+#: resources.py:26 resources.py:50
+msgid "nurse"
+msgstr "zuster"
+
+#: resources.py:26
+msgid "clinic"
+msgstr "kliniek"
+
+#: resources.py:27
+msgid "EDUCATION"
+msgstr "ONDERWIJS"
+
+#: resources.py:27
+msgid "learn"
+msgstr "leren"
+
+#: resources.py:27 resources.py:44
+msgid "study"
+msgstr "studeren"
+
+#: resources.py:27
+msgid "grade"
+msgstr "cijfer"
+
+#: resources.py:27 resources.py:44
+msgid "tests"
+msgstr "examens"
+
+#: resources.py:27 resources.py:94
+msgid "books"
+msgstr "boeken"
+
+#: resources.py:27
+msgid "math"
+msgstr "wiskunde"
+
+#: resources.py:27
+msgid "class"
+msgstr "klas"
+
+#: resources.py:27
+msgid "teach"
+msgstr "leraar"
+
+#: resources.py:27 resources.py:62
+msgid "notes"
+msgstr "aantekeningen"
+
+#: resources.py:28
+msgid "ART"
+msgstr "KUNST"
+
+#: resources.py:28 resources.py:32 resources.py:36
+msgid "paint"
+msgstr "verf"
+
+#: resources.py:28 resources.py:32 resources.py:36
+msgid "craft"
+msgstr "handenarbeid"
+
+#: resources.py:28 resources.py:36 resources.py:87
+msgid "draw"
+msgstr "tekenen"
+
+#: resources.py:28
+msgid "color"
+msgstr "kleur"
+
+#: resources.py:28
+msgid "shape"
+msgstr "vorm"
+
+#: resources.py:28
+msgid "sketch"
+msgstr "schets"
+
+#: resources.py:28
+msgid "design"
+msgstr "ontwerp"
+
+#: resources.py:28 resources.py:97
+msgid "image"
+msgstr "afbeelding"
+
+#: resources.py:28
+msgid "canvas"
+msgstr "canvas"
+
+#: resources.py:28
+msgid "line"
+msgstr "lijn"
+
+#: resources.py:29
+msgid "PHOTOGRAPHY"
+msgstr "FOTOGRAFIE"
+
+#: resources.py:29
+msgid "photo"
+msgstr "foto"
+
+#: resources.py:29 resources.py:97
+msgid "frame"
+msgstr "lijstje"
+
+#: resources.py:29
+msgid "lens"
+msgstr "lens"
+
+#: resources.py:29
+msgid "scene"
+msgstr "scène"
+
+#: resources.py:29
+msgid "focus"
+msgstr "focus"
+
+#: resources.py:29 resources.py:97
+msgid "angle"
+msgstr "hoek"
+
+#: resources.py:29 resources.py:44 resources.py:98
+msgid "light"
+msgstr "licht"
+
+#: resources.py:29
+msgid "flash"
+msgstr "flits"
+
+#: resources.py:29
+msgid "shot"
+msgstr "maken"
+
+#: resources.py:29
+msgid "view"
+msgstr "weergave"
+
+#: resources.py:30
+msgid "ARCHITECTURE"
+msgstr "ARCHITECTUUR"
+
+#: resources.py:30
+msgid "build"
+msgstr "bouwen"
+
+#: resources.py:30
+msgid "house"
+msgstr "huis"
+
+#: resources.py:30 resources.py:53 resources.py:63 resources.py:87
+msgid "tower"
+msgstr "toren"
+
+#: resources.py:30
+msgid "brick"
+msgstr "steen"
+
+#: resources.py:30
+msgid "plans"
+msgstr "plannen"
+
+#: resources.py:30 resources.py:53
+msgid "roof"
+msgstr "dak"
+
+#: resources.py:30 resources.py:53
+msgid "rooms"
+msgstr "kamers"
+
+#: resources.py:30
+msgid "wall"
+msgstr "muur"
+
+#: resources.py:31
+msgid "NATURE"
+msgstr "NATUUR"
+
+#: resources.py:31 resources.py:35
+msgid "plant"
+msgstr "plant"
+
+#: resources.py:31
+msgid "river"
+msgstr "rivier"
+
+#: resources.py:31
+msgid "trees"
+msgstr "bomen"
+
+#: resources.py:31
+msgid "grass"
+msgstr "grass"
+
+#: resources.py:31
+msgid "flora"
+msgstr "flora"
+
+#: resources.py:31 resources.py:44
+msgid "field"
+msgstr "veld"
+
+#: resources.py:31
+msgid "woods"
+msgstr "bos"
+
+#: resources.py:31
+msgid "bush"
+msgstr "struik"
+
+#: resources.py:31
+msgid "vine"
+msgstr "liaan"
+
+#: resources.py:32
+msgid "CRAFTS"
+msgstr "HANDENARBEID"
+
+#: resources.py:32 resources.py:36
+msgid "sew"
+msgstr "naaien"
+
+#: resources.py:32 resources.py:36
+msgid "knit"
+msgstr "breien"
+
+#: resources.py:32
+msgid "mold"
+msgstr "afgietsel"
+
+#: resources.py:32
+msgid "lace"
+msgstr "veter"
+
+#: resources.py:32
+msgid "thread"
+msgstr "draad"
+
+#: resources.py:32
+msgid "bead"
+msgstr "kraal"
+
+#: resources.py:32
+msgid "stitch"
+msgstr "steek"
+
+#: resources.py:32
+msgid "diy"
+msgstr "knutselen"
+
+#: resources.py:33
+msgid "BOARD GAMES"
+msgstr "BORDSPELLEN"
+
+#: resources.py:33 resources.py:52
+msgid "chess"
+msgstr "schaken"
+
+#: resources.py:33 resources.py:52
+msgid "dice"
+msgstr "dobbelsteen"
+
+#: resources.py:33 resources.py:52
+msgid "clue"
+msgstr "clue"
+
+#: resources.py:33 resources.py:45 resources.py:52
+msgid "cards"
+msgstr "kaarten"
+
+#: resources.py:33 resources.py:52
+msgid "risk"
+msgstr "risk"
+
+#: resources.py:33
+msgid "pawn"
+msgstr "pion"
+
+#: resources.py:33
+msgid "check"
+msgstr "schaak"
+
+#: resources.py:33
+msgid "move"
+msgstr "zet"
+
+#: resources.py:33 resources.py:52
+msgid "jenga"
+msgstr "jenga"
+
+#: resources.py:33 resources.py:52
+msgid "board"
+msgstr "bord"
+
+#: resources.py:34
+msgid "VIDEO GAMES"
+msgstr "VIDEOSPELLEN"
+
+#: resources.py:34
+msgid "games"
+msgstr "spellen"
+
+#: resources.py:34
+msgid "enemy"
+msgstr "vijand"
+
+#: resources.py:34
+msgid "score"
+msgstr "score"
+
+#: resources.py:34 resources.py:51 resources.py:85
+msgid "level"
+msgstr "level"
+
+#: resources.py:34 resources.py:36
+msgid "play"
+msgstr "spelen"
+
+#: resources.py:34
+msgid "pixel"
+msgstr "pixel"
+
+#: resources.py:34
+msgid "quest"
+msgstr "zoektocht"
+
+#: resources.py:34
+msgid "shoot"
+msgstr "schieten"
+
+#: resources.py:34
+msgid "jump"
+msgstr "springen"
+
+#: resources.py:34
+msgid "fight"
+msgstr "vechten"
+
+#: resources.py:35
+msgid "GARDENING"
+msgstr "TUINIEREN"
+
+#: resources.py:35
+msgid "grow"
+msgstr "groeien"
+
+#: resources.py:35
+msgid "prune"
+msgstr "snoeien"
+
+#: resources.py:35 resources.py:61 resources.py:92
+msgid "tools"
+msgstr "gereedschap"
+
+#: resources.py:35
+msgid "soil"
+msgstr "aarde"
+
+#: resources.py:35 resources.py:74
+msgid "seeds"
+msgstr "zaden"
+
+#: resources.py:35 resources.py:74
+msgid "weeds"
+msgstr "onkruid"
+
+#: resources.py:35 resources.py:74
+msgid "herbs"
+msgstr "kruiden"
+
+#: resources.py:35
+msgid "pots"
+msgstr "potten"
+
+#: resources.py:36
+msgid "HOBBIES"
+msgstr "HOBBY'S"
+
+#: resources.py:36
+msgid "read"
+msgstr "lezen"
+
+#: resources.py:36 resources.py:40
+msgid "bake"
+msgstr "bakken"
+
+#: resources.py:36
+msgid "write"
+msgstr "schrijven"
+
+#: resources.py:37
+msgid "DANCE"
+msgstr "DANSEN"
+
+#: resources.py:37
+msgid "ballet"
+msgstr "ballet"
+
+#: resources.py:37
+msgid "tap"
+msgstr "tap"
+
+#: resources.py:37
+msgid "spin"
+msgstr "pirouette"
+
+#: resources.py:37
+msgid "twirl"
+msgstr "draaien"
+
+#: resources.py:37
+msgid "moves"
+msgstr "danspassen"
+
+#: resources.py:37
+msgid "rhythm"
+msgstr "ritme"
+
+#: resources.py:37
+msgid "break"
+msgstr "break"
+
+#: resources.py:37
+msgid "step"
+msgstr "stap"
+
+#: resources.py:37
+msgid "tango"
+msgstr "tango"
+
+#: resources.py:38
+msgid "TRAVEL"
+msgstr "REIZEN"
+
+#: resources.py:38
+msgid "trip"
+msgstr "uitje"
+
+#: resources.py:38
+msgid "hotel"
+msgstr "hotel"
+
+#: resources.py:38
+msgid "map"
+msgstr "kaart"
+
+#: resources.py:38
+msgid "roads"
+msgstr "wegen"
+
+#: resources.py:38
+msgid "guide"
+msgstr "gids"
+
+#: resources.py:38
+msgid "visit"
+msgstr "bezoek"
+
+#: resources.py:38 resources.py:61
+msgid "camp"
+msgstr "kamperen"
+
+#: resources.py:39
+msgid "FITNESS"
+msgstr "FITNESS"
+
+#: resources.py:39
+msgid "walk"
+msgstr "wandelen"
+
+#: resources.py:39
+msgid "yoga"
+msgstr "yoga"
+
+#: resources.py:39
+msgid "cycle"
+msgstr "fietsen"
+
+#: resources.py:39 resources.py:57
+msgid "bench"
+msgstr "bench"
+
+#: resources.py:39
+msgid "pullup"
+msgstr "optrekken"
+
+#: resources.py:39
+msgid "squat"
+msgstr "hurken"
+
+#: resources.py:39
+msgid "pushup"
+msgstr "opdrukken"
+
+#: resources.py:40
+msgid "COOKING"
+msgstr "KOKEN"
+
+#: resources.py:40 resources.py:50
+msgid "chef"
+msgstr "chef"
+
+#: resources.py:40
+msgid "cook"
+msgstr "koken"
+
+#: resources.py:40 resources.py:61
+msgid "grill"
+msgstr "grill"
+
+#: resources.py:40
+msgid "slice"
+msgstr "snijden"
+
+#: resources.py:40
+msgid "stir"
+msgstr "roeren"
+
+#: resources.py:40
+msgid "boil"
+msgstr "kookpunt"
+
+#: resources.py:40
+msgid "dough"
+msgstr "deeg"
+
+#: resources.py:40
+msgid "steam"
+msgstr "stoom"
+
+#: resources.py:41
+msgid "BEAUTY"
+msgstr "SCHOONHEID"
+
+#: resources.py:41 resources.py:51
+msgid "nails"
+msgstr "nagels"
+
+#: resources.py:41
+msgid "skin"
+msgstr "huid"
+
+#: resources.py:41
+msgid "spa"
+msgstr "spa"
+
+#: resources.py:41
+msgid "hair"
+msgstr "haar"
+
+#: resources.py:41
+msgid "lip"
+msgstr "lip"
+
+#: resources.py:41
+msgid "face"
+msgstr "gezicht"
+
+#: resources.py:41
+msgid "gloss"
+msgstr "gloss"
+
+#: resources.py:41
+msgid "brush"
+msgstr "borstel"
+
+#: resources.py:42
+msgid "MYTHOLOGY"
+msgstr "MYTHOLOGIE"
+
+#: resources.py:42
+msgid "myth"
+msgstr "mythe"
+
+#: resources.py:42
+msgid "god"
+msgstr "god"
+
+#: resources.py:42 resources.py:64 resources.py:68 resources.py:73
+#: resources.py:96
+msgid "beast"
+msgstr "beest"
+
+#: resources.py:42 resources.py:76 resources.py:98
+msgid "lore"
+msgstr "folklore"
+
+#: resources.py:42
+msgid "hero"
+msgstr "held"
+
+#: resources.py:42 resources.py:70 resources.py:94 resources.py:98
+msgid "magic"
+msgstr "magie"
+
+#: resources.py:42 resources.py:68
+msgid "curse"
+msgstr "vloek"
+
+#: resources.py:42
+msgid "fate"
+msgstr "lot"
+
+#: resources.py:42
+msgid "oracle"
+msgstr "orakel"
+
+#: resources.py:42 resources.py:64 resources.py:70 resources.py:91
+msgid "troll"
+msgstr "trol"
+
+#: resources.py:43
+msgid "PHILOSOPHY"
+msgstr "FILOSOFIE"
+
+#: resources.py:43
+msgid "truth"
+msgstr "waarheid"
+
+#: resources.py:43
+msgid "mind"
+msgstr "geest"
+
+#: resources.py:43
+msgid "faith"
+msgstr "geloof"
+
+#: resources.py:43
+msgid "moral"
+msgstr "moraal"
+
+#: resources.py:43
+msgid "ideal"
+msgstr "ideaal"
+
+#: resources.py:43
+msgid "ideas"
+msgstr "ideeën"
+
+#: resources.py:43
+msgid "reason"
+msgstr "reden"
+
+#: resources.py:43
+msgid "thought"
+msgstr "gedachte"
+
+#: resources.py:44
+msgid "SCIENCE"
+msgstr "WETENSCHAP"
+
+#: resources.py:44
+msgid "cells"
+msgstr "cellen"
+
+#: resources.py:44
+msgid "atoms"
+msgstr "atomen"
+
+#: resources.py:44
+msgid "force"
+msgstr "kracht"
+
+#: resources.py:44 resources.py:92
+msgid "brain"
+msgstr "hersenen"
+
+#: resources.py:45
+msgid "HOLIDAYS"
+msgstr "FEESTDAGEN"
+
+#: resources.py:45
+msgid "gifts"
+msgstr "cadeaus"
+
+#: resources.py:45
+msgid "feast"
+msgstr "feestmaal"
+
+#: resources.py:45 resources.py:70
+msgid "elves"
+msgstr "elven"
+
+#: resources.py:45
+msgid "tree"
+msgstr "boom"
+
+#: resources.py:45
+msgid "cheer"
+msgstr "juichen"
+
+#: resources.py:45
+msgid "sled"
+msgstr "slee"
+
+#: resources.py:46
+msgid "FLOWERS"
+msgstr "BLOEMEN"
+
+#: resources.py:46
+msgid "rose"
+msgstr "roos"
+
+#: resources.py:46
+msgid "lily"
+msgstr "lelie"
+
+#: resources.py:46
+msgid "daisy"
+msgstr "madeliefje"
+
+#: resources.py:46
+msgid "tulip"
+msgstr "tulp"
+
+#: resources.py:46
+msgid "bloom"
+msgstr "bloeien"
+
+#: resources.py:46
+msgid "petal"
+msgstr "bloemblad"
+
+#: resources.py:46
+msgid "violet"
+msgstr "viooltje"
+
+#: resources.py:46
+msgid "poppy"
+msgstr "papaver"
+
+#: resources.py:46
+msgid "orchid"
+msgstr "orchidee"
+
+#: resources.py:46 resources.py:78
+msgid "bud"
+msgstr "knop"
+
+#: resources.py:47
+msgid "DRINKS"
+msgstr "DRINKEN"
+
+#: resources.py:47
+msgid "juice"
+msgstr "sap"
+
+#: resources.py:47
+msgid "soda"
+msgstr "limonade"
+
+#: resources.py:47
+msgid "shake"
+msgstr "schudden"
+
+#: resources.py:47
+msgid "cider"
+msgstr "cider"
+
+#: resources.py:47
+msgid "tea"
+msgstr "thee"
+
+#: resources.py:47
+msgid "tonic"
+msgstr "tonic"
+
+#: resources.py:47 resources.py:67
+msgid "latte"
+msgstr "latte"
+
+#: resources.py:47
+msgid "mocha"
+msgstr "mokka"
+
+#: resources.py:47
+msgid "milk"
+msgstr "melk"
+
+#: resources.py:48
+msgid "CLOTHING"
+msgstr "KLEDING"
+
+#: resources.py:48
+msgid "hat"
+msgstr "hoed"
+
+#: resources.py:48
+msgid "vest"
+msgstr "vest"
+
+#: resources.py:48
+msgid "socks"
+msgstr "sokken"
+
+#: resources.py:49
+msgid "INSECTS"
+msgstr "INSECTEN"
+
+#: resources.py:49
+msgid "bee"
+msgstr "bij"
+
+#: resources.py:49
+msgid "ant"
+msgstr "mier"
+
+#: resources.py:49
+msgid "moth"
+msgstr "mot"
+
+#: resources.py:49
+msgid "fly"
+msgstr "vlieg"
+
+#: resources.py:49
+msgid "gnat"
+msgstr "mug"
+
+#: resources.py:49
+msgid "roach"
+msgstr "kakkerlak"
+
+#: resources.py:49
+msgid "wasp"
+msgstr "wesp"
+
+#: resources.py:49
+msgid "spider"
+msgstr "spin"
+
+#: resources.py:49
+msgid "beetle"
+msgstr "kever"
+
+#: resources.py:49
+msgid "tick"
+msgstr "teek"
+
+#: resources.py:50
+msgid "JOBS"
+msgstr "BEROEPEN"
+
+#: resources.py:50
+msgid "pilot"
+msgstr "piloot"
+
+#: resources.py:50
+msgid "clerk"
+msgstr "assistent"
+
+#: resources.py:50
+msgid "actor"
+msgstr "acteur"
+
+#: resources.py:50
+msgid "guard"
+msgstr "beveiliger"
+
+#: resources.py:50
+msgid "miner"
+msgstr "mijnwerker"
+
+#: resources.py:50
+msgid "agent"
+msgstr "agent"
+
+#: resources.py:50
+msgid "judge"
+msgstr "rechter"
+
+#: resources.py:51 resources.py:85
+msgid "TOOLS"
+msgstr "GEREEDSCHAP"
+
+#: resources.py:51
+msgid "hammer"
+msgstr "hamer"
+
+#: resources.py:51 resources.py:85
+msgid "screw"
+msgstr "schroef"
+
+#: resources.py:51 resources.py:85
+msgid "blade"
+msgstr "blad"
+
+#: resources.py:51 resources.py:85
+msgid "drill"
+msgstr "boor"
+
+#: resources.py:51 resources.py:85
+msgid "plier"
+msgstr "tang"
+
+#: resources.py:51 resources.py:85
+msgid "saw"
+msgstr "zaag"
+
+#: resources.py:51 resources.py:85
+msgid "ruler"
+msgstr "liniaal"
+
+#: resources.py:51 resources.py:85
+msgid "wrench"
+msgstr "moersleutel"
+
+#: resources.py:52
+msgid "GAMES"
+msgstr "SPELLEN"
+
+#: resources.py:52
+msgid "poker"
+msgstr "poker"
+
+#: resources.py:52
+msgid "bingo"
+msgstr "bingo"
+
+#: resources.py:52
+msgid "go"
+msgstr "go"
+
+#: resources.py:53
+msgid "HOUSES"
+msgstr "HUIZEN"
+
+#: resources.py:53
+msgid "home"
+msgstr "huis"
+
+#: resources.py:53
+msgid "cabin"
+msgstr "hut"
+
+#: resources.py:53
+msgid "loft"
+msgstr "loft"
+
+#: resources.py:53
+msgid "barn"
+msgstr "schuur"
+
+#: resources.py:53
+msgid "villa"
+msgstr "villa"
+
+#: resources.py:53 resources.py:63 resources.py:70
+msgid "castle"
+msgstr "kasteel"
+
+#: resources.py:53
+msgid "ranch"
+msgstr "ranch"
+
+#: resources.py:54
+msgid "DESERTS"
+msgstr "WOESTIJN"
+
+#: resources.py:54
+msgid "dunes"
+msgstr "duinen"
+
+#: resources.py:54
+msgid "cactus"
+msgstr "cactus"
+
+#: resources.py:54 resources.py:88
+msgid "sands"
+msgstr "zand"
+
+#: resources.py:54 resources.py:77 resources.py:91
+msgid "rocks"
+msgstr "stenen"
+
+#: resources.py:54 resources.py:98
+msgid "dust"
+msgstr "stof"
+
+#: resources.py:54
+msgid "oasis"
+msgstr "oase"
+
+#: resources.py:54
+msgid "heat"
+msgstr "hitte"
+
+#: resources.py:54
+msgid "dry"
+msgstr "droog"
+
+#: resources.py:54 resources.py:56
+msgid "sun"
+msgstr "zon"
+
+#: resources.py:55
+msgid "BIRDS"
+msgstr "VOGELS"
+
+#: resources.py:55
+msgid "crow"
+msgstr "kraai"
+
+#: resources.py:55
+msgid "swan"
+msgstr "zwaan"
+
+#: resources.py:55
+msgid "robin"
+msgstr "roodborstje"
+
+#: resources.py:55 resources.py:80
+msgid "eagle"
+msgstr "adelaar"
+
+#: resources.py:55
+msgid "finch"
+msgstr "vink"
+
+#: resources.py:55
+msgid "crane"
+msgstr "kraanvogel"
+
+#: resources.py:55 resources.py:71
+msgid "parrot"
+msgstr "papegaai"
+
+#: resources.py:55
+msgid "pigeon"
+msgstr "duif"
+
+#: resources.py:55
+msgid "sparrow"
+msgstr "mus"
+
+#: resources.py:55
+msgid "heron"
+msgstr "reiger"
+
+#: resources.py:56
+msgid "BEACHES"
+msgstr "STRAND"
+
+#: resources.py:56
+msgid "sand"
+msgstr "zand"
+
+#: resources.py:56
+msgid "waves"
+msgstr "golven"
+
+#: resources.py:56
+msgid "ocean"
+msgstr "oceaan"
+
+#: resources.py:56
+msgid "shell"
+msgstr "schelp"
+
+#: resources.py:57
+msgid "FURNITURE"
+msgstr "HUISRAAD"
+
+#: resources.py:57
+msgid "chair"
+msgstr "stoel"
+
+#: resources.py:57
+msgid "table"
+msgstr "tafel"
+
+#: resources.py:57
+msgid "sofa"
+msgstr "sofa"
+
+#: resources.py:57
+msgid "stool"
+msgstr "kruk"
+
+#: resources.py:57
+msgid "desk"
+msgstr "bureau"
+
+#: resources.py:57 resources.py:61
+msgid "lamp"
+msgstr "lamp"
+
+#: resources.py:57
+msgid "bed"
+msgstr "bed"
+
+#: resources.py:57
+msgid "shelf"
+msgstr "plank"
+
+#: resources.py:57
+msgid "couch"
+msgstr "bank"
+
+#: resources.py:58
+msgid "JEWELRY"
+msgstr "JUWELEN"
+
+#: resources.py:58
+msgid "brace"
+msgstr "armband"
+
+#: resources.py:58 resources.py:82
+msgid "pearl"
+msgstr "parel"
+
+#: resources.py:58
+msgid "beads"
+msgstr "kralen"
+
+#: resources.py:58
+msgid "chain"
+msgstr "ketting"
+
+#: resources.py:58
+msgid "gold"
+msgstr "goud"
+
+#: resources.py:58
+msgid "gem"
+msgstr "edelsteen"
+
+#: resources.py:58
+msgid "watch"
+msgstr "horloge"
+
+#: resources.py:58
+msgid "band"
+msgstr "band"
+
+#: resources.py:59
+msgid "LANGUAGES"
+msgstr "TALEN"
+
+#: resources.py:59
+msgid "latin"
+msgstr "latijn"
+
+#: resources.py:59
+msgid "greek"
+msgstr "grieks"
+
+#: resources.py:59
+msgid "hindi"
+msgstr "hindi"
+
+#: resources.py:59
+msgid "hebrew"
+msgstr "hebreeuws"
+
+#: resources.py:59
+msgid "dutch"
+msgstr "nederlands"
+
+#: resources.py:59
+msgid "swahili"
+msgstr "swahili"
+
+#: resources.py:59
+msgid "korean"
+msgstr "koreaans"
+
+#: resources.py:59
+msgid "arabic"
+msgstr "arabisch"
+
+#: resources.py:59
+msgid "french"
+msgstr "frans"
+
+#: resources.py:59
+msgid "spanish"
+msgstr "spaans"
+
+#: resources.py:60
+msgid "PLANETS"
+msgstr "PLANETEN"
+
+#: resources.py:60 resources.py:86
+msgid "mars"
+msgstr "mars"
+
+#: resources.py:60
+msgid "venus"
+msgstr "venus"
+
+#: resources.py:60 resources.py:95 resources.py:100
+msgid "earth"
+msgstr "aarde"
+
+#: resources.py:60
+msgid "pluto"
+msgstr "pluto"
+
+#: resources.py:60
+msgid "jupiter"
+msgstr "jupiter"
+
+#: resources.py:60
+msgid "saturn"
+msgstr "saturnus"
+
+#: resources.py:60
+msgid "neptune"
+msgstr "neptunus"
+
+#: resources.py:61
+msgid "CAMPING"
+msgstr "KAMPEREN"
+
+#: resources.py:61
+msgid "tent"
+msgstr "tent"
+
+#: resources.py:61 resources.py:95 resources.py:96
+msgid "fire"
+msgstr "kampvuur"
+
+#: resources.py:61 resources.py:92
+msgid "gear"
+msgstr "uitrusting"
+
+#: resources.py:61
+msgid "hike"
+msgstr "wandeling"
+
+#: resources.py:62
+msgid "MUSIC"
+msgstr "MUZIEK"
+
+#: resources.py:62
+msgid "piano"
+msgstr "piano"
+
+#: resources.py:62
+msgid "lyric"
+msgstr "liedtekst"
+
+#: resources.py:62
+msgid "vocal"
+msgstr "zang"
+
+#: resources.py:62
+msgid "drums"
+msgstr "drums"
+
+#: resources.py:62
+msgid "bass"
+msgstr "bas"
+
+#: resources.py:62
+msgid "guitar"
+msgstr "gitaar"
+
+#: resources.py:62
+msgid "flute"
+msgstr "fluit"
+
+#: resources.py:62
+msgid "violin"
+msgstr "viool"
+
+#: resources.py:62
+msgid "horn"
+msgstr "blaasinstrument"
+
+#: resources.py:63
+msgid "WONDERS"
+msgstr "WONDEREN"
+
+#: resources.py:63
+msgid "ruins"
+msgstr "ruïnes"
+
+#: resources.py:63
+msgid "temple"
+msgstr "tempel"
+
+#: resources.py:63
+msgid "bridge"
+msgstr "brug"
+
+#: resources.py:63
+msgid "garden"
+msgstr "tuin"
+
+#: resources.py:63
+msgid "pyramid"
+msgstr "pyramide"
+
+#: resources.py:63
+msgid "palace"
+msgstr "paleis"
+
+#: resources.py:63
+msgid "statue"
+msgstr "standbeeld"
+
+#: resources.py:64
+msgid "MYTHICAL CREATURES"
+msgstr "MYTHISCHE WEZENS"
+
+#: resources.py:64 resources.py:98
+msgid "elf"
+msgstr "elf"
+
+#: resources.py:64
+msgid "fairy"
+msgstr "fee"
+
+#: resources.py:64 resources.py:73
+msgid "hydra"
+msgstr "hydra"
+
+#: resources.py:64
+msgid "phoenix"
+msgstr "fenix"
+
+#: resources.py:64 resources.py:70
+msgid "dragon"
+msgstr "draak"
+
+#: resources.py:64 resources.py:67
+msgid "sprite"
+msgstr "geest"
+
+#: resources.py:64
+msgid "mermaid"
+msgstr "zeemeermin"
+
+#: resources.py:64
+msgid "giant"
+msgstr "reus"
+
+#: resources.py:65
+msgid "SHAPES"
+msgstr "VORMEN"
+
+#: resources.py:65
+msgid "circle"
+msgstr "cirkel"
+
+#: resources.py:65
+msgid "sphere"
+msgstr "bol"
+
+#: resources.py:65
+msgid "cube"
+msgstr "kubus"
+
+#: resources.py:65
+msgid "oval"
+msgstr "ovaal"
+
+#: resources.py:65
+msgid "hexagon"
+msgstr "hexagon"
+
+#: resources.py:65
+msgid "rhombus"
+msgstr "ruit"
+
+#: resources.py:65
+msgid "prism"
+msgstr "prisma"
+
+#: resources.py:65
+msgid "arc"
+msgstr "boog"
+
+#: resources.py:66
+msgid "DESSERTS"
+msgstr "DESSERTS"
+
+#: resources.py:66
+msgid "cake"
+msgstr "cake"
+
+#: resources.py:66
+msgid "pie"
+msgstr "taart"
+
+#: resources.py:66
+msgid "cookie"
+msgstr "koekje"
+
+#: resources.py:66
+msgid "tart"
+msgstr "tart"
+
+#: resources.py:66 resources.py:84
+msgid "fudge"
+msgstr "fudge"
+
+#: resources.py:66
+msgid "mousse"
+msgstr "mousse"
+
+#: resources.py:66
+msgid "sorbet"
+msgstr "sorbet"
+
+#: resources.py:66
+msgid "gelato"
+msgstr "roomijs"
+
+#: resources.py:66
+msgid "pudding"
+msgstr "pudding"
+
+#: resources.py:66
+msgid "donut"
+msgstr "donut"
+
+#: resources.py:67
+msgid "BEVERAGES"
+msgstr "DRANKEN"
+
+#: resources.py:67
+msgid "coffee"
+msgstr "koffie"
+
+#: resources.py:67
+msgid "mojito"
+msgstr "mojito"
+
+#: resources.py:67
+msgid "tonics"
+msgstr "tonics"
+
+#: resources.py:67
+msgid "cocoa"
+msgstr "chocomelk"
+
+#: resources.py:67
+msgid "smooth"
+msgstr "smoothie"
+
+#: resources.py:67
+msgid "seltz"
+msgstr "spuitwater"
+
+#: resources.py:67
+msgid "chai"
+msgstr "chai"
+
+#: resources.py:68
+msgid "HORROR"
+msgstr "HORROR"
+
+#: resources.py:68 resources.py:90 resources.py:97
+msgid "ghost"
+msgstr "spook"
+
+#: resources.py:68 resources.py:90
+msgid "haunt"
+msgstr "kwelling"
+
+#: resources.py:68
+msgid "spirit"
+msgstr "geest"
+
+#: resources.py:68
+msgid "scream"
+msgstr "schreeuw"
+
+#: resources.py:68 resources.py:90
+msgid "crypt"
+msgstr "crypte"
+
+#: resources.py:68 resources.py:72 resources.py:85
+msgid "knife"
+msgstr "mes"
+
+#: resources.py:68 resources.py:73
+msgid "zombie"
+msgstr "zombie"
+
+#: resources.py:68
+msgid "creepy"
+msgstr "eng"
+
+#: resources.py:69
+msgid "ASTRONOMY"
+msgstr "ASTRONOMIE"
+
+#: resources.py:69
+msgid "nebula"
+msgstr "nevel"
+
+#: resources.py:69
+msgid "cosmos"
+msgstr "kosmos"
+
+#: resources.py:69
+msgid "galaxy"
+msgstr "melkweg"
+
+#: resources.py:69
+msgid "comets"
+msgstr "kometen"
+
+#: resources.py:69
+msgid "lunar"
+msgstr "maan"
+
+#: resources.py:69
+msgid "stars"
+msgstr "sterren"
+
+#: resources.py:70
+msgid "FANTASY"
+msgstr "FANTASIE"
+
+#: resources.py:70
+msgid "wizard"
+msgstr "tovenaar"
+
+#: resources.py:70
+msgid "realm"
+msgstr "rijk"
+
+#: resources.py:70
+msgid "sword"
+msgstr "zwaard"
+
+#: resources.py:70 resources.py:76
+msgid "giants"
+msgstr "reuzen"
+
+#: resources.py:70
+msgid "knight"
+msgstr "ridder"
+
+#: resources.py:71
+msgid "PIRATES"
+msgstr "PIRATEN"
+
+#: resources.py:71 resources.py:76
+msgid "swords"
+msgstr "zwaarden"
+
+#: resources.py:71
+msgid "golden"
+msgstr "goud"
+
+#: resources.py:71
+msgid "rum"
+msgstr "rum"
+
+#: resources.py:71
+msgid "ships"
+msgstr "schepen"
+
+#: resources.py:71
+msgid "shanty"
+msgstr "shanty"
+
+#: resources.py:71
+msgid "cannon"
+msgstr "kanon"
+
+#: resources.py:71
+msgid "mutiny"
+msgstr "muiterij"
+
+#: resources.py:71
+msgid "booty"
+msgstr "buit"
+
+#: resources.py:71
+msgid "pegleg"
+msgstr "hout"
+
+#: resources.py:72
+msgid "KITCHEN"
+msgstr "KEUKEN"
+
+#: resources.py:72
+msgid "spices"
+msgstr "kruiden"
+
+#: resources.py:72
+msgid "plates"
+msgstr "borden"
+
+#: resources.py:72
+msgid "spoons"
+msgstr "lepels"
+
+#: resources.py:72
+msgid "mixers"
+msgstr "mixers"
+
+#: resources.py:72
+msgid "aprons"
+msgstr "schorten"
+
+#: resources.py:72
+msgid "utens"
+msgstr "bestek"
+
+#: resources.py:72
+msgid "mixer"
+msgstr "mixer"
+
+#: resources.py:72
+msgid "dishes"
+msgstr "afwas"
+
+#: resources.py:72
+msgid "gloves"
+msgstr "handschoenen"
+
+#: resources.py:73
+msgid "MONSTERS"
+msgstr "MONSTERS"
+
+#: resources.py:73 resources.py:94
+msgid "witch"
+msgstr "heks"
+
+#: resources.py:73 resources.py:90
+msgid "ghoul"
+msgstr "geest"
+
+#: resources.py:73
+msgid "kraken"
+msgstr "kraken"
+
+#: resources.py:73
+msgid "goblin"
+msgstr "goblin"
+
+#: resources.py:73
+msgid "slime"
+msgstr "slijm"
+
+#: resources.py:73
+msgid "ghosts"
+msgstr "spoken"
+
+#: resources.py:73
+msgid "fiends"
+msgstr "duivel"
+
+#: resources.py:74
+msgid "GARDENS"
+msgstr "TUIN"
+
+#: resources.py:74
+msgid "roses"
+msgstr "rozen"
+
+#: resources.py:74
+msgid "hedges"
+msgstr "haag"
+
+#: resources.py:74
+msgid "shrubs"
+msgstr "struiken"
+
+#: resources.py:74
+msgid "vines"
+msgstr "ranken"
+
+#: resources.py:74
+msgid "blooms"
+msgstr "bloemen"
+
+#: resources.py:74 resources.py:78 resources.py:93
+msgid "roots"
+msgstr "wortels"
+
+#: resources.py:74
+msgid "petals"
+msgstr "bloemblad"
+
+#: resources.py:75
+msgid "TRAINS"
+msgstr "TREINEN"
+
+#: resources.py:75
+msgid "engine"
+msgstr "locomotief"
+
+#: resources.py:75
+msgid "tracks"
+msgstr "rails"
+
+#: resources.py:75
+msgid "cargos"
+msgstr "goederen"
+
+#: resources.py:75
+msgid "ticket"
+msgstr "ticket"
+
+#: resources.py:75
+msgid "rails"
+msgstr "spoor"
+
+#: resources.py:75
+msgid "diesel"
+msgstr "diesel"
+
+#: resources.py:75
+msgid "signal"
+msgstr "sein"
+
+#: resources.py:75
+msgid "horns"
+msgstr "tyfoon"
+
+#: resources.py:75
+msgid "switch"
+msgstr "wissel"
+
+#: resources.py:76
+msgid "LEGENDS"
+msgstr "LEGENDES"
+
+#: resources.py:76
+msgid "heroes"
+msgstr "helden"
+
+#: resources.py:76
+msgid "mythos"
+msgstr "mythes"
+
+#: resources.py:76
+msgid "quests"
+msgstr "queeste"
+
+#: resources.py:76
+msgid "scroll"
+msgstr "rol"
+
+#: resources.py:76 resources.py:94
+msgid "runes"
+msgstr "runes"
+
+#: resources.py:76
+msgid "epics"
+msgstr "episch"
+
+#: resources.py:76
+msgid "tales"
+msgstr "sprookjes"
+
+#: resources.py:77
+msgid "HIKING"
+msgstr "WANDELEN"
+
+#: resources.py:77
+msgid "trails"
+msgstr "wandeltocht"
+
+#: resources.py:77
+msgid "climbs"
+msgstr "klimmen"
+
+#: resources.py:77
+msgid "packs"
+msgstr "rugzak"
+
+#: resources.py:77
+msgid "views"
+msgstr "uitzicht"
+
+#: resources.py:77
+msgid "camped"
+msgstr "kamperen"
+
+#: resources.py:77
+msgid "poles"
+msgstr "pool"
+
+#: resources.py:77
+msgid "steps"
+msgstr "steppe"
+
+#: resources.py:78
+msgid "PLANTS"
+msgstr "PLANTEN"
+
+#: resources.py:78
+msgid "fern"
+msgstr "varen"
+
+#: resources.py:78
+msgid "bamboo"
+msgstr "bamboe"
+
+#: resources.py:78
+msgid "ivy"
+msgstr "klimop"
+
+#: resources.py:78
+msgid "shrub"
+msgstr "struik"
+
+#: resources.py:78 resources.py:93
+msgid "bark"
+msgstr "schors"
+
+#: resources.py:78
+msgid "leaf"
+msgstr "blad"
+
+#: resources.py:78
+msgid "stem"
+msgstr "steel"
+
+#: resources.py:78 resources.py:93
+msgid "moss"
+msgstr "mos"
+
+#: resources.py:79
+msgid "UNDERWATER LIFE"
+msgstr "ONDERZEES"
+
+#: resources.py:79
+msgid "shrimp"
+msgstr "garnaal"
+
+#: resources.py:79
+msgid "coral"
+msgstr "koraal"
+
+#: resources.py:79
+msgid "whale"
+msgstr "walvis"
+
+#: resources.py:79
+msgid "tuna"
+msgstr "tonijn"
+
+#: resources.py:79
+msgid "crab"
+msgstr "krab"
+
+#: resources.py:79
+msgid "squid"
+msgstr "inktvis"
+
+#: resources.py:79
+msgid "angler"
+msgstr "visser"
+
+#: resources.py:79
+msgid "urchin"
+msgstr "zee-egel"
+
+#: resources.py:80
+msgid "WILDLIFE"
+msgstr "WILDE DIEREN"
+
+#: resources.py:80
+msgid "deer"
+msgstr "hert"
+
+#: resources.py:80
+msgid "fox"
+msgstr "vos"
+
+#: resources.py:80
+msgid "wolf"
+msgstr "wolf"
+
+#: resources.py:80
+msgid "bear"
+msgstr "beer"
+
+#: resources.py:80
+msgid "owl"
+msgstr "uil"
+
+#: resources.py:80
+msgid "snake"
+msgstr "slang"
+
+#: resources.py:80
+msgid "frog"
+msgstr "kikker"
+
+#: resources.py:80
+msgid "moose"
+msgstr "eland"
+
+#: resources.py:80
+msgid "otter"
+msgstr "otter"
+
+#: resources.py:81
+msgid "SEASONS"
+msgstr "SEIZOENEN"
+
+#: resources.py:81
+msgid "summer"
+msgstr "zomer"
+
+#: resources.py:81
+msgid "winter"
+msgstr "winter"
+
+#: resources.py:81
+msgid "autumn"
+msgstr "voorjaar"
+
+#: resources.py:81
+msgid "spring"
+msgstr "lente"
+
+#: resources.py:81
+msgid "fall"
+msgstr "herfst"
+
+#: resources.py:81
+msgid "season"
+msgstr "seizoen"
+
+#: resources.py:81
+msgid "harvest"
+msgstr "oogst"
+
+#: resources.py:81
+msgid "blossom"
+msgstr "bloesem"
+
+#: resources.py:82
+msgid "GEMS"
+msgstr "EDELSTENEM"
+
+#: resources.py:82
+msgid "diamond"
+msgstr "diamant"
+
+#: resources.py:82
+msgid "ruby"
+msgstr "robijn"
+
+#: resources.py:82
+msgid "lapis"
+msgstr "lazuur"
+
+#: resources.py:82
+msgid "opal"
+msgstr "opaal"
+
+#: resources.py:82
+msgid "jasper"
+msgstr "jaspis"
+
+#: resources.py:82
+msgid "emerald"
+msgstr "smaragd"
+
+#: resources.py:82
+msgid "topaz"
+msgstr "topaas"
+
+#: resources.py:82
+msgid "garnet"
+msgstr "granaat"
+
+#: resources.py:82
+msgid "onyx"
+msgstr "onyx"
+
+#: resources.py:83
+msgid "EMOTIONS"
+msgstr "EMOTIES"
+
+#: resources.py:83
+msgid "happy"
+msgstr "blij"
+
+#: resources.py:83
+msgid "sad"
+msgstr "verdrietig"
+
+#: resources.py:83
+msgid "angry"
+msgstr "boos"
+
+#: resources.py:83
+msgid "excited"
+msgstr "opgewonden"
+
+#: resources.py:83
+msgid "fear"
+msgstr "angstig"
+
+#: resources.py:83
+msgid "love"
+msgstr "liefde"
+
+#: resources.py:83
+msgid "joy"
+msgstr "genot"
+
+#: resources.py:83
+msgid "angst"
+msgstr "bang"
+
+#: resources.py:83
+msgid "grief"
+msgstr "rouw"
+
+#: resources.py:83
+msgid "relief"
+msgstr "opluchting"
+
+#: resources.py:84
+msgid "CANDY"
+msgstr "SNOEPGOED"
+
+#: resources.py:84
+msgid "sugar"
+msgstr "suiker"
+
+#: resources.py:84
+msgid "mint"
+msgstr "pepermunt"
+
+#: resources.py:84
+msgid "gummy"
+msgstr "gummibeer"
+
+#: resources.py:84
+msgid "treats"
+msgstr "traktaties"
+
+#: resources.py:84
+msgid "caramel"
+msgstr "karamel"
+
+#: resources.py:84
+msgid "nougat"
+msgstr "noga"
+
+#: resources.py:85
+msgid "bolts"
+msgstr "zuurtje"
+
+#: resources.py:86
+msgid "ALIENS"
+msgstr "ALIENS"
+
+#: resources.py:86
+msgid "alien"
+msgstr "alien"
+
+#: resources.py:86
+msgid "ufo"
+msgstr "ufo"
+
+#: resources.py:86
+msgid "ship"
+msgstr "ruimteschip"
+
+#: resources.py:86
+msgid "probe"
+msgstr "sonde"
+
+#: resources.py:86
+msgid "beam"
+msgstr "straal"
+
+#: resources.py:86
+msgid "zoom"
+msgstr "zoom"
+
+#: resources.py:86
+msgid "zap"
+msgstr "zap"
+
+#: resources.py:87
+msgid "CASTLES"
+msgstr "KASTELEN"
+
+#: resources.py:87
+msgid "moat"
+msgstr "slotgracht"
+
+#: resources.py:87
+msgid "arch"
+msgstr "boog"
+
+#: resources.py:87
+msgid "walls"
+msgstr "muren"
+
+#: resources.py:87
+msgid "gate"
+msgstr "poort"
+
+#: resources.py:88
+msgid "ISLANDS"
+msgstr "EILANDEN"
+
+#: resources.py:88
+msgid "palm"
+msgstr "palm"
+
+#: resources.py:88
+msgid "cove"
+msgstr "baai"
+
+#: resources.py:88
+msgid "boats"
+msgstr "boten"
+
+#: resources.py:88
+msgid "docks"
+msgstr "eenden"
+
+#: resources.py:88
+msgid "tropic"
+msgstr "tropisch"
+
+#: resources.py:89
+msgid "CLOWNS"
+msgstr "CLOWNS"
+
+#: resources.py:89
+msgid "clown"
+msgstr "clown"
+
+#: resources.py:89
+msgid "mime"
+msgstr "mime"
+
+#: resources.py:89
+msgid "wig"
+msgstr "pruik"
+
+#: resources.py:89
+msgid "mask"
+msgstr "masker"
+
+#: resources.py:89
+msgid "nose"
+msgstr "neus"
+
+#: resources.py:89
+msgid "balloon"
+msgstr "ballon"
+
+#: resources.py:89
+msgid "laugh"
+msgstr "lachen"
+
+#: resources.py:89
+msgid "joke"
+msgstr "grap"
+
+#: resources.py:89
+msgid "prank"
+msgstr "streek"
+
+#: resources.py:90
+msgid "GHOSTS"
+msgstr "SPOKEN"
+
+#: resources.py:90
+msgid "spook"
+msgstr "spook"
+
+#: resources.py:90
+msgid "scare"
+msgstr "bangmakne"
+
+#: resources.py:90
+msgid "eerie"
+msgstr "geheimzinnig"
+
+#: resources.py:90
+msgid "fright"
+msgstr "angst"
+
+#: resources.py:90
+msgid "wail"
+msgstr "grienen"
+
+#: resources.py:91
+msgid "CAVES"
+msgstr "GROTTEN"
+
+#: resources.py:91
+msgid "bats"
+msgstr "vleermuis"
+
+#: resources.py:91 resources.py:100
+msgid "dark"
+msgstr "donker"
+
+#: resources.py:91
+msgid "stalag"
+msgstr "stalagmiet"
+
+#: resources.py:91
+msgid "depth"
+msgstr "diepte"
+
+#: resources.py:91
+msgid "echo"
+msgstr "echo"
+
+#: resources.py:91
+msgid "gloom"
+msgstr "glooiing"
+
+#: resources.py:91
+msgid "vault"
+msgstr "gewelf"
+
+#: resources.py:92
+msgid "ROBOTS"
+msgstr "ROBOTS"
+
+#: resources.py:92
+msgid "servo"
+msgstr "servo"
+
+#: resources.py:92
+msgid "cog"
+msgstr "tandwiel"
+
+#: resources.py:92
+msgid "bolt"
+msgstr "bout"
+
+#: resources.py:92
+msgid "cable"
+msgstr "kabel"
+
+#: resources.py:92
+msgid "arm"
+msgstr "arm"
+
+#: resources.py:93
+msgid "TREES"
+msgstr "BOMEN"
+
+#: resources.py:93
+msgid "oak"
+msgstr "eik"
+
+#: resources.py:93
+msgid "pine"
+msgstr "pijnboom"
+
+#: resources.py:93
+msgid "leaves"
+msgstr "bladeren"
+
+#: resources.py:93
+msgid "twig"
+msgstr "takje"
+
+#: resources.py:93
+msgid "shade"
+msgstr "schaduw"
+
+#: resources.py:94
+msgid "WIZARDS"
+msgstr "TOVENARIJ"
+
+#: resources.py:94
+msgid "spell"
+msgstr "spreuk"
+
+#: resources.py:94
+msgid "cloak"
+msgstr "mantel"
+
+#: resources.py:94
+msgid "staff"
+msgstr "staf"
+
+#: resources.py:94
+msgid "potion"
+msgstr "toverdrankje"
+
+#: resources.py:94 resources.py:98
+msgid "charm"
+msgstr "amulet"
+
+#: resources.py:94
+msgid "wand"
+msgstr "toverstaf"
+
+#: resources.py:95
+msgid "VOLCANO"
+msgstr "VULKAAN"
+
+#: resources.py:95
+msgid "lava"
+msgstr "lava"
+
+#: resources.py:95
+msgid "smoke"
+msgstr "rook"
+
+#: resources.py:95
+msgid "ash"
+msgstr "as"
+
+#: resources.py:95
+msgid "crust"
+msgstr "korst"
+
+#: resources.py:95
+msgid "erupts"
+msgstr "uitbarsting"
+
+#: resources.py:95
+msgid "crack"
+msgstr "scheur"
+
+#: resources.py:95
+msgid "magma"
+msgstr "magma"
+
+#: resources.py:96
+msgid "DRAGONS"
+msgstr "DRAKEN"
+
+#: resources.py:96
+msgid "scales"
+msgstr "schubben"
+
+#: resources.py:96 resources.py:98
+msgid "wings"
+msgstr "vleugels"
+
+#: resources.py:96
+msgid "tail"
+msgstr "staart"
+
+#: resources.py:96
+msgid "claws"
+msgstr "klauwen"
+
+#: resources.py:96
+msgid "roar"
+msgstr "brul"
+
+#: resources.py:96
+msgid "flame"
+msgstr "vlam"
+
+#: resources.py:96
+msgid "fangs"
+msgstr "hoektanden"
+
+#: resources.py:96
+msgid "lair"
+msgstr "hol"
+
+#: resources.py:97
+msgid "MIRRORS"
+msgstr "SPIEGELS"
+
+#: resources.py:97
+msgid "glass"
+msgstr "glas"
+
+#: resources.py:97
+msgid "look"
+msgstr "bekijken"
+
+#: resources.py:97
+msgid "shine"
+msgstr "spiegeling"
+
+#: resources.py:97
+msgid "reflect"
+msgstr "weerspiegeling"
+
+#: resources.py:97
+msgid "room"
+msgstr "kamer"
+
+#: resources.py:97
+msgid "clean"
+msgstr "schoon"
+
+#: resources.py:98
+msgid "FAIRIES"
+msgstr "FEEËN"
+
+#: resources.py:98
+msgid "pixie"
+msgstr "elfje"
+
+#: resources.py:98
+msgid "tiny"
+msgstr "klein"
+
+#: resources.py:98
+msgid "spark"
+msgstr "vonk"
+
+#: resources.py:99
+msgid "MARKETS"
+msgstr "MARKT"
+
+#: resources.py:99
+msgid "stalls"
+msgstr "kraampjes"
+
+#: resources.py:99
+msgid "crowd"
+msgstr "publiek"
+
+#: resources.py:99
+msgid "sales"
+msgstr "verkoop"
+
+#: resources.py:99
+msgid "deals"
+msgstr "aanbiedingen"
+
+#: resources.py:100
+msgid "TUNNELS"
+msgstr "TUNNELS"
+
+#: resources.py:100
+msgid "shaft"
+msgstr "schacht"
+
+#: resources.py:100
+msgid "mines"
+msgstr "mijnen"
+
+#: resources.py:100
+msgid "pipes"
+msgstr "buizen"
+
+#: resources.py:100
+msgid "crawl"
+msgstr "kruipen"
+
+#: resources.py:100
+msgid "route"
+msgstr "route"
+
+#: resources.py:100
+msgid "gates"
+msgstr "toegang"
+
+#: resources.py:100
+msgid "dig"
+msgstr "graven"
+
+#: window.py:87
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>8 × 8 grid</span>\n"
+"<b>5 words\n"
+"(30 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 8×8</span>\n"
+"<b>5 woorden\n"
+"(30 seconden)</b>\n"
+
+#: window.py:88
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>12 × 12 grid</span>\n"
+"<b>8 words\n"
+"(60 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 12×12</span>\r\n"
+"<b>8 woorden\r\n"
+"(60 seconden)</b>\r\n"
+
+#: window.py:89
+msgid ""
+"\n"
+"<span size='x-large' weight='ultrabold'>16 × 16 grid</span>\n"
+"<b>10 words\n"
+"(80 seconds)</b>\n"
+msgstr ""
+"\n"
+"<span size='x-large' weight='ultrabold'>Bord van 16×16</span>\r\n"
+"<b>10 woorden\r\n"
+"(80 seconden)</b>\r\n"
+
+#: window.py:90
+msgid ""
+"\n"
+"<span size='large' weight='ultrabold'>Custom</span>\n"
+msgstr ""
+"\n"
+"<span size='large' weight='ultrabold'>Aangepast</span>\n"
+
+#: window.py:667
+msgid "Congratulations!"
+msgstr "Gefeliciteerd!"
+
+#: window.py:668
+msgid "You won the game!"
+msgstr "Je hebt het spel gewonnen!"
+
+#: window.py:671
+msgid "Time's out!"
+msgstr "De tijd is op!"
+
+#: window.py:672
+msgid "You ran out of time!"
+msgstr "Je hebt geen tijd meer!"
+
+#: window.ui:186
+msgid "Game mode"
+msgstr "Spelvorm"
+
+#: window.ui:191
+msgid "No timer"
+msgstr "Geen tijdklok"
+
+#: window.ui:203
+msgid "With timer"
+msgstr "Met tijdklok"
+
+#: window.ui:215
+msgid "Blitz"
+msgstr "Turbo"
+
+#: window.ui:227
+msgid "Theme"
+msgstr "Thema"
+
+#: window.ui:233
+msgid "Random"
+msgstr "Willekeurig"
+
+#: window.ui:300 window.ui:520 window.ui:685
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: window.ui:396
+msgid "How many lines you want"
+msgstr "Hoeveel lijnen je wilt"
+
+#: window.ui:397
+msgid "Height"
+msgstr "Hoogte"
+
+#: window.ui:411
+msgid "How many columns you want"
+msgstr "Hoeveel kolommen je wilt"
+
+#: window.ui:412
+msgid "Width"
+msgstr "Breedte"
+
+#: window.ui:426
+msgid "How many words you will have to guess"
+msgstr "Hoeveel woorden je moet raden"
+
+#: window.ui:427
+msgid "Words"
+msgstr "Aantal woorden"
+
+#: window.ui:441
+msgid "The time you will have to find all the words"
+msgstr "De tijd die je hebt om alle woorden te vinden"
+
+#: window.ui:442
+msgid "Time (in seconds)"
+msgstr "Tijd (in seconden)"
+
+#: window.ui:467
+msgid "Start"
+msgstr "Starten"
+
+#: window.ui:482
+msgid "Create the game of your dreams!"
+msgstr "Maak het spel van je dromen!"
+
+#: window.ui:484
+msgid "Custom settings"
+msgstr "Aangepaste voorkeuren"
+
+#: window.ui:501
+msgid "Game"
+msgstr "Spel"
+
+#: window.ui:763
+msgid "Time left"
+msgstr "Resterende tijd"
+
+#: window.ui:786
+msgid "Words to find"
+msgstr "Aantal verstopte woorden"
+
+#: window.ui:818
+msgid "_Keyboard Shortcuts"
+msgstr "_Sneltoetsen"
+
+#: window.ui:822
+msgid "_About Hunt"
+msgstr "_Over Woordzoeker"
+
+#: window.ui:826
+msgid "_Help"
+msgstr "_Hulp"
+
+#~ msgid "Shapes"
+#~ msgstr "Vormen"
+
+#~ msgid "8 x 8 tiles"
+#~ msgstr "Bord van 8x8"
+
+#~ msgid "5 out of 5"
+#~ msgstr "5 van 5"
+
+#~ msgid ""
+#~ "8 x 8 grid\n"
+#~ "\n"
+#~ "5 words\n"
+#~ "(30 seconds)"
+#~ msgstr ""
+#~ "bord van 8x8\n"
+#~ "\n"
+#~ "5 woorden\n"
+#~ "(30 seconden)"
+
+#~ msgid ""
+#~ "12 x 12 grid\n"
+#~ "\n"
+#~ "8 words\n"
+#~ "(60 seconds)"
+#~ msgstr ""
+#~ "bord van 12x12\n"
+#~ "\n"
+#~ "8 woorden\n"
+#~ "(60 seconden)"
+
+#~ msgid ""
+#~ "16 x 16 grid\n"
+#~ "\n"
+#~ "10 words\n"
+#~ "(80 seconds)"
+#~ msgstr ""
+#~ "bord van 16x16\n"
+#~ "\n"
+#~ "10 woorden\n"
+#~ "(80 seconden)"
+
+#~ msgid "Custom"
+#~ msgstr "Aangepast"
+
+#~ msgid "Options"
+#~ msgstr "Opties"
+
+#~ msgid "Themes"
+#~ msgstr "Thema's"
