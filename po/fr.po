@@ -717,10 +717,9 @@ msgstr "MONTAGNES"
 msgid "hill"
 msgstr "colline"
 
-#TODO
 #: resources.py:14
 msgid "peak"
-msgstr "sommet"
+msgstr "culminant"
 
 #: resources.py:14
 msgid "ridge"
@@ -2036,10 +2035,9 @@ msgstr "abeille"
 msgid "ant"
 msgstr "fourmi"
 
-#TODO, remove the spaces or change the translations
 #: resources.py:49
 msgid "moth"
-msgstr "papillon de nuit"
+msgstr "phalène"
 
 #: resources.py:49
 msgid "fly"
@@ -2361,10 +2359,9 @@ msgstr "joyau"
 msgid "watch"
 msgstr "montre"
 
-#TODO
 #: resources.py:58
 msgid "band"
-msgstr "anneau"
+msgstr "bandeau"
 
 #: resources.py:59
 msgid "LANGUAGES"
@@ -2606,7 +2603,6 @@ msgstr "DESSERTS"
 msgid "cake"
 msgstr "gâteau"
 
-#TODO
 #: resources.py:66
 msgid "pie"
 msgstr "tarte"
@@ -2617,7 +2613,7 @@ msgstr "biscuit"
 
 #: resources.py:66
 msgid "tart"
-msgstr "tarte"
+msgstr "tourte"
 
 #: resources.py:66 resources.py:84
 msgid "fudge"
