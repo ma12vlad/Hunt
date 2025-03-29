@@ -324,7 +324,7 @@ msgstr "brinta"
 #TODO "duplicate brood"
 #: resources.py:5 resources.py:21 resources.py:40
 msgid "toast"
-msgstr "brood"
+msgstr "tosti"
 
 #: resources.py:5
 msgid "waffle"
@@ -1382,7 +1382,7 @@ msgstr "toren"
 #TODO duplicate "steen"
 #: resources.py:30
 msgid "brick"
-msgstr "steen"
+msgstr "baksteen"
 
 #: resources.py:30
 msgid "plans"
@@ -2684,7 +2684,7 @@ msgstr "HORROR"
 #TODO duplicate "spook"
 #: resources.py:68 resources.py:90 resources.py:97
 msgid "ghost"
-msgstr "spook"
+msgstr "ziel"
 
 #: resources.py:68 resources.py:90
 msgid "haunt"
