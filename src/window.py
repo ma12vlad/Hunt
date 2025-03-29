@@ -1,4 +1,4 @@
-import random
+import random, time
 from gi.repository import Adw, Gtk, Gdk, Gio, GLib
 from .resources import *
 
@@ -107,11 +107,8 @@ class HuntWindow(Adw.ApplicationWindow):
         self.main_window_content.connect("popped", lambda _, page: self.back_to_main_menu(None, None) if page.get_tag() == 'game' else None)
 
         for item in sorted(list(related_words.keys())):
-            listEntry = Gtk.ListBoxRow(selectable=False)
-            actionEntry = Adw.ActionRow()
-
-            listEntry.set_child(actionEntry)
-            actionEntry.set_title(item.capitalize())
+            actionEntry = Adw.ActionRow(title=item.capitalize())
+            listEntry = Gtk.ListBoxRow(selectable=False, child=actionEntry)
 
             checkbox = Gtk.CheckButton()
             if(actionEntry.get_title().upper() in self.selected_categories):
@@ -142,11 +139,8 @@ class HuntWindow(Adw.ApplicationWindow):
 
         # Add rows for the filtered categories
         for category in sorted(filtered_categories):
-            listEntry = Gtk.ListBoxRow(selectable=False)
-            actionEntry = Adw.ActionRow()
-
-            listEntry.set_child(actionEntry)
-            actionEntry.set_title(category.capitalize())
+            actionEntry = Adw.ActionRow(title=category.capitalize())
+            listEntry = Gtk.ListBoxRow(selectable=False, child=actionEntry)
 
             checkbox = Gtk.CheckButton()
             self.checkbuttons.append(checkbox)
@@ -212,7 +206,6 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Start the game with the custom values set by the player in self.custom_box
     def custom_start(self, action, _):
-        print("hell")
         self.word_count = int(self.words_value.get_value())
         self.height = int(self.height_value.get_value())
         self.length = int(self.length_value.get_value())
@@ -222,6 +215,7 @@ class HuntWindow(Adw.ApplicationWindow):
 
     #Back from a running game to the main menu
     def back_to_main_menu(self, action, _):
+        print("backtomainmenu")
         if(self.clock.is_visible()):
             GLib.Source.remove(self.timer_id)
         self.found_words.clear(); self.used_letters.clear()
@@ -253,7 +247,7 @@ class HuntWindow(Adw.ApplicationWindow):
             return False
         else: #Reduces timer by 0.1 seconds every (obviously) 0.1 seconds
             self.timer -= 0.1
-            self.clock.set_description(str(round(self.timer, 1)) + " seconds")
+            self.clock.set_description(time.strftime("%H:%M:%S", time.gmtime(self.timer)) + f".{int((self.timer % 1) * 10)}")
             self.timer_progBar.set_fraction(self.timer / self.reference_time)
             return True
 
@@ -266,7 +260,7 @@ class HuntWindow(Adw.ApplicationWindow):
             close_response="ok"
             )
             dialog.add_response("ok", "_OK")
-            dialog.set_response_enabled("ok", True)  # Ensure OK button is enabled
+            dialog.set_response_enabled("ok", True)
             dialog.set_default_response("ok")
             dialog.present(self)
             dialog.get_child().add_css_class("warning")
@@ -274,7 +268,7 @@ class HuntWindow(Adw.ApplicationWindow):
         self.game_over = False
         self.copy_colors = self.colors.copy()
         if(len(self.found_words) == 0): #Only run at game start, this is here because the blitz mode will call this function to rebuild the grid every time a player finds a new word
-            self.make_word_list()
+            if(not self.make_word_list()): return
             while(self.frame.get_first_child() is not None): #Clear the GTKListBox that is to the left of the grid, only on start of game (not when blitz refreshes grid)
                 self.frame.remove(self.frame.get_first_child())
             if self.main_window_content.get_visible_page().get_tag() != "game":
@@ -312,19 +306,16 @@ class HuntWindow(Adw.ApplicationWindow):
             else:
                 locale = "en_US.UTF-8" #defaults to English if not defined in resources.py
         for i in range(1, self.length * self.height + 1): #Generate the grid with all the buttons in it
-            button = Gtk.Button(hexpand=True, vexpand=True)
+            button = Gtk.Button(hexpand=True, vexpand=True, width_request=12, height_request=12, label=random.choice(letters[locale]))
             self.grid.attach(button, col, row, 1, 1)
             self.buttons.append(button)
             self.grid.add_css_class("frame")
             button.add_css_class("flat")
-            button.set_size_request(12, 12)
             button.connect("clicked", self.letter_selected, _, button)
 
             motion_controller = Gtk.EventControllerMotion() #Uses an event controller for when is hovering over buttons on the grid when they have selected their first letter
             motion_controller.connect("enter", self.on_button_hovered)
             button.add_controller(motion_controller)
-
-            button.set_label(random.choice(letters[locale]))
 
             col += 1
             if(i % self.length == 0):
@@ -337,47 +328,24 @@ class HuntWindow(Adw.ApplicationWindow):
             #Add each word the the GTKListBox, and place each word in the grid. Does not run in blitz mode because only one word needs to be in the grid and in the GTKListBox at a time
             used_words = set()
             for word in self.words:
-                label = Gtk.Label()
-                label.set_label(word)
-                label.set_margin_bottom(14)
-                label.set_margin_top(14)
-                self.place_word_in_grid(word)
+                label = Gtk.Label(label=word, margin_bottom=14, margin_top=14)
                 used_words.add(label.get_label())
                 #This is needed because sometimes words would be added to self.frame that are not in self.words, or words that are in self.frame are placed in multiple times
                 #Occurs with words that fail to be placed
                 if(label.get_label().lower() in self.word_list and all(child.get_first_child().get_title().upper() != label.get_label() for child in self.frame)):
-                    listbox = Gtk.ListBoxRow()
-                    listbox.set_selectable(False)
-                    listbox.set_activatable(False)
-                    actionRow = Adw.ActionRow()
-                    checkbutton = Gtk.CheckButton()
-
-                    listbox.set_child(actionRow)
-                    actionRow.add_suffix(checkbutton)
-                    checkbutton.set_visible(False)
-
-                    actionRow.set_title(label.get_label().capitalize())
-
-                    self.frame.append(listbox)
+                    self.place_word_in_grid(word)
         else: #Add self.divided_timer to however much it was before, and place the one new word into the grid as well as onto the GTKListBox.
             self.timer += self.divided_timer
             self.reference_time = self.timer
             self.clock.set_description(str(round(self.timer, 1)) + " seconds")
-
-            listbox = Gtk.ListBoxRow()
-            listbox.set_selectable(False)
-            listbox.set_activatable(False)
-            actionRow = Adw.ActionRow()
-            checkbutton = Gtk.CheckButton()
-
-            listbox.set_child(actionRow)
-            actionRow.add_suffix(checkbutton)
-            checkbutton.set_visible(False)
-
-            actionRow.set_title(self.words[len(self.found_words)].capitalize())
-
-            self.frame.insert(listbox, 0)
             self.place_word_in_grid(self.words[len(self.found_words)])
+
+    def add_item_to_sidebar(self, word):
+        checkbutton = Gtk.CheckButton(visible=False)
+        actionRow = Adw.ActionRow(title=word.capitalize())
+        listbox = Gtk.ListBoxRow(selectable=False, activatable=False, child=actionRow)
+        actionRow.add_suffix(checkbutton)
+        self.frame.append(listbox)
 
     def make_word_list(self): #Creates the list of words for the player to search for.
         self.words.clear()
@@ -394,10 +362,33 @@ class HuntWindow(Adw.ApplicationWindow):
         self.grid_data = [[' ' for _ in range(self.length)] for _ in range(self.height)]
         self.word_list = list(set(self.word_list)) #Kind of stupid, but removes all the duplicate words if there are two or more active themes and they have a few in common
         random.shuffle(self.word_list)
-        for i in range(self.word_count):
+        for i in range(len(self.word_list)):
+            if(len(self.word_list[i]) > self.length or len(self.word_list[i]) > self.height):
+                print(self.word_list[i])
+                continue
             newWord = self.word_list[i].upper()
             self.words.append(newWord)
             self.words_left.append(newWord)
+        del self.words[self.word_count:]; del self.words_left[self.word_count:]
+        if(len(self.words) < self.word_count):
+            if("RANDOM" in self.selected_categories):
+                print("error placing word: " + str(self.random_key))
+                self.make_grid("activate", _)
+                return False
+            else:
+                self.back_to_main_menu("activate", _)
+            dialog = Adw.AlertDialog(
+            heading=_('Error :('),
+            body=_('\nUnable to place all the words in the selected theme!\n\n   Try selecting a larger grid or a different category.   \n\nSorry for the inconvenience\n'),
+            close_response="ok"
+            )
+            dialog.add_response("ok", "_OK")
+            dialog.set_response_enabled("ok", True)  # Ensure OK button is enabled
+            dialog.set_default_response("ok")
+            dialog.present(self)
+            dialog.get_child().add_css_class("error")
+            return False
+        return True
 
     # Places the words in self.words into the grid in random places and in random directions
     def place_word_in_grid(self, word):
@@ -416,7 +407,6 @@ class HuntWindow(Adw.ApplicationWindow):
             row = random.randint(0, self.height - 1)
             col = random.randint(0, self.length - 1)
             word_to_place = word[::-1] if backward else word  # Reverse word if placing backwards
-
             # Check horizontal placement
             if(direction == 'horizontal'):
                 if(backward):
@@ -427,8 +417,7 @@ class HuntWindow(Adw.ApplicationWindow):
                             self.grid_data[row][col + i] = word_to_place[i].upper()
                             self.buttons[row * self.length + col + i].set_label(word_to_place[i].upper())
                             self.used_letters.append(self.buttons[row * self.length + col + i])
-                        placed = True
-
+                        placed = True; self.add_item_to_sidebar(word)
             # Check vertical placement
             elif(direction == 'vertical'):
                 if(backward):
@@ -439,12 +428,9 @@ class HuntWindow(Adw.ApplicationWindow):
                             self.grid_data[row + i][col] = word_to_place[i].upper()
                             self.buttons[(row + i) * self.length + col].set_label(word_to_place[i].upper())
                             self.used_letters.append(self.buttons[(row + i) * self.length + col])
-                        placed = True
-
+                        placed = True; self.add_item_to_sidebar(word)
             # Check diagonal placement
             elif(direction == 'diagonal'):
-                if(backward):
-                    word = word[::-1]
                 if(diagonal_up):
                     if(row - (len(word) - 1) >= 0 and col + len(word) <= self.length):  # Ensure row stays within bounds
                         if(all(self.grid_data[row - i][col + i] in [' ', word_to_place[i].upper()] for i in range(len(word)))):
@@ -452,7 +438,7 @@ class HuntWindow(Adw.ApplicationWindow):
                                 self.grid_data[row - i][col + i] = word_to_place[i].upper()
                                 self.buttons[(row - i) * self.length + (col + i)].set_label(word_to_place[i].upper())
                                 self.used_letters.append(self.buttons[(row - i) * self.length + (col + i)])
-                            placed = True
+                            placed = True; self.add_item_to_sidebar(word)
                 else:
                     if(0 <= row and row + len(word) <= self.height and col + len(word) <= self.length):
                         if(all(self.grid_data[row + i][col + i] in [' ', word_to_place[i].upper()] for i in range(len(word)))):
@@ -460,8 +446,7 @@ class HuntWindow(Adw.ApplicationWindow):
                                 self.grid_data[row + i][col + i] = word_to_place[i].upper()
                                 self.buttons[(row + i) * self.length + (col + i)].set_label(word_to_place[i].upper())
                                 self.used_letters.append(self.buttons[(row + i) * self.length + (col + i)])
-                            placed = True
-
+                            placed = True; self.add_item_to_sidebar(word)
         if(not placed):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
             self.make_grid("activate", _)
@@ -506,8 +491,7 @@ class HuntWindow(Adw.ApplicationWindow):
                         child.get_first_child().set_sensitive(False)
                         child.get_first_child().set_title(f"<s>{child.get_first_child().get_title()}</s>")
 
-                        checkIcon = Gtk.CheckButton()
-                        checkIcon.set_active(True)
+                        checkIcon = Gtk.CheckButton(active=True)
                         checkIcon.add_css_class("selection-mode")
                         child.get_first_child().add_suffix(checkIcon)
                 color = random.choice(self.copy_colors)

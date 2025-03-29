@@ -321,6 +321,7 @@ msgstr "ONTBIJTPRODUCTEN"
 msgid "bacon"
 msgstr "brinta"
 
+#TODO "duplicate brood"
 #: resources.py:5 resources.py:21 resources.py:40
 msgid "toast"
 msgstr "brood"
@@ -1378,6 +1379,7 @@ msgstr "huis"
 msgid "tower"
 msgstr "toren"
 
+#TODO duplicate "steen"
 #: resources.py:30
 msgid "brick"
 msgstr "steen"
@@ -2679,6 +2681,7 @@ msgstr "chai"
 msgid "HORROR"
 msgstr "HORROR"
 
+#TODO duplicate "spook"
 #: resources.py:68 resources.py:90 resources.py:97
 msgid "ghost"
 msgstr "spook"

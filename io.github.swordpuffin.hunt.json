@@ -30,7 +30,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/SwordPuffin/Hunt.git",
-                    "tag" : "v1.1.2"
+                    "tag" : "v1.1.3"
                 }
             ]
         }

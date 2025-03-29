@@ -479,7 +479,7 @@ msgstr "marron"
 
 #: resources.py:8
 msgid "teal"
-msgstr "bleu canard"
+msgstr "bleucanard"
 
 #: resources.py:8
 msgid "black"
@@ -675,7 +675,7 @@ msgstr "ville"
 
 #: resources.py:13
 msgid "town"
-msgstr "ville"
+msgstr "commune"
 
 #: resources.py:13
 msgid "metro"
@@ -717,6 +717,7 @@ msgstr "MONTAGNES"
 msgid "hill"
 msgstr "colline"
 
+#TODO
 #: resources.py:14
 msgid "peak"
 msgstr "sommet"
@@ -2035,6 +2036,7 @@ msgstr "abeille"
 msgid "ant"
 msgstr "fourmi"
 
+#TODO, remove the spaces or change the translations
 #: resources.py:49
 msgid "moth"
 msgstr "papillon de nuit"
@@ -2359,6 +2361,7 @@ msgstr "joyau"
 msgid "watch"
 msgstr "montre"
 
+#TODO
 #: resources.py:58
 msgid "band"
 msgstr "anneau"
@@ -2603,6 +2606,7 @@ msgstr "DESSERTS"
 msgid "cake"
 msgstr "gâteau"
 
+#TODO
 #: resources.py:66
 msgid "pie"
 msgstr "tarte"
@@ -2913,7 +2917,7 @@ msgstr "moteur"
 
 #: resources.py:75
 msgid "tracks"
-msgstr "rails"
+msgstr "ferrées"
 
 #: resources.py:75
 msgid "cargos"
@@ -2941,7 +2945,7 @@ msgstr "cornes"
 
 #: resources.py:75
 msgid "switch"
-msgstr "interrupteur"
+msgstr "bouton" #change to button, original translation was too long
 
 #: resources.py:76
 msgid "LEGENDS"

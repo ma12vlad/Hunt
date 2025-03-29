@@ -34,7 +34,8 @@ Then, in Builder you can add it to your projects.
 ## Translating
 Any help with translating Hunt into other languages would be much appreciated :).
 
-Obviously the accuracy of the translation matters most, however please try as much as possible to keep words between 4 -> 8 characters long.
+Obviously the accuracy of the translation matters most, however please try as much as possible to keep words between 4 -> 8 characters long. 
+Also, do not include spaces or other non-alphanumeric characters
 
 It just helps as when the words are too long they are really easy to spot, and can even cause errors if they are larger than the grid. 
 **Because of this, words can be AT MOST 16 characters, but ideally none are over 12 characters.**

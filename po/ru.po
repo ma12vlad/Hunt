@@ -303,6 +303,7 @@ msgstr "свекла"
 msgid "onion"
 msgstr "лук"
 
+#TODO, duplicate of "squash"
 #: resources.py:4
 msgid "cabbage"
 msgstr "капуста"
@@ -768,6 +769,7 @@ msgstr "волна"
 msgid "beach"
 msgstr "берег"
 
+#TODO, duplicate of "shore" in both BEACHES and OCEANS category
 #: resources.py:15 resources.py:56 resources.py:88
 msgid "coast"
 msgstr "побережье"
@@ -1540,6 +1542,7 @@ msgstr "враги"
 msgid "score"
 msgstr "счёт"
 
+#TODO, same as "wrench"
 #: resources.py:34 resources.py:51 resources.py:85
 msgid "level"
 msgstr "уровень"
@@ -1808,6 +1811,7 @@ msgstr "миф"
 msgid "god"
 msgstr "бог"
 
+#TODO, duplicate of "ghost"
 #: resources.py:42 resources.py:64 resources.py:68 resources.py:73
 #: resources.py:96
 msgid "beast"
@@ -2725,6 +2729,7 @@ msgstr "АСТРОНОМИЯ"
 msgid "nebula"
 msgstr "метеорит"
 
+#TODO, duplicate of "space"
 #: resources.py:69
 msgid "cosmos"
 msgstr "космос"
@@ -3465,6 +3470,7 @@ msgstr "механизм"
 msgid "cog"
 msgstr "андроид"
 
+#TODO, duplicate of "arm"
 #: resources.py:92
 msgid "bolt"
 msgstr "киборг"
