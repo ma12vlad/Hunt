@@ -311,69 +311,77 @@
                         <property name="allow-long-swipes">True</property>
                         <property name="vexpand">True</property>
                         <child>
-                          <object class="AdwClamp" id="recommended_settings">
+                          <object class="GtkScrolledWindow">
                             <property name="hexpand">True</property>
-                            <property name="margin-end">15</property>
-                            <property name="margin-start">15</property>
-                            <property name="maximum-size">500</property>
-                            <property name="tightening-threshold">200</property>
                             <property name="vexpand">True</property>
                             <child>
-                              <object class="AdwClamp">
+                              <object class="AdwClamp" id="recommended_settings">
+                                <property name="hexpand">True</property>
+                                <property name="margin-bottom">5</property>
+                                <property name="margin-end">15</property>
+                                <property name="margin-start">15</property>
+                                <property name="margin-top">5</property>
                                 <property name="maximum-size">500</property>
-                                <property name="orientation">vertical</property>
                                 <property name="tightening-threshold">200</property>
+                                <property name="vexpand">True</property>
                                 <child>
-                                  <object class="GtkListBox">
+                                  <object class="AdwClamp">
+                                    <property name="maximum-size">500</property>
+                                    <property name="orientation">vertical</property>
+                                    <property name="tightening-threshold">200</property>
                                     <child>
-                                      <object class="AdwButtonRow" id="small_game">
-                                        <property name="title" translatable="yes"></property>
-                                        <property name="selectable">false</property>
+                                      <object class="GtkListBox">
+                                        <child>
+                                          <object class="AdwButtonRow" id="small_game">
+                                            <property name="selectable">false</property>
+                                            <property name="title" translatable="yes"/>
+                                            <style>
+                                              <class name="small_game"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwButtonRow" id="medium_game">
+                                            <property name="selectable">false</property>
+                                            <property name="title" translatable="yes"/>
+                                            <style>
+                                              <class name="medium_game"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwButtonRow" id="large_game">
+                                            <property name="selectable">false</property>
+                                            <property name="title" translatable="yes"/>
+                                            <style>
+                                              <class name="large_game"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                        <child>
+                                          <object class="AdwButtonRow" id="custom_start_button">
+                                            <property name="action-name">win.custom</property>
+                                            <property name="end-icon-name">go-next</property>
+                                            <property name="selectable">false</property>
+                                            <property name="title" translatable="yes"/>
+                                            <style>
+                                              <class name="custom"/>
+                                            </style>
+                                          </object>
+                                        </child>
                                         <style>
-                                          <class name="small_game"/>
+                                          <class name="boxed-list"/>
                                         </style>
                                       </object>
                                     </child>
-                                    <child>
-                                      <object class="AdwButtonRow" id="medium_game">
-                                        <property name="title" translatable="yes"></property>
-                                        <property name="selectable">false</property>
-                                        <style>
-                                          <class name="medium_game"/>
-                                        </style>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="AdwButtonRow" id="large_game">
-                                        <property name="title" translatable="yes"></property>
-                                        <property name="selectable">false</property>
-                                        <style>
-                                          <class name="large_game"/>
-                                        </style>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="AdwButtonRow" id="custom_start_button">
-                                        <property name="selectable">false</property>
-                                        <property name="action-name">win.custom</property>
-                                        <property name="title" translatable="yes"></property>
-                                        <property name="end-icon-name">go-next</property>
-                                        <style>
-                                          <class name="custom"/>
-                                        </style>
-                                      </object>
-                                    </child>
-                                    <style>
-                                      <class name="boxed-list"/>
-                                    </style>
                                   </object>
                                 </child>
+                                <style>
+                                  <class name="title-3"/>
+                                  <class name="header"/>
+                                </style>
                               </object>
                             </child>
-                            <style>
-                              <class name="title-3"/>
-                              <class name="header"/>
-                            </style>
                           </object>
                         </child>
                         <child>
@@ -585,86 +593,22 @@
                                 </property>
                                 <property name="title">Words to find</property>
                                 <child>
-                                  <object class="GtkListBox" id="frame_light">
-                                    <property name="selection-mode">none</property>
-                                    <style>
-                                      <class name="title-4"/>
-                                      <class name="boxed-list"/>
-                                    </style>
+                                  <object class="GtkScrolledWindow">
+                                    <property name="hscrollbar-policy">external</property>
+                                    <property name="margin-bottom">5</property>
+                                    <property name="vscrollbar-policy">never</property>
                                     <child>
-                                      <object class="GtkListBoxRow">
-                                        <property name="activatable">False</property>
-                                        <property name="selectable">False</property>
-                                        <child>
-                                          <object class="GtkCenterBox">
-                                            <property name="margin-end">10</property>
-                                            <property name="margin-start">10</property>
-                                            <child type="start">
-                                              <object class="GtkLabel">
-                                                <property name="label">Word1</property>
-                                                <property name="margin-bottom">8</property>
-                                                <property name="margin-top">8</property>
-                                                <property name="use-markup">True</property>
-                                              </object>
-                                            </child>
-                                            <style/>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkListBoxRow">
-                                        <property name="activatable">False</property>
-                                        <property name="selectable">False</property>
-                                        <child>
-                                          <object class="GtkCenterBox">
-                                            <property name="margin-end">10</property>
-                                            <property name="margin-start">10</property>
-                                            <child type="start">
-                                              <object class="GtkLabel">
-                                                <property name="label">Word2</property>
-                                                <property name="margin-bottom">8</property>
-                                                <property name="margin-top">8</property>
-                                                <property name="use-markup">True</property>
-                                              </object>
-                                            </child>
-                                            <style/>
-                                          </object>
-                                        </child>
-                                      </object>
-                                    </child>
-                                    <child>
-                                      <object class="GtkListBoxRow">
-                                        <property name="activatable">False</property>
-                                        <property name="selectable">False</property>
-                                        <child>
-                                          <object class="GtkCenterBox">
-                                            <property name="margin-end">10</property>
-                                            <property name="margin-start">10</property>
-                                            <property name="sensitive">False</property>
-                                            <child type="start">
-                                              <object class="GtkLabel">
-                                                <property name="label">&lt;s&gt;Word3&lt;/s&gt;</property>
-                                                <property name="use-markup">True</property>
-                                              </object>
-                                            </child>
-                                            <child type="end">
-                                              <object class="GtkCheckButton">
-                                                <property name="active">True</property>
-                                                <style>
-                                                  <class name="selection-mode"/>
-                                                </style>
-                                              </object>
-                                            </child>
-                                            <style>
-                                              <class name="success"/>
-                                            </style>
-                                          </object>
-                                        </child>
+                                      <object class="GtkGrid" id="frame_light">
+                                        <property name="column-spacing">6</property>
+                                        <property name="halign">start</property>
+                                        <style>
+                                          <class name="wrap-box"/>
+                                        </style>
                                       </object>
                                     </child>
                                     <style>
-                                      <class name="boxed-list"/>
+                                      <class name="undershoot-end"/>
+                                      <class name="undershoot-start"/>
                                     </style>
                                   </object>
                                 </child>
@@ -694,7 +638,7 @@
                             <child>
                               <object class="AdwLayoutSlot">
                                 <property name="id">lyt_grid</property>
-                                <property name="margin-bottom">160</property>
+                                <property name="margin-bottom">96</property>
                               </object>
                             </child>
                           </object>
@@ -753,6 +697,12 @@
                         <property name="valign">center</property>
                       </object>
                     </child>
+                    <style>
+                      <class name="undershoot-top"/>
+                      <class name="undershoot-bottom"/>
+                      <class name="undershoot-start"/>
+                      <class name="undershoot-end"/>
+                    </style>
                   </object>
                 </child>
                 <child type="lyt_game-options">
@@ -808,6 +758,7 @@
         <condition>max-width: 600px</condition>
         <setter object="multi_layout" property="layout-name">portrait</setter>
         <setter object="ingame_layouts" property="layout-name">portrait</setter>
+        <setter object="game_selector" property="margin-bottom">36</setter>
       </object>
     </child>
   </template>

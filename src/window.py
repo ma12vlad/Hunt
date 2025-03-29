@@ -331,7 +331,7 @@ class HuntWindow(Adw.ApplicationWindow):
                 col = 0
                 row += 1
 
-        self.refresh_lightlist(1 if self.blitz_game else 3)
+        self.refresh_lightlist()
 
         if(not self.blitz_game):
             #Add each word the the GTKListBox, and place each word in the grid. Does not run in blitz mode because only one word needs to be in the grid and in the GTKListBox at a time
@@ -466,25 +466,30 @@ class HuntWindow(Adw.ApplicationWindow):
             print(f"Failed to place word '{word}' after {max_attempts} attempts.")
             self.make_grid("activate", _)
 
-    def refresh_lightlist(self, maxWords=3):
-        self.frame_light.remove_all()
+    def refresh_lightlist(self):
+        self.frame_light.remove_row(0)
+
         def generate_new_entry(word, empty=False):
-            label = Gtk.Label(label=word, xalign=(0.5), margin_top=5, margin_bottom=5, margin_start=5, use_markup=empty, css_classes=(["dim-label"] if empty else None))
-            return Gtk.ListBoxRow(activatable=False, selectable=False, child=label)
+            label = Gtk.Label(label=word, css_classes=(["dim-label"] if empty else None), use_markup=empty)
+            box = Gtk.Box(css_classes=(['tag'] if not empty else None))
+            box.append(label)
+            return box
+
         if len(self.words_left) > 0:
-            for i in range(0, min(maxWords, len(self.words_left)), 2):
-                try:
-                    self.frame_light.append(generate_new_entry(self.words_left[i].capitalize() + "                                  " + self.words_left[i + 1].capitalize()))
-                except Exception:
-                    self.frame_light.append(generate_new_entry(self.words_left[i].capitalize() + "                                             "))
+            max_words = len(self.words_left)
 
-            if not self.frame_light.has_css_class('boxed-list'): self.frame_light.add_css_class('boxed-list')
-            if self.frame_light.has_css_class('background'): self.frame_light.remove_css_class('background')
+            if self.blitz_game:
+                max_words = 1
+                if self.frame_light.get_halign() != Gtk.Align.CENTER: self.frame_light.set_halign(Gtk.Align.CENTER)
+            else:
+                if self.frame_light.get_halign() != Gtk.Align.START: self.frame_light.set_halign(Gtk.Align.START)
+
+            for i in range(0, max_words):
+                self.frame_light.attach(generate_new_entry(self.words_left[i].capitalize()),i, 0, 1, 1)
         else:
-            self.frame_light.append(generate_new_entry("<i>No words left</i>", True))
+            self.frame_light.attach(generate_new_entry("<i>No words left</i>", True), 0, 0, 1, 1)
+            if self.frame_light.get_halign() != Gtk.Align.CENTER: self.frame_light.set_halign(Gtk.Align.CENTER)
 
-            if self.frame_light.has_css_class('boxed-list'): self.frame_light.remove_css_class('boxed-list')
-            if not self.frame_light.has_css_class('background'): self.frame_light.add_css_class('background')
 
 
     #Fetches the word in between the two selected buttons. Also checks if the word that is made is one of words the player is supposed to find
@@ -512,7 +517,7 @@ class HuntWindow(Adw.ApplicationWindow):
                         child.get_first_child().add_suffix(checkIcon)
                 color = random.choice(self.copy_colors)
                 self.words_left.remove(word)
-                self.refresh_lightlist(1 if self.blitz_game else 3)
+                self.refresh_lightlist()
                 self.copy_colors.remove(color)
                 for child in self.word_buttons:
                     if(child in self.used_letters):

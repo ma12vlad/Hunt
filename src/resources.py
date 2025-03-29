@@ -238,6 +238,14 @@ css = """
             80% { transform: translateX(4px); background-color: @green_5;}
             100% { transform: translateX(0px); }
         }
+
+        /* BottomSheet wordlist */
+        grid.wrap-box > box.tag {
+          background-color: color(srgb 0 0 0.0235294 / 0.08);
+          border-radius: 99px;
+          padding: 6px 12px;
+          outline-color: rgba(0,0,6,0.8);
+        }
 """
 letters = {
     'en_US.UTF-8': "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
