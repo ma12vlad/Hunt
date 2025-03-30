@@ -303,14 +303,14 @@ msgstr "свекла"
 msgid "onion"
 msgstr "лук"
 
-#TODO, duplicate of "squash"
+#Fixed_TODO, duplicate of "squash"
 #: resources.py:4
 msgid "cabbage"
 msgstr "капуста"
 
 #: resources.py:4 resources.py:67
 msgid "squash"
-msgstr "капуста"
+msgstr "тыква"
 
 #: resources.py:4
 msgid "radish"
@@ -769,7 +769,7 @@ msgstr "волна"
 msgid "beach"
 msgstr "берег"
 
-#TODO, duplicate of "shore" in both BEACHES and OCEANS category
+#Fixed_TODO, duplicate of "shore" in both BEACHES and OCEANS category
 #: resources.py:15 resources.py:56 resources.py:88
 msgid "coast"
 msgstr "побережье"
@@ -780,7 +780,7 @@ msgstr "прилив"
 
 #: resources.py:15 resources.py:56
 msgid "shore"
-msgstr "побережье"
+msgstr "сэнди"
 
 #: resources.py:15 resources.py:35 resources.py:47 resources.py:77
 msgid "water"
@@ -848,7 +848,7 @@ msgstr "КОСМОС"
 
 #: resources.py:17 resources.py:69 resources.py:86
 msgid "space"
-msgstr "космос"
+msgstr "бездна"
 
 #: resources.py:17 resources.py:60
 msgid "moon"
@@ -868,7 +868,7 @@ msgstr "орбита"
 
 #: resources.py:17 resources.py:69
 msgid "nova"
-msgstr "бездна"
+msgstr "болид"
 
 #: resources.py:17 resources.py:69
 msgid "planet"
@@ -1542,7 +1542,7 @@ msgstr "враги"
 msgid "score"
 msgstr "счёт"
 
-#TODO, same as "wrench"
+#Fixed_TODO, same as "wrench"
 #: resources.py:34 resources.py:51 resources.py:85
 msgid "level"
 msgstr "уровень"
@@ -1811,11 +1811,11 @@ msgstr "миф"
 msgid "god"
 msgstr "бог"
 
-#TODO, duplicate of "ghost"
+#Fixed_TODO, duplicate of "ghost"
 #: resources.py:42 resources.py:64 resources.py:68 resources.py:73
 #: resources.py:96
 msgid "beast"
-msgstr "чудовище"
+msgstr "тварь"
 
 #: resources.py:42 resources.py:76 resources.py:98
 msgid "lore"
@@ -2139,7 +2139,7 @@ msgstr "линейка"
 
 #: resources.py:51 resources.py:85
 msgid "wrench"
-msgstr "уровень"
+msgstr "клещи"
 
 #: resources.py:52
 msgid "GAMES"
@@ -2729,7 +2729,7 @@ msgstr "АСТРОНОМИЯ"
 msgid "nebula"
 msgstr "метеорит"
 
-#TODO, duplicate of "space"
+#Fixed_TODO, duplicate of "space"
 #: resources.py:69
 msgid "cosmos"
 msgstr "космос"
@@ -2880,7 +2880,7 @@ msgstr "слизь"
 
 #: resources.py:73
 msgid "ghosts"
-msgstr "призрак"
+msgstr "призраки"
 
 #: resources.py:73
 msgid "fiends"
@@ -3470,7 +3470,7 @@ msgstr "механизм"
 msgid "cog"
 msgstr "андроид"
 
-#TODO, duplicate of "arm"
+#Fixed_TODO, duplicate of "arm"
 #: resources.py:92
 msgid "bolt"
 msgstr "киборг"
@@ -3481,7 +3481,7 @@ msgstr "робот"
 
 #: resources.py:92
 msgid "arm"
-msgstr "киборг"
+msgstr "бот"
 
 #: resources.py:93
 msgid "TREES"

@@ -250,5 +250,5 @@ css = """
 letters = {
     'en_US.UTF-8': "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     'ru_RU.UTF-8': "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ",
-    'fr_FR.UTF-8': "AÀÂÄÆBCÇDEÈÉÊËFGHIÎÏJKLMNOÔŒPQRSTUÙÛÜVWXYZ"
+    'fr_FR.UTF-8': "AÀÂBCÇDEÈÉÊFGHIÎJKLMNOÔPQRSTUÙÛVWXYZ"
 }
