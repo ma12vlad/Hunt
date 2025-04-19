@@ -461,7 +461,7 @@ msgstr "серый"
 
 #: resources.py:8 resources.py:89
 msgid "red"
-msgstr "красный"
+msgstr "индиго"
 
 #: resources.py:8 resources.py:86
 msgid "green"
